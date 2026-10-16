@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>OK Sofás — 6 meses depois</title>
+    <script src="gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "DM Serif Display";
+        src: url("fonts/DMSerifDisplay-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-600.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: block;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: transparent;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: transparent;
+      }
+      #hook {
+        position: absolute;
+        inset: 0;
+      }
+      .anchor {
+        position: absolute;
+        left: 80px;
+        right: 80px;
+        top: 1036px;
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 24px 60px 30px 48px;
+        background: #f4efe8;
+        border-radius: 40px;
+        box-shadow: 0 14px 44px rgba(43, 36, 32, 0.32);
+      }
+      .six {
+        font-family: "DM Serif Display", serif;
+        font-size: 260px;
+        line-height: 0.82;
+        color: #d6342a;
+        display: block;
+      }
+      .stack {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .mask {
+        overflow: hidden;
+        padding: 4px 0 2px;
+      }
+      .line {
+        display: block;
+        font-family: "DM Serif Display", serif;
+        font-size: 110px;
+        line-height: 0.92;
+        letter-spacing: 0.01em;
+        color: #2b2420;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="2.52"
+      data-width="1080"
+      data-height="1920"
+    >
+      <section id="hook" class="clip" data-start="0" data-duration="2.52" data-track-index="0">
+        <div class="anchor">
+          <div class="card" id="card">
+            <span class="six" id="six">6</span>
+            <div class="stack">
+              <div class="mask"><span class="line" id="l1">MESES</span></div>
+              <div class="mask"><span class="line" id="l2">DEPOIS</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      (async () => {
+        await Promise.all([
+          document.fonts.load('400 260px "DM Serif Display"', "6MESDPOI"),
+          document.fonts.load('600 40px "Inter"', "A"),
+        ]);
+        await document.fonts.ready;
+        if (!document.fonts.check('400 110px "DM Serif Display"', "6 MESES DEPOIS")) {
+          throw new Error("DM Serif Display not loaded");
+        }
+        if (!document.fonts.check('600 40px "Inter"', "A")) {
+          throw new Error("Inter 600 not loaded");
+        }
+        const tl = gsap.timeline({ paused: true });
+        // Card entrance (0.00 -> 0.30)
+        tl.fromTo("#card", { opacity: 0, y: 70, scale: 0.9 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.28, ease: "power3.out" }, 0);
+        // Big "6" lands at t = 0.34 s ("seis")
+        tl.fromTo("#six", { opacity: 0, yPercent: 35, scale: 1.4 },
+          { opacity: 1, yPercent: 0, scale: 1, duration: 0.24, ease: "power3.out" }, 0.10);
+        // MESES lands 0.49, DEPOIS lands 0.54 (mask reveal)
+        tl.fromTo("#l1", { yPercent: 110 }, { yPercent: 0, duration: 0.19, ease: "power3.out" }, 0.30);
+        tl.fromTo("#l2", { yPercent: 110 }, { yPercent: 0, duration: 0.19, ease: "power3.out" }, 0.35);
+        // Exit: 2.25 -> 2.50 (gone before the 2.52 end)
+        tl.to("#card", { opacity: 0, y: 50, scale: 0.96, duration: 0.25, ease: "power2.in" }, 2.25);
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>

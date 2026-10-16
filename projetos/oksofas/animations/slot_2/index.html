@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>OK Sofás — montagem de usos</title>
+    <script src="gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "DM Serif Display";
+        src: url("fonts/DMSerifDisplay-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-600.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: block;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: transparent;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: transparent;
+      }
+      .word-clip {
+        position: absolute;
+        inset: 0;
+      }
+      /* Same anchor for every word: centred, vertical centre ~ y 320 */
+      .anchor {
+        position: absolute;
+        left: 80px;
+        right: 80px;
+        top: 250px;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pill {
+        display: block;
+        overflow: hidden;
+        padding: 14px 56px 22px;
+        background: #f4efe8;
+        border-radius: 999px;
+        box-shadow: 0 14px 44px rgba(43, 36, 32, 0.32);
+      }
+      .word {
+        display: block;
+        font-family: "DM Serif Display", serif;
+        font-size: 100px;
+        line-height: 1;
+        color: #2b2420;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5"
+      data-width="1080"
+      data-height="1920"
+    >
+      <section id="w0" class="word-clip clip" data-start="0" data-duration="1" data-track-index="0">
+        <div class="anchor"><div class="pill" id="p0"><span class="word" id="t0">Descansar</span></div></div>
+      </section>
+      <section id="w1" class="word-clip clip" data-start="1" data-duration="1" data-track-index="0">
+        <div class="anchor"><div class="pill" id="p1"><span class="word" id="t1">Ler</span></div></div>
+      </section>
+      <section id="w2" class="word-clip clip" data-start="2" data-duration="1" data-track-index="0">
+        <div class="anchor"><div class="pill" id="p2"><span class="word" id="t2">Trabalhar</span></div></div>
+      </section>
+      <section id="w3" class="word-clip clip" data-start="3" data-duration="1" data-track-index="0">
+        <div class="anchor"><div class="pill" id="p3"><span class="word" id="t3">Relaxar</span></div></div>
+      </section>
+      <section id="w4" class="word-clip clip" data-start="4" data-duration="1" data-track-index="0">
+        <div class="anchor"><div class="pill" id="p4"><span class="word" id="t4">Brincar</span></div></div>
+      </section>
+    </div>
+    <script>
+      (async () => {
+        await Promise.all([
+          document.fonts.load('400 100px "DM Serif Display"', "DescansarLerTrabalharRelaxarBrincar"),
+          document.fonts.load('600 40px "Inter"', "A"),
+        ]);
+        await document.fonts.ready;
+        if (!document.fonts.check('400 100px "DM Serif Display"', "Descansar Ler Trabalhar Relaxar Brincar")) {
+          throw new Error("DM Serif Display not loaded");
+        }
+        if (!document.fonts.check('600 40px "Inter"', "A")) {
+          throw new Error("Inter 600 not loaded");
+        }
+        const tl = gsap.timeline({ paused: true });
+        for (let i = 0; i < 5; i++) {
+          // Punchy entrance at each hard cut: pill pops up (0.20 s), word slides up inside it.
+          tl.fromTo("#p" + i, { opacity: 0, y: 46, scale: 0.92 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "expo.out" }, i);
+          tl.fromTo("#t" + i, { yPercent: 70 },
+            { yPercent: 0, duration: 0.2, ease: "expo.out" }, i);
+        }
+        // Last word leaves before 5.0 s
+        tl.to("#p4", { opacity: 0, y: -24, duration: 0.15, ease: "power2.in" }, 4.8);
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>

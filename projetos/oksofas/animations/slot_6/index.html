@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-PT" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "DM Serif Display";
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url("assets/fonts/DMSerifDisplay-Regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "DM Serif Display";
+        font-style: italic;
+        font-weight: 400;
+        font-display: block;
+        src: url("assets/fonts/DMSerifDisplay-Italic.woff2") format("woff2");
+      }
+      :root {
+        --cream: #f4efe8;
+        --brown: #2b2420;
+        --card: rgba(43, 36, 32, 0.86);
+        --red: #d6342a;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: transparent;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        font-family: "DM Serif Display", Georgia, serif;
+        color: var(--cream);
+      }
+      #layer {
+        position: absolute;
+        inset: 0;
+      }
+      .card {
+        position: absolute;
+        display: block;
+        background: var(--card);
+        border-radius: 30px;
+        box-shadow: 0 10px 34px rgba(43, 36, 32, 0.28);
+        white-space: nowrap;
+      }
+      #line1 {
+        left: 80px;
+        top: 250px;
+        padding: 14px 46px 30px 46px;
+        font-size: 128px;
+        line-height: 1.05;
+        transform-origin: 0% 50%;
+      }
+      #steps {
+        position: absolute;
+        left: 104px;
+        top: 452px;
+        display: flex;
+        gap: 14px;
+        padding: 12px 16px;
+        border-radius: 999px;
+        background: var(--card);
+      }
+      .dot {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid rgba(244, 239, 232, 0.7);
+        background: transparent;
+      }
+      #line2 {
+        right: 140px;
+        top: 540px;
+        padding: 18px 50px 36px 50px;
+        font-size: 150px;
+        line-height: 1.05;
+        transform-origin: 100% 50%;
+      }
+      #line2 .w {
+        display: inline-block;
+        position: relative;
+      }
+      #cama {
+        display: inline-block;
+        position: relative;
+        padding: 0 18px;
+        margin-left: 24px;
+      }
+      #marker {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 22px;
+        bottom: -10px;
+        background: var(--red);
+        border-radius: 16px;
+        transform-origin: 0% 50%;
+      }
+      #cama-text {
+        position: relative;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="2.7"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="layer" class="clip" data-start="0" data-duration="2.7" data-track-index="0">
+        <div id="line1" class="card"><span id="l1text" class="w">De sofá…</span></div>
+        <div id="steps">
+          <span class="dot" id="d0"></span>
+          <span class="dot" id="d1"></span>
+          <span class="dot" id="d2"></span>
+          <span class="dot" id="d3"></span>
+        </div>
+        <div id="line2" class="card">
+          <span class="w" id="l2a">…a</span><span id="cama"><span id="marker"></span><span id="cama-text">cama.</span></span>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        const FONT = '128px "DM Serif Display"';
+        document.fonts
+          .load(FONT, "De sofá… a cama.")
+          .then(function () {
+            if (!document.fonts.check(FONT, "De sofá… a cama.")) {
+              throw new Error("DM Serif Display not loaded");
+            }
+            const tl = gsap.timeline({ paused: true });
+
+            // Line 1 — "De sofá…" (in by 0.3 s)
+            tl.fromTo("#line1", { opacity: 0, y: 36, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "expo.out" }, 0);
+            tl.fromTo("#l1text", { y: 22 }, { y: 0, duration: 0.3, ease: "power3.out" }, 0.02);
+            tl.fromTo("#steps", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 0.08);
+
+            // Step dots: tick at each hard cut (0, 0.4, 0.8, 1.2)
+            const cuts = [0, 0.4, 0.8, 1.2];
+            cuts.forEach(function (t, i) {
+              const fill = i === 3 ? "#D6342A" : "#F4EFE8";
+              const border = i === 3 ? "#D6342A" : "#F4EFE8";
+              tl.fromTo(
+                "#d" + i,
+                { backgroundColor: "rgba(244,239,232,0)", borderColor: "rgba(244,239,232,0.7)" },
+                { backgroundColor: fill, borderColor: border, duration: 0.12, ease: "power3.out", immediateRender: false },
+                t
+              );
+              tl.fromTo("#d" + i, { scale: 1.7 }, { scale: 1, duration: 0.3, ease: "expo.out", immediateRender: false }, t);
+            });
+
+            // Line 2 — "…a cama." lands exactly at 1.2 s
+            tl.fromTo("#line2", { opacity: 0, y: 46, scale: 0.86 }, { opacity: 1, y: 0, scale: 1, duration: 0.32, ease: "expo.out" }, 1.2);
+            tl.fromTo("#marker", { scaleX: 0 }, { scaleX: 1, duration: 0.34, ease: "expo.out" }, 1.26);
+            tl.fromTo("#cama-text", { scale: 1.12 }, { scale: 1, duration: 0.4, ease: "expo.out" }, 1.26);
+            // small acknowledgement punch on line 1
+            tl.to("#line1", { scale: 0.97, duration: 0.12, ease: "power3.out" }, 1.2);
+            tl.to("#line1", { scale: 1, duration: 0.3, ease: "expo.out" }, 1.32);
+
+            // Exit 2.45 → 2.7
+            tl.to(["#line1", "#steps", "#line2"], { opacity: 0, y: -14, duration: 0.25, ease: "power3.out" }, 2.45);
+
+            window.__timelines["main"] = tl;
+            tl.seek(0);
+          });
+      })();
+    </script>
+  </body>
+</html>

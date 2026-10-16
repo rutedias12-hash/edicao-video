@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/inter-600.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/inter-500.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: block;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: transparent;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: transparent;
+        font-family: "Inter", sans-serif;
+        --cream: #F4EFE8;
+        --sand: #CDBBA3;
+        --brown: #2B2420;
+        --red: #D6342A;
+      }
+      #fx { position: absolute; inset: 0; }
+      #line-svg {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: visible;
+        filter: drop-shadow(0 1px 2.5px rgba(20, 14, 10, 0.55));
+      }
+      #line { stroke: var(--cream); stroke-width: 3; stroke-linecap: round; fill: none; }
+      .dot-wrap {
+        position: absolute;
+        left: 560px;
+        top: 175px;
+        width: 80px;
+        height: 80px;
+      }
+      #ring {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 4px solid var(--red);
+        opacity: 0;
+      }
+      #dot {
+        position: absolute;
+        left: 26px;
+        top: 26px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--red);
+        border: 4px solid var(--cream);
+        box-shadow: 0 2px 8px rgba(20, 14, 10, 0.45);
+      }
+      .label-wrap {
+        position: absolute;
+        left: 600px;
+        top:395px;
+        width: 0;
+        display: flex;
+        justify-content: center;
+      }
+      #label {
+        flex: none;
+        max-width: 860px;
+        width: max-content;
+        padding: 24px 34px 26px;
+        border-radius: 28px;
+        background: var(--cream);
+        border: 2px solid rgba(205, 187, 163, 0.75);
+        color: var(--brown);
+        box-shadow: 0 14px 34px rgba(20, 14, 10, 0.30), 0 3px 8px rgba(20, 14, 10, 0.18);
+        text-align: center;
+      }
+      .title {
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 1.12;
+        letter-spacing: -0.015em;
+      }
+      .title::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--red);
+        margin-right: 16px;
+        vertical-align: 0.14em;
+      }
+      .sub {
+        margin-top: 6px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 1.2;
+        color: #6A5C51;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="3.38"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="callout">
+        <div id="fx">
+          <svg id="line-svg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+            <line id="line" x1="600.0" y1="230.0" x2="600" y2="395"
+              stroke-dasharray="165.0" stroke-dashoffset="165.0" />
+          </svg>
+          <div class="dot-wrap">
+            <div id="ring"></div>
+            <div id="dot"></div>
+          </div>
+          <div class="label-wrap">
+            <div id="label">
+              <div class="title">2 arcas escondidas</div>
+            <div class="sub">nos braços do sofá</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      (async () => {
+        await Promise.all([
+          document.fonts.load('600 46px "Inter"'),
+          document.fonts.load('500 30px "Inter"'),
+        ]);
+        await document.fonts.ready;
+        if (!document.fonts.check('600 46px "Inter"') || !document.fonts.check('500 30px "Inter"')) {
+          throw new Error("Inter font not loaded - refusing to render with a fallback font");
+        }
+        const D0 = 0.46;
+        const tl = gsap.timeline({ paused: true });
+        // 1. dot pops
+        tl.fromTo("#dot", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(2.2)" }, D0);
+        // single pulse ring
+        tl.fromTo("#ring", { scale: 0.6 }, { scale: 2.3, duration: 0.7, ease: "power2.out" }, D0 + 0.12);
+        tl.fromTo("#ring", { opacity: 0 }, { opacity: 0.85, duration: 0.04, ease: "power1.out" }, D0 + 0.12);
+        tl.to("#ring", { opacity: 0, duration: 0.62, ease: "power2.out" }, D0 + 0.2);
+        // 2. line draws from dot to label
+        tl.fromTo("#line", { attr: { "stroke-dashoffset": 165.0 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.3, ease: "power3.inOut" }, D0 + 0.17);
+        // 3. label reveals
+        tl.fromTo("#label",
+          { opacity: 0, y: -18, scale: 0.94, transformOrigin: "50% 0%" },
+          { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "power3.out" }, D0 + 0.4);
+        // hold, then fade everything out over the last 0.2 s
+        tl.fromTo("#fx", { opacity: 1 }, { opacity: 0, duration: 0.1667, ease: "sine.in" }, 3.1800);
+        window.__timelines["main"] = tl;
+      })();
+    </script>
+  </body>
+</html>
