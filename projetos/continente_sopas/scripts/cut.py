@@ -32,6 +32,7 @@ for i, r in enumerate(edl['ranges']):
         base = f'{crop}scale=-2:1920,fps={FPS}'
     fc = [f'[0:v]{base},setpts=PTS-STARTPTS[b0]']; cur = '[b0]'
     for k, (cs, cd, at) in enumerate(r.get('cutaways') or [], start=1):
+        if d - (at + cd) < 0.15: cd = d - at + 0.1  # B-roll a acabar mesmo no fim: cobre até ao último frame (evita 'flash')
         cmd += ['-ss', f'{cs:.3f}', '-t', f'{cd+0.2:.3f}', '-i', s]
         fc.append(f'[{k}:v]scale=-2:1920,fps={FPS},trim=duration={cd},setpts=PTS-STARTPTS+{at}/TB[c{k}]')
         fc.append(f"{cur}[c{k}]overlay=0:0:eof_action=pass:enable='between(t,{at},{at+cd-0.001})'[b{k}]"); cur = f'[b{k}]'
