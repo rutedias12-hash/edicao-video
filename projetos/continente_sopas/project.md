@@ -76,3 +76,5 @@
 - 33 segmentos, 45,0 s. Sem textos/legendas.
 - 6.1: removido 'flash' de 1 frame aos 11,5 s (último B-roll não cobria o último frame); corrigido em `cut.py` para todos os planos e verificado o vídeo inteiro.
 - 6.2: removido o plano do jantar (46:02) em que a Rute caminha para a câmara. 32 segmentos, 44,1 s.
+
+**FINAL (2026-10-16):** versão 6.2 aprovada pela Rute → `videos/edit/final.mp4` (44,1 s, 1080×1920, -14 LUFS). EDL final = `edl.json`.
