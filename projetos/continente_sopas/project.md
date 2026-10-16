@@ -75,3 +75,4 @@
 - Fecho: aproximação cinemática lenta na embalagem (zoom 1,0 → 1,22, ease in-out, sobre o 4K).
 - 33 segmentos, 45,0 s. Sem textos/legendas.
 - 6.1: removido 'flash' de 1 frame aos 11,5 s (último B-roll não cobria o último frame); corrigido em `cut.py` para todos os planos e verificado o vídeo inteiro.
+- 6.2: removido o plano do jantar (46:02) em que a Rute caminha para a câmara. 32 segmentos, 44,1 s.

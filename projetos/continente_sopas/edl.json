@@ -323,14 +323,6 @@
   },
   {
    "source": "continente_sopas",
-   "start": 2762.0,
-   "end": 2762.9,
-   "beat": "FAMILIA",
-   "quote": "(imagem) Paulo e Clara a comer, sem conversa",
-   "label": ""
-  },
-  {
-   "source": "continente_sopas",
    "start": 2921.0,
    "end": 2922.0,
    "beat": "FAMILIA",
@@ -359,5 +351,5 @@
    ]
   }
  ],
- "total_duration_s": 44.9
+ "total_duration_s": 44.0
 }
