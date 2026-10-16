@@ -1,0 +1,16 @@
+# Vídeos e resultados (pesados e privados — nunca vão para o GitHub)
+videos/*
+!videos/.gitkeep
+*.mp4
+*.mov
+*.m4v
+*.mkv
+*.webm
+*.wav
+*.mp3
+
+# Ferramentas descarregadas pelo setup.sh
+tools/
+
+# Segredos
+.env
