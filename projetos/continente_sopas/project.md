@@ -66,3 +66,11 @@
   embalagem em grande plano por cima de "sopa de abóbora, camarão e coentros", deitar (corredor, embalar, berço), Clara (2 ângulos), sopa (a deitar + taças).
 - Banho: corredor a entrar com o bebé → do quarto, a porta fecha (18:46) → abre e sai com ele de toalha (18:51), sem aproximar.
 - Mantido "Espera, por favor, espera." com o bebé a chorar.
+
+### Iteração 6
+- Fala da ginástica contínua e completa: "como hoje | a Clara tem treino na ginástica e chega um bocadinho tarde, eu tenho de ir adiantando esta parte." (pausa de 0,6 s removida), com 7 planos de B-roll.
+- "Espera, filho. Espera." (9:46) com o bebé a choramingar por baixo (camada de som de 9:26, +2 dB) no início do plano.
+- Ovos: último plano trocado pela Rute junto ao Henrique na cadeira de refeição (33:08).
+- Jantar em família: sem conversa — 3 planos tranquilos (46:02, 48:41, 48:54).
+- Fecho: aproximação cinemática lenta na embalagem (zoom 1,0 → 1,22, ease in-out, sobre o 4K).
+- 33 segmentos, 45,0 s. Sem textos/legendas.
