@@ -6,18 +6,26 @@
  "ranges": [
   {
    "source": "continente_sopas",
-   "start": 17.0,
-   "end": 18.2,
+   "start": 12.0,
+   "end": 12.9,
    "beat": "ABERTURA",
-   "quote": "(imagem) a entrar em casa com o bebé",
+   "quote": "(imagem) a abrir a porta e entrar",
    "label": ""
   },
   {
    "source": "continente_sopas",
-   "start": 132.0,
-   "end": 133.0,
+   "start": 18.6,
+   "end": 19.5,
    "beat": "ABERTURA",
-   "quote": "(imagem) bebé na cadeira, cão",
+   "quote": "(imagem) a entrar com o bebé ao colo",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 67.4,
+   "end": 68.3,
+   "beat": "ABERTURA",
+   "quote": "(imagem) corredor com o bebé",
    "label": ""
   },
   {
@@ -27,14 +35,6 @@
    "beat": "JANTAR",
    "quote": "Dez pras seis.",
    "label": "17:50|preparar o jantar"
-  },
-  {
-   "source": "continente_sopas",
-   "start": 194.22,
-   "end": 195.38,
-   "beat": "JANTAR",
-   "quote": "Este dia nunca mais acaba,",
-   "label": ""
   },
   {
    "source": "continente_sopas",
@@ -54,35 +54,43 @@
   },
   {
    "source": "continente_sopas",
-   "start": 264.5,
-   "end": 265.2,
-   "beat": "CAOS",
-   "quote": "(imagem) batatas",
-   "label": ""
-  },
-  {
-   "source": "continente_sopas",
-   "start": 552.0,
-   "end": 552.7,
-   "beat": "CAOS",
-   "quote": "(imagem) cortar batatas",
-   "label": ""
-  },
-  {
-   "source": "continente_sopas",
    "start": 524.46,
    "end": 526.36,
    "beat": "CAOS",
    "quote": "a partir das seis da tarde isso é loucura, né?",
-   "label": ""
+   "label": "",
+   "cutaways": [
+    [
+     264.5,
+     0.9,
+     0.0
+    ]
+   ]
   },
   {
    "source": "continente_sopas",
-   "start": 586.45,
-   "end": 587.7,
+   "start": 953.9,
+   "end": 958.08,
    "beat": "CAOS",
-   "quote": "Espera, filho.",
-   "label": ""
+   "quote": "como hoje a Clara tem treino na ginástica e chega um bocadinho tarde,",
+   "label": "",
+   "cutaways": [
+    [
+     308.0,
+     1.4,
+     0.0
+    ],
+    [
+     552.0,
+     1.4,
+     1.4
+    ],
+    [
+     292.0,
+     1.38,
+     2.8
+    ]
+   ]
   },
   {
    "source": "continente_sopas",
@@ -114,7 +122,14 @@
    "end": 647.97,
    "beat": "DECISAO",
    "quote": "Vou fazer uns ovos e vou servir a sopa.",
-   "label": ""
+   "label": "",
+   "cutaways": [
+    [
+     1952.0,
+     1.0,
+     0.35
+    ]
+   ]
   },
   {
    "source": "continente_sopas",
@@ -166,6 +181,14 @@
   },
   {
    "source": "continente_sopas",
+   "start": 1185.0,
+   "end": 1185.8,
+   "beat": "BANHO",
+   "quote": "(imagem) bebé na toalha",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
    "start": 1230.0,
    "end": 1230.8,
    "beat": "PIJAMA",
@@ -178,14 +201,6 @@
    "end": 1260.5,
    "beat": "PIJAMA",
    "quote": "(imagem) abraço de pijama",
-   "label": ""
-  },
-  {
-   "source": "continente_sopas",
-   "start": 1952.0,
-   "end": 1952.8,
-   "beat": "OVOS",
-   "quote": "(imagem) ovos na frigideira",
    "label": ""
   },
   {
@@ -206,10 +221,10 @@
   },
   {
    "source": "continente_sopas",
-   "start": 2286.0,
-   "end": 2286.8,
+   "start": 2256.4,
+   "end": 2257.6,
    "beat": "DEITAR",
-   "quote": "(imagem) a caminho do quarto",
+   "quote": "(imagem) a entrar no quarto com o bebé",
    "label": "deitar o Henrique"
   },
   {
@@ -218,14 +233,6 @@
    "end": 2352.8,
    "beat": "DEITAR",
    "quote": "(imagem) no berço",
-   "label": ""
-  },
-  {
-   "source": "continente_sopas",
-   "start": 2442.6,
-   "end": 2443.6,
-   "beat": "DEITAR",
-   "quote": "(imagem) shhh",
    "label": ""
   },
   {
@@ -263,5 +270,5 @@
  ],
  "grade": "",
  "overlays": [],
- "total_duration_s": 44.09
+ "total_duration_s": 44.36
 }

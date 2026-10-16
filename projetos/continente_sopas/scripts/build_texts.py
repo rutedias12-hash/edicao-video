@@ -15,7 +15,8 @@ cues = []
 for i, r in enumerate(edl['ranges']):
     off = offs[i]
     if r['beat'] in manual and r['label']:
-        for a, b, t in manual[r['beat']]: cues.append([off+a, off+b, t]); continue
+        for a, b, t in manual[r['beat']]: cues.append([off+a, off+b, t, off+durs[i]])
+        continue
     if r['quote'].startswith('(imagem)') or r['beat'] in manual: continue
     ws = [x for x in w if x['start'] >= r['start']-0.02 and x['end'] <= r['end']+0.05]
     groups, cur = [], []
@@ -23,20 +24,22 @@ for i, r in enumerate(edl['ranges']):
         cur.append(x); e = x['text'][-1]
         if e in '.?!' or (e == ',' and len(cur) >= 3) or len(cur) >= 6: groups.append(cur); cur = []
     if cur: groups.append(cur)
+    for j in range(len(groups)-1, 0, -1):
+        if len(groups[j]) == 1 and len(groups[j-1]) <= 6: groups[j-1] += groups.pop(j)
     for g in groups:
-        cues.append([g[0]['start']-r['start']+off, g[-1]['end']-r['start']+off, " ".join(fix.get(c['text'], c['text']) for c in g)])
+        cues.append([g[0]['start']-r['start']+off, g[-1]['end']-r['start']+off, " ".join(fix.get(c['text'], c['text']) for c in g), off+durs[i]])
 # frases cortadas a meio: juntar pedaços curtos à legenda anterior quando seguidos
 merged = []
 for c in cues:
     if merged and len(c[2].split()) <= 2 and c[0]-merged[-1][1] < 0.6 and merged[-1][2][-1] in ',' and len(merged[-1][2].split()) <= 6:
-        merged[-1] = [merged[-1][0], c[1], merged[-1][2]+" "+c[2]]
+        merged[-1] = [merged[-1][0], c[1], merged[-1][2]+" "+c[2], c[3]]
     else: merged.append(c)
 for c in merged: c[2] = c[2][0].upper()+c[2][1:] if (c is merged[0] or merged[merged.index(c)-1][2][-1] in '.?!') else c[2]
 fecho_t = next(offs[i] for i, r in enumerate(edl['ranges']) if r['label'] == 'FECHO')
 out = []
-for k, (a, b, t) in enumerate(merged):
+for k, (a, b, t, segend) in enumerate(merged):
     nxt = merged[k+1][0] if k+1 < len(merged) else b+0.4
-    b = min(b+0.25, nxt-0.03) if nxt > b else b
+    b = min(b+0.25, nxt-0.03, segend) if nxt > b else min(b, segend)
     out.append((max(0, a-0.03), min(b, fecho_t-0.05), t))
 ts = lambda s: f"0:{int(s//60):02d}:{s%60:05.2f}"
 hdr = """[Script Info]

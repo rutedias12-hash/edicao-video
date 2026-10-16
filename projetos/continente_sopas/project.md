@@ -41,3 +41,11 @@
   sopa servida nas taças (42:30) e fecho sobre o **grande plano da embalagem Cozinha Continente Receita do Chef** (43:00), com o som em silêncio (o Paulo fala de outra coisa).
 - A chegada da Clara **não existe neste ficheiro** (provável parte "em falta").
 - Volume aprovado. Scripts: `scripts/build_texts.py` (legendas + textos a partir do EDL) e `scripts/finish.sh` (montagem final).
+
+### Iteração 3
+- Abertura com 3 planos a entrar em casa (12.0, 18.6, 67.4 s).
+- B-roll por cima da fala (novo `scripts/cut.py`, campo "cutaways" no EDL): batatas na frase "loucura";
+  descascar/cortar/tabuleiros por cima de "como hoje a Clara tem treino na ginástica e chega um bocadinho tarde" (15:53);
+  ovos na frigideira por cima de "vou fazer uns ovos".
+- Banho com 3 planos (banheira, toalha de pé, bebé na toalha na cama); deitar: plano a ENTRAR no quarto (37:36) em vez do "shhh".
+- Saíram "Este dia nunca mais acaba" e "Espera, filho". 29 cortes, 44,6 s.
