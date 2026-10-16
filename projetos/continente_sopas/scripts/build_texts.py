@@ -4,8 +4,7 @@ from pathlib import Path
 E = Path(__file__).resolve().parent.parent
 edl = json.load(open(E/'edl.json'))
 w = [x for x in json.load(open(E/'transcripts/continente_sopas.json'))['words'] if x.get('type') == 'word']
-durs = [float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',
-        str(E/f'clips_graded/seg_{i:02d}_continente_sopas.mp4')]).decode()) for i in range(len(edl['ranges']))]
+durs = json.load(open(E/'clips_graded/durs.json'))
 offs = [sum(durs[:i]) for i in range(len(durs))]; total = sum(durs)
 
 # ---------- legendas ----------
@@ -27,7 +26,7 @@ for i, r in enumerate(edl['ranges']):
     for j in range(len(groups)-1, 0, -1):
         if len(groups[j]) == 1 and len(groups[j-1]) <= 6: groups[j-1] += groups.pop(j)
     for g in groups:
-        cues.append([g[0]['start']-r['start']+off, g[-1]['end']-r['start']+off, " ".join(fix.get(c['text'], c['text']) for c in g), off+durs[i]])
+        cues.append([g[0]['start']-r['start']-0.10+off, g[-1]['end']-r['start']-0.10+off, " ".join(fix.get(c['text'], c['text']) for c in g), off+durs[i]])
 # frases cortadas a meio: juntar pedaços curtos à legenda anterior quando seguidos
 merged = []
 for c in cues:

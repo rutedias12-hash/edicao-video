@@ -49,3 +49,12 @@
   ovos na frigideira por cima de "vou fazer uns ovos".
 - Banho com 3 planos (banheira, toalha de pé, bebé na toalha na cama); deitar: plano a ENTRAR no quarto (37:36) em vez do "shhh".
 - Saíram "Este dia nunca mais acaba" e "Espera, filho". 29 cortes, 44,6 s.
+
+### Iteração 4
+- **Sincronização:** o som original chega ~0,10 s depois da imagem (microfone sem fios; medido na porta a fechar: imagem 15,1 s, som 15,2 s).
+  `scripts/cut.py` reescrito: lê o som 0,10 s à frente, planos com frames inteiros e som com amostras exatas (sem desvio).
+- "Espera, por favor, espera." com o bebé a chorar (9:29) logo a seguir à explicação da ginástica.
+- Banho: corredor com o Henrique ao colo (por cima de "Vamos lá tomar banhoca") → porta a fechar → a sair da casa de banho
+  com o bebé de toalha (18:51, aproximado com "crop").
+- Sopa servida: plano a deitar a sopa da embalagem na taça (42:22).
+- Saíram "a partir das seis da tarde isso é loucura" e "É sopa,". 27 cortes, 44,3 s.
