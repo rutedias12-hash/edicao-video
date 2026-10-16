@@ -58,3 +58,11 @@
   com o bebé de toalha (18:51, aproximado com "crop").
 - Sopa servida: plano a deitar a sopa da embalagem na taça (42:22).
 - Saíram "a partir das seis da tarde isso é loucura" e "É sopa,". 27 cortes, 44,3 s.
+
+### Iteração 5 (base = versão 3, a pedido da Rute)
+- Sem textos nem legendas (`scripts/finish_clean.sh`). Mantida a correção de sincronização de 0,10 s.
+- 42 planos em 44,9 s (~1,1 s cada), alternando ângulos: entrada (frente / lado perto / frente com bebé; corredor removido),
+  batatas (frente, cozinha de costas com o bebé na cadeira, cortar, tabuleiros, lava-loiça), ovos (de costas a partir, frigideira, bater),
+  embalagem em grande plano por cima de "sopa de abóbora, camarão e coentros", deitar (corredor, embalar, berço), Clara (2 ângulos), sopa (a deitar + taças).
+- Banho: corredor a entrar com o bebé → do quarto, a porta fecha (18:46) → abre e sai com ele de toalha (18:51), sem aproximar.
+- Mantido "Espera, por favor, espera." com o bebé a chorar.
