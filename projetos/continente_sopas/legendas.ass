@@ -1,0 +1,37 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Vlog,Poppins Medium,54,&H00FFFFFF,&H00FFFFFF,&H50000000,&H64000000,0,0,0,0,100,100,0,0,1,1.2,2,2,90,90,560,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:02.25,0:00:03.38,Vlog,,0,0,0,,Dez pras seis.
+Dialogue: 0,0:00:03.38,0:00:04.53,Vlog,,0,0,0,,Este dia nunca mais acaba,
+Dialogue: 0,0:00:04.53,0:00:06.27,Vlog,,0,0,0,,Estou de rastos.
+Dialogue: 0,0:00:06.27,0:00:07.99,Vlog,,0,0,0,,Vou preparar o jantar.
+Dialogue: 0,0:00:09.21,0:00:10.25,Vlog,,0,0,0,,A partir das seis da tarde
+Dialogue: 0,0:00:10.25,0:00:11.18,Vlog,,0,0,0,,isso é loucura, né?
+Dialogue: 0,0:00:11.18,0:00:12.48,Vlog,,0,0,0,,Espera, filho.
+Dialogue: 0,0:00:12.48,0:00:13.25,Vlog,,0,0,0,,Vou ser honesta,
+Dialogue: 0,0:00:13.25,0:00:14.17,Vlog,,0,0,0,,eu ia fazer jantar,
+Dialogue: 0,0:00:14.17,0:00:15.57,Vlog,,0,0,0,,mas já não vou, porque, não dá.
+Dialogue: 0,0:00:15.57,0:00:16.73,Vlog,,0,0,0,,Vou fazer uns ovos e vou
+Dialogue: 0,0:00:16.73,0:00:17.65,Vlog,,0,0,0,,servir a sopa.
+Dialogue: 0,0:00:17.65,0:00:19.13,Vlog,,0,0,0,,Eu descobri a melhor sopa de
+Dialogue: 0,0:00:19.13,0:00:20.26,Vlog,,0,0,0,,sempre no Continente,
+Dialogue: 0,0:00:20.26,0:00:21.30,Vlog,,0,0,0,,a receita do chef,
+Dialogue: 0,0:00:21.30,0:00:22.34,Vlog,,0,0,0,,sopa de abóbora,
+Dialogue: 0,0:00:22.34,0:00:24.32,Vlog,,0,0,0,,camarão e coentros, é maravilhosa.
+Dialogue: 0,0:00:24.32,0:00:24.94,Vlog,,0,0,0,,Amamos.
+Dialogue: 0,0:00:24.94,0:00:26.24,Vlog,,0,0,0,,Vamos lá tomar banhoca,
+Dialogue: 0,0:00:30.20,0:00:31.05,Vlog,,0,0,0,,É sopa,
+Dialogue: 0,0:00:31.05,0:00:31.75,Vlog,,0,0,0,,não é doce,
+Dialogue: 0,0:00:31.75,0:00:33.75,Vlog,,0,0,0,,não pode ser sempre doce, filho.
+Dialogue: 0,0:00:38.02,0:00:41.07,Vlog,,0,0,0,,Posso ficar com mais sopa?
+Dialogue: 0,0:00:41.07,0:00:41.65,Vlog,,0,0,0,,Podes, podes.
