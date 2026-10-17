@@ -75,13 +75,14 @@ def ffprobe_dur(p):
 # Ecrã dividido: 3 faixas 1080x640 com os planos horizontais originais (ela deitada ao comprido),
 # a entrar uma de cada vez de cima para baixo, alternando o lado (esq., dir., esq.), ease-out cúbico.
 SPLIT_PANELS = [("IMG_6300", 4.0, "ler", -1), ("IMG_6306", 6.0, "relaxar", 1), ("IMG_6305", 8.0, "trabalhar", -1)]
-SPLIT_BG = ("IMG_6316", 3.06)      # o sofá-cama continua por trás enquanto as faixas entram
+CLEAN = {"IMG_6310", "IMG_6314", "IMG_6315", "IMG_6316"}   # stop-motion: tirar as manchas do tecido (tools/manchas.py)
 SPLIT_STEP, SPLIT_SLIDE = 0.40, 0.45
 
 
-def make_split(out, dur):
-    inputs = ["-ss", f"{SPLIT_BG[1]:.3f}", "-t", f"{dur:.3f}", "-i", str(SRC / f"{SPLIT_BG[0]}.MOV")]
-    fc = [f"[0:v]scale=1080:1920:flags=lanczos,setsar=1,fps={FPS},{GRADE}[bg]"]
+def make_split(out, dur, bg_clip):
+    # fundo: o último frame do sofá-cama (já limpo) parado, enquanto as faixas entram
+    inputs = ["-sseof", "-0.05", "-i", str(bg_clip)]
+    fc = [f"[0:v]tpad=stop_mode=clone:stop_duration={dur + 1:.2f},trim=duration={dur:.3f},setpts=PTS-STARTPTS[bg]"]
     last = "bg"
     for k, (src, ss, _, side) in enumerate(SPLIT_PANELS, start=1):
         inputs += ["-ss", f"{ss:.3f}", "-t", f"{dur:.3f}", "-i", str(SRC / f"{src}.MOV")]
@@ -103,13 +104,17 @@ def build_base():
         out = clips / f"seg_{i:02d}_{src}.mp4"
         if src == "SPLIT":
             print(f"  [{i:02d}] {t:6.2f}s  {note}")
-            make_split(out, dur); segs.append(out); t += dur
+            make_split(out, dur, segs[-1]); segs.append(out); t += dur
             continue
         vf = ",".join(p for p in [geo, f"setpts=PTS/{speed}" if speed != 1 else "", "scale=1080:1920:flags=lanczos", "setsar=1", GRADE] if p)
         print(f"  [{i:02d}] {t:6.2f}s  {src} {ss:.2f}+{dur:.2f}  {note}")
         run(["ffmpeg", "-y", "-ss", f"{ss:.3f}", "-t", f"{dur * speed:.3f}", "-i", str(SRC / f"{src}.MOV"), "-t", f"{dur:.3f}",
              "-vf", vf, "-an", "-r", str(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "17",
              "-pix_fmt", "yuv420p", str(out)])
+        if src in CLEAN:
+            raw = out.with_name(out.stem + "_manchas.mp4")
+            out.replace(raw)
+            subprocess.run([sys.executable, str(ED / "tools" / "manchas.py"), str(raw), str(out)], check=True)
         segs.append(out); t += dur
     lst = ED / "_concat.txt"
     lst.write_text("".join(f"file '{p}'\n" for p in segs))

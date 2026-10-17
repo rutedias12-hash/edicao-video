@@ -47,3 +47,6 @@ personalização + encosto ajustável → arcas → stop-motion sofá→cama →
   legendas básicas Inter 500 38px brancas ao centro (sem legendas durante o título). "Fonte de sistema" = Inter (equivalente livre da SF Pro).
 - v9: sem sombras em nenhum texto; legendas básicas 26px (≈ tamanho 5 no CapCut) com espaçamento -0,045em.
 - v10: títulos e destaques em butter yellow (#F8E27A) em vez do Pantone Winter White; legendas básicas continuam brancas; sem sombras.
+- v11: cor dos títulos/destaques de volta ao #F5ECD2 (a "butter yellow" da cliente = cor da v8), sem sombras.
+  Manchas do tecido removidas nos 4 planos do stop-motion e no fundo do ecrã dividido (tools/manchas.py):
+  ganho de baixa frequência = tom do tecido à volta / tom local (convolução normalizada, sem as próprias manchas), 2 passagens (grande e pequena), buracos fechados dentro do tecido incluídos. Mantém a textura. Fica a ruga do 1.º passo (é dobra, não mancha).
