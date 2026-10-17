@@ -11,7 +11,6 @@
       @font-face { font-family: "Inter"; src: url("fonts/Inter-800.woff2") format("woff2"); font-weight: 800; font-display: block; }
       :root {
         --destaque: #f5ecd2;   /* Pantone 11-0507 TCX (Winter White) */
-        --sombra: 0 3px 18px rgba(30, 22, 16, 0.45), 0 1px 3px rgba(30, 22, 16, 0.35);
       }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
@@ -23,19 +22,19 @@
         position: absolute; left: 70px; right: 70px; top: 960px;
         font-family: "Inter", system-ui, sans-serif; font-weight: 800;
         font-size: 112px; line-height: 0.86; letter-spacing: -0.055em;
-        color: var(--destaque); text-shadow: var(--sombra);
+        color: var(--destaque);
       }
       #titulo .c { opacity: 0; }
       #titulo .c { position: relative; }
       #titulo .k {
         position: absolute; right: -14px; top: 0.06em; width: 8px; height: 0.78em; opacity: 0;
-        background: var(--destaque); box-shadow: var(--sombra);
+        background: var(--destaque);
       }
 
       /* Destaques das características (número/palavra grande + texto mais pequeno, juntos) */
       .hl {
         position: absolute; top: 1080px; width: 900px;
-        font-family: "Inter", system-ui, sans-serif; color: var(--destaque); text-shadow: var(--sombra);
+        font-family: "Inter", system-ui, sans-serif; color: var(--destaque);
         opacity: 0;
       }
       .hl.esq { left: 70px; text-align: left; }
@@ -48,8 +47,8 @@
       /* Legendas básicas: pequenas, brancas, ao centro */
       .cap {
         position: absolute; left: 140px; right: 140px; top: 940px; text-align: center;
-        font-family: "Inter", system-ui, sans-serif; font-weight: 500; font-size: 38px; line-height: 1.15;
-        letter-spacing: -0.01em; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.5);
+        font-family: "Inter", system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.15;
+        letter-spacing: -0.045em; color: #fff;   /* ≈ tamanho 5 no CapCut */
         opacity: 0;
       }
     </style>
@@ -104,9 +103,9 @@
       CAPS.forEach(([a,b,txt],i) => { const d=document.createElement("div"); d.className="cap"; d.id="cap"+i; d.textContent=txt; capsEl.appendChild(d); });
 
       (async () => {
-        await Promise.all([document.fonts.load('800 112px "Inter"', "Aé6?"), document.fonts.load('500 38px "Inter"', "Aé")]);
+        await Promise.all([document.fonts.load('800 112px "Inter"', "Aé6?"), document.fonts.load('500 26px "Inter"', "Aé")]);
         await document.fonts.ready;
-        if (!document.fonts.check('800 112px "Inter"', "Aé") || !document.fonts.check('500 38px "Inter"', "Aé")) throw new Error("Inter não carregou");
+        if (!document.fonts.check('800 112px "Inter"', "Aé") || !document.fonts.check('500 26px "Inter"', "Aé")) throw new Error("Inter não carregou");
 
         const tl = gsap.timeline({ paused: true });
         // Typewriter: cada palavra é escrita letra a letra enquanto é dita; cursor na última letra escrita
