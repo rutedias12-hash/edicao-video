@@ -50,3 +50,4 @@ personalização + encosto ajustável → arcas → stop-motion sofá→cama →
 - v11: cor dos títulos/destaques de volta ao #F5ECD2 (a "butter yellow" da cliente = cor da v8), sem sombras.
   Manchas do tecido removidas nos 4 planos do stop-motion e no fundo do ecrã dividido (tools/manchas.py):
   ganho de baixa frequência = tom do tecido à volta / tom local (convolução normalizada, sem as próprias manchas), 2 passagens (grande e pequena), buracos fechados dentro do tecido incluídos. Mantém a textura. Fica a ruga do 1.º passo (é dobra, não mancha).
+- Exportação final 4K: final_4k.mp4 (2160x3840, 30 fps, 20 s, ~80 MB, H.264 CRF 18, -17,2 LUFS). Textos HyperFrames renderizados a 4K (--resolution portrait-4k). OKS_4K=1 python edit/build.py base|final.

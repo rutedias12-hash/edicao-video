@@ -8,5 +8,6 @@ Para retomar numa sessão nova:
 3. Copiar esta pasta para `videos/oksofas/edit/` (build.py, overlays.json, project.md, assets/, animations/)
 4. Em cada `animations/slot_N/`: `npx --yes hyperframes render . --format webm --fps 30 -o render.webm`
 5. `python videos/oksofas/edit/build.py base` e depois `python videos/oksofas/edit/build.py final`
+   (4K: `npx --yes hyperframes render animations/texto --format webm --fps 30 --resolution portrait-4k -o animations/texto/render_4k.webm`, depois `OKS_4K=1` antes dos dois comandos)
 
 Estado e decisões: ver `project.md`.

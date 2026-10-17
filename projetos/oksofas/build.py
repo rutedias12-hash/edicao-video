@@ -13,6 +13,11 @@ from pathlib import Path
 ED = Path(__file__).resolve().parent
 SRC = ED.parent
 FPS = 30
+# 4K: OKS_4K=1 python edit/build.py base|final  → clips_4k/, base_4k.mp4, final_4k.mp4 (2160x3840)
+import os
+SC = 2 if os.environ.get("OKS_4K") else 1
+W, H = 1080 * SC, 1920 * SC
+SUF = "_4k" if SC == 2 else ""
 LOUDNESS = -17        # LUFS (era -14; pedido para baixar o volume)
 MUSIC_OFFSET = 13.10  # subida da faixa (29,24 s) cai quando aparece o sofá-cama (16,14 s)
 MUSIC_GAIN_DB = -8    # nível da música nas partes sem voz
@@ -30,7 +35,7 @@ def crop(x):                            # recorte 9:16 de um plano horizontal 38
 _P = "min(on/54,1)"; _E = f"if(lt({_P},0.5),4*pow({_P},3),1-pow(-2*{_P}+2,3)/2)"
 ZOOM_OUT = (crop(1000) + ",scale=2430:4320:flags=lanczos,fps=30,"
             f"zoompan=z='2.2-1.2*{_E}':x='(iw-iw/zoom)/2':"
-            f"y='max(0,min(ih-ih/zoom,(0.26+0.24*{_E})*ih-ih/zoom/2))':d=1:s=1080x1920:fps=30")
+            f"y='max(0,min(ih-ih/zoom,(0.26+0.24*{_E})*ih-ih/zoom/2))':d=1:s={W}x{H}:fps=30")
 
 # (fonte, início, duração na saída, geometria, nota[, velocidade])
 SEGMENTS = [
@@ -86,18 +91,18 @@ def make_split(out, dur, bg_clip):
     last = "bg"
     for k, (src, ss, _, side) in enumerate(SPLIT_PANELS, start=1):
         inputs += ["-ss", f"{ss:.3f}", "-t", f"{dur:.3f}", "-i", str(SRC / f"{src}.MOV")]
-        fc.append(f"[{k}:v]crop=3645:2160,scale=1080:640:flags=lanczos,setsar=1,fps={FPS},{GRADE}[p{k}]")
+        fc.append(f"[{k}:v]crop=3645:2160,scale={W}:{640 * SC}:flags=lanczos,setsar=1,fps={FPS},{GRADE}[p{k}]")
         t0 = (k - 1) * SPLIT_STEP
         e = f"(1-pow(1-min(max((t-{t0})/{SPLIT_SLIDE},0),1),3))"
-        x = f"{side}*1080*(1-{e})"
-        fc.append(f"[{last}][p{k}]overlay=x='{x}':y={(k - 1) * 640}:eof_action=pass[s{k}]")
+        x = f"{side}*{W}*(1-{e})"
+        fc.append(f"[{last}][p{k}]overlay=x='{x}':y={(k - 1) * 640 * SC}:eof_action=pass[s{k}]")
         last = f"s{k}"
     run(["ffmpeg", "-y", *inputs, "-filter_complex", ";".join(fc), "-map", f"[{last}]", "-t", f"{dur:.3f}",
          "-an", "-r", str(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", str(out)])
 
 
 def build_base():
-    clips = ED / "clips_graded"; clips.mkdir(exist_ok=True)
+    clips = ED / ("clips_4k" if SC == 2 else "clips_graded"); clips.mkdir(exist_ok=True)
     segs, t = [], 0.0
     for i, (src, ss, dur, geo, note, *spd) in enumerate(SEGMENTS):
         speed = spd[0] if spd else 1.0
@@ -106,7 +111,7 @@ def build_base():
             print(f"  [{i:02d}] {t:6.2f}s  {note}")
             make_split(out, dur, segs[-1]); segs.append(out); t += dur
             continue
-        vf = ",".join(p for p in [geo, f"setpts=PTS/{speed}" if speed != 1 else "", "scale=1080:1920:flags=lanczos", "setsar=1", GRADE] if p)
+        vf = ",".join(p for p in [geo, f"setpts=PTS/{speed}" if speed != 1 else "", f"scale={W}:{H}:flags=lanczos", "setsar=1", GRADE] if p)
         print(f"  [{i:02d}] {t:6.2f}s  {src} {ss:.2f}+{dur:.2f}  {note}")
         run(["ffmpeg", "-y", "-ss", f"{ss:.3f}", "-t", f"{dur * speed:.3f}", "-i", str(SRC / f"{src}.MOV"), "-t", f"{dur:.3f}",
              "-vf", vf, "-an", "-r", str(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "17",
@@ -118,7 +123,7 @@ def build_base():
         segs.append(out); t += dur
     lst = ED / "_concat.txt"
     lst.write_text("".join(f"file '{p}'\n" for p in segs))
-    run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(ED / "base_video.mp4")])
+    run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(ED / f"base_video{SUF}.mp4")])
 
     # Vozes: cada uma com fades de 30 ms, atrasada para o tempo de saída e misturada
     inputs, parts = [], []
@@ -130,17 +135,17 @@ def build_base():
     mix = "".join(f"[v{k}]" for k in range(len(VOICE)))
     fc = ";".join(parts) + f";{mix}amix=inputs={len(VOICE)}:normalize=0,apad[a]"
     run(["ffmpeg", "-y", *inputs, "-filter_complex", fc, "-map", "[a]", "-t", f"{t:.3f}",
-         "-c:a", "pcm_s16le", str(ED / "voice.wav")])
-    run(["ffmpeg", "-y", "-i", str(ED / "base_video.mp4"), "-i", str(ED / "voice.wav"),
-         "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", str(ED / "base.mp4")])
-    print(f"base.mp4  {ffprobe_dur(ED / 'base.mp4'):.2f}s (esperado {t:.2f}s)")
+         "-c:a", "pcm_s16le", str(ED / f"voice{SUF}.wav")])
+    run(["ffmpeg", "-y", "-i", str(ED / f"base_video{SUF}.mp4"), "-i", str(ED / f"voice{SUF}.wav"),
+         "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", str(ED / f"base{SUF}.mp4")])
+    print(f"base{SUF}.mp4  {ffprobe_dur(ED / f'base{SUF}.mp4'):.2f}s (esperado {t:.2f}s)")
 
 
 def build_final():
     overlays = json.loads((ED / "overlays.json").read_text())
-    inputs, fc, last = ["-i", str(ED / "base.mp4")], [], "0:v"
+    inputs, fc, last = ["-i", str(ED / f"base{SUF}.mp4")], [], "0:v"
     for k, o in enumerate(overlays, start=1):
-        inputs += ["-c:v", "libvpx-vp9", "-i", str(ED / o["file"])]
+        inputs += ["-c:v", "libvpx-vp9", "-i", str(ED / (o["file"].replace(".webm", "_4k.webm") if SC == 2 else o["file"]))]
         st = o["start"]
         fc.append(f"[{k}:v]setpts=PTS-STARTPTS+{st}/TB,format=yuva420p[o{k}]")
         fc.append(f"[{last}][o{k}]overlay=0:0:eof_action=pass:enable='between(t,{st},{st + o['duration']})'[b{k}]")
@@ -150,7 +155,7 @@ def build_final():
     # (sidechain), fade-out no fim. Depois normaliza tudo junto.
     music = sorted(ED.glob("assets/music.*"))
     if music:
-        total = ffprobe_dur(ED / "base.mp4")
+        total = ffprobe_dur(ED / f"base{SUF}.mp4")
         k = len(overlays) + 1
         inputs += ["-ss", f"{MUSIC_OFFSET:.3f}", "-i", str(music[0])]
         g, r = 10 ** (MUSIC_DUCK_DB / 20), 0.25   # baixa a música nas janelas de voz, rampas de 0,25 s
@@ -167,8 +172,8 @@ def build_final():
     fc.append(f"[{src_a}]loudnorm=I={LOUDNESS}:TP=-1.5:LRA=11[aout]")
     run(["ffmpeg", "-y", *inputs, "-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "[aout]",
          "-r", str(FPS), "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p",
-         "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", str(ED / "final.mp4")])
-    print(f"final.mp4  {ffprobe_dur(ED / 'final.mp4'):.2f}s")
+         "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", str(ED / f"final{SUF}.mp4")])
+    print(f"final{SUF}.mp4  {ffprobe_dur(ED / f'final{SUF}.mp4'):.2f}s")
 
 
 if __name__ == "__main__":
