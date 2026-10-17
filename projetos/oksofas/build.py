@@ -19,10 +19,10 @@ SC = 2 if os.environ.get("OKS_4K") else 1
 W, H = 1080 * SC, 1920 * SC
 SUF = "_4k" if SC == 2 else ""
 LOUDNESS = -17        # LUFS (era -14; pedido para baixar o volume)
-MUSIC_OFFSET = 13.10  # subida da faixa (29,24 s) cai quando aparece o sofá-cama (16,14 s)
+MUSIC_OFFSET = 12.86  # subida da faixa (29,24 s) cai quando aparece o sofá-cama (16,38 s)
 MUSIC_GAIN_DB = -8    # nível da música nas partes sem voz
 MUSIC_DUCK_DB = -13   # quanto a música baixa enquanto ela fala
-DUCK_WINDOWS = [(0.0, 19.00)]   # a voz é contínua do início até "aconselhamos."
+DUCK_WINDOWS = [(0.0, 19.10)]   # a voz é contínua do início até "aconselhamos."
 GRADE = "eq=contrast=1.04:saturation=1.06:gamma=1.01,colorbalance=rm=0.015:bm=-0.015"
 
 ROT = "transpose=2"                     # horizontal filmado de cima → rodar 90° (encosto à esquerda)
@@ -45,16 +45,17 @@ SEGMENTS = [
     ("IMG_6305", 3.00, 1.35, ROT, "trabalhar"),
     ("IMG_6306", 4.00, 1.35, ROT, "relaxar"),
     ("IMG_6303", 0.80, 3.48, ROT, "arcas (2x: abre a arca e mexe lá dentro)", 2.0),
-    ("IMG_6307", 2.70, 1.10, ROT2, "chaise redonda  ← \"Chaise longue redonda\""),
-    ("IMG_6309", 4.60, 1.32, ROT2, "encosto ajustável  ← \"encosto de cabeça ajustável\""),
-    ("IMG_6310", 10.30, 0.47, "", "stop 1 (fechado)  ← \"transforma-se\""),
-    ("IMG_6314", 2.00, 0.47, "", "stop 2"),
-    ("IMG_6315", 3.00, 0.48, "", "stop 3"),
-    ("IMG_6316", 1.80, 1.26, "", "stop 4 (cama) ← \"cama\""),
-    ("SPLIT", 0.0, 2.60, "", "ecrã dividido em 3: ler / relaxar / trabalhar ← \"Por isso, claro que aconselhamos.\""),
+    ("IMG_6307", 2.70, 1.20, ROT2, "chaise redonda  ← \"Chaise longue redonda\""),
+    ("IMG_6309", 4.60, 1.70, ROT2, "encosto ajustável  ← \"encosto de cabeça ajustável\""),
+    ("IMG_6310", 10.30, 0.39, "", "stop 1 (fechado)  ← \"passa\""),
+    ("IMG_6314", 2.00, 0.39, "", "stop 2"),
+    ("IMG_6315", 3.00, 0.40, "", "stop 3"),
+    ("IMG_6316", 1.80, 1.02, "", "stop 4 (cama) ← \"cama\""),
+    ("SPLIT", 0.0, 2.60, "", "ecrã dividido em 3: ler / relaxar / trabalhar ← \"Por isso, é claro que eu aconselho sempre.\""),
 ]
 
 # (fonte, início, fim, início_na_saída[, ganho dB para igualar as vozes]) — limites com folga sobre as palavras
+FECHO2_DB = 8.5   # 2.ª nota de voz (~-25,5 dB RMS) → ~-17 dB como as outras falas
 FECHO_DB = 10.5   # ganho da nota de voz para igualar as falas do vídeo (~-17 dB RMS)
 VOICE = [
     ("IMG_6297", 1.18, 4.60, 0.00, 2.0),     # E será que depois de seis meses ainda aconselhamos este sofá?
@@ -62,9 +63,9 @@ VOICE = [
     ("IMG_6302", 12.66, 15.08, 6.28),        # desde o comprimento, cor, arrumação,
     ("IMG_6303", 0.06, 3.44, 8.87, 4.0),     # Ele tem duas arcas escondidas nos braços do sofá.
     # Gravação de fecho (nota de voz, 3.ª versão): partida entre "redonda," e "encosto"; pausas encurtadas
-    ("fecho/fecho.m4a", 15.80, 16.74, 12.36, FECHO_DB - 4),   # Chaise longue redonda,
-    ("fecho/fecho.m4a", 16.74, 20.90, 13.36, FECHO_DB + 1),   # encosto de cabeça ajustável e transforma-se de sofá a cama sem esforço.
-    ("fecho/fecho.m4a", 22.56, 24.06, 17.50, FECHO_DB + 4),   # Por isso, claro que aconselhamos.
+    # 2.ª gravação de fecho (fecho2.m4a), em duas partes para tirar a pausa de ~0,9 s depois de "ajustável"
+    ("fecho/fecho2.m4a", 0.28, 2.90, 12.36, FECHO2_DB),      # Chaise longue redonda, encosto de cabeça ajustável
+    ("fecho/fecho2.m4a", 3.62, 7.85, 14.96, FECHO2_DB),      # e passa de sofá a cama sem esforço. Por isso, é claro que eu aconselho sempre.
 ]
 
 

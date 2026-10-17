@@ -51,3 +51,5 @@ personalização + encosto ajustável → arcas → stop-motion sofá→cama →
   Manchas do tecido removidas nos 4 planos do stop-motion e no fundo do ecrã dividido (tools/manchas.py):
   ganho de baixa frequência = tom do tecido à volta / tom local (convolução normalizada, sem as próprias manchas), 2 passagens (grande e pequena), buracos fechados dentro do tecido incluídos. Mantém a textura. Fica a ruga do 1.º passo (é dobra, não mancha).
 - Exportação final 4K: final_4k.mp4 (2160x3840, 30 fps, 20 s, ~80 MB, H.264 CRF 18, -17,2 LUFS). Textos HyperFrames renderizados a 4K (--resolution portrait-4k). OKS_4K=1 python edit/build.py base|final.
+- v12 (final 4K): nova gravação de fecho (fecho/fecho2.m4a): "Chaise longue redonda, encosto de cabeça ajustável [pausa de 0,9 s cortada] e passa de sofá a cama sem esforço. Por isso, é claro que eu aconselho sempre." +8,5 dB.
+  Imagem reacertada: chaise 12,30 / encosto 13,50 ("encosto") / stop-motion 15,20 ("passa") / cama 16,38 ("cama") / ecrã dividido 17,40. Legendas e destaques reacertados. -16,9 LUFS, pico -3,9 dBFS. final.mp4 e final_4k.mp4.
