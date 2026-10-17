@@ -14,10 +14,10 @@ ED = Path(__file__).resolve().parent
 SRC = ED.parent
 FPS = 30
 LOUDNESS = -17        # LUFS (era -14; pedido para baixar o volume)
-MUSIC_OFFSET = 16.99  # subida da faixa (29,24 s) cai quando acaba a fala (12,25 s)
+MUSIC_OFFSET = 12.48  # subida da faixa (29,24 s) cai quando aparece o sofá-cama (16,76 s)
 MUSIC_GAIN_DB = -8    # nível da música nas partes sem voz
 MUSIC_DUCK_DB = -13   # quanto a música baixa enquanto ela fala
-DUCK_WINDOWS = [(0.0, 12.25)]   # a voz é contínua do início até às arcas
+DUCK_WINDOWS = [(0.0, 20.06)]   # a voz é contínua do início até "aconselhamos."
 GRADE = "eq=contrast=1.04:saturation=1.06:gamma=1.01,colorbalance=rm=0.015:bm=-0.015"
 
 ROT = "transpose=2"                     # horizontal filmado de cima → rodar 90° (encosto à esquerda)
@@ -40,20 +40,25 @@ SEGMENTS = [
     ("IMG_6305", 3.00, 1.35, ROT, "trabalhar"),
     ("IMG_6306", 4.00, 1.35, ROT, "relaxar"),
     ("IMG_6303", 0.80, 3.60, ROT, "arcas (2x: abre a arca e mexe lá dentro)", 2.0),
-    ("IMG_6307", 2.70, 1.80, ROT2, "chaise redonda"),
-    ("IMG_6309", 4.60, 2.42, ROT2, "encosto ajustável"),
-    ("IMG_6310", 10.30, 0.40, "", "stop 1 (fechado)"),
-    ("IMG_6314", 2.00, 0.40, "", "stop 2"),
-    ("IMG_6315", 3.00, 0.40, "", "stop 3"),
-    ("IMG_6316", 1.80, 2.00, "", "stop 4 (cama) — último plano"),
+    ("IMG_6307", 2.70, 1.60, ROT2, "chaise redonda  ← \"Chaise longue redonda\""),
+    ("IMG_6309", 4.60, 1.32, ROT2, "encosto ajustável  ← \"encosto de cabeça ajustável\""),
+    ("IMG_6310", 10.30, 0.47, "", "stop 1 (fechado)  ← \"transforma-se\""),
+    ("IMG_6314", 2.00, 0.47, "", "stop 2"),
+    ("IMG_6315", 3.00, 0.48, "", "stop 3"),
+    ("IMG_6316", 1.80, 4.24, "", "stop 4 (cama) ← \"cama\" — último plano"),
 ]
 
 # (fonte, início, fim, início_na_saída[, ganho dB para igualar as vozes]) — limites com folga sobre as palavras
+FECHO_DB = 10.5   # ganho da nota de voz para igualar as falas do vídeo (~-17 dB RMS)
 VOICE = [
     ("IMG_6297", 1.18, 4.60, 0.00, 2.0),     # E será que depois de seis meses ainda aconselhamos este sofá?
     ("IMG_6302", 4.10, 6.86, 3.52),          # nós personalizamos absolutamente tudo neste sofá,  (sobre as atividades)
     ("IMG_6302", 12.66, 15.08, 6.28),        # desde o comprimento, cor, arrumação,
     ("IMG_6303", 0.06, 3.44, 8.87, 4.0),     # Ele tem duas arcas escondidas nos braços do sofá.
+    # Gravação de fecho (nota de voz, 3.ª versão): partida entre "redonda," e "encosto"
+    ("fecho/fecho.m4a", 15.80, 16.74, 12.50, FECHO_DB - 4),   # Chaise longue redonda,
+    ("fecho/fecho.m4a", 16.74, 20.90, 13.98, FECHO_DB + 1),   # encosto de cabeça ajustável e transforma-se de sofá a cama sem esforço.
+    ("fecho/fecho.m4a", 22.56, 24.06, 18.55, FECHO_DB + 4),   # Por isso, claro que aconselhamos.
 ]
 
 
@@ -86,8 +91,8 @@ def build_base():
     inputs, parts = [], []
     for k, (src, a, b, at, *gain) in enumerate(VOICE):
         d = b - a
-        inputs += ["-ss", f"{a:.3f}", "-t", f"{d:.3f}", "-i", str(SRC / f"{src}.MOV")]
-        parts.append(f"[{k}:a]aresample=48000,volume={gain[0] if gain else 0}dB,afade=t=in:st=0:d=0.03,afade=t=out:st={d-0.03:.3f}:d=0.03,"
+        inputs += ["-ss", f"{a:.3f}", "-t", f"{d:.3f}", "-i", str(SRC / (src if "." in src else f"{src}.MOV"))]
+        parts.append(f"[{k}:a]aresample=48000,highpass=f=80,volume={gain[0] if gain else 0}dB,alimiter=limit=0.89:level=0,afade=t=in:st=0:d=0.03,afade=t=out:st={d-0.03:.3f}:d=0.03,"
                      f"adelay={int(at*1000)}:all=1[v{k}]")
     mix = "".join(f"[v{k}]" for k in range(len(VOICE)))
     fc = ";".join(parts) + f";{mix}amix=inputs={len(VOICE)}:normalize=0,apad[a]"
