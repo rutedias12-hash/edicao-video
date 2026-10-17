@@ -34,3 +34,5 @@ personalização + encosto ajustável → arcas → stop-motion sofá→cama →
 - Nova ordem: gancho 0–3,42 → atividades 5×1,2 s (descansar, ler, trabalhar, relaxar, brincar) com "nós personalizamos… desde o comprimento, cor, arrumação" (3,52–8,70) → arcas 2x com a voz das arcas (9,52–12,90) → chaise → encosto → stop-motion → sofá-cama 2 s. Total 20,6 s. Sai o plano dela a falar (6302).
 - Sem sobreposições (overlays.json vazio); slots HyperFrames ficam guardados mas fora do vídeo.
 - Música: começa aos 16,34 s da faixa para a subida (29,24 s) cair quando acaba a fala (12,90 s); baixa -13 dB durante toda a fala. Voz 15-16 dB acima da música. -17,9 LUFS.
+- v5: zoom out mais rápido (1,8 s); removido o clip 6301 (a rir no encosto); atividades 4×1,35 s; arcas (imagem 8,82 s, voz 8,87 s) logo a seguir a "…arrumação"; música desloca-se para a subida cair aos 12,25 s. Total 19,8 s.
+- Fecho falado: nada utilizável nos clips (ver conversa). Sugerido gravar uma frase curta.

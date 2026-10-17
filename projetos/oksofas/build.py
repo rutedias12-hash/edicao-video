@@ -14,10 +14,10 @@ ED = Path(__file__).resolve().parent
 SRC = ED.parent
 FPS = 30
 LOUDNESS = -17        # LUFS (era -14; pedido para baixar o volume)
-MUSIC_OFFSET = 16.34  # subida da faixa (29,24 s) cai quando acaba a fala (12,90 s)
+MUSIC_OFFSET = 16.99  # subida da faixa (29,24 s) cai quando acaba a fala (12,25 s)
 MUSIC_GAIN_DB = -8    # nível da música nas partes sem voz
 MUSIC_DUCK_DB = -13   # quanto a música baixa enquanto ela fala
-DUCK_WINDOWS = [(0.0, 12.90)]   # a voz é contínua do início até às arcas
+DUCK_WINDOWS = [(0.0, 12.25)]   # a voz é contínua do início até às arcas
 GRADE = "eq=contrast=1.04:saturation=1.06:gamma=1.01,colorbalance=rm=0.015:bm=-0.015"
 
 ROT = "transpose=2"                     # horizontal filmado de cima → rodar 90° (encosto à esquerda)
@@ -25,9 +25,9 @@ ROT2 = "transpose=1"                    # 2.ª sala: rodar ao contrário para el
 def crop(x):                            # recorte 9:16 de um plano horizontal 3840x2160
     return f"crop=1215:2160:{x}:0"
 
-# Gancho: começa ~2,2x aproximado na cara dela e afasta (ease-in-out cúbico em 3,3 s) até ao plano 9:16 completo.
+# Gancho: começa ~2,2x aproximado na cara dela e afasta (ease-in-out cúbico em 1,8 s) até ao plano 9:16 completo.
 # Sobe a resolução antes do zoompan para o movimento não "tremer".
-_P = "min(on/100,1)"; _E = f"if(lt({_P},0.5),4*pow({_P},3),1-pow(-2*{_P}+2,3)/2)"
+_P = "min(on/54,1)"; _E = f"if(lt({_P},0.5),4*pow({_P},3),1-pow(-2*{_P}+2,3)/2)"
 ZOOM_OUT = (crop(1000) + ",scale=2430:4320:flags=lanczos,fps=30,"
             f"zoompan=z='2.2-1.2*{_E}':x='(iw-iw/zoom)/2':"
             f"y='max(0,min(ih-ih/zoom,(0.26+0.24*{_E})*ih-ih/zoom/2))':d=1:s=1080x1920:fps=30")
@@ -35,12 +35,11 @@ ZOOM_OUT = (crop(1000) + ",scale=2430:4320:flags=lanczos,fps=30,"
 # (fonte, início, duração na saída, geometria, nota[, velocidade])
 SEGMENTS = [
     ("IMG_6297", 1.18, 3.42, ZOOM_OUT, "gancho (zoom out)"),
-    ("IMG_6298", 0.40, 1.20, ROT, "descansar"),
-    ("IMG_6300", 0.90, 1.20, ROT, "ler"),
-    ("IMG_6305", 3.00, 1.20, ROT, "trabalhar"),
-    ("IMG_6306", 4.00, 1.20, ROT, "relaxar"),
-    ("IMG_6301", 0.00, 1.20, ROT, "brincar"),
-    ("IMG_6303", 0.80, 3.80, ROT, "arcas (2x: abre a arca e mexe lá dentro)", 2.0),
+    ("IMG_6298", 0.40, 1.35, ROT, "descansar"),
+    ("IMG_6300", 0.90, 1.35, ROT, "ler"),
+    ("IMG_6305", 3.00, 1.35, ROT, "trabalhar"),
+    ("IMG_6306", 4.00, 1.35, ROT, "relaxar"),
+    ("IMG_6303", 0.80, 3.60, ROT, "arcas (2x: abre a arca e mexe lá dentro)", 2.0),
     ("IMG_6307", 2.70, 1.80, ROT2, "chaise redonda"),
     ("IMG_6309", 4.60, 2.42, ROT2, "encosto ajustável"),
     ("IMG_6310", 10.30, 0.40, "", "stop 1 (fechado)"),
@@ -54,7 +53,7 @@ VOICE = [
     ("IMG_6297", 1.18, 4.60, 0.00, 2.0),     # E será que depois de seis meses ainda aconselhamos este sofá?
     ("IMG_6302", 4.10, 6.86, 3.52),          # nós personalizamos absolutamente tudo neste sofá,  (sobre as atividades)
     ("IMG_6302", 12.66, 15.08, 6.28),        # desde o comprimento, cor, arrumação,
-    ("IMG_6303", 0.06, 3.44, 9.52, 4.0),     # Ele tem duas arcas escondidas nos braços do sofá.
+    ("IMG_6303", 0.06, 3.44, 8.87, 4.0),     # Ele tem duas arcas escondidas nos braços do sofá.
 ]
 
 
