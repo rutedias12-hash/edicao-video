@@ -46,3 +46,4 @@ personalização + encosto ajustável → arcas → stop-motion sofá→cama →
   destaques grandes cor Pantone 11-0507 TCX (#F5ECD2), Inter 800, espaçamento -0,055/-0,06em, entrelinha 0,8–0,86, alternando esq./dir.: 100% personalizável (+comprimento, cor, arrumação) / 2 arcas escondidas / chaise longue redonda / encosto de cabeça ajustável / de sofá a cama sem esforço;
   legendas básicas Inter 500 38px brancas ao centro (sem legendas durante o título). "Fonte de sistema" = Inter (equivalente livre da SF Pro).
 - v9: sem sombras em nenhum texto; legendas básicas 26px (≈ tamanho 5 no CapCut) com espaçamento -0,045em.
+- v10: títulos e destaques em butter yellow (#F8E27A) em vez do Pantone Winter White; legendas básicas continuam brancas; sem sombras.
