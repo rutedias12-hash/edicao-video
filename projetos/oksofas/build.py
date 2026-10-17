@@ -14,10 +14,10 @@ ED = Path(__file__).resolve().parent
 SRC = ED.parent
 FPS = 30
 LOUDNESS = -17        # LUFS (era -14; pedido para baixar o volume)
-MUSIC_OFFSET = 12.48  # subida da faixa (29,24 s) cai quando aparece o sofá-cama (16,76 s)
+MUSIC_OFFSET = 13.10  # subida da faixa (29,24 s) cai quando aparece o sofá-cama (16,14 s)
 MUSIC_GAIN_DB = -8    # nível da música nas partes sem voz
 MUSIC_DUCK_DB = -13   # quanto a música baixa enquanto ela fala
-DUCK_WINDOWS = [(0.0, 20.06)]   # a voz é contínua do início até "aconselhamos."
+DUCK_WINDOWS = [(0.0, 19.00)]   # a voz é contínua do início até "aconselhamos."
 GRADE = "eq=contrast=1.04:saturation=1.06:gamma=1.01,colorbalance=rm=0.015:bm=-0.015"
 
 ROT = "transpose=2"                     # horizontal filmado de cima → rodar 90° (encosto à esquerda)
@@ -39,13 +39,14 @@ SEGMENTS = [
     ("IMG_6300", 0.90, 1.35, ROT, "ler"),
     ("IMG_6305", 3.00, 1.35, ROT, "trabalhar"),
     ("IMG_6306", 4.00, 1.35, ROT, "relaxar"),
-    ("IMG_6303", 0.80, 3.60, ROT, "arcas (2x: abre a arca e mexe lá dentro)", 2.0),
-    ("IMG_6307", 2.70, 1.60, ROT2, "chaise redonda  ← \"Chaise longue redonda\""),
+    ("IMG_6303", 0.80, 3.48, ROT, "arcas (2x: abre a arca e mexe lá dentro)", 2.0),
+    ("IMG_6307", 2.70, 1.10, ROT2, "chaise redonda  ← \"Chaise longue redonda\""),
     ("IMG_6309", 4.60, 1.32, ROT2, "encosto ajustável  ← \"encosto de cabeça ajustável\""),
     ("IMG_6310", 10.30, 0.47, "", "stop 1 (fechado)  ← \"transforma-se\""),
     ("IMG_6314", 2.00, 0.47, "", "stop 2"),
     ("IMG_6315", 3.00, 0.48, "", "stop 3"),
-    ("IMG_6316", 1.80, 4.24, "", "stop 4 (cama) ← \"cama\" — último plano"),
+    ("IMG_6316", 1.80, 1.26, "", "stop 4 (cama) ← \"cama\""),
+    ("SPLIT", 0.0, 2.60, "", "ecrã dividido em 3: ler / relaxar / trabalhar ← \"Por isso, claro que aconselhamos.\""),
 ]
 
 # (fonte, início, fim, início_na_saída[, ganho dB para igualar as vozes]) — limites com folga sobre as palavras
@@ -55,10 +56,10 @@ VOICE = [
     ("IMG_6302", 4.10, 6.86, 3.52),          # nós personalizamos absolutamente tudo neste sofá,  (sobre as atividades)
     ("IMG_6302", 12.66, 15.08, 6.28),        # desde o comprimento, cor, arrumação,
     ("IMG_6303", 0.06, 3.44, 8.87, 4.0),     # Ele tem duas arcas escondidas nos braços do sofá.
-    # Gravação de fecho (nota de voz, 3.ª versão): partida entre "redonda," e "encosto"
-    ("fecho/fecho.m4a", 15.80, 16.74, 12.50, FECHO_DB - 4),   # Chaise longue redonda,
-    ("fecho/fecho.m4a", 16.74, 20.90, 13.98, FECHO_DB + 1),   # encosto de cabeça ajustável e transforma-se de sofá a cama sem esforço.
-    ("fecho/fecho.m4a", 22.56, 24.06, 18.55, FECHO_DB + 4),   # Por isso, claro que aconselhamos.
+    # Gravação de fecho (nota de voz, 3.ª versão): partida entre "redonda," e "encosto"; pausas encurtadas
+    ("fecho/fecho.m4a", 15.80, 16.74, 12.36, FECHO_DB - 4),   # Chaise longue redonda,
+    ("fecho/fecho.m4a", 16.74, 20.90, 13.36, FECHO_DB + 1),   # encosto de cabeça ajustável e transforma-se de sofá a cama sem esforço.
+    ("fecho/fecho.m4a", 22.56, 24.06, 17.50, FECHO_DB + 4),   # Por isso, claro que aconselhamos.
 ]
 
 
@@ -71,12 +72,39 @@ def ffprobe_dur(p):
                                           "-of", "csv=p=0", str(p)]).decode())
 
 
+# Ecrã dividido: 3 faixas 1080x640 com os planos horizontais originais (ela deitada ao comprido),
+# a entrar uma de cada vez de cima para baixo, alternando o lado (esq., dir., esq.), ease-out cúbico.
+SPLIT_PANELS = [("IMG_6300", 4.0, "ler", -1), ("IMG_6306", 6.0, "relaxar", 1), ("IMG_6305", 8.0, "trabalhar", -1)]
+SPLIT_BG = ("IMG_6316", 3.06)      # o sofá-cama continua por trás enquanto as faixas entram
+SPLIT_STEP, SPLIT_SLIDE = 0.40, 0.45
+
+
+def make_split(out, dur):
+    inputs = ["-ss", f"{SPLIT_BG[1]:.3f}", "-t", f"{dur:.3f}", "-i", str(SRC / f"{SPLIT_BG[0]}.MOV")]
+    fc = [f"[0:v]scale=1080:1920:flags=lanczos,setsar=1,fps={FPS},{GRADE}[bg]"]
+    last = "bg"
+    for k, (src, ss, _, side) in enumerate(SPLIT_PANELS, start=1):
+        inputs += ["-ss", f"{ss:.3f}", "-t", f"{dur:.3f}", "-i", str(SRC / f"{src}.MOV")]
+        fc.append(f"[{k}:v]crop=3645:2160,scale=1080:640:flags=lanczos,setsar=1,fps={FPS},{GRADE}[p{k}]")
+        t0 = (k - 1) * SPLIT_STEP
+        e = f"(1-pow(1-min(max((t-{t0})/{SPLIT_SLIDE},0),1),3))"
+        x = f"{side}*1080*(1-{e})"
+        fc.append(f"[{last}][p{k}]overlay=x='{x}':y={(k - 1) * 640}:eof_action=pass[s{k}]")
+        last = f"s{k}"
+    run(["ffmpeg", "-y", *inputs, "-filter_complex", ";".join(fc), "-map", f"[{last}]", "-t", f"{dur:.3f}",
+         "-an", "-r", str(FPS), "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", str(out)])
+
+
 def build_base():
     clips = ED / "clips_graded"; clips.mkdir(exist_ok=True)
     segs, t = [], 0.0
     for i, (src, ss, dur, geo, note, *spd) in enumerate(SEGMENTS):
         speed = spd[0] if spd else 1.0
         out = clips / f"seg_{i:02d}_{src}.mp4"
+        if src == "SPLIT":
+            print(f"  [{i:02d}] {t:6.2f}s  {note}")
+            make_split(out, dur); segs.append(out); t += dur
+            continue
         vf = ",".join(p for p in [geo, f"setpts=PTS/{speed}" if speed != 1 else "", "scale=1080:1920:flags=lanczos", "setsar=1", GRADE] if p)
         print(f"  [{i:02d}] {t:6.2f}s  {src} {ss:.2f}+{dur:.2f}  {note}")
         run(["ffmpeg", "-y", "-ss", f"{ss:.3f}", "-t", f"{dur * speed:.3f}", "-i", str(SRC / f"{src}.MOV"), "-t", f"{dur:.3f}",
