@@ -26,3 +26,11 @@ personalização + encosto ajustável → arcas → stop-motion sofá→cama →
 - Música: "Voja - Great Escape - No Lead Vocals.wav" (136 BPM). Começa aos 25,82 s da faixa para a subida (29,24 s)
   cair no 1.º corte da montagem (3,42 s). -8 dB sem voz, -13 dB extra sob as vozes (rampas 0,25 s), fade-out 1,5 s.
   Vozes igualadas (+2 dB gancho, +4 dB arcas). Voz ~12-16 dB acima da música. Mistura -17,5 LUFS, pico -2,2 dBFS.
+
+## Sessão 2 — 2026-10-17
+**Pedidos:** introdução com zoom out; explicação a começar logo aos 3-4 s sobre as atividades; remover todo o lettering e o cartão final.
+**Feito:**
+- Gancho (6297 1,18 s): zoompan 2,2x → 1x centrado na cara, ease-in-out cúbico em 3,3 s; início 6 centésimos mais tarde (frames desfocados de ela a sentar-se); voz acompanha (sem dessincronizar).
+- Nova ordem: gancho 0–3,42 → atividades 5×1,2 s (descansar, ler, trabalhar, relaxar, brincar) com "nós personalizamos… desde o comprimento, cor, arrumação" (3,52–8,70) → arcas 2x com a voz das arcas (9,52–12,90) → chaise → encosto → stop-motion → sofá-cama 2 s. Total 20,6 s. Sai o plano dela a falar (6302).
+- Sem sobreposições (overlays.json vazio); slots HyperFrames ficam guardados mas fora do vídeo.
+- Música: começa aos 16,34 s da faixa para a subida (29,24 s) cair quando acaba a fala (12,90 s); baixa -13 dB durante toda a fala. Voz 15-16 dB acima da música. -17,9 LUFS.
