@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>OK Sofás — textos</title>
+    <script src="gsap.min.js"></script>
+    <style>
+      /* "Fonte de sistema": Inter (o equivalente livre da SF Pro do iPhone) */
+      @font-face { font-family: "Inter"; src: url("fonts/Inter-500.woff2") format("woff2"); font-weight: 500; font-display: block; }
+      @font-face { font-family: "Inter"; src: url("fonts/Inter-800.woff2") format("woff2"); font-weight: 800; font-display: block; }
+      :root {
+        --destaque: #f5ecd2;   /* Pantone 11-0507 TCX (Winter White) */
+        --sombra: 0 3px 18px rgba(30, 22, 16, 0.45), 0 1px 3px rgba(30, 22, 16, 0.35);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+      .layer { position: absolute; inset: 0; }
+
+      /* Título principal (typewriter) */
+      #titulo {
+        position: absolute; left: 70px; right: 70px; top: 960px;
+        font-family: "Inter", system-ui, sans-serif; font-weight: 800;
+        font-size: 112px; line-height: 0.86; letter-spacing: -0.055em;
+        color: var(--destaque); text-shadow: var(--sombra);
+      }
+      #titulo .c { opacity: 0; }
+      #titulo .c { position: relative; }
+      #titulo .k {
+        position: absolute; right: -14px; top: 0.06em; width: 8px; height: 0.78em; opacity: 0;
+        background: var(--destaque); box-shadow: var(--sombra);
+      }
+
+      /* Destaques das características (número/palavra grande + texto mais pequeno, juntos) */
+      .hl {
+        position: absolute; top: 1080px; width: 900px;
+        font-family: "Inter", system-ui, sans-serif; color: var(--destaque); text-shadow: var(--sombra);
+        opacity: 0;
+      }
+      .hl.esq { left: 70px; text-align: left; }
+      .hl.dir { right: 70px; text-align: right; }
+      .hl .big { display: block; font-weight: 800; font-size: 190px; line-height: 0.8; letter-spacing: -0.06em; }
+      .hl .big.m { font-size: 150px; }
+      .hl .lab { display: block; font-weight: 500; font-size: 62px; line-height: 0.88; letter-spacing: -0.04em; margin-top: 10px; }
+      .hl .w { display: inline-block; opacity: 0; }
+
+      /* Legendas básicas: pequenas, brancas, ao centro */
+      .cap {
+        position: absolute; left: 140px; right: 140px; top: 940px; text-align: center;
+        font-family: "Inter", system-ui, sans-serif; font-weight: 500; font-size: 38px; line-height: 1.15;
+        letter-spacing: -0.01em; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.5);
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1080" data-height="1920">
+      <section class="layer clip" data-start="0" data-duration="20" data-track-index="0">
+        <div id="titulo"></div>
+
+        <div class="hl esq" id="h1"><span class="big">100%</span><span class="lab"><span class="w" id="h1a">personalizável</span><br><span class="w" id="h1b">comprimento,</span> <span class="w" id="h1c">cor,</span> <span class="w" id="h1d">arrumação</span></span></div>
+        <div class="hl dir" id="h2"><span class="big">2</span><span class="lab"><span class="w" id="h2a">arcas</span><br><span class="w" id="h2b">escondidas</span></span></div>
+        <div class="hl esq" id="h3"><span class="big m">chaise<br>longue</span><span class="lab"><span class="w" id="h3a">redonda</span></span></div>
+        <div class="hl dir" id="h4"><span class="big m">encosto</span><span class="lab"><span class="w" id="h4a">de cabeça</span><br><span class="w" id="h4b">ajustável</span></span></div>
+        <div class="hl esq" id="h5"><span class="big m"><span class="w" id="h5a">de sofá</span><br><span class="w" id="h5b">a cama</span></span><span class="lab"><span class="w" id="h5c">sem esforço</span></span></div>
+
+        <div id="caps"></div>
+      </section>
+    </div>
+    <script>
+      // Tempos (s) tirados das transcrições, já no tempo do vídeo final
+      const TITLE = [ // palavra do título → [início, fim] da palavra falada
+        ["E",0.04,0.12],["será",0.16,0.40],["que",0.54,0.70],["depois",0.74,1.00],["de",1.06,1.12],
+        ["6",1.18,1.40],["meses",1.50,1.86],["ainda",2.04,2.22],["aconselhamos",2.26,2.76],["este",2.78,2.94],["sofá?",2.94,3.26]];
+      const TITLE_LINES = [[0,4],[4,8],[8,9],[9,11]];   // "E será que depois" / "de 6 meses ainda" / "aconselhamos" / "este sofá?"
+      const CAPS = [
+        [3.64,5.32,"nós personalizamos absolutamente"],[5.38,6.30,"tudo neste sofá,"],
+        [6.36,7.40,"desde o comprimento,"],[7.44,8.80,"cor, arrumação,"],
+        [8.95,10.52,"Ele tem duas arcas"],[10.57,12.34,"escondidas nos braços do sofá."],
+        [12.42,13.36,"Chaise longue redonda,"],[13.40,14.68,"encosto de cabeça ajustável e"],
+        [14.72,16.70,"transforma-se de sofá a cama"],[16.80,17.50,"sem esforço."],
+        [17.56,18.18,"Por isso, claro"],[18.20,20.0,"que aconselhamos."]];
+      // destaques: [id, entra, sai, [[subelemento, tempo], ...]]
+      const HL = [
+        ["h1",4.60,8.80,[["h1a",4.60],["h1b",6.62],["h1c",7.44],["h1d",7.98]]],
+        ["h2",9.59,12.34,[["h2a",10.03],["h2b",10.57]]],
+        ["h3",12.42,13.36,[["h3a",12.88]]],
+        ["h4",13.40,14.68,[["h4a",13.76],["h4b",14.08]]],
+        ["h5",15.34,17.50,[["h5a",15.34],["h5b",15.98],["h5c",16.80]]]];
+
+      // monta o título letra a letra
+      const t = document.getElementById("titulo");
+      TITLE_LINES.forEach(([a,b],li) => {
+        const line = document.createElement("div");
+        for (let i=a;i<b;i++) {
+          const [w] = TITLE[i];
+          [...w].forEach((ch,ci) => { const s=document.createElement("span"); s.className="c"; s.dataset.w=i; s.dataset.k=ci; s.textContent=ch; line.appendChild(s); });
+          if (i<b-1) { const s=document.createElement("span"); s.className="c"; s.dataset.w=i+1; s.dataset.k=-1; s.textContent=" "; line.appendChild(s); }
+        }
+        t.appendChild(line);
+      });
+      const capsEl = document.getElementById("caps");
+      CAPS.forEach(([a,b,txt],i) => { const d=document.createElement("div"); d.className="cap"; d.id="cap"+i; d.textContent=txt; capsEl.appendChild(d); });
+
+      (async () => {
+        await Promise.all([document.fonts.load('800 112px "Inter"', "Aé6?"), document.fonts.load('500 38px "Inter"', "Aé")]);
+        await document.fonts.ready;
+        if (!document.fonts.check('800 112px "Inter"', "Aé") || !document.fonts.check('500 38px "Inter"', "Aé")) throw new Error("Inter não carregou");
+
+        const tl = gsap.timeline({ paused: true });
+        // Typewriter: cada palavra é escrita letra a letra enquanto é dita; cursor na última letra escrita
+        const chars = [...document.querySelectorAll("#titulo .c")];
+        const times = chars.map(c => {
+          const w = +c.dataset.w, k = +c.dataset.k, [word,a,b] = TITLE[w];
+          return Math.max(k < 0 ? a - 0.02 : a + Math.max(b - a, 0.12) * (k / word.length), 0.001);
+        });
+        chars.forEach((c,i) => {
+          const k = document.createElement("i"); k.className = "k"; c.appendChild(k);
+          tl.set(c, { opacity: 1 }, times[i]);
+          tl.set(k, { opacity: 1 }, times[i]);
+          if (i < chars.length - 1) tl.set(k, { opacity: 0 }, times[i+1]);
+          else { [3.42, 3.70, 3.98].forEach((x,j) => tl.set(k, { opacity: j % 2 ? 1 : 0 }, x)); }
+        });
+        tl.to("#titulo", { opacity: 0, y: -20, duration: 0.2, ease: "power2.in" }, 3.42);
+
+        // Destaques
+        HL.forEach(([id,a,b,subs]) => {
+          tl.fromTo("#"+id, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.22, ease: "power3.out" }, a);
+          subs.forEach(([sid,st]) => tl.fromTo("#"+sid, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, st));
+          tl.to("#"+id, { opacity: 0, duration: 0.12, ease: "power1.in" }, b - 0.12);
+        });
+        // Legendas básicas (entram e saem secas, como no Instagram)
+        CAPS.forEach(([a,b],i) => { tl.set("#cap"+i, { opacity: 1 }, a); if (b < 20) tl.set("#cap"+i, { opacity: 0 }, b); });
+
+        window.__timelines = window.__timelines || {};
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>

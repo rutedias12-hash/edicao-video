@@ -41,3 +41,7 @@ personalização + encosto ajustável → arcas → stop-motion sofá→cama →
   Nota de voz +10,5 dB (chaise -4, resto +1, "aconselhamos" +4), highpass 80 Hz, limitador. Todas as falas ~-17/-18 dB RMS. Música abaixa durante toda a fala (0–20,06); subida da faixa no sofá-cama (offset 12,48). -17,3 LUFS, pico -3,8 dBFS.
 - v7 (20,0 s): sem silêncios. A fala da gravação entra logo após as arcas (12,36), "encosto…" aos 13,36 e "Por isso, claro que aconselhamos." aos 17,50. Imagens reacertadas: chaise 12,30 / encosto 13,40 / stop-motion 14,72 / cama 16,14.
   Final em ecrã dividido (17,40–20,0): 3 faixas 1080x640 com os planos horizontais originais (ler 6300 4,0 s, relaxar 6306 6,0 s, trabalhar 6305 8,0 s), a entrar de cima para baixo de 0,4 em 0,4 s (esq., dir., esq.), deslize de 0,45 s ease-out cúbico, por cima do sofá-cama.
+- v8: textos ao estilo das referências do Instagram (DejZJ-gRLJe, Dd_U9b_DRT8). Uma só composição HyperFrames (animations/texto, 20 s, transparente):
+  título "E será que depois de 6 meses ainda aconselhamos este sofá?" em typewriter sincronizado com cada palavra falada (0–3,42);
+  destaques grandes cor Pantone 11-0507 TCX (#F5ECD2), Inter 800, espaçamento -0,055/-0,06em, entrelinha 0,8–0,86, alternando esq./dir.: 100% personalizável (+comprimento, cor, arrumação) / 2 arcas escondidas / chaise longue redonda / encosto de cabeça ajustável / de sofá a cama sem esforço;
+  legendas básicas Inter 500 38px brancas ao centro (sem legendas durante o título). "Fonte de sistema" = Inter (equivalente livre da SF Pro).
