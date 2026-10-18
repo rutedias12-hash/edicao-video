@@ -84,12 +84,12 @@ html = f'''<!doctype html>
       html, body {{ width: 1080px; height: 1920px; overflow: hidden; background: transparent; }}
       #root {{ position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Inter"; font-weight: 700; }}
       .clip {{ position: absolute; left: 0; right: 0; }}
-      .sh {{ text-shadow: 0 0 20px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.4); }}
+      .sh {{ }}  /* sem sombreado, a pedido da Rute */
       #intro {{ top: 0; bottom: 0; }}
       #intro-in {{ position: absolute; inset: 0; }}
       #title {{ position: absolute; left: 84px; top: 690px; width: 880px; font-size: 112px; line-height: 0.95; letter-spacing: -0.02em; color: {WINTER_WHITE}; text-align: left; }}
       .ch {{ opacity: 0; }}
-      #sub {{ position: absolute; left: 84px; top: 940px; width: 960px; height: 130px; overflow: visible; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.45)); }}
+      #sub {{ position: absolute; left: 84px; top: 940px; width: 960px; height: 130px; overflow: visible; }}
       .subtext {{ font-family: "Inter"; font-weight: 700; font-size: 50px; letter-spacing: -0.01em; fill: #FFFFFF; stroke: #FFFFFF; stroke-width: 1.4px; stroke-dasharray: 900; }}
       #body {{ position: absolute; left: 0; right: 0; top: 1110px; text-align: center; font-size: 44px; color: #FFFFFF; }}
       #body-t {{ opacity: 0; }}

@@ -91,3 +91,4 @@
   subtítulo "família de 4 em dia de atividades extracurriculares" (branco, escrita à mão + som de caneta sintetizado),
   corpo "17:50 às 20:30" centrado; textos iniciais até 4,1 s (o teaser só tem 2,4 s).
   Etiquetas hora + descrição por cena, centradas, Winter White, 40 px, sem animação. **Horas propostas, a confirmar** (só 17:50 é certa).
+- 8.1: textos sem sombreado.
