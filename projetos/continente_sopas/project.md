@@ -83,3 +83,4 @@
 - Teaser ("sneak peek") no início: 8 planos × 0,3 s a 1,25× (som acelerado sem mudar o tom): banho (corredor), batatas,
   embalagem na mão, bebé na toalha, ovos, quarto vermelho, a deitar a sopa, embalagem em grande plano. Novo campo "speed" em `cut.py`.
 - Total 46,5 s (passa o limite de 45 s pedido antes — perguntar à Rute). Final anterior guardado em `final_v6_44s.mp4`.
+- 7.1: teaser a 3× (cada plano mostra 0,9 s de ação em 0,3 s).

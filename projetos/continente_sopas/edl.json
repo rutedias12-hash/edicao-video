@@ -6,75 +6,75 @@
  "ranges": [
   {
    "source": "continente_sopas",
-   "start": 833.3,
-   "end": 833.675,
+   "start": 833.0,
+   "end": 833.9,
    "beat": "TEASER",
    "quote": "(imagem) teaser: a caminho do banho com o bebé ao colo",
    "label": "",
-   "speed": 1.25
+   "speed": 3.0
   },
   {
    "source": "continente_sopas",
-   "start": 552.3,
-   "end": 552.675,
+   "start": 552.0,
+   "end": 552.9,
    "beat": "TEASER",
    "quote": "(imagem) teaser: a cortar batatas",
    "label": "",
-   "speed": 1.25
+   "speed": 3.0
   },
   {
    "source": "continente_sopas",
-   "start": 227.6,
-   "end": 227.975,
+   "start": 227.3,
+   "end": 228.2,
    "beat": "TEASER",
    "quote": "(imagem) teaser: embalagem da sopa na mão",
    "label": "",
-   "speed": 1.25
+   "speed": 3.0
   },
   {
    "source": "continente_sopas",
-   "start": 1142.2,
-   "end": 1142.575,
+   "start": 1142.0,
+   "end": 1142.9,
    "beat": "TEASER",
    "quote": "(imagem) teaser: bebé na toalha",
    "label": "",
-   "speed": 1.25
+   "speed": 3.0
   },
   {
    "source": "continente_sopas",
-   "start": 1952.2,
-   "end": 1952.575,
+   "start": 1952.0,
+   "end": 1952.9,
    "beat": "TEASER",
    "quote": "(imagem) teaser: ovos na frigideira",
    "label": "",
-   "speed": 1.25
+   "speed": 3.0
   },
   {
    "source": "continente_sopas",
-   "start": 2316.1,
-   "end": 2316.475,
+   "start": 2316.0,
+   "end": 2316.9,
    "beat": "TEASER",
    "quote": "(imagem) teaser: a embalar no quarto vermelho",
    "label": "",
-   "speed": 1.25
+   "speed": 3.0
   },
   {
    "source": "continente_sopas",
-   "start": 2542.6,
-   "end": 2542.975,
+   "start": 2542.2,
+   "end": 2543.1,
    "beat": "TEASER",
    "quote": "(imagem) teaser: a deitar a sopa na taça",
    "label": "",
-   "speed": 1.25
+   "speed": 3.0
   },
   {
    "source": "continente_sopas",
-   "start": 2580.4,
-   "end": 2580.775,
+   "start": 2580.0,
+   "end": 2580.9,
    "beat": "TEASER",
    "quote": "(imagem) teaser: embalagem em grande plano",
    "label": "",
-   "speed": 1.25
+   "speed": 3.0
   },
   {
    "source": "continente_sopas",
