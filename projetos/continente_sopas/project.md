@@ -96,3 +96,13 @@
 ## Sessão 2 (cont.) — exportação final
 - Textos e efeitos sonoros retirados a pedido da Rute (não gostou). Fica: teaser 3× + vídeo da versão 6.2, sem texto.
 - **Exportação 4K**: `H=3840 python3 scripts/cut.py` + `scripts/export_4k.sh` → `videos/edit/final_4k.mp4` (2160×3840, 30 fps, H.264, 46,5 s, -14 LUFS, 136 MB).
+
+## Sessão 3 — 2026-10-18 · versão editada pela Rute (lettering + SFX feitos por ela no CapCut)
+- Ficheiro dela: `videos/rute_v2/sopaContinente.mov` (42,6 s, 4K, textos "colados" na imagem; som próprio no teaser).
+- Pedido: tirar os planos de sopa do teaser. Trocados (imagem só): embalagem na mão → Henrique na cadeira (2:12);
+  a deitar a sopa → Clara ao colo (40:46); embalagem em grande plano → abraço de pijama (20:59).
+- Método (`edit/scripts/replace_teaser.py`): o vídeo dela coincide frame a frame com `final_4k.mp4`; textos dela recuperados
+  por máscara de cor (magenta ≈ RGB 161,0,50) × molde das letras (frame 80) × "já escrito" (difere da imagem limpa) + brancos e cursor.
+  Verificado: 27 frames revistos, resto do vídeo igual (só recompressão), som bit a bit idêntico.
+  → `videos/rute_v2/sopaContinente_teaser.mp4`.
+- Música "Genesis": ficheiro não fornecido — pendente.
