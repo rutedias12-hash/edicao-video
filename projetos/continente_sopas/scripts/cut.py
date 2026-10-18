@@ -31,8 +31,8 @@ for i, r in enumerate(edl['ranges']):
         ez = f"({z0}+({z1}-{z0})*(1-cos(PI*min(on/{n},1)))/2)"
         base = f"zoompan=z='{ez}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s=1080x1920:fps={FPS}"
     else:
-        base = f'{crop}scale=-2:1920,fps={FPS}'
-    fc = [f'[0:v]{base},setpts=(PTS-STARTPTS)/{sp}[b0]']; cur = '[b0]'
+        base = f'{crop}scale=-2:1920'
+    fc = [f'[0:v]{base},setpts=(PTS-STARTPTS)/{sp},fps={FPS}[b0]']; cur = '[b0]'  # acelerar ANTES de fixar os 30 fps
     for k, (cs, cd, at) in enumerate(r.get('cutaways') or [], start=1):
         if d - (at + cd) < 0.15: cd = d - at + 0.1  # B-roll a acabar mesmo no fim: cobre até ao último frame (evita 'flash')
         cmd += ['-ss', f'{cs:.3f}', '-t', f'{cd+0.2:.3f}', '-i', s]
@@ -52,6 +52,8 @@ for i, r in enumerate(edl['ranges']):
     afc.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0,atrim=end_sample={ns},"
                f'afade=t=in:st=0:d={FADE},afade=t=out:st={d-FADE:.4f}:d={FADE}[a]')
     run(acmd + ['-filter_complex', ';'.join(afc), '-map', '[a]', '-ac', '2', '-c:a', 'pcm_s16le', str(aout)])
+    vd = float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(vout)]))
+    assert abs(vd - d) < 0.02, f'segmento {i}: imagem {vd:.3f}s ≠ som {d:.3f}s'  # garante sincronização
     vlist.append(vout); alist.append(aout); print(f'  {i:02d} {d:.3f}s {r["quote"][:40]}', flush=True)
 for name, lst in (('v', vlist), ('a', alist)):
     (d_seg/f'{name}_list.txt').write_text(''.join(f"file '{p}'\n" for p in lst))

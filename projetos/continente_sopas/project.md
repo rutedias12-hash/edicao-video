@@ -84,3 +84,10 @@
   embalagem na mão, bebé na toalha, ovos, quarto vermelho, a deitar a sopa, embalagem em grande plano. Novo campo "speed" em `cut.py`.
 - Total 46,5 s (passa o limite de 45 s pedido antes — perguntar à Rute). Final anterior guardado em `final_v6_44s.mp4`.
 - 7.1: teaser a 3× (cada plano mostra 0,9 s de ação em 0,3 s).
+- 7.2 (corrigido): dessincronização causada pelo teaser — nos planos acelerados a imagem ficava com 0,17 s e o som 0,3 s
+  (o fps era fixado antes de acelerar). `cut.py` agora acelera antes de fixar os 30 fps e **falha se imagem ≠ som** em qualquer plano.
+- 8: textos (`scripts/build_titles.py` → `animations/slot_2`, `scripts/finish_titles.sh`):
+  título "caos de fim de dia" (Inter Bold, Winter White #F5ECD2, à esquerda, typewriter + teclas reais recortadas do som de teclado da biblioteca),
+  subtítulo "família de 4 em dia de atividades extracurriculares" (branco, escrita à mão + som de caneta sintetizado),
+  corpo "17:50 às 20:30" centrado; textos iniciais até 4,1 s (o teaser só tem 2,4 s).
+  Etiquetas hora + descrição por cena, centradas, Winter White, 40 px, sem animação. **Horas propostas, a confirmar** (só 17:50 é certa).
