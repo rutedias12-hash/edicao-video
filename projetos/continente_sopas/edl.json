@@ -6,6 +6,78 @@
  "ranges": [
   {
    "source": "continente_sopas",
+   "start": 833.3,
+   "end": 833.675,
+   "beat": "TEASER",
+   "quote": "(imagem) teaser: a caminho do banho com o bebé ao colo",
+   "label": "",
+   "speed": 1.25
+  },
+  {
+   "source": "continente_sopas",
+   "start": 552.3,
+   "end": 552.675,
+   "beat": "TEASER",
+   "quote": "(imagem) teaser: a cortar batatas",
+   "label": "",
+   "speed": 1.25
+  },
+  {
+   "source": "continente_sopas",
+   "start": 227.6,
+   "end": 227.975,
+   "beat": "TEASER",
+   "quote": "(imagem) teaser: embalagem da sopa na mão",
+   "label": "",
+   "speed": 1.25
+  },
+  {
+   "source": "continente_sopas",
+   "start": 1142.2,
+   "end": 1142.575,
+   "beat": "TEASER",
+   "quote": "(imagem) teaser: bebé na toalha",
+   "label": "",
+   "speed": 1.25
+  },
+  {
+   "source": "continente_sopas",
+   "start": 1952.2,
+   "end": 1952.575,
+   "beat": "TEASER",
+   "quote": "(imagem) teaser: ovos na frigideira",
+   "label": "",
+   "speed": 1.25
+  },
+  {
+   "source": "continente_sopas",
+   "start": 2316.1,
+   "end": 2316.475,
+   "beat": "TEASER",
+   "quote": "(imagem) teaser: a embalar no quarto vermelho",
+   "label": "",
+   "speed": 1.25
+  },
+  {
+   "source": "continente_sopas",
+   "start": 2542.6,
+   "end": 2542.975,
+   "beat": "TEASER",
+   "quote": "(imagem) teaser: a deitar a sopa na taça",
+   "label": "",
+   "speed": 1.25
+  },
+  {
+   "source": "continente_sopas",
+   "start": 2580.4,
+   "end": 2580.775,
+   "beat": "TEASER",
+   "quote": "(imagem) teaser: embalagem em grande plano",
+   "label": "",
+   "speed": 1.25
+  },
+  {
+   "source": "continente_sopas",
    "start": 12.0,
    "end": 12.6,
    "beat": "ABERTURA",
@@ -351,5 +423,5 @@
    ]
   }
  ],
- "total_duration_s": 44.0
+ "total_duration_s": 46.4
 }

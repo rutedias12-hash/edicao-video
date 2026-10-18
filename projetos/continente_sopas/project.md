@@ -78,3 +78,8 @@
 - 6.2: removido o plano do jantar (46:02) em que a Rute caminha para a câmara. 32 segmentos, 44,1 s.
 
 **FINAL (2026-10-16):** versão 6.2 aprovada pela Rute → `videos/edit/final.mp4` (44,1 s, 1080×1920, -14 LUFS). EDL final = `edl.json`.
+
+## Sessão 2 — 2026-10-18
+- Teaser ("sneak peek") no início: 8 planos × 0,3 s a 1,25× (som acelerado sem mudar o tom): banho (corredor), batatas,
+  embalagem na mão, bebé na toalha, ovos, quarto vermelho, a deitar a sopa, embalagem em grande plano. Novo campo "speed" em `cut.py`.
+- Total 46,5 s (passa o limite de 45 s pedido antes — perguntar à Rute). Final anterior guardado em `final_v6_44s.mp4`.

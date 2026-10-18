@@ -6,6 +6,7 @@
 - "mute": true — plano sem som.
 - "crop": "w:h:x:y" — aproximar a imagem (sobre o 4K original).
 - "zoom": [z0, z1] — aproximação lenta (ease in-out).
+- "speed": 1.25 — plano acelerado (duração final = (end-start)/speed).
 - "audio_layers": [[inicio_na_fonte, duracao, aos_x_segundos, ganho_dB], ...] — som extra por baixo.
 Uso: python3 scripts/cut.py   → cuts.mp4"""
 import json, subprocess
@@ -19,10 +20,11 @@ run = lambda c: subprocess.run(c, check=True)
 vlist, alist, durs = [], [], []
 for i, r in enumerate(edl['ranges']):
     s = src[r['source']]
-    n = max(1, round((r['end'] - r['start']) * FPS)); d = n / FPS; ns = round(d * SR)
+    sp = r.get('speed', 1.0)  # >1 = mais rápido (o som mantém o tom)
+    n = max(1, round((r['end'] - r['start']) / sp * FPS)); d = n / FPS; ns = round(d * SR)
     durs.append(d)
     vout, aout = d_seg/f'v_{i:02d}.mp4', d_seg/f'a_{i:02d}.wav'
-    cmd = ['ffmpeg', '-v', 'error', '-y', '-ss', f'{r["start"]:.3f}', '-t', f'{d+0.2:.3f}', '-i', s]
+    cmd = ['ffmpeg', '-v', 'error', '-y', '-ss', f'{r["start"]:.3f}', '-t', f'{d*sp+0.2:.3f}', '-i', s]
     crop = f"crop={r['crop']}," if r.get('crop') else ''  # aproximar (punch-in), ex. "1080:1920:240:600" na imagem 4K
     if r.get('zoom'):  # [z_inicio, z_fim]: aproximação lenta e suave (ease in-out) sobre o 4K
         z0, z1 = r['zoom']
@@ -30,7 +32,7 @@ for i, r in enumerate(edl['ranges']):
         base = f"zoompan=z='{ez}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s=1080x1920:fps={FPS}"
     else:
         base = f'{crop}scale=-2:1920,fps={FPS}'
-    fc = [f'[0:v]{base},setpts=PTS-STARTPTS[b0]']; cur = '[b0]'
+    fc = [f'[0:v]{base},setpts=(PTS-STARTPTS)/{sp}[b0]']; cur = '[b0]'
     for k, (cs, cd, at) in enumerate(r.get('cutaways') or [], start=1):
         if d - (at + cd) < 0.15: cd = d - at + 0.1  # B-roll a acabar mesmo no fim: cobre até ao último frame (evita 'flash')
         cmd += ['-ss', f'{cs:.3f}', '-t', f'{cd+0.2:.3f}', '-i', s]
@@ -40,8 +42,9 @@ for i, r in enumerate(edl['ranges']):
     run(cmd + ['-filter_complex', ';'.join(fc), '-map', '[v]', '-an', '-c:v', 'libx264', '-preset', 'fast', '-crf', '18',
                '-pix_fmt', 'yuv420p', '-r', str(FPS), str(vout)])
     vol = 'volume=0,' if r.get('mute') else ''
-    acmd = ['ffmpeg', '-v', 'error', '-y', '-ss', f'{r["start"]+AV_OFFSET:.3f}', '-t', f'{d+0.2:.3f}', '-i', s]
-    afc = [f'[0:a]aresample={SR},{vol}apad,atrim=end_sample={ns}[m0]']; mix = ['[m0]']
+    acmd = ['ffmpeg', '-v', 'error', '-y', '-ss', f'{r["start"]+AV_OFFSET:.3f}', '-t', f'{d*sp+0.2:.3f}', '-i', s]
+    tempo = f'atempo={sp},' if sp != 1.0 else ''
+    afc = [f'[0:a]aresample={SR},{tempo}{vol}apad,atrim=end_sample={ns}[m0]']; mix = ['[m0]']
     for k, (ls, ldur, at, gain) in enumerate(r.get('audio_layers') or [], start=1):
         acmd += ['-ss', f'{ls+AV_OFFSET:.3f}', '-t', f'{ldur:.3f}', '-i', s]
         afc.append(f'[{k}:a]aresample={SR},volume={gain}dB,afade=t=in:d=0.08,afade=t=out:st={ldur-0.15:.3f}:d=0.15,'
