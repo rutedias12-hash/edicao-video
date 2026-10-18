@@ -9,13 +9,15 @@
 - "speed": 1.25 — plano acelerado (duração final = (end-start)/speed).
 - "audio_layers": [[inicio_na_fonte, duracao, aos_x_segundos, ganho_dB], ...] — som extra por baixo.
 Uso: python3 scripts/cut.py   → cuts.mp4"""
-import json, subprocess
+import json, os, subprocess
 from pathlib import Path
 E = Path(__file__).resolve().parent.parent
 FPS, SR, AV_OFFSET, FADE = 30, 48000, 0.10, 0.03
 edl = json.load(open(E/'edl.json'))
 src = {k: v for k, v in edl['sources'].items()}
-d_seg = E/'clips_graded'; d_seg.mkdir(exist_ok=True)
+H = int(os.environ.get('H', '1920')); W = H * 9 // 16   # H=3840 → exportação 4K
+TAG = '' if H == 1920 else f'_{H}'
+d_seg = E/f'clips_graded{TAG}'; d_seg.mkdir(exist_ok=True)
 run = lambda c: subprocess.run(c, check=True)
 vlist, alist, durs = [], [], []
 for i, r in enumerate(edl['ranges']):
@@ -29,14 +31,14 @@ for i, r in enumerate(edl['ranges']):
     if r.get('zoom'):  # [z_inicio, z_fim]: aproximação lenta e suave (ease in-out) sobre o 4K
         z0, z1 = r['zoom']
         ez = f"({z0}+({z1}-{z0})*(1-cos(PI*min(on/{n},1)))/2)"
-        base = f"zoompan=z='{ez}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s=1080x1920:fps={FPS}"
+        base = f"zoompan=z='{ez}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s={W}x{H}:fps={FPS}"
     else:
-        base = f'{crop}scale=-2:1920'
+        base = f'{crop}scale=-2:{H}'
     fc = [f'[0:v]{base},setpts=(PTS-STARTPTS)/{sp},fps={FPS}[b0]']; cur = '[b0]'  # acelerar ANTES de fixar os 30 fps
     for k, (cs, cd, at) in enumerate(r.get('cutaways') or [], start=1):
         if d - (at + cd) < 0.15: cd = d - at + 0.1  # B-roll a acabar mesmo no fim: cobre até ao último frame (evita 'flash')
         cmd += ['-ss', f'{cs:.3f}', '-t', f'{cd+0.2:.3f}', '-i', s]
-        fc.append(f'[{k}:v]scale=-2:1920,fps={FPS},trim=duration={cd},setpts=PTS-STARTPTS+{at}/TB[c{k}]')
+        fc.append(f'[{k}:v]scale=-2:{H},fps={FPS},trim=duration={cd},setpts=PTS-STARTPTS+{at}/TB[c{k}]')
         fc.append(f"{cur}[c{k}]overlay=0:0:eof_action=pass:enable='between(t,{at},{at+cd-0.001})'[b{k}]"); cur = f'[b{k}]'
     fc.append(f'{cur}trim=end_frame={n},setpts=PTS-STARTPTS[v]')
     run(cmd + ['-filter_complex', ';'.join(fc), '-map', '[v]', '-an', '-c:v', 'libx264', '-preset', 'fast', '-crf', '18',
@@ -58,6 +60,6 @@ for i, r in enumerate(edl['ranges']):
 for name, lst in (('v', vlist), ('a', alist)):
     (d_seg/f'{name}_list.txt').write_text(''.join(f"file '{p}'\n" for p in lst))
 run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', str(d_seg/'v_list.txt'), '-f', 'concat', '-safe', '0',
-     '-i', str(d_seg/'a_list.txt'), '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'pcm_s16le', str(E/'cuts.mkv')])
+     '-i', str(d_seg/'a_list.txt'), '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'pcm_s16le', str(E/f'cuts{TAG}.mkv')])
 json.dump(durs, open(d_seg/'durs.json', 'w'))
-print(f'cuts.mkv pronto: {sum(durs):.3f}s')
+print(f'cuts{TAG}.mkv pronto: {sum(durs):.3f}s')

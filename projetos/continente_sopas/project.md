@@ -92,3 +92,7 @@
   corpo "17:50 às 20:30" centrado; textos iniciais até 4,1 s (o teaser só tem 2,4 s).
   Etiquetas hora + descrição por cena, centradas, Winter White, 40 px, sem animação. **Horas propostas, a confirmar** (só 17:50 é certa).
 - 8.1: textos sem sombreado.
+
+## Sessão 2 (cont.) — exportação final
+- Textos e efeitos sonoros retirados a pedido da Rute (não gostou). Fica: teaser 3× + vídeo da versão 6.2, sem texto.
+- **Exportação 4K**: `H=3840 python3 scripts/cut.py` + `scripts/export_4k.sh` → `videos/edit/final_4k.mp4` (2160×3840, 30 fps, H.264, 46,5 s, -14 LUFS, 136 MB).
