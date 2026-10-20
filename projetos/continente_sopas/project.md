@@ -114,3 +114,9 @@
   2. Jantar do Henrique (26,07–28,57 s): restos de sopa apagados dentro da taça (fica taça vazia; borda intacta), cliente não quer que se note a sopa.
   3. Choro (11,47 s): antes da voz, choro substituído por resmungo curto (8:02 do original); fim do choro por baixo do 1.º "Espera" subtraído;
      resmungo baixinho (9:24) na pausa. Bebé −14,6 → −23,7 dB; voz da Rute inalterada; resto do som igual (dif. −38 dB, só compressão).
+
+## Sessão 4 (cont.) — plano do jantar do Henrique sem fala
+- Marca não quer "não é doce". `edit/scripts/fix_v4.py` → `rute_v4/continenteReels_v4.mp4` (a partir de continenteReels_corrigido.mp4):
+  frames 782–856 (26,07–28,57 s) trocados por 36:11,6–36:14,1 do original (Rute leva a colher ao Henrique e faz "ahh" sem som),
+  imagem sem letras (a Rute acrescenta), taça limpa, som = ambiente do próprio plano (−54 dB, sem fala). Resto igual (verificado).
+- Nota: `-shortest` no mux cortava 4 frames finais → removido de fix_v3/fix_v4.

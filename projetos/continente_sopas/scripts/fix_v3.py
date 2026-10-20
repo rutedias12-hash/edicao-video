@@ -128,5 +128,5 @@ print('amostras limitadas:', int(over.sum()), '· pico final:', round(20*np.log1
 (V/'rute_v3/audio.raw').write_bytes((np.clip(full, -1, 1)*32767).astype(np.int16).tobytes())
 subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(V/'rute_v3/video.mkv'), '-f', 's16le', '-ar', str(SR), '-ac', '2',
                 '-i', str(V/'rute_v3/audio.raw'), '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k',
-                '-shortest', '-tag:v', 'avc1', '-movflags', '+faststart', str(OUT)], check=True)
+                '-tag:v', 'avc1', '-movflags', '+faststart', str(OUT)], check=True)
 print('pronto:', OUT)
