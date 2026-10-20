@@ -106,3 +106,11 @@
   Verificado: 27 frames revistos, resto do vídeo igual (só recompressão), som bit a bit idêntico.
   → `videos/rute_v2/sopaContinente_teaser.mp4`.
 - Música "Genesis": ficheiro não fornecido — pendente.
+
+## Sessão 4 — 2026-10-20 · correções sobre `rute_v3/continenteReels.mov` (versão da Rute, 42,6 s)
+- Diagnóstico: imagem igual à versão anterior dela (teaser ainda com sopa); só o som da cena do jantar do Henrique mudou.
+- `edit/scripts/fix_v3.py` → `rute_v3/continenteReels_corrigido.mp4`:
+  1. Teaser: 3 planos de sopa trocados de novo (Henrique na cadeira, Clara ao colo, abraço de pijama), textos dela preservados.
+  2. Jantar do Henrique (26,07–28,57 s): restos de sopa apagados dentro da taça (fica taça vazia; borda intacta), cliente não quer que se note a sopa.
+  3. Choro (11,47 s): antes da voz, choro substituído por resmungo curto (8:02 do original); fim do choro por baixo do 1.º "Espera" subtraído;
+     resmungo baixinho (9:24) na pausa. Bebé −14,6 → −23,7 dB; voz da Rute inalterada; resto do som igual (dif. −38 dB, só compressão).
