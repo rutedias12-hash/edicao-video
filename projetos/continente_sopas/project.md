@@ -120,3 +120,11 @@
   frames 782–856 (26,07–28,57 s) trocados por 36:11,6–36:14,1 do original (Rute leva a colher ao Henrique e faz "ahh" sem som),
   imagem sem letras (a Rute acrescenta), taça limpa, som = ambiente do próprio plano (−54 dB, sem fala). Resto igual (verificado).
 - Nota: `-shortest` no mux cortava 4 frames finais → removido de fix_v3/fix_v4.
+
+## Sessão 5 — 2026-10-21 · "clipes travados"
+- Causa: as exportações do CapCut da Rute mostram só ~20 imagens únicas/s (padrão 0,1,3,4,6,7…: salta 1 em cada 3 do nosso final_4k).
+  Detalhe 4K completo → não é ficheiro reduzido; o salto acontece no projeto/exportação do CapCut. Reexportar a 60 fps (rute_v6/1018(1).mov) não resolve.
+- As nossas correções (v3/v4) partiram dessa exportação → herdaram o salto (exceto planos substituídos por nós: teaser e Henrique, fluidos).
+- Reconstrução a 30 fps possível (mapa de frames em rute_v7/: maioria dos planos ligada ao final_4k por desvio constante),
+  mas há o plano P&B com aproximação (17,0–17,8 s) e planos estáticos que precisam de tratamento à parte. Pendente de decisão da Rute.
+- Enviada a v4 a pedido dela.
