@@ -6,6 +6,7 @@
 - "mute": true — plano sem som.
 - "crop": "w:h:x:y" — aproximar a imagem (sobre o 4K original).
 - "zoom": [z0, z1] — aproximação lenta (ease in-out).
+- "bowl_clean": true — apaga restos de sopa na taça (jantar do Henrique).
 - "speed": 1.25 — plano acelerado (duração final = (end-start)/speed).
 - "audio_layers": [[inicio_na_fonte, duracao, aos_x_segundos, ganho_dB], ...] — som extra por baixo.
 Uso: python3 scripts/cut.py   → cuts.mp4"""
@@ -19,6 +20,32 @@ H = int(os.environ.get('H', '1920')); W = H * 9 // 16   # H=3840 → exportaçã
 TAG = '' if H == 1920 else f'_{H}'
 d_seg = E/f'clips_graded{TAG}'; d_seg.mkdir(exist_ok=True)
 run = lambda c: subprocess.run(c, check=True)
+
+def clean_bowl(vout, n):
+    """Apaga os restos de sopa dentro da taça (mesa do jantar do Henrique; câmara fixa).
+    Máscara pela cor (laranja saturado) dentro do interior da taça; preenchimento suave; borda intacta."""
+    import numpy as np, cv2
+    k = H / 3840; X0, Y0, X1, Y1 = [int(round(v*k)) for v in (100, 2250, 480, 2480)]
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(vout), '-pix_fmt', 'bgr24', '-f', 'rawvideo', '-'], capture_output=True, check=True).stdout
+    fr = np.frombuffer(raw, np.uint8).reshape(-1, H, W, 3).copy()
+    med = np.median(fr[:, Y0:Y1, X0:X1], 0).astype(np.uint8)
+    hsv = cv2.cvtColor(med, cv2.COLOR_BGR2HSV)
+    inner = np.zeros(med.shape[:2], np.uint8)
+    cv2.ellipse(inner, (int(180*k), int(86*k)), (int(136*k), int(34*k)), 0, 0, 360, 1, -1)
+    M = ((hsv[..., 1] > 115) & (hsv[..., 0] <= 30)).astype(np.uint8) & inner
+    r7 = max(3, int(7*k) | 1)
+    M = cv2.dilate(M, np.ones((r7, r7), np.uint8)) & inner
+    fill = cv2.GaussianBlur(cv2.inpaint(cv2.GaussianBlur(med, (0, 0), 1.2*k), M*255, max(5, int(20*k)), cv2.INPAINT_TELEA), (0, 0), 2.5*k).astype(np.float32)
+    A = cv2.GaussianBlur(M.astype(np.float32), (0, 0), 1.5*k)[..., None]
+    reg = fr[:, Y0:Y1, X0:X1].astype(np.float32)
+    fr[:, Y0:Y1, X0:X1] = (reg*(1-A) + fill*A).astype(np.uint8)
+    cv2.imwrite(str(vout.with_suffix('.taca.png')), np.concatenate([med, fr[n//2, Y0:Y1, X0:X1]], 1))
+    tmp = vout.with_suffix('.tmp.mp4')
+    pr = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'bgr24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
+                           '-c:v', 'libx264', '-preset', 'fast', '-crf', '18', '-pix_fmt', 'yuv420p', str(tmp)], stdin=subprocess.PIPE)
+    pr.stdin.write(fr.tobytes()); pr.stdin.close(); pr.wait(); tmp.replace(vout)
+    print(f'    taça limpa: {int(M.sum())} px de sopa apagados')
+
 vlist, alist, durs = [], [], []
 for i, r in enumerate(edl['ranges']):
     s = src[r['source']]
@@ -54,6 +81,7 @@ for i, r in enumerate(edl['ranges']):
     afc.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0,atrim=end_sample={ns},"
                f'afade=t=in:st=0:d={FADE},afade=t=out:st={d-FADE:.4f}:d={FADE}[a]')
     run(acmd + ['-filter_complex', ';'.join(afc), '-map', '[a]', '-ac', '2', '-c:a', 'pcm_s16le', str(aout)])
+    if r.get('bowl_clean'): clean_bowl(vout, n)
     vd = float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(vout)]))
     assert abs(vd - d) < 0.02, f'segmento {i}: imagem {vd:.3f}s ≠ som {d:.3f}s'  # garante sincronização
     vlist.append(vout); alist.append(aout); print(f'  {i:02d} {d:.3f}s {r["quote"][:40]}', flush=True)

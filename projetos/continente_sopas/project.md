@@ -128,3 +128,13 @@
 - Reconstrução a 30 fps possível (mapa de frames em rute_v7/: maioria dos planos ligada ao final_4k por desvio constante),
   mas há o plano P&B com aproximação (17,0–17,8 s) e planos estáticos que precisam de tratamento à parte. Pendente de decisão da Rute.
 - Enviada a v4 a pedido dela.
+
+## Sessão 5 (cont.) — versão limpa 4K a 30 fps reais (sem textos) com todas as correções → `edit/final_4k_v8.mp4` (46,3 s)
+Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do CapCut — sem saltos de imagens (29 repetidos = planos parados).
+- Teaser: planos de sopa → Henrique na cadeira (2:12), Clara ao colo (40:46), abraço de pijama (20:59).
+- Choro → resmungos (`audio_layers` 8:02 a 0 dB e 9:24 a −6 dB); bebé −21…−27 dB vs voz −13…−16 dB.
+- Jantar do Henrique → 36:11,6 sem fala; `bowl_clean` (novo em cut.py) apaga a sopa da taça.
+- Correção geral: com o desfasamento de 0,10 s do som, os planos com fala cortavam o início das palavras e apanhavam a seguinte
+  ("malta", "fi-", "tio") → planos de fala recuados 0,10 s (imagem e som juntos) e limites à volta de "malta" acertados. Verificado: 0 palavras cortadas.
+- Plano "a deitar a sopa": som trocado por ambiente da cozinha sem fala (havia "Quem é o…" de fundo).
+- Transcrição final verificada: sem "doce".

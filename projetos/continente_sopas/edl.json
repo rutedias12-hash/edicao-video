@@ -24,10 +24,10 @@
   },
   {
    "source": "continente_sopas",
-   "start": 227.3,
-   "end": 228.2,
+   "start": 132.0,
+   "end": 132.9,
    "beat": "TEASER",
-   "quote": "(imagem) teaser: embalagem da sopa na mão",
+   "quote": "(imagem) teaser: Henrique na cadeira, na cozinha",
    "label": "",
    "speed": 3.0
   },
@@ -60,19 +60,19 @@
   },
   {
    "source": "continente_sopas",
-   "start": 2542.2,
-   "end": 2543.1,
+   "start": 2446.0,
+   "end": 2446.9,
    "beat": "TEASER",
-   "quote": "(imagem) teaser: a deitar a sopa na taça",
+   "quote": "(imagem) teaser: a Clara ao colo",
    "label": "",
    "speed": 3.0
   },
   {
    "source": "continente_sopas",
-   "start": 2580.0,
-   "end": 2580.9,
+   "start": 1259.4,
+   "end": 1260.3,
    "beat": "TEASER",
-   "quote": "(imagem) teaser: embalagem em grande plano",
+   "quote": "(imagem) teaser: abraço de pijama",
    "label": "",
    "speed": 3.0
   },
@@ -102,24 +102,24 @@
   },
   {
    "source": "continente_sopas",
-   "start": 191.12,
-   "end": 192.24,
+   "start": 191.02,
+   "end": 192.14,
    "beat": "JANTAR",
    "quote": "Dez pras seis.",
    "label": ""
   },
   {
    "source": "continente_sopas",
-   "start": 195.98,
-   "end": 197.7,
+   "start": 195.88,
+   "end": 197.6,
    "beat": "JANTAR",
    "quote": "Estou de rastos.",
    "label": ""
   },
   {
    "source": "continente_sopas",
-   "start": 197.95,
-   "end": 199.54,
+   "start": 197.85,
+   "end": 199.44,
    "beat": "JANTAR",
    "quote": "Vou preparar o jantar.",
    "label": "",
@@ -133,8 +133,8 @@
   },
   {
    "source": "continente_sopas",
-   "start": 953.9,
-   "end": 954.7,
+   "start": 953.8,
+   "end": 954.6,
    "beat": "CAOS",
    "quote": "como hoje",
    "label": "",
@@ -148,8 +148,8 @@
   },
   {
    "source": "continente_sopas",
-   "start": 955.3,
-   "end": 959.75,
+   "start": 955.2,
+   "end": 959.65,
    "beat": "CAOS",
    "quote": "a Clara tem treino na ginástica e chega um bocadinho tarde, eu tenho de ir adiantando esta parte.",
    "label": "",
@@ -188,48 +188,54 @@
   },
   {
    "source": "continente_sopas",
-   "start": 585.5,
-   "end": 588.7,
+   "start": 585.4,
+   "end": 588.6,
    "beat": "CAOS",
-   "quote": "(bebé a chamar) Espera, filho. Espera.",
+   "quote": "(bebé a resmungar) Espera, filho. Espera.",
    "label": "",
    "audio_layers": [
     [
-     566.3,
-     1.5,
-     0.0,
-     2
+     482.59,
+     0.85,
+     0.08,
+     0
+    ],
+    [
+     564.49,
+     0.4,
+     1.98,
+     -6
     ]
    ]
   },
   {
    "source": "continente_sopas",
-   "start": 637.22,
-   "end": 638.02,
+   "start": 637.12,
+   "end": 637.87,
    "beat": "DECISAO",
    "quote": "Vou ser honesta,",
    "label": ""
   },
   {
    "source": "continente_sopas",
-   "start": 638.15,
-   "end": 640.0,
+   "start": 638.11,
+   "end": 639.9,
    "beat": "DECISAO",
    "quote": "eu ia fazer jantar, mas já não vou, porque,",
    "label": ""
   },
   {
    "source": "continente_sopas",
-   "start": 640.7,
-   "end": 641.17,
+   "start": 640.6,
+   "end": 641.07,
    "beat": "DECISAO",
    "quote": "não dá.",
    "label": ""
   },
   {
    "source": "continente_sopas",
-   "start": 645.96,
-   "end": 647.97,
+   "start": 645.86,
+   "end": 647.87,
    "beat": "DECISAO",
    "quote": "Vou fazer uns ovos e vou servir a sopa.",
    "label": "",
@@ -253,16 +259,16 @@
   },
   {
    "source": "continente_sopas",
-   "start": 221.62,
-   "end": 224.18,
+   "start": 221.52,
+   "end": 224.08,
    "beat": "PRODUTO",
    "quote": "Eu descobri a melhor sopa de sempre no Continente,",
    "label": ""
   },
   {
    "source": "continente_sopas",
-   "start": 226.12,
-   "end": 230.22,
+   "start": 226.02,
+   "end": 230.12,
    "beat": "PRODUTO",
    "quote": "a receita do chef, sopa de abóbora, camarão e coentros, é maravilhosa.",
    "label": "",
@@ -276,16 +282,16 @@
   },
   {
    "source": "continente_sopas",
-   "start": 249.1,
-   "end": 249.74,
+   "start": 249.0,
+   "end": 249.64,
    "beat": "PRODUTO",
    "quote": "Amamos.",
    "label": ""
   },
   {
    "source": "continente_sopas",
-   "start": 961.92,
-   "end": 963.05,
+   "start": 961.82,
+   "end": 962.95,
    "beat": "BANHO",
    "quote": "Vamos lá tomar banhoca, (imagem: corredor a entrar na casa de banho com o bebé)",
    "label": "",
@@ -331,11 +337,12 @@
   },
   {
    "source": "continente_sopas",
-   "start": 2135.24,
-   "end": 2137.8,
+   "start": 2171.6,
+   "end": 2174.16,
    "beat": "HENRIQUE",
-   "quote": "não é doce, não pode ser sempre doce, filho.",
-   "label": ""
+   "quote": "(imagem, sem fala) Rute leva a colher ao Henrique e faz 'ahh'",
+   "label": "",
+   "bowl_clean": true
   },
   {
    "source": "continente_sopas",
@@ -379,11 +386,20 @@
   },
   {
    "source": "continente_sopas",
-   "start": 2542.0,
-   "end": 2543.3,
+   "start": 2541.9,
+   "end": 2543.2,
    "beat": "FAMILIA",
    "quote": "(imagem) a deitar a sopa da embalagem na taça",
-   "label": ""
+   "label": "",
+   "mute": true,
+   "audio_layers": [
+    [
+     2537.15,
+     1.32,
+     0.0,
+     0
+    ]
+   ]
   },
   {
    "source": "continente_sopas",
@@ -423,5 +439,5 @@
    ]
   }
  ],
- "total_duration_s": 46.4
+ "total_duration_s": 46.29
 }
