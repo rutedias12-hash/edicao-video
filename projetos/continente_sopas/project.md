@@ -176,3 +176,16 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
 - Iteração: título "fim / de / dia" uma palavra por linha, 470 px, em Cherry Burgundy (escolha da Rute, mesmo sem passar o teste de contraste);
   destaque "chef" (Sloop) em Burgundy. Cozinha reordenada (2,9–8,9 s): Henrique na cadeira (abre, não estava na lista dela) → saca das batatas →
   com o Henrique ao colo, batatas já no cesto → travessas pretas para a bancada → a descascar → a cortar. EDL anterior: edl_montagem_hq_antes_reordem.json.
+
+## Sessão 8 — 2026-10-22/23 · voz off (áudios 81 e 82) → `edit/vozoff_preview.mp4` (1080p30, para afinar; 4K só quando a Rute disser)
+- Áudios da Rute em `videos/voz/` (audio81/82.m4a). Transcritos (ElevenLabs) → `scripts/condensar_voz.py`: sem respirações/pausas/silêncios
+  (pausa 0,25 s em fim de frase, 0,15 s em vírgula): 81 17,8 → 14,6 s; 82 28,4 → 25,3 s. Re-transcrição confirmou 0 palavras cortadas.
+- `scripts/build_edl_vozoff.py` → `edl_vozoff.json` (48,2 s): antes da sopa 4,6 → 15,3 s, com 4 clipes novos dos originais
+  (p_caos1 2:33 Henrique na cadeira/ela corre p/ o forno; p_caos3 11:32 ao colo, mão na testa; p_caos2 2:46; p_caos4 2:57 lava-loiça);
+  restantes clipes acertados às frases do 82 ("Se calhar…" no pijama, "filha chega de rastos" na Clara, "E saboroso" no fecho).
+- 81 começa aos 0,59 s (por baixo do título) e acaba 0,25 s antes do "Eu descobri"; 82 começa logo depois do "Amamos!". Vozes +8,2 dB
+  (= nível da sopa), tudo -14 LUFS, pico -1 dBFS. Transcrição do som final: ordem e texto certos.
+- Lettering: título condensado (-0,09 em, linhas 0,68, 470 px, burgundy), subtítulo "quando o caos ataca uma família de 4" (Medium 44 px),
+  horas novas (17:50 chegar a casa · 17:50 tentar preparar o jantar · …), legendas palavra a palavra da voz off (não aparecem durante o título),
+  descem uma linha sob a atividade de 2 linhas; Sloop desce 48 px para não tocar na atividade. HyperFrames check sem erros; zona segura ok.
+- Pré-visualizações: `ESCALA=1` + `cut.py H=1920 FPS=30` + `finish_vozoff.sh preview`. Final: `ESCALA=2`, `H=3840 FPS=60`, `finish_vozoff.sh 4k`.

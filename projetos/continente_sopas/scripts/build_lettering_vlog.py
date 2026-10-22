@@ -1,14 +1,17 @@
-"""Lettering "vlog" da marca (marca/FORMATOS.md) para a montagem 4K60 com o bloco da sopa.
-Gera animations/slot_3/index.html (HyperFrames, 2160×3840, fundo transparente) a partir de marca/marca.css.
-- Título "fim / de / dia": Montserrat SemiBold 470 px, uma palavra por linha, à esquerda, máquina de escrever (14 letras/s)
-  com cursor; só 0–2,9 s. Cor: Cherry Burgundy por escolha da Rute neste vídeo (mesmo sem passar o teste de contraste).
-- Destaque "chef" (Sloop) também em Burgundy, por escolha da Rute; os outros destaques em Champagne.
-- Hora + atividade: ao centro, Winter White, só aparecem/desaparecem.
-- Legendas da voz (só bloco da sopa): uma palavra de cada vez, coladas por baixo da hora; destaques em Champagne
-  (o burgundy/espresso não passam o teste), alternando "cor" (SemiBold) e "sloop".
-Uso: python3 scripts/build_lettering_vlog.py
+"""Lettering "vlog" da marca (marca/FORMATOS.md) para a montagem com voz off (edl_vozoff.json).
+Gera animations/slot_3/index.html (HyperFrames, fundo transparente) a partir de marca/marca.css.
+ESCALA=1 → 1080×1920 (pré-visualização); ESCALA=2 → 2160×3840 (4K final). Tempos em vozoff_tempos.json.
+- Título "fim / de / dia": Montserrat SemiBold 470 px, uma palavra por linha, condensado (letras -0,09 em, linhas 0,68),
+  à esquerda, Cherry Burgundy (escolha da Rute), máquina de escrever (14 letras/s) com cursor; só 0–2,9 s.
+- Subtítulo "quando o caos ataca uma família de 4": Montserrat Medium 44 px, Winter White, por baixo do título;
+  aparece quando o título acaba de se escrever e sai com ele.
+- Hora + atividade: ao centro, Winter White; cada uma fica até aparecer a seguinte (pedido da Rute).
+- Legendas da voz (voz off 81 e 82 + bloco da sopa): uma palavra de cada vez, coladas por baixo da hora; não aparecem
+  enquanto o título está no ecrã. Destaques em Champagne (o burgundy/espresso não passam o teste), alternando "cor" e
+  "sloop"; "chef" em Burgundy (escolha da Rute).
+Uso: ESCALA=1 python3 scripts/build_lettering_vlog.py
 """
-import html, json, shutil
+import html, json, os, re, shutil
 from pathlib import Path
 
 E = Path(__file__).resolve().parents[1]
@@ -19,28 +22,60 @@ for f in (R/'marca/fontes').glob('*.ttf'):
     shutil.copy(f, OUT/'fontes'/f.name)
 shutil.copy(R/'marca/marca.css', OUT/'marca.css')
 
-DUR = 38.5
+ESC = int(os.environ.get('ESCALA', '1'))
+W, H = 1080*ESC, 1920*ESC
+T = json.load(open(E/'vozoff_tempos.json')); S = T['secoes']
+DUR = S['fim']
 TITULO, T0, LPS, FIM_TITULO = ['fim', 'de', 'dia'], 0.3, 14, 2.9   # uma palavra por linha (pedido da Rute)
-HORAS = [  # (início, fim, hora, atividade) — o fim é recalculado: cada uma fica até aparecer a seguinte (a última até ao fim)
-    (2.9, 4.9, '17:50', 'tentar preparar o jantar'),
-    (8.9, 11.46, '18:10', 'plano b'),
-    (16.2, 18.0, '18:30', 'jantar do Henrique (omelete + banana esmagada)'),
-    (20.2, 22.3, '18:50', 'banho do Henrique'),
-    (26.7, 28.5, '19:30', 'deitar o bebé'),
-    (30.4, 32.1, '19:45', 'Clarita chega de rastos'),
-    (32.1, 34.2, '19:50', 'ainda bem que tinha esta sopa'),
-    (34.2, 36.2, '20:00', 'jantar em família'),
+SUBTITULO = 'quando o caos ataca uma família de 4'
+HORAS = [  # (início, hora, atividade) — cada uma fica até aparecer a seguinte (a última até ao fim)
+    (FIM_TITULO, '17:50', 'chegar a casa'),
+    (S['cozinha'], '17:50', 'tentar preparar o jantar'),
+    (S['sopa'], '18:10', 'plano b'),
+    (S['jantar_henrique'], '18:30', 'jantar do Henrique (omelete + banana esmagada)'),
+    (S['banho'], '18:50', 'banho do Henrique'),
+    (S['deitar'], '19:30', 'deitar o bebé'),
+    (S['clara'], '19:45', 'Clarita chega de rastos'),
+    (S['sopa_taca'], '19:50', 'ainda bem que tinha esta sopa'),
+    (S['mesa'], '20:00', 'jantar em família'),
 ]
-# (palavra, início em s na montagem, destaque) — tempos da transcrição do bloco (ElevenLabs)
-LEG = [('eu', 9.00), ('descobri', 9.14), ('a', 9.44), ('melhor', 9.52, 'cor'), ('sopa', 10.04), ('de', 10.36),
-       ('sempre', 10.48), ('no', 10.84), ('Continente', 10.98),
-       ('é', 11.60), ('a', 11.64), ('receita', 11.72), ('do', 12.00), ('chef', 12.16, 'sloop-vermelho'),
-       ('sopa', 12.62), ('de', 12.96), ('abóbora', 13.04), ('camarão', 13.66), ('e', 13.98), ('coentros', 14.08),
-       ('é', 14.42), ('maravilhosa', 14.74, 'cor'),
-       ('amamos', 15.60, 'sloop')]
-LEG_FIM = 16.06
-# pedido da Rute: a hora/atividade fica sempre no ecrã e só sai quando aparece a seguinte
-HORAS = [(a, HORAS[k+1][0] if k+1 < len(HORAS) else DUR, h, r) for k, (a, b, h, r) in enumerate(HORAS)]
+HORAS = [(round(a, 3), round(HORAS[k+1][0] if k+1 < len(HORAS) else DUR, 3), h, r) for k, (a, h, r) in enumerate(HORAS)]
+# atividades que ocupam 2 linhas (Montserrat SemiBold 28 px, maiúsculas, +0,04 em, largura útil 840 px): a legenda desce uma linha
+from PIL import ImageFont
+_f = ImageFont.truetype(str(R/'marca/fontes/Montserrat-SemiBold.ttf'), 28)
+LINHAS = {r: 2 if _f.getlength(r.upper()) + 0.04*28*len(r) > 840 else 1 for _, _, _, r in HORAS}
+def topo_legenda(t):   # colada por baixo da hora/atividade que está no ecrã
+    for a, b, h, r in HORAS:
+        if a <= t < b and LINHAS[r] == 2: return 968 + 34
+    return 968
+
+# ---- legendas: palavras com tempos (início, fim da fala) ----
+PROPRIOS = {'henrique': 'Henrique', 'paulo': 'Paulo', 'clara': 'Clara', 'continente': 'Continente'}
+CORRIGE = {'controle': 'controlo', 'raste': 'rastos'}
+def limpa(t):
+    w = re.sub(r'[.,?!…]', '', t).lower()
+    return PROPRIOS.get(w, CORRIGE.get(w, w))
+LEG = []   # (palavra, início, fim da fala, destaque)
+def voz(n, inicio, destaques):
+    P = json.load(open(E.parents[0]/f'voz/voz{n}_palavras.json')); dest = dict(destaques)
+    for i, p in enumerate(P):
+        w = limpa(p['texto'])
+        if w == 'da' and i and limpa(P[i-1]['texto']) == 'rastos': w = 'a'   # "de rastos a casa"
+        LEG.append([w, round(inicio + p['ini'], 3), round(inicio + p['fim'], 3), dest.pop(w, '')])
+    LEG.append(None)   # fim do bloco de fala
+voz('81', T['voz81'], [('controlo', 'sloop'), ('jantar', 'cor'), ('incomodado', 'sloop'), ('sozinha', 'cor'), ('ceder', 'sloop')])
+SOPA = S['sopa'] + 0.1 - 9.00   # tempos do bloco da sopa medidos com o "Eu" aos 9,00 s
+for w, t, *d in [('eu', 9.00), ('descobri', 9.14), ('a', 9.44), ('melhor', 9.52, 'cor'), ('sopa', 10.04), ('de', 10.36),
+                 ('sempre', 10.48), ('no', 10.84), ('Continente', 10.98), ('é', 11.60), ('a', 11.64), ('receita', 11.72),
+                 ('do', 12.00), ('chef', 12.16, 'sloop-vermelho'), ('sopa', 12.62), ('de', 12.96), ('abóbora', 13.04),
+                 ('camarão', 13.66), ('e', 13.98), ('coentros', 14.08), ('é', 14.42), ('maravilhosa', 14.74, 'cor'),
+                 ('amamos', 15.60, 'sloop')]:
+    LEG.append([w, round(t + SOPA, 3), round(t + SOPA + 0.3, 3), d[0] if d else ''])
+LEG[-1][2] = round(16.06 + SOPA, 3); LEG.append(None)
+voz('82', T['voz82'], [('sacrificar', 'cor'), ('batalhas', 'sloop'), ('fogão', 'cor'), ('mão', 'sloop'), ('real', 'cor'), ('saboroso', 'sloop')])
+for k in range(1, len(LEG)):   # palavras ditas "ao mesmo tempo" (ex.: "e eu"): cada uma fica pelo menos 0,07 s
+    if LEG[k] and LEG[k-1] and LEG[k][1] < LEG[k-1][1] + 0.07:
+        LEG[k][1] = round(LEG[k-1][1] + 0.07, 3)
 
 # ---- título: um elemento por letra (a quebra de linha conta como uma letra, como no marca/exemplo.html) ----
 chars = []
@@ -57,35 +92,41 @@ while t < FIM_TITULO:
 
 clips = [f'<div id="titulo" class="clip" data-start="0" data-duration="{FIM_TITULO}">{tit}<span id="cursor" class="cursor"></span></div>']
 for k, (a, b, h, r) in enumerate(HORAS):
-    clips.append(f'<div id="hora{k}" class="clip hora" data-start="{a:.3f}" data-duration="{b-a:.3f}">'
+    clips.append(f'<div id="hora{k}" class="clip hora" data-start="{a:.3f}" data-duration="{round(b-a, 3):.3f}">'
                  f'<div class="h">{h}</div><div class="r">{html.escape(r)}</div></div>')
+clips.append(f'<div id="subtitulo" class="clip" data-start="{fim_escrita:.3f}" data-duration="{FIM_TITULO - fim_escrita:.3f}">{html.escape(SUBTITULO)}</div>')
 for k, w in enumerate(LEG):
-    nxt = LEG[k+1][1] if k+1 < len(LEG) else LEG_FIM
-    fim = min(nxt, w[1] + 0.6) if k+1 < len(LEG) else LEG_FIM   # sai antes da seguinte; nas pausas fica no máx. 0,6 s
-    d = w[2] if len(w) > 2 else ''
+    if w is None or w[1] < FIM_TITULO: continue
+    nxt = LEG[k+1][1] if LEG[k+1] is not None else None
+    fim = min(nxt, w[1] + 0.6) if nxt is not None else max(w[2], w[1] + 0.3)   # última palavra do bloco: até acabar de ser dita
+    d = w[3]
     inner = (f'<span class="dest-sloop" style="color:var(--burgundy)">{w[0]}</span>' if d == 'sloop-vermelho' else
              f'<span class="dest-sloop" style="color:var(--champagne)">{w[0]}</span>' if d == 'sloop' else
-             f'<span class="dest-cor" style="color:var(--champagne)">{w[0]}</span>' if d == 'cor' else w[0])
-    clips.append(f'<div id="w{k}" class="clip leg" data-start="{w[1]:.3f}" data-duration="{fim-w[1]:.3f}">{inner}</div>')
+             f'<span class="dest-cor" style="color:var(--champagne)">{w[0]}</span>' if d == 'cor' else html.escape(w[0]))
+    topo = topo_legenda(w[1]) + (48 if 'sloop' in d else 0)   # a Sloop é grande: desce para não tocar na atividade
+    st = '' if topo == 968 else f' style="top:{topo}px"'
+    clips.append(f'<div id="w{k}" class="clip leg"{st} data-start="{w[1]:.3f}" data-duration="{fim-w[1]:.3f}">{inner}</div>')
 
 page = f'''<!doctype html>
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=2160, height=3840" />
+    <meta name="viewport" content="width={W}, height={H}" />
     <title>Fim de dia — lettering vlog</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <link rel="stylesheet" href="marca.css" />
     <style>
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-      html, body {{ width: 2160px; height: 3840px; overflow: hidden; background: transparent; }}
-      #root {{ position: relative; width: 2160px; height: 3840px; overflow: hidden; }}
-      /* palco em coordenadas 1080×1920 (as da marca), ampliado 2× para 4K */
-      #palco {{ position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform: scale(2); transform-origin: 0 0;
+      html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: transparent; }}
+      #root {{ position: relative; width: {W}px; height: {H}px; overflow: hidden; }}
+      /* palco em coordenadas 1080×1920 (as da marca), ampliado {ESC}× */
+      #palco {{ position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform: scale({ESC}); transform-origin: 0 0;
                font-family: var(--fonte-texto); color: var(--winter-white); }}
       .clip {{ position: absolute; }}
-      #titulo {{ top: calc(var(--seg-topo) + 24px); left: 70px; right: var(--seg-dir); font-weight: 600; font-size: 470px;
-                line-height: var(--lh-titulo-vlog); letter-spacing: var(--esp-titulo); color: var(--burgundy); white-space: nowrap; }}
+      #titulo {{ top: calc(var(--seg-topo) + 40px); left: 70px; right: var(--seg-dir); font-weight: 600; font-size: 470px;
+                line-height: .68; letter-spacing: -0.09em; color: var(--burgundy); white-space: nowrap; }}   /* mais condensado (pedido da Rute) */
+      #subtitulo {{ top: 1379px; left: 70px; right: var(--seg-dir); font-weight: 500; font-size: 44px; line-height: var(--lh-texto);
+                   letter-spacing: var(--esp-texto); white-space: nowrap; }}
       .ch {{ display: none; }}
       #titulo .cursor {{ width: .06em; height: .72em; vertical-align: -.02em; }}
       .hora {{ top: 880px; left: var(--seg-dir); right: var(--seg-dir); text-align: center; }}
@@ -96,7 +137,7 @@ page = f'''<!doctype html>
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="{DUR}" data-width="2160" data-height="3840">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{DUR}" data-width="{W}" data-height="{H}">
       <div id="palco">
         {chr(10).join('        ' + c for c in clips).lstrip()}
       </div>
@@ -112,4 +153,4 @@ page = f'''<!doctype html>
 '''
 (OUT/'index.html').write_text(page)
 json.dump({'fim_escrita': round(fim_escrita, 3), 'inicio_escrita': T0}, open(OUT/'timings.json', 'w'))
-print('slot_3 pronto · escrita do título', T0, '→', round(fim_escrita, 3), 's')
+print(f'slot_3 pronto ({W}×{H}, {DUR:.2f} s) · escrita do título', T0, '→', round(fim_escrita, 3), 's · palavras', sum(1 for c in clips if 'class="clip leg"' in c))

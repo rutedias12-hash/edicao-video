@@ -1,0 +1,18 @@
+{
+ "secoes": {
+  "chegada": 0.0,
+  "cozinha": 4.6,
+  "sopa": 15.2667,
+  "jantar_henrique": 22.5667,
+  "banho": 26.9667,
+  "pijama": 31.4333,
+  "deitar": 33.1,
+  "clara": 36.5,
+  "sopa_taca": 40.3667,
+  "mesa": 43.2333,
+  "fecho": 45.9,
+  "fim": 48.2333
+ },
+ "voz81": 0.587,
+ "voz82": 22.617
+}

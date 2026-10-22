@@ -32,3 +32,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — continente_sopas — horas/atividades ficam SEMPRE no ecrã e só saem quando aparece a seguinte. As legendas da voz NÃO (mantêm a regra palavra a palavra).
 2026-10-22 — continente_sopas — título do vlog: uma palavra por linha, pode ser maior (até caber); a Rute prefere o título em vermelho (Burgundy)
   mesmo quando o teste de contraste indicaria Champagne. Destaques Sloop também podem ir em Burgundy. Perguntar se a regra passa a ser sempre assim.
+2026-10-23 — continente_sopas — enviar sempre pré-visualizações em 1080p/30 fps para afinar; o 4K só quando a Rute disser.
+  Voz off (vlog): cortar respirações, pausas e silêncios. Título pode levar subtítulo curto por baixo (Winter White, aparece quando o título acaba).
