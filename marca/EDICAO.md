@@ -32,3 +32,9 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — todo o texto dentro das margens de segurança dos Reels (220 cima, 420 baixo, 120 direita, 60 esquerda).
 2026-10-22 — vlog tapete novo — a Rute pediu: remover TODAS as pausas e respirações e o fecho final (assinatura), em todos os vídeos.
 2026-10-22 — vlog tapete novo — cor: corrigir SEMPRE luz e cor plano a plano (contraste nos planos lavados, mesmo tom quente em todos, cor viva mas natural, nitidez leve). Nunca alterar feições nem a realidade.
+2026-10-22 — vlog tapete novo — produtos: quando se fala de um produto comprado, mostrar um **cartão de produto pequeno**
+  (foto da captura da loja + o essencial em Montserrat Espresso sobre Winter White: nome, tamanho, ref., preço),
+  num canto da zona segura que **não tape a ação**; **clique de rato** (marca/sons/clique.wav) ao aparecer e ao desaparecer.
+  Legendas e horas continuam no ecrã. Pedir à Rute a captura da loja e os dados que faltem (ex.: tamanho).
+2026-10-22 — vlog tapete novo — horas no ecrã: usar as **horas reais de gravação** (metadados do iPhone, hora de Lisboa) do clipe de cada momento.
+2026-10-22 — vlog tapete novo — título do vlog mais condensado: espaço entre letras -0,09 em (letra maior para ocupar a largura).

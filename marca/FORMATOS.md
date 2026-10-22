@@ -34,7 +34,7 @@ Se houver música, os cortes caem no compasso.
 - Na **cor de destaque**: Cherry Burgundy; se o burgundy não se ler sobre a imagem, **Champagne** (ver `MARCA.md`).
 - Escreve-se à máquina, com cursor e som de teclado. **Só nos primeiros 3 s**; depois desaparece.
 
-**Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15", Montserrat Semibold ~54 px) e,
+**Horas no ecrã:** a cada mudança de momento, aparece a hora **real de gravação** (metadados do clipe, hora de Lisboa) ("7:15", Montserrat Semibold ~54 px) e,
 por baixo, a atividade em maiúsculas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO; Semibold ~28 px).
 **Sempre Winter White** (tom claro), **alinhadas ao centro do ecrã** (horizontal e vertical, como nas referências),
 sem caixa nem sombra. Só aparecem; saem um ou dois clipes depois.
@@ -57,7 +57,10 @@ estilo do título (Montserrat Semibold, letras e linhas apertadas, cor de destaq
 som de teclado) que **fica no ecrã** enquanto é relevante, com hora/atividade e legenda por baixo.
 Modelo pronto: `marca/modelos/legenda-informativa.html`. Nunca usar sem a Rute pedir "legenda informativa".
 
-**Efeitos sonoros:** só o teclado, enquanto o título (ou uma legenda informativa) se escreve.
+**Produtos:** cartão de produto pequeno (foto + nome, tamanho, ref., preço) num canto que não tape a ação,
+enquanto se fala do produto (~3–4 s), com clique de rato ao aparecer e ao desaparecer (ver `EDICAO.md`).
+
+**Efeitos sonoros:** o teclado enquanto o título (ou uma legenda informativa) se escreve; o clique nos cartões de produto.
 
 **Cor da imagem:** tons quentes e suaves, iguais em todos os planos (o mesmo "filtro" em todo o vídeo).
 
