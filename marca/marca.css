@@ -1,40 +1,54 @@
 /* Marca Rute Dias — importar em todas as composições HyperFrames.
-   Estilo simples: só Proxima Nova, sem sombras; títulos em máquina de escrever, o resto só aparece. */
-/* Proxima Nova (quando os ficheiros estiverem em fontes/); senão usa Montserrat, a substituta. */
+   Vlog: só "Sistema" (+ Sloop em algumas palavras das legendas).
+   Yapping: Sloop (títulos/destaques) + Proxima Nova (legendas/texto).
+   Sem sombras. Títulos em máquina de escrever; o resto só aparece. */
 @font-face { font-family: "Proxima Nova"; font-weight: 400; src: url("fontes/ProximaNova-Regular.otf"); }
 @font-face { font-family: "Proxima Nova"; font-weight: 500; src: url("fontes/ProximaNova-Medium.otf"); }
 @font-face { font-family: "Proxima Nova"; font-weight: 600; src: url("fontes/ProximaNova-Semibold.otf"); }
+@font-face { font-family: "Sloop"; src: url("fontes/Sloop.otf"); }
+/* Substitutas (gratuitas) enquanto não houver os ficheiros verdadeiros */
 @font-face { font-family: "Montserrat"; font-weight: 400; src: url("fontes/Montserrat-Regular.ttf"); }
 @font-face { font-family: "Montserrat"; font-weight: 500; src: url("fontes/Montserrat-Medium.ttf"); }
 @font-face { font-family: "Montserrat"; font-weight: 600; src: url("fontes/Montserrat-SemiBold.ttf"); }
+@font-face { font-family: "Inter"; font-weight: 400; src: url("fontes/Inter-Regular.ttf"); }
+@font-face { font-family: "Inter"; font-weight: 500; src: url("fontes/Inter-Medium.ttf"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("fontes/Inter-SemiBold.ttf"); }
+@font-face { font-family: "Mrs Saint Delafield"; src: url("fontes/MrsSaintDelafield.ttf"); }
 
 :root {
   /* Cores */
-  --winter-white: #F2EFE6;   /* texto sobre o vídeo (por defeito) */
-  --champagne:    #E8D8C5;
+  --winter-white: #F2EFE6;   /* texto normal sobre o vídeo */
+  --champagne:    #E8D8C5;   /* destaque quando o burgundy não se lê */
   --espresso:     #493A33;   /* texto sobre fundos claros */
-  --burgundy:     #6F172B;
+  --burgundy:     #6F172B;   /* cor de destaque principal */
 
-  --fonte: "Proxima Nova", "Montserrat", sans-serif;
+  /* Fontes */
+  --fonte-sistema: "Inter", -apple-system, "SF Pro Display", sans-serif;   /* vlogs */
+  --fonte-texto:   "Proxima Nova", "Montserrat", sans-serif;               /* yapping */
+  --fonte-sloop:   "Sloop", "Mrs Saint Delafield", cursive;
 
   /* Espaçamento entre letras: apertado (pedido da Rute) */
-  --esp-titulo:  -0.03em;
-  --esp-texto:   -0.015em;
-  --esp-rotulo:   0.1em;   /* rótulos em maiúsculas */
+  --esp-titulo: -0.03em;
+  --esp-texto:  -0.015em;
+  --esp-rotulo:  0.1em;
 
-  /* Tamanhos para vídeo vertical 1080×1920 */
-  --t-titulo:   72px;  /* 64–80, SemiBold */
-  --t-hora:     44px;  /* Medium */
-  --t-rotulo:   24px;  /* Medium, maiúsculas */
-  --t-legenda:  36px;  /* vlog, Regular */
-  --t-palavra:  64px;  /* yapping, palavra a palavra, SemiBold */
+  /* Vídeo vertical 1080×1920 */
+  --t-titulo-vlog: 230px;   /* 200–260: quase o ecrã todo; ajustar para a palavra mais longa caber */
+  --lh-titulo-vlog: 0.88;   /* linhas muito juntas */
+  --t-hora:     44px;
+  --t-rotulo:   24px;
+  --t-legenda:  40px;       /* vlog, palavra a palavra */
+  --t-palavra:  64px;       /* yapping, palavra a palavra */
 
-  /* Máquina de escrever */
   --letras-por-segundo: 14;
   --cursor-pisca: 0.5s;
 }
 
-.texto  { font-family: var(--fonte); color: var(--winter-white); text-shadow: none; letter-spacing: var(--esp-texto); }
-.claro  { color: var(--espresso); }   /* usar quando o fundo é claro */
-.cursor { display: inline-block; width: .08em; height: .9em; margin-left: .06em;
-          background: currentColor; vertical-align: -.1em; }
+.texto  { color: var(--winter-white); text-shadow: none; letter-spacing: var(--esp-texto); }
+.claro  { color: var(--espresso); }
+.cursor { display: inline-block; width: .06em; height: .8em; margin-left: .04em;
+          background: currentColor; vertical-align: -.02em; }
+/* Destaques nas legendas do vlog */
+.dest-cor   { color: var(--champagne); font-weight: 600; }          /* mesma fonte, outro tom da paleta */
+.dest-sloop { font-family: var(--fonte-sloop); color: var(--burgundy);
+              font-size: 2.6em; letter-spacing: 0; line-height: .6; }  /* 2,6× para a substituta; afinar com a Sloop */  /* ou --champagne se não se ler */

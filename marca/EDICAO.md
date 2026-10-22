@@ -17,3 +17,6 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — vlog: clipes de 0,5 a 2 s (nunca 3 s), cada corte muda de perspetiva.
 2026-10-22 — configuração — a Rute detestou o lettering editorial (La Luxes + manuscrita). Agora: só sans serif (Hind Siliguri), sem sombras; títulos em máquina de escrever com cursor e som de teclado; resto só aparece.
 2026-10-22 — configuração — letra dos vídeos passa a Proxima Nova (Montserrat até haver ficheiros) com espaçamento entre letras apertado.
+2026-10-22 — configuração — guia novo (Sloop + Proxima Nova). Sloop só no yapping; vlog só "Sistema".
+  Títulos do vlog: curtos, enormes, à esquerda, linhas juntas, em Burgundy (Champagne se não se ler).
+  Legendas do vlog: palavra a palavra, com palavras-chave em Champagne ou em Sloop.
