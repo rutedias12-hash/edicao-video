@@ -19,3 +19,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — yapping: legendas palavra a palavra; efeitos sonoros sim (só yapping); música só se pedida.
 2026-10-22 — configuração — vlog: clipes de 0,5 a 2 s (nunca 3 s), cada corte muda de perspetiva.
 2026-10-22 — vlog tapete novo — a Rute pediu: remover TODAS as pausas e respirações e o fecho final (assinatura), em todos os vídeos.
+2026-10-22 — vlog tapete novo — cor: corrigir SEMPRE luz e cor plano a plano (contraste nos planos lavados, mesmo tom quente em todos, cor viva mas natural, nitidez leve). Nunca alterar feições nem a realidade.
