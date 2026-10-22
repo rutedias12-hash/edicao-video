@@ -9,10 +9,10 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   vlog calmo (a voz respira ~0,2–0,3 s entre frases); yapping vivo (sem tempos mortos).
 - Legendas, título de abertura e animações: dependem do formato (vlog ou yapping), ver `marca/FORMATOS.md`.
 - Volume final: -14 LUFS.
-- Fecho: assinatura "Rute Dias" em New Icon Script, Burgundy, sobre Winter White.
 - Música: **só se a Rute pedir** (confirmado); nesse caso, volume baixo por baixo da voz.
 
 ## Aprendido nos projetos
 <!-- Formato: AAAA-MM-DD — projeto — o que mudou e porquê -->
 2026-10-22 — configuração — yapping: legendas palavra a palavra; efeitos sonoros sim (só yapping); música só se pedida.
 2026-10-22 — configuração — vlog: clipes de 0,5 a 2 s (nunca 3 s), cada corte muda de perspetiva.
+2026-10-22 — configuração — a Rute detestou o lettering editorial (La Luxes + manuscrita). Agora: só sans serif (Hind Siliguri), sem sombras; títulos em máquina de escrever com cursor e som de teclado; resto só aparece.

@@ -5,7 +5,7 @@ As receitas vêm das referências que a Rute escolheu, **traduzidas para a marca
 copia-se a estrutura e o ritmo, nunca as cores ou as fontes das referências.
 
 Comum aos dois: vertical 1080×1920, volume final **-14 LUFS** (o valor de todas as referências),
-assinatura "Rute Dias" no fim.
+títulos em máquina de escrever com som de teclado, todo o resto só aparece (ver `MARCA.md`).
 
 ---
 
@@ -25,67 +25,55 @@ alternar plano geral, pormenor (mãos, objetos), visto de cima, perfil, espelho.
 seguidos do mesmo ângulo. Se um plano for longo, partir em vários pedaços curtos de ângulos diferentes.
 Se houver música, os cortes caem no compasso.
 
-**Gancho (0–3 s):** título curto no centro, que aparece **palavra a palavra**, empilhado, uma palavra por linha
-(ex.: "uma / manhã / lenta / comigo"), em La Luxes, Winter White sobre a imagem.
-Por baixo, uma frase curta em New Icon Script (ex.: "a minha rotina"), escrita da esquerda para a direita.
-Fica no ecrã enquanto passam os 2–4 primeiros planos.
+**Gancho (0–3 s):** título curto em minúsculas (ex.: "uma manhã lenta comigo"), Hind Siliguri SemiBold
+~72 px, que **se escreve à máquina** com cursor e som de teclado. Centro ou terço superior.
+Fica no ecrã enquanto passam os 2–4 primeiros clipes.
 
-**Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15") em Hind Siliguri Medium ~44 px
-e, por baixo, um rótulo minúsculo em maiúsculas espaçadas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO), ~22 px.
-Winter White, centro do ecrã, sem caixa. Entra suave, sai no plano seguinte ou dois.
+**Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15", Hind Siliguri Medium ~44 px) e,
+por baixo, um rótulo pequeno em maiúsculas espaçadas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO, ~24 px).
+Winter White, centro do ecrã, sem caixa nem sombra. Só aparece; sai um ou dois clipes depois.
 
-**Legendas da voz:** discretas. Uma linha, letra pequena (Hind Siliguri Regular ~34–38 px), minúsculas,
-Winter White com sombra muito leve, a meio do ecrã (~45 % da altura). Frase inteira, não palavra a palavra.
-Sem caixa.
+**Legendas da voz:** discretas. Uma linha, Hind Siliguri Regular ~36 px, minúsculas, Winter White
+**sem sombra**, a meio do ecrã (~45 % da altura). Frase inteira, não palavra a palavra. Só aparecem.
 
-**Efeitos sonoros:** não (são só para o yapping).
+**Efeitos sonoros:** só o teclado, enquanto o título se escreve.
 
 **Cor da imagem:** tons quentes e suaves, iguais em todos os planos (o mesmo "filtro" em todo o vídeo).
 
-**Fecho:** último plano (até 2 s) e a assinatura "Rute Dias" em New Icon Script.
+**Fecho:** último plano (até 2 s). Sem assinatura, a não ser que a Rute peça.
 
 ---
 
 ## 2. Yapping (a falar para a câmara: dicas, opiniões, histórias)
 
 Referências:
-- https://www.instagram.com/reel/DaF4c7-hN1t/ (legenda palavra a palavra, palavras grandes, desenhos)
+- https://www.instagram.com/reel/DaF4c7-hN1t/ (legenda palavra a palavra)
 - https://www.instagram.com/reel/Dec66kzs_MU/ (lista que se vai preenchendo no topo)
-- https://www.instagram.com/reel/DeelAf-yI_d/ (títulos de secção "01 / …", imagens de exemplo, cartões de notas)
+- https://www.instagram.com/reel/DeelAf-yI_d/ (títulos de secção "01 / …", imagens de exemplo)
 
 **Duração:** 60–130 s.
 
 **Imagem:** a Rute a falar para a câmara, plano médio. Cortar **todos** os silêncios, hesitações e respirações
 longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 
-**Gancho (0–3 s):** no topo, uma frase pequena em New Icon Script que "se escreve" (ex.: "como eu edito")
-e, por baixo, 2–3 palavras **grandes** em La Luxes que entram uma a uma (ex.: "EDITA OS TEUS VÍDEOS").
-Winter White, com a palavra-chave em Champagne.
+**Gancho (0–3 s):** título curto em minúsculas no terço superior (ex.: "como eu edito os meus vídeos"),
+Hind Siliguri SemiBold ~72 px, que **se escreve à máquina** com cursor e som de teclado.
 
-**Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã (~62 % da altura).
-Hind Siliguri SemiBold ~68 px, Winter White com sombra suave. Cada palavra entra com um pequeno
-crescimento (95 % → 100 %, 0,12 s), sem saltos. Palavras-chave em Champagne e ligeiramente maiores.
+**Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
+(~62 % da altura). Hind Siliguri SemiBold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
+(sem crescer nem saltar).
 
 **Durante o vídeo:**
-- **Palavra-tema grande:** quando diz um conceito central ("FEED", "7 PASSOS"), aparece em La Luxes muito grande
-  (160–220 px) atrás ou ao lado dela, 1–2 s.
-- **Títulos de secção:** a cada nova parte, número em New Icon Script ("01") + título em La Luxes
-  ("A lista"), no centro, sobre um plano de pormenor ou sobre ela, 1,5–2 s.
-- **Lista que se vai preenchendo:** quando enumera coisas, no topo aparece o título da lista (New Icon Script)
-  e cada item (Hind Siliguri, "1. …") entra no momento em que é dito; a lista fica até ao fim da secção.
-- **Cartão de notas:** para listas longas ou dicas para guardar, um cartão Champagne com cantos arredondados,
-  título em Hind Siliguri SemiBold Espresso e pontos em Hind Siliguri Regular; a Rute fica visível por baixo.
+- **Títulos de secção:** a cada nova parte, "01 a lista" em Hind Siliguri SemiBold, escrito à máquina
+  com cursor e som de teclado, no terço superior, 1,5–2 s.
+- **Lista que se vai preenchendo:** quando enumera coisas, no topo fica o título da lista (escrito à máquina)
+  e cada item ("1. …", Hind Siliguri Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
-  e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s).
-- **Pequenos desenhos:** brilhos, setas, sublinhados em traço fino Winter White ou Burgundy, à mão,
-  junto do texto. Poucos, só para dar personalidade.
-- **Efeitos sonoros (sim, a Rute quer):** só estes dois, escolhidos pela Rute
-  (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
-  - **`clique.wav`** (clique de rato, 0,2 s): quando aparece uma palavra-tema, um item de lista,
-    um cartão de notas, um título de secção, uma imagem de exemplo ou um desenho;
-  - **`teclado.wav`** (teclas a bater, até 6,4 s): enquanto uma frase "se escreve" no ecrã
-    (gancho, título da lista); cortar à duração da escrita, com desvanecimento curto no fim.
-  Volume baixo, sempre abaixo da voz (cerca de -20 dB em relação à fala). **Não** em cada palavra da legenda,
-  só nos elementos gráficos. Nunca inventar nem procurar outros sons; se a Rute enviar mais, acrescentar aqui.
+  e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.
+- **Efeitos sonoros** (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
+  - **`teclado.wav`**: enquanto um título se escreve; cortar à duração da escrita;
+  - **`clique.wav`** (0,2 s): quando aparece um item de lista ou uma imagem de exemplo.
+  Volume baixo, sempre abaixo da voz (cerca de -20 dB em relação à fala). Nunca nas legendas.
+  Nunca inventar nem procurar outros sons; se a Rute enviar mais, acrescentar aqui.
 
-**Fecho:** frase final + assinatura "Rute Dias" em New Icon Script.
+**Fecho:** frase final. Sem assinatura, a não ser que a Rute peça.

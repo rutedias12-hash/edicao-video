@@ -1,19 +1,29 @@
 <!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="marca.css">
+<!-- Exemplo do estilo: título à máquina de escrever com cursor, resto só aparece.
+     ?t=<segundos> mostra o instante t (para gerar frames); sem ?t anima em tempo real. -->
 <style>
-body{margin:0;width:1080px;height:1920px;background:var(--winter-white);color:var(--espresso);font-family:var(--fonte-corpo);
- display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:40px}
-.rotulo{font-size:28px;letter-spacing:.3em;text-transform:uppercase}
-h1{font-family:var(--fonte-titulo);font-size:var(--t-titulo);font-weight:400;margin:0;line-height:1.05}
-.linha{width:120px;height:2px;background:var(--burgundy)}
-.script{font-family:var(--fonte-destaque);font-size:var(--t-destaque);color:var(--burgundy)}
-h2{font-size:var(--t-subtitulo);font-weight:600;margin:0}
-.legenda{font-size:var(--t-corpo);font-weight:500;background:var(--champagne);padding:14px 32px;border-radius:12px}
-.legenda b{color:var(--burgundy)}
+body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#8a7a6c center/cover no-repeat;
+  background-image:var(--fundo,none)}
+#titulo{position:absolute;top:420px;left:90px;right:90px;text-align:center;font-weight:600;font-size:var(--t-titulo);line-height:1.15}
+#hora{position:absolute;top:620px;width:100%;text-align:center}
+#hora .h{font-weight:500;font-size:var(--t-hora)}
+#hora .r{font-weight:500;font-size:var(--t-rotulo);letter-spacing:.3em;text-transform:uppercase}
+#legenda{position:absolute;top:790px;width:100%;text-align:center;font-size:var(--t-legenda)}
 </style></head><body>
-<div class="rotulo">Episódio 01</div>
-<h1>Título principal<br>do vídeo</h1><div class="linha"></div>
-<div class="script">um toque especial</div>
-<h2>Subtítulo em Hind Siliguri</h2>
-<div class="legenda">exemplo de <b>legenda</b> no ecrã</div>
-<div class="script" style="margin-top:120px">Rute Dias</div>
-</body></html>
+<div id="titulo" class="texto"></div>
+<div id="hora" class="texto" hidden><div class="h">7:15</div><div class="r">pequeno-almoço</div></div>
+<div id="legenda" class="texto" hidden>e começo sempre o dia com um café</div>
+<script>
+const TITULO="uma manhã lenta comigo", LPS=14, INICIO=0.3, PISCA=0.5;
+const fundo=new URLSearchParams(location.search).get('fundo'); if(fundo) document.body.style.backgroundImage=`url(${fundo})`;
+function desenha(t){
+  const n=Math.max(0,Math.min(TITULO.length,Math.floor((t-INICIO)*LPS)));
+  const fim=INICIO+TITULO.length/LPS;                 // a escrita acaba aqui
+  const cursor= t<fim || (t<fim+PISCA*6 && Math.floor((t-fim)/PISCA)%2===1);
+  document.getElementById('titulo').innerHTML=TITULO.slice(0,n)+(cursor?'<span class="cursor"></span>':'');
+  document.getElementById('hora').hidden=t<fim+1.2;      // só aparece
+  document.getElementById('legenda').hidden=t<fim+1.8;   // só aparece
+}
+const q=new URLSearchParams(location.search).get('t');
+if(q!==null) desenha(parseFloat(q)); else { const t0=performance.now(); (function f(){desenha((performance.now()-t0)/1000);requestAnimationFrame(f)})(); }
+</script></body></html>

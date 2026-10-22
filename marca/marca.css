@@ -1,33 +1,31 @@
 /* Marca Rute Dias — importar em todas as composições HyperFrames.
-   Caminhos relativos a marca/; copiar ou ajustar o caminho conforme a composição. */
-@font-face { font-family: "La Luxes"; src: url("fontes/LaLuxes.otf") format("opentype"); }
-@font-face { font-family: "New Icon Script"; src: url("fontes/NewIconScript.otf") format("opentype"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 300; src: url("fontes/HindSiliguri-Light.ttf"); }
+   Estilo simples: só Hind Siliguri, sem sombras; títulos em máquina de escrever, o resto só aparece. */
 @font-face { font-family: "Hind Siliguri"; font-weight: 400; src: url("fontes/HindSiliguri-Regular.ttf"); }
 @font-face { font-family: "Hind Siliguri"; font-weight: 500; src: url("fontes/HindSiliguri-Medium.ttf"); }
 @font-face { font-family: "Hind Siliguri"; font-weight: 600; src: url("fontes/HindSiliguri-SemiBold.ttf"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 700; src: url("fontes/HindSiliguri-Bold.ttf"); }
 
 :root {
   /* Cores */
-  --winter-white: #F2EFE6;   /* fundo principal, espaço negativo */
-  --champagne:    #E8D8C5;   /* fundos alternativos, caixas de texto */
-  --espresso:     #493A33;   /* texto principal, linhas, ícones */
-  --burgundy:     #6F172B;   /* assinatura: destaques, palavras-chave */
+  --winter-white: #F2EFE6;   /* texto sobre o vídeo (por defeito) */
+  --champagne:    #E8D8C5;
+  --espresso:     #493A33;   /* texto sobre fundos claros */
+  --burgundy:     #6F172B;
 
-  /* Tipos de letra */
-  --fonte-titulo:   "La Luxes", serif;
-  --fonte-destaque: "New Icon Script", cursive;
-  --fonte-corpo:    "Hind Siliguri", sans-serif;
+  --fonte: "Hind Siliguri", sans-serif;
 
   /* Tamanhos para vídeo vertical 1080×1920 */
-  --t-titulo:    120px;  /* 96–140 */
-  --t-destaque:   96px;  /* 72–120, só palavras/frases curtas */
-  --t-subtitulo:  56px;  /* 48–64 */
-  --t-corpo:      44px;  /* 40–52, legendas incluídas */
+  --t-titulo:   72px;  /* 64–80, SemiBold */
+  --t-hora:     44px;  /* Medium */
+  --t-rotulo:   24px;  /* Medium, maiúsculas, letter-spacing .3em */
+  --t-legenda:  36px;  /* vlog, Regular */
+  --t-palavra:  64px;  /* yapping, palavra a palavra, SemiBold */
 
-  /* Movimento: suave e editorial */
-  --entrada:   0.7s;
-  --saida:     0.5s;
-  --suave:     cubic-bezier(0.22, 1, 0.36, 1);
+  /* Máquina de escrever */
+  --letras-por-segundo: 14;
+  --cursor-pisca: 0.5s;
 }
+
+.texto  { font-family: var(--fonte); color: var(--winter-white); text-shadow: none; }
+.claro  { color: var(--espresso); }   /* usar quando o fundo é claro */
+.cursor { display: inline-block; width: .08em; height: .9em; margin-left: .06em;
+          background: currentColor; vertical-align: -.1em; }

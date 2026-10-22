@@ -2,10 +2,11 @@
 
 Fonte de verdade: `marca/fontes/guia-de-marca.png` (branding sheet).
 Fontes e guia são descarregados por `bash marca/download.sh` (corre também no `setup.sh`).
-Variáveis prontas a usar: `marca/marca.css`. Ecrã de exemplo com tudo aplicado: `marca/exemplo.html`.
+Variáveis prontas a usar: `marca/marca.css`. Ecrã de exemplo (com o título a escrever-se): `marca/exemplo.html`.
 
-**Personalidade:** editorial, sofisticada, feminina, luminosa. Calma, nunca agitada.
-**Logótipo:** não há. A assinatura é o nome "Rute Dias" escrito em New Icon Script, na cor Cherry Burgundy.
+**Estilo nos vídeos (decidido pela Rute):** **simples**, ao estilo dos vlogs de referência.
+Letra sans serif, sem sombras, sem caixas enfeitadas, animações mínimas.
+**Logótipo:** não há.
 
 ## Cores
 | Nome | Código | Para quê |
@@ -18,34 +19,31 @@ Variáveis prontas a usar: `marca/marca.css`. Ecrã de exemplo com tudo aplicado
 Regras:
 - Usar apenas estas quatro cores. Nada de branco puro, preto puro ou cores fora da paleta.
 - O Burgundy é a cor de assinatura: usar pouco (uma palavra ou um detalhe por ecrã) para manter o impacto.
-- Texto sobre o vídeo: Espresso dentro de uma caixa Winter White ou Champagne (opacidade 85–92 %) ou,
-  sobre imagem escura, Winter White diretamente.
+- Texto sobre o vídeo: diretamente sobre a imagem, **sem sombra e sem caixa**. Winter White por defeito;
+  Espresso quando o fundo é claro. Escolher o plano/posição para o texto se ler bem, em vez de pôr sombra.
 
-## Tipografia
-| Função | Fonte | Tamanho em vídeo 1080×1920 |
+## Tipografia (vídeos)
+**Só Hind Siliguri** (sans serif). La Luxes e New Icon Script **não** se usam nos vídeos
+(a Rute não gostou do resultado); ficam só para outros materiais da marca.
+
+| Função | Peso | Tamanho em vídeo 1080×1920 |
 |---|---|---|
-| Título principal | La Luxes | 96–140 px |
-| Destaque / assinatura | New Icon Script | 72–120 px, **só palavras ou frases curtas** |
-| Subtítulo | Hind Siliguri SemiBold/Medium | 48–64 px |
-| Corpo e legendas | Hind Siliguri Regular/Medium | 40–52 px |
+| Título | SemiBold | 64–80 px, minúsculas (frase normal) |
+| Hora / número | Medium | 44 px |
+| Rótulo pequeno | Medium, maiúsculas, espaçamento ≈0,3em | 22–26 px |
+| Legendas e texto | Regular | 34–40 px (vlog); 60–68 px SemiBold (yapping, palavra a palavra) |
 
-**Nota sobre La Luxes:** o ficheiro no Drive é a versão *La Luxes Serif* (só maiúsculas, direita).
-O guia mostra *La Luxes Ital* (itálico, com minúsculas). Enquanto a versão Ital não for adicionada ao Drive,
-os títulos saem em maiúsculas elegantes, como em `marca/exemplo.html`.
-
-(O guia indica tamanhos em pt para publicações no Instagram; em vídeo vertical usam-se cerca do dobro.)
 Para vídeo horizontal 1920×1080, multiplicar os tamanhos por ~0,75.
 
-Rótulos pequenos ao estilo do guia: Hind Siliguri em maiúsculas, com espaçamento entre letras largo (≈0,3em).
+## Animações (só duas)
+1. **Títulos: máquina de escrever.** O texto escreve-se letra a letra (~14 letras por segundo) com uma
+   **barra de cursor** fina (`|`, mesma cor do texto, ~0,08 em de largura) à frente. Quando acaba, o cursor
+   pisca 2–3 vezes (ligado 0,5 s / desligado 0,5 s) e desaparece. Durante a escrita toca o som
+   **`marca/sons/teclado.wav`**, cortado à duração da escrita (desvanecimento de 0,05 s no fim).
+2. **Tudo o resto: só aparecer.** Legendas, horas, rótulos, listas, imagens: entram de uma vez (sem
+   desvanecer, sem deslizar, sem crescer) e saem de uma vez.
 
-## Animações (estilo)
-- **Entradas:** aparecer + subir ligeiramente (20–40 px), 0,6–0,8 s, curva suave (`--suave`). Sem saltos nem ressaltos.
-- **Saídas:** desvanecer em 0,4–0,5 s.
-- **New Icon Script:** a palavra "escreve-se" da esquerda para a direita (revelação com máscara), 0,8–1,2 s.
-- **Linhas finas** (1–2 px, Espresso ou Burgundy) que se desenham por baixo de títulos, como no guia.
-- **Palavra-chave:** muda para Burgundy ou ganha um sublinhado Burgundy no instante em que é dita.
-- **Transições entre secções:** fundido simples ou cortina Winter White/Champagne. Nada de zooms rápidos, giros ou efeitos chamativos.
-- Muito espaço vazio à volta do texto; no máximo dois tipos de letra por ecrã.
+Proibido: sombras, contornos, brilhos, ressaltos, zooms, rotações, linhas que se desenham, letra manuscrita.
 
 ## Atenção às licenças
 - **New Icon Script**: licença "Free for Personal Use" (exfont.com). Para vídeos comerciais ou de clientes
