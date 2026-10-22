@@ -37,8 +37,8 @@ LEG = [('eu', 9.00), ('descobri', 9.14), ('a', 9.44), ('melhor', 9.52, 'cor'), (
        ('sopa', 12.62), ('de', 12.96), ('abóbora', 13.04), ('camarão', 13.66), ('e', 13.98), ('coentros', 14.08),
        ('é', 14.42), ('maravilhosa', 14.74, 'cor'),
        ('amamos', 15.60, 'sloop')]
-LEG_FIM = 16.2   # a última palavra fica até ao fim do bloco da sopa
-# pedido da Rute: o texto fica sempre no ecrã e só sai quando aparece o seguinte
+LEG_FIM = 16.06
+# pedido da Rute: a hora/atividade fica sempre no ecrã e só sai quando aparece a seguinte
 HORAS = [(a, HORAS[k+1][0] if k+1 < len(HORAS) else DUR, h, r) for k, (a, b, h, r) in enumerate(HORAS)]
 
 # ---- título: um elemento por letra (a quebra de linha conta como uma letra, como no marca/exemplo.html) ----
@@ -60,7 +60,7 @@ for k, (a, b, h, r) in enumerate(HORAS):
                  f'<div class="h">{h}</div><div class="r">{html.escape(r)}</div></div>')
 for k, w in enumerate(LEG):
     nxt = LEG[k+1][1] if k+1 < len(LEG) else LEG_FIM
-    fim = nxt   # fica até surgir a palavra seguinte (sem sair nas pausas)
+    fim = min(nxt, w[1] + 0.6) if k+1 < len(LEG) else LEG_FIM   # sai antes da seguinte; nas pausas fica no máx. 0,6 s
     d = w[2] if len(w) > 2 else ''
     inner = (f'<span class="dest-sloop" style="color:var(--champagne)">{w[0]}</span>' if d == 'sloop' else
              f'<span class="dest-cor" style="color:var(--champagne)">{w[0]}</span>' if d == 'cor' else w[0])
