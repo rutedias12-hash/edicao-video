@@ -27,3 +27,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   O layout anterior ficou guardado como "legenda informativa" (marca/modelos/), só quando a Rute pedir.
 2026-10-22 — configuração — legendas coladas por baixo da hora/atividade (sem espaço extra).
 2026-10-22 — configuração — todo o texto dentro das margens de segurança dos Reels (220 cima, 420 baixo, 120 direita, 60 esquerda).
+2026-10-22 — configuração — Sloop Script verdadeira ligada (Drive); destaques em Sloop a ~2,2×.

@@ -39,8 +39,7 @@ Guia: Sloop (títulos, destaques, assinaturas) + sans serif (subtítulos, corpo,
 | **Yapping** | Sloop | Montserrat | Sloop |
 
 - **Sloop só no yapping** (títulos e destaques). No vlog, a única exceção são algumas palavras das legendas.
-- **Sloop:** ainda não está no Drive. Para pré-visualizações usa-se Mrs Saint Delafield; num vídeo final,
-  pedir o ficheiro à Rute antes de renderizar.
+- **Sloop:** "Sloop Script Regular.ttf", no Drive da Rute (descarregada por `marca/download.sh`). Tem todos os acentos.
 - **Letras e linhas apertadas** (pedido da Rute): espaçamento entre letras -0,06 em nos títulos,
   -0,035 em no texto, 0,04 em nos rótulos em maiúsculas; altura de linha 0,78 nos títulos, 1,2 no texto.
 
@@ -67,6 +66,6 @@ elemento que nenhum píxel de texto (acentos e caudas incluídos) sai da zona se
 Proibido: sombras, contornos, brilhos, ressaltos, zooms, rotações, linhas que se desenham.
 
 ## Atenção às licenças
-- **Montserrat** e **Mrs Saint Delafield**: livres (Google Fonts, licença OFL).
-- **Sloop**: confirmar a licença quando a Rute enviar o ficheiro.
+- **Montserrat**: livre (Google Fonts, licença OFL).
+- **Sloop Script** (Synergie SoftWare, 1999): confirmar que a licença permite uso comercial em vídeo.
 Por isso as fontes **não** vão para o GitHub (o repositório é público); ficam só no Drive.

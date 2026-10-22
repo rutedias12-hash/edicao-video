@@ -46,7 +46,7 @@ Cada palavra só aparece.
 **Palavras estratégicas em destaque** (1–2 por frase, nunca mais; as que dão sentido ou emoção:
 "café", "devagar", "casa", "família"…), alternando entre dois estilos:
 - **mesma fonte, tom escuro da paleta (Semibold):** Espresso ou Burgundy; Champagne se o tom escuro não se ler;
-- **em Sloop, bem maior (~2–2,6×):** Cherry Burgundy, ou Champagne se o burgundy não se ler.
+- **em Sloop, bem maior (~2,2×):** Cherry Burgundy, ou Champagne se o burgundy não se ler.
 Não repetir o mesmo estilo de destaque em frases seguidas.
 
 **"Legenda informativa" (só quando a Rute pedir):** modelo para detalhes mais informativos
