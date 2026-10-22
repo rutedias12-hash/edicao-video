@@ -19,7 +19,10 @@ Referências:
 **Duração:** 20–55 s.
 
 **Imagem:** quase só planos de pormenor e de ambiente (café, mãos, livros, luz da janela), com a voz
-da Rute por cima (voz off). Pouco ou nada a falar para a câmara. Cada plano dura **1–3 s**.
+da Rute por cima (voz off). Pouco ou nada a falar para a câmara.
+**Cada clipe dura entre 0,5 e 2 s (nunca mais de 2 s)** e cada corte **muda de perspetiva**:
+alternar plano geral, pormenor (mãos, objetos), visto de cima, perfil, espelho. Nunca dois clipes
+seguidos do mesmo ângulo. Se um plano for longo, partir em vários pedaços curtos de ângulos diferentes.
 Se houver música, os cortes caem no compasso.
 
 **Gancho (0–3 s):** título curto no centro, que aparece **palavra a palavra**, empilhado, uma palavra por linha
@@ -39,7 +42,7 @@ Sem caixa.
 
 **Cor da imagem:** tons quentes e suaves, iguais em todos os planos (o mesmo "filtro" em todo o vídeo).
 
-**Fecho:** último plano mais longo (2–3 s) e a assinatura "Rute Dias" em New Icon Script.
+**Fecho:** último plano (até 2 s) e a assinatura "Rute Dias" em New Icon Script.
 
 ---
 
@@ -76,11 +79,12 @@ crescimento (95 % → 100 %, 0,12 s), sem saltos. Palavras-chave em Champagne e 
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s).
 - **Pequenos desenhos:** brilhos, setas, sublinhados em traço fino Winter White ou Burgundy, à mão,
   junto do texto. Poucos, só para dar personalidade.
-- **Efeitos sonoros (sim, a Rute quer):** som curto e suave quando aparece texto ou imagem:
-  "pop" para palavras-tema e itens de lista, "clique" para cartões de notas, "whoosh" leve nos títulos
-  de secção e nas imagens de exemplo, "brilho" nos desenhos. Volume baixo, sempre abaixo da voz
-  (cerca de -20 dB em relação à fala). **Não** em cada palavra da legenda, só nos elementos gráficos.
-  Sons guardados em `marca/sons/` para serem sempre os mesmos; se ainda não existirem, criá-los no
-  primeiro projeto (ex.: efeitos sonoros da ElevenLabs, com a chave já configurada) e fazer commit.
+- **Efeitos sonoros (sim, a Rute quer, o mais parecidos possível com a referência DaF4c7-hN1t):**
+  - **brilho** (chime cintilante, ~0,8 s): no gancho, quando aparece o título;
+  - **clique** (clique de rato, curto e seco): quando aparece uma palavra-tema, um item de lista ou um desenho;
+  - **teclado** (sequência de cliques de teclas): enquanto uma frase "se escreve" no ecrã;
+  - **whoosh** (varrimento curto com batida suave): nos títulos de secção e nas imagens de exemplo.
+  Volume baixo, sempre abaixo da voz. **Não** em cada palavra da legenda, só nos elementos gráficos.
+  Usar sempre os ficheiros de `marca/sons/` (descarregados do Drive por `marca/download.sh`), nunca inventar outros.
 
 **Fecho:** frase final + assinatura "Rute Dias" em New Icon Script.

@@ -15,3 +15,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 ## Aprendido nos projetos
 <!-- Formato: AAAA-MM-DD — projeto — o que mudou e porquê -->
 2026-10-22 — configuração — yapping: legendas palavra a palavra; efeitos sonoros sim (só yapping); música só se pedida.
+2026-10-22 — configuração — vlog: clipes de 0,5 a 2 s (nunca 3 s), cada corte muda de perspetiva.
