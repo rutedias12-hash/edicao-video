@@ -23,15 +23,18 @@ Regras:
   Espresso quando o fundo é claro. Escolher o plano/posição para o texto se ler bem, em vez de pôr sombra.
 
 ## Tipografia (vídeos)
-**Só Hind Siliguri** (sans serif). La Luxes e New Icon Script **não** se usam nos vídeos
-(a Rute não gostou do resultado); ficam só para outros materiais da marca.
+**Só Proxima Nova** (sans serif), com **espaçamento entre letras apertado** (pedido da Rute).
+La Luxes, New Icon Script e Hind Siliguri **não** se usam nos vídeos.
 
-| Função | Peso | Tamanho em vídeo 1080×1920 |
-|---|---|---|
-| Título | SemiBold | 64–80 px, minúsculas (frase normal) |
-| Hora / número | Medium | 44 px |
-| Rótulo pequeno | Medium, maiúsculas, espaçamento ≈0,3em | 22–26 px |
-| Legendas e texto | Regular | 34–40 px (vlog); 60–68 px SemiBold (yapping, palavra a palavra) |
+Proxima Nova é uma fonte paga: os ficheiros têm de ser postos no Drive pela Rute. Enquanto não estiverem,
+usa-se **Montserrat** (gratuita, a mais parecida), que o `marca.css` escolhe automaticamente.
+
+| Função | Peso | Tamanho em vídeo 1080×1920 | Espaçamento entre letras |
+|---|---|---|---|
+| Título | Semibold | 64–80 px, minúsculas (frase normal) | -0,03 em |
+| Hora / número | Medium | 44 px | -0,015 em |
+| Rótulo pequeno | Medium, maiúsculas | 22–26 px | 0,1 em |
+| Legendas e texto | Regular | 34–40 px (vlog); 60–68 px Semibold (yapping, palavra a palavra) | -0,015 em |
 
 Para vídeo horizontal 1920×1080, multiplicar os tamanhos por ~0,75.
 
@@ -49,5 +52,6 @@ Proibido: sombras, contornos, brilhos, ressaltos, zooms, rotações, linhas que 
 - **New Icon Script**: licença "Free for Personal Use" (exfont.com). Para vídeos comerciais ou de clientes
   é preciso comprar a licença comercial.
 - **La Luxes**: confirmar a licença de origem.
-- **Hind Siliguri**: livre (Google Fonts, licença OFL).
+- **Hind Siliguri** e **Montserrat**: livres (Google Fonts, licença OFL).
+- **Proxima Nova**: paga (Mark Simonson / Adobe Fonts); usar só ficheiros com licença da Rute.
 Por isso as fontes **não** vão para o GitHub (o repositório é público); ficam só no Drive.

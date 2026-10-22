@@ -16,3 +16,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — yapping: legendas palavra a palavra; efeitos sonoros sim (só yapping); música só se pedida.
 2026-10-22 — configuração — vlog: clipes de 0,5 a 2 s (nunca 3 s), cada corte muda de perspetiva.
 2026-10-22 — configuração — a Rute detestou o lettering editorial (La Luxes + manuscrita). Agora: só sans serif (Hind Siliguri), sem sombras; títulos em máquina de escrever com cursor e som de teclado; resto só aparece.
+2026-10-22 — configuração — letra dos vídeos passa a Proxima Nova (Montserrat até haver ficheiros) com espaçamento entre letras apertado.

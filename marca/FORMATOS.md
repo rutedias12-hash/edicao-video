@@ -25,15 +25,15 @@ alternar plano geral, pormenor (mãos, objetos), visto de cima, perfil, espelho.
 seguidos do mesmo ângulo. Se um plano for longo, partir em vários pedaços curtos de ângulos diferentes.
 Se houver música, os cortes caem no compasso.
 
-**Gancho (0–3 s):** título curto em minúsculas (ex.: "uma manhã lenta comigo"), Hind Siliguri SemiBold
+**Gancho (0–3 s):** título curto em minúsculas (ex.: "uma manhã lenta comigo"), Proxima Nova Semibold
 ~72 px, que **se escreve à máquina** com cursor e som de teclado. Centro ou terço superior.
 Fica no ecrã enquanto passam os 2–4 primeiros clipes.
 
-**Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15", Hind Siliguri Medium ~44 px) e,
-por baixo, um rótulo pequeno em maiúsculas espaçadas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO, ~24 px).
+**Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15", Proxima Nova Medium ~44 px) e,
+por baixo, um rótulo pequeno em maiúsculas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO, ~24 px).
 Winter White, centro do ecrã, sem caixa nem sombra. Só aparece; sai um ou dois clipes depois.
 
-**Legendas da voz:** discretas. Uma linha, Hind Siliguri Regular ~36 px, minúsculas, Winter White
+**Legendas da voz:** discretas. Uma linha, Proxima Nova Regular ~36 px, minúsculas, Winter White
 **sem sombra**, a meio do ecrã (~45 % da altura). Frase inteira, não palavra a palavra. Só aparecem.
 
 **Efeitos sonoros:** só o teclado, enquanto o título se escreve.
@@ -57,17 +57,17 @@ Referências:
 longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 
 **Gancho (0–3 s):** título curto em minúsculas no terço superior (ex.: "como eu edito os meus vídeos"),
-Hind Siliguri SemiBold ~72 px, que **se escreve à máquina** com cursor e som de teclado.
+Proxima Nova Semibold ~72 px, que **se escreve à máquina** com cursor e som de teclado.
 
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
-(~62 % da altura). Hind Siliguri SemiBold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
+(~62 % da altura). Proxima Nova Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
 (sem crescer nem saltar).
 
 **Durante o vídeo:**
-- **Títulos de secção:** a cada nova parte, "01 a lista" em Hind Siliguri SemiBold, escrito à máquina
+- **Títulos de secção:** a cada nova parte, "01 a lista" em Proxima Nova Semibold, escrito à máquina
   com cursor e som de teclado, no terço superior, 1,5–2 s.
 - **Lista que se vai preenchendo:** quando enumera coisas, no topo fica o título da lista (escrito à máquina)
-  e cada item ("1. …", Hind Siliguri Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
+  e cada item ("1. …", Proxima Nova Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.
 - **Efeitos sonoros** (`marca/sons/`, descarregados do Drive por `marca/download.sh`):

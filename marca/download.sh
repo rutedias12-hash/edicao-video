@@ -20,6 +20,14 @@ baixar 1mZELJL3HV-pgjuAKRRtGprTCRJ5W-ciq HindSiliguri-Medium.ttf
 baixar 1yZxvg7EBntzLShJvM9jIzEYapbehav64 HindSiliguri-SemiBold.ttf
 baixar 1ObpUbNA0PCRg0g-v_uamU9c4JnGIZViO HindSiliguri-Bold.ttf
 
+# Proxima Nova (letra dos vídeos). Fonte paga: só funciona quando a Rute puser os ficheiros no Drive.
+# Quando houver IDs, acrescentar aqui: baixar <id> ProximaNova-Regular.otf / -Medium.otf / -Semibold.otf
+# Substituta enquanto não houver: Montserrat (gratuita, Google Fonts, licença OFL).
+baixar_gf() { [ -s "$DIR/$2" ] || curl -fsSL "https://fonts.gstatic.com/s/montserrat/v31/$1" -o "$DIR/$2"; }
+baixar_gf JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf Montserrat-Regular.ttf
+baixar_gf JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf Montserrat-Medium.ttf
+baixar_gf JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf Montserrat-SemiBold.ttf
+
 # Efeitos sonoros (yapping). Ficam já aparados, prontos a usar.
 SONS="$(cd "$(dirname "$0")" && pwd)/sons"
 mkdir -p "$SONS"

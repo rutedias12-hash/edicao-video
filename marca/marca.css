@@ -1,8 +1,12 @@
 /* Marca Rute Dias — importar em todas as composições HyperFrames.
-   Estilo simples: só Hind Siliguri, sem sombras; títulos em máquina de escrever, o resto só aparece. */
-@font-face { font-family: "Hind Siliguri"; font-weight: 400; src: url("fontes/HindSiliguri-Regular.ttf"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 500; src: url("fontes/HindSiliguri-Medium.ttf"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 600; src: url("fontes/HindSiliguri-SemiBold.ttf"); }
+   Estilo simples: só Proxima Nova, sem sombras; títulos em máquina de escrever, o resto só aparece. */
+/* Proxima Nova (quando os ficheiros estiverem em fontes/); senão usa Montserrat, a substituta. */
+@font-face { font-family: "Proxima Nova"; font-weight: 400; src: url("fontes/ProximaNova-Regular.otf"); }
+@font-face { font-family: "Proxima Nova"; font-weight: 500; src: url("fontes/ProximaNova-Medium.otf"); }
+@font-face { font-family: "Proxima Nova"; font-weight: 600; src: url("fontes/ProximaNova-Semibold.otf"); }
+@font-face { font-family: "Montserrat"; font-weight: 400; src: url("fontes/Montserrat-Regular.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 500; src: url("fontes/Montserrat-Medium.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("fontes/Montserrat-SemiBold.ttf"); }
 
 :root {
   /* Cores */
@@ -11,12 +15,17 @@
   --espresso:     #493A33;   /* texto sobre fundos claros */
   --burgundy:     #6F172B;
 
-  --fonte: "Hind Siliguri", sans-serif;
+  --fonte: "Proxima Nova", "Montserrat", sans-serif;
+
+  /* Espaçamento entre letras: apertado (pedido da Rute) */
+  --esp-titulo:  -0.03em;
+  --esp-texto:   -0.015em;
+  --esp-rotulo:   0.1em;   /* rótulos em maiúsculas */
 
   /* Tamanhos para vídeo vertical 1080×1920 */
   --t-titulo:   72px;  /* 64–80, SemiBold */
   --t-hora:     44px;  /* Medium */
-  --t-rotulo:   24px;  /* Medium, maiúsculas, letter-spacing .3em */
+  --t-rotulo:   24px;  /* Medium, maiúsculas */
   --t-legenda:  36px;  /* vlog, Regular */
   --t-palavra:  64px;  /* yapping, palavra a palavra, SemiBold */
 
@@ -25,7 +34,7 @@
   --cursor-pisca: 0.5s;
 }
 
-.texto  { font-family: var(--fonte); color: var(--winter-white); text-shadow: none; }
+.texto  { font-family: var(--fonte); color: var(--winter-white); text-shadow: none; letter-spacing: var(--esp-texto); }
 .claro  { color: var(--espresso); }   /* usar quando o fundo é claro */
 .cursor { display: inline-block; width: .08em; height: .9em; margin-left: .06em;
           background: currentColor; vertical-align: -.1em; }
