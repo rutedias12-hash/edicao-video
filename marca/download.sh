@@ -22,8 +22,9 @@ baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf Montserrat
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf Montserrat-Medium.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf Montserrat-SemiBold.ttf
 
-# Sloop (yapping: títulos e destaques; vlog: algumas palavras das legendas). Ainda não está no Drive.
-# Quando estiver, acrescentar aqui: baixar <id> Sloop.otf
+# Sloop (yapping: títulos e destaques; vlog: algumas palavras das legendas). Enviada pela Rute no projeto;
+# fica na pasta partilhada do projeto (não no GitHub, por causa da licença).
+[ -s "$DIR/Sloop.ttf" ] || cp /mnt/project-files/marca/fontes/Sloop.ttf "$DIR/Sloop.ttf" 2>/dev/null || echo "Aviso: falta a Sloop (pedir o ficheiro à Rute)"
 # Substituta só para pré-visualizações: Mrs Saint Delafield.
 baixar_gf mrssaintdelafield/v14/v6-IGZDIOVXH9xtmTZfRagunqBw5WC62cK4.ttf MrsSaintDelafield.ttf
 
