@@ -151,3 +151,6 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
   ao frame contra o vídeo longo (erro 0,1–0,6); clipe grande apagado. Pedaços em `videos/hq_pedacos/` (+ hq_map.json, duracoes.json).
 - `scripts/build_hq_edl.py` → `edl_montagem_hq.json`; render `EDL=edl_montagem_hq.json H=3840 FPS=60 cut.py` (cut.py: FPS configurável; silêncio para planos sem som).
 - Verificado: 0 repetidos nos planos com movimento; os repetidos estão só nos planos escuros (quarto vermelho) — o iPhone grava menos imagens com pouca luz. Taças limpas.
+- Inserido antes dos ovos (8,9–11,4 s): "Eu descobri a melhor sopa de sempre no Continente" a partir do original IMG_6588 (re-descarregado),
+  4K 60 fps, com som só neste plano (resto em silêncio). Som do original: atraso medido 0,063 s (campo `av_offset` novo no cut.py).
+  Transcrição confirmada (frase inteira, sem "tip–" nem o "é" seguinte). → `edit/montagem_4k60_hq_com_sopa.mp4` (33,7 s).

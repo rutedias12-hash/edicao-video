@@ -8,6 +8,7 @@
 - "zoom": [z0, z1] — aproximação lenta (ease in-out).
 - "bowl_clean": true — apaga restos de sopa na taça (jantar do Henrique).
 - "speed": 1.25 — plano acelerado (duração final = (end-start)/speed).
+- "av_offset": 0.06 — atraso do som próprio desta fonte (por defeito 0,10 s, medido no vídeo longo).
 - "audio_layers": [[inicio_na_fonte, duracao, aos_x_segundos, ganho_dB], ...] — som extra por baixo.
 Uso: python3 scripts/cut.py   → cuts.mp4"""
 import json, os, subprocess
@@ -73,11 +74,11 @@ for i, r in enumerate(edl['ranges']):
     run(cmd + ['-filter_complex', ';'.join(fc), '-map', '[v]', '-an', '-c:v', 'libx264', '-preset', 'fast', '-crf', '18',
                '-pix_fmt', 'yuv420p', '-r', str(FPS), str(vout)])
     vol = 'volume=0,' if r.get('mute') else ''
-    acmd = ['ffmpeg', '-v', 'error', '-y', '-ss', f'{r["start"]+AV_OFFSET:.3f}', '-t', f'{d*sp+0.2:.3f}', '-i', s]
+    acmd = ['ffmpeg', '-v', 'error', '-y', '-ss', f'{r["start"]+r.get('av_offset', AV_OFFSET):.3f}', '-t', f'{d*sp+0.2:.3f}', '-i', s]
     tempo = f'atempo={sp},' if sp != 1.0 else ''
     afc = [f'[0:a]aresample={SR},{tempo}{vol}apad,atrim=end_sample={ns}[m0]']; mix = ['[m0]']
     for k, (ls, ldur, at, gain) in enumerate(r.get('audio_layers') or [], start=1):
-        acmd += ['-ss', f'{ls+AV_OFFSET:.3f}', '-t', f'{ldur:.3f}', '-i', s]
+        acmd += ['-ss', f'{ls+r.get("av_offset", AV_OFFSET):.3f}', '-t', f'{ldur:.3f}', '-i', s]
         afc.append(f'[{k}:a]aresample={SR},volume={gain}dB,afade=t=in:d=0.08,afade=t=out:st={ldur-0.15:.3f}:d=0.15,'
                    f'adelay={int(at*1000)}:all=1,apad,atrim=end_sample={ns}[m{k}]'); mix.append(f'[m{k}]')
     afc.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0,atrim=end_sample={ns},"

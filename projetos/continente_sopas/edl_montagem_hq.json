@@ -30,7 +30,8 @@
   "p26_IMG_6633": "/home/user/edicao-video/videos/hq_pedacos/p26_IMG_6633.mov",
   "p27_IMG_6638": "/home/user/edicao-video/videos/hq_pedacos/p27_IMG_6638.mov",
   "p28_IMG_6638": "/home/user/edicao-video/videos/hq_pedacos/p28_IMG_6638.mov",
-  "p29_IMG_6634": "/home/user/edicao-video/videos/hq_pedacos/p29_IMG_6634.mov"
+  "p29_IMG_6634": "/home/user/edicao-video/videos/hq_pedacos/p29_IMG_6634.mov",
+  "p_sopa_IMG_6588": "/home/user/edicao-video/videos/hq_pedacos/p_sopa_IMG_6588.mov"
  },
  "ranges": [
   {
@@ -113,6 +114,15 @@
    "quote": "(imagem) tabuleiros",
    "label": "",
    "mute": true
+  },
+  {
+   "source": "p_sopa_IMG_6588",
+   "start": 0.85,
+   "end": 3.34,
+   "beat": "SOPA",
+   "quote": "Eu descobri a melhor sopa de sempre no Continente,",
+   "label": "",
+   "av_offset": 0.0626
   },
   {
    "source": "p09_IMG_6617",
