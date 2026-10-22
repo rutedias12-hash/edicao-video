@@ -206,6 +206,6 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "teste":
         render("pintura_teste.png", 1400, 1000)
     else:
-        render("aves_pintura_70x50.png", 7000, 5000)
+        render("aves_pintura_70x50.png", 8268, 5906)
         render("aves_pintura_40x30.png", 4724, 3543)
         render("aves_pintura_A4.png", 3508, 2480)
