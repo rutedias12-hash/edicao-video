@@ -14,10 +14,12 @@ import json, os, subprocess
 from pathlib import Path
 E = Path(__file__).resolve().parent.parent
 FPS, SR, AV_OFFSET, FADE = 30, 48000, 0.10, 0.03
-edl = json.load(open(E/'edl.json'))
+EDLF = os.environ.get('EDL', 'edl.json')   # EDL=edl_montagem.json → outra montagem, sem mexer na anterior
+edl = json.load(open(E/EDLF))
+NAME = Path(EDLF).stem.replace('edl', 'cuts', 1)
 src = {k: v for k, v in edl['sources'].items()}
 H = int(os.environ.get('H', '1920')); W = H * 9 // 16   # H=3840 → exportação 4K
-TAG = '' if H == 1920 else f'_{H}'
+TAG = ('' if H == 1920 else f'_{H}') + ('' if EDLF == 'edl.json' else '_' + Path(EDLF).stem)
 d_seg = E/f'clips_graded{TAG}'; d_seg.mkdir(exist_ok=True)
 run = lambda c: subprocess.run(c, check=True)
 

@@ -138,3 +138,9 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
   ("malta", "fi-", "tio") → planos de fala recuados 0,10 s (imagem e som juntos) e limites à volta de "malta" acertados. Verificado: 0 palavras cortadas.
 - Plano "a deitar a sopa": som trocado por ambiente da cozinha sem fala (havia "Quem é o…" de fundo).
 - Transcrição final verificada: sem "doce".
+
+## Sessão 6 — 2026-10-22 · MONTAGEM SEM VOZ (a marca não gostou da versão falada)
+- `edl_montagem.json` (cut.py com `EDL=edl_montagem.json`), 30 planos de ~1 s, 31,2 s, todos `mute` → `edit/montagem_4k_sem_som.mp4` (4K, 30 fps, sem faixa de som).
+- Ordem pedida pela Rute: chegada · cozinha caótica · jantar do Henrique (ovos, Henrique à mesa, colher "ahh"; taças limpas) · banho · pijama ·
+  deitar (com "shhh") · a Clara chega · jantar com a sopa (sopa a sair da embalagem, taças, mesa) · fecho (embalagem com zoom 1,0→1,22).
+- Fora: tudo com fala, Henrique a comer sopa, embalagem na mão (ela falava).
