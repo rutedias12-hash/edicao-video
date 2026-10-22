@@ -16,3 +16,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 <!-- Formato: AAAA-MM-DD — projeto — o que mudou e porquê -->
 2026-10-22 — configuração — yapping: legendas palavra a palavra; efeitos sonoros sim (só yapping); música só se pedida.
 2026-10-22 — configuração — vlog: clipes de 0,5 a 2 s (nunca 3 s), cada corte muda de perspetiva.
+2026-10-22 — roomba (try-out falado com planos do produto) — tratado como yapping: cortar todas as pausas e respirações (>0,08 s) e acelerar 1,1x; versão final de 30–35 s; acabar na piada, sem planos extra depois; exportar também em 4K a partir dos originais.
