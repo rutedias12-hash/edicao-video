@@ -1,7 +1,8 @@
 """Lettering "vlog" da marca (marca/FORMATOS.md) para a montagem 4K60 com o bloco da sopa.
 Gera animations/slot_3/index.html (HyperFrames, 2160×3840, fundo transparente) a partir de marca/marca.css.
-- Título "fim / de dia": Montserrat SemiBold 285 px, à esquerda, máquina de escrever (14 letras/s) com cursor; só 0–2,9 s.
-  Cor: Champagne (o burgundy não passa o teste de contraste 3:1 no 2.º plano da chegada).
+- Título "fim / de / dia": Montserrat SemiBold 470 px, uma palavra por linha, à esquerda, máquina de escrever (14 letras/s)
+  com cursor; só 0–2,9 s. Cor: Cherry Burgundy por escolha da Rute neste vídeo (mesmo sem passar o teste de contraste).
+- Destaque "chef" (Sloop) também em Burgundy, por escolha da Rute; os outros destaques em Champagne.
 - Hora + atividade: ao centro, Winter White, só aparecem/desaparecem.
 - Legendas da voz (só bloco da sopa): uma palavra de cada vez, coladas por baixo da hora; destaques em Champagne
   (o burgundy/espresso não passam o teste), alternando "cor" (SemiBold) e "sloop".
@@ -19,7 +20,7 @@ for f in (R/'marca/fontes').glob('*.ttf'):
 shutil.copy(R/'marca/marca.css', OUT/'marca.css')
 
 DUR = 38.5
-TITULO, T0, LPS, FIM_TITULO = ['fim', 'de dia'], 0.3, 14, 2.9
+TITULO, T0, LPS, FIM_TITULO = ['fim', 'de', 'dia'], 0.3, 14, 2.9   # uma palavra por linha (pedido da Rute)
 HORAS = [  # (início, fim, hora, atividade) — o fim é recalculado: cada uma fica até aparecer a seguinte (a última até ao fim)
     (2.9, 4.9, '17:50', 'tentar preparar o jantar'),
     (8.9, 11.46, '18:10', 'plano b'),
@@ -33,7 +34,7 @@ HORAS = [  # (início, fim, hora, atividade) — o fim é recalculado: cada uma 
 # (palavra, início em s na montagem, destaque) — tempos da transcrição do bloco (ElevenLabs)
 LEG = [('eu', 9.00), ('descobri', 9.14), ('a', 9.44), ('melhor', 9.52, 'cor'), ('sopa', 10.04), ('de', 10.36),
        ('sempre', 10.48), ('no', 10.84), ('Continente', 10.98),
-       ('é', 11.60), ('a', 11.64), ('receita', 11.72), ('do', 12.00), ('chef', 12.16, 'sloop'),
+       ('é', 11.60), ('a', 11.64), ('receita', 11.72), ('do', 12.00), ('chef', 12.16, 'sloop-vermelho'),
        ('sopa', 12.62), ('de', 12.96), ('abóbora', 13.04), ('camarão', 13.66), ('e', 13.98), ('coentros', 14.08),
        ('é', 14.42), ('maravilhosa', 14.74, 'cor'),
        ('amamos', 15.60, 'sloop')]
@@ -62,7 +63,8 @@ for k, w in enumerate(LEG):
     nxt = LEG[k+1][1] if k+1 < len(LEG) else LEG_FIM
     fim = min(nxt, w[1] + 0.6) if k+1 < len(LEG) else LEG_FIM   # sai antes da seguinte; nas pausas fica no máx. 0,6 s
     d = w[2] if len(w) > 2 else ''
-    inner = (f'<span class="dest-sloop" style="color:var(--champagne)">{w[0]}</span>' if d == 'sloop' else
+    inner = (f'<span class="dest-sloop" style="color:var(--burgundy)">{w[0]}</span>' if d == 'sloop-vermelho' else
+             f'<span class="dest-sloop" style="color:var(--champagne)">{w[0]}</span>' if d == 'sloop' else
              f'<span class="dest-cor" style="color:var(--champagne)">{w[0]}</span>' if d == 'cor' else w[0])
     clips.append(f'<div id="w{k}" class="clip leg" data-start="{w[1]:.3f}" data-duration="{fim-w[1]:.3f}">{inner}</div>')
 
@@ -82,8 +84,8 @@ page = f'''<!doctype html>
       #palco {{ position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform: scale(2); transform-origin: 0 0;
                font-family: var(--fonte-texto); color: var(--winter-white); }}
       .clip {{ position: absolute; }}
-      #titulo {{ top: calc(var(--seg-topo) + 24px); left: 70px; right: var(--seg-dir); font-weight: 600; font-size: 285px;
-                line-height: var(--lh-titulo-vlog); letter-spacing: var(--esp-titulo); color: var(--champagne); white-space: nowrap; }}
+      #titulo {{ top: calc(var(--seg-topo) + 24px); left: 70px; right: var(--seg-dir); font-weight: 600; font-size: 470px;
+                line-height: var(--lh-titulo-vlog); letter-spacing: var(--esp-titulo); color: var(--burgundy); white-space: nowrap; }}
       .ch {{ display: none; }}
       #titulo .cursor {{ width: .06em; height: .72em; vertical-align: -.02em; }}
       .hora {{ top: 880px; left: var(--seg-dir); right: var(--seg-dir); text-align: center; }}

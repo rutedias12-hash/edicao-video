@@ -173,3 +173,6 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
 - Atenção: na parte da sopa as legendas claras ficam sobre a camisola branca → leitura fraca; proposta à Rute: subir/baixar só nesse bloco.
 - Iteração: as horas/atividades ficam no ecrã até aparecer a seguinte (a das 20:00 até ao fim, por cima do plano da embalagem).
   As legendas da voz mantêm a regra palavra a palavra (pedido da Rute: "só o das horas e atividades"). Regra guardada em marca/FORMATOS.md.
+- Iteração: título "fim / de / dia" uma palavra por linha, 470 px, em Cherry Burgundy (escolha da Rute, mesmo sem passar o teste de contraste);
+  destaque "chef" (Sloop) em Burgundy. Cozinha reordenada (2,9–8,9 s): Henrique na cadeira (abre, não estava na lista dela) → saca das batatas →
+  com o Henrique ao colo, batatas já no cesto → travessas pretas para a bancada → a descascar → a cortar. EDL anterior: edl_montagem_hq_antes_reordem.json.

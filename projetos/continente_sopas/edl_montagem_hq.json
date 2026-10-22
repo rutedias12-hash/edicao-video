@@ -84,15 +84,6 @@
    "mute": true
   },
   {
-   "source": "p05_IMG_6590",
-   "start": 0.7833,
-   "end": 1.7833,
-   "beat": "COZINHA",
-   "quote": "(imagem) a descascar",
-   "label": "",
-   "mute": true
-  },
-  {
    "source": "p06_IMG_6593",
    "start": 0.7333,
    "end": 1.7333,
@@ -102,20 +93,29 @@
    "mute": true
   },
   {
-   "source": "p07_IMG_6592",
-   "start": 0.7833,
-   "end": 1.7833,
-   "beat": "COZINHA",
-   "quote": "(imagem) a cortar batatas",
-   "label": "",
-   "mute": true
-  },
-  {
    "source": "p08_IMG_6589",
    "start": 0.8167,
    "end": 1.8167,
    "beat": "COZINHA",
    "quote": "(imagem) tabuleiros",
+   "label": "",
+   "mute": true
+  },
+  {
+   "source": "p05_IMG_6590",
+   "start": 0.7833,
+   "end": 1.7833,
+   "beat": "COZINHA",
+   "quote": "(imagem) a descascar",
+   "label": "",
+   "mute": true
+  },
+  {
+   "source": "p07_IMG_6592",
+   "start": 0.7833,
+   "end": 1.7833,
+   "beat": "COZINHA",
+   "quote": "(imagem) a cortar batatas",
    "label": "",
    "mute": true
   },

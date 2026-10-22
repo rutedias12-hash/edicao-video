@@ -30,3 +30,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — continente_sopas — o lettering segue SEMPRE as definições de marca/ (vlog), não o estilo antigo dos projetos no CapCut.
   Sloop Script Regular enviada pela Rute (marca/fontes/Sloop.ttf, não vai para o git); destaque Sloop a 3,3× a legenda.
 2026-10-22 — continente_sopas — horas/atividades ficam SEMPRE no ecrã e só saem quando aparece a seguinte. As legendas da voz NÃO (mantêm a regra palavra a palavra).
+2026-10-22 — continente_sopas — título do vlog: uma palavra por linha, pode ser maior (até caber); a Rute prefere o título em vermelho (Burgundy)
+  mesmo quando o teste de contraste indicaria Champagne. Destaques Sloop também podem ir em Burgundy. Perguntar se a regra passa a ser sempre assim.
