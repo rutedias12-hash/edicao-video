@@ -22,8 +22,8 @@ baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf Montserrat
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf Montserrat-Medium.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf Montserrat-SemiBold.ttf
 
-# Sloop (yapping: títulos e destaques; vlog: algumas palavras das legendas). Ainda não está no Drive.
-# Quando estiver, acrescentar aqui: baixar <id> Sloop.otf
+# Sloop (yapping: títulos e destaques; vlog: algumas palavras das legendas). A Rute já enviou o ficheiro
+# (Sloop Script Regular, .ttf), mas ainda não está no Drive. Quando estiver, acrescentar aqui: baixar <id> Sloop.ttf
 # Substituta só para pré-visualizações: Mrs Saint Delafield.
 baixar_gf mrssaintdelafield/v14/v6-IGZDIOVXH9xtmTZfRagunqBw5WC62cK4.ttf MrsSaintDelafield.ttf
 
