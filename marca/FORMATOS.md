@@ -79,14 +79,13 @@ crescimento (95 % → 100 %, 0,12 s), sem saltos. Palavras-chave em Champagne e 
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s).
 - **Pequenos desenhos:** brilhos, setas, sublinhados em traço fino Winter White ou Burgundy, à mão,
   junto do texto. Poucos, só para dar personalidade.
-- **Efeitos sonoros (sim, a Rute quer, o mais parecidos possível com a referência DaF4c7-hN1t):**
-  - **brilho** (chime cintilante, ~0,8 s): no gancho, quando aparece o título;
-  - **clique** (clique de rato, curto e seco): quando aparece uma palavra-tema, um item de lista ou um desenho;
-  - **teclado** (sequência de cliques de teclas): enquanto uma frase "se escreve" no ecrã;
-  - **whoosh** (varrimento curto com batida suave): nos títulos de secção e nas imagens de exemplo.
-  Volume baixo, sempre abaixo da voz. **Não** em cada palavra da legenda, só nos elementos gráficos.
-  Usar sempre os ficheiros de `marca/sons/` (descarregados do Drive por `marca/download.sh`), nunca inventar outros.
-  **Pendente:** a Rute vai arranjar os sons e enviá-los. Enquanto `marca/sons/` não tiver os ficheiros,
-  fazer os vídeos **sem** efeitos sonoros (não criar nem procurar outros).
+- **Efeitos sonoros (sim, a Rute quer):** só estes dois, escolhidos pela Rute
+  (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
+  - **`clique.wav`** (clique de rato, 0,2 s): quando aparece uma palavra-tema, um item de lista,
+    um cartão de notas, um título de secção, uma imagem de exemplo ou um desenho;
+  - **`teclado.wav`** (teclas a bater, até 6,4 s): enquanto uma frase "se escreve" no ecrã
+    (gancho, título da lista); cortar à duração da escrita, com desvanecimento curto no fim.
+  Volume baixo, sempre abaixo da voz (cerca de -20 dB em relação à fala). **Não** em cada palavra da legenda,
+  só nos elementos gráficos. Nunca inventar nem procurar outros sons; se a Rute enviar mais, acrescentar aqui.
 
 **Fecho:** frase final + assinatura "Rute Dias" em New Icon Script.

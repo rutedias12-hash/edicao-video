@@ -20,6 +20,18 @@ baixar 1mZELJL3HV-pgjuAKRRtGprTCRJ5W-ciq HindSiliguri-Medium.ttf
 baixar 1yZxvg7EBntzLShJvM9jIzEYapbehav64 HindSiliguri-SemiBold.ttf
 baixar 1ObpUbNA0PCRg0g-v_uamU9c4JnGIZViO HindSiliguri-Bold.ttf
 
+# Efeitos sonoros (yapping). Ficam já aparados, prontos a usar.
+SONS="$(cd "$(dirname "$0")" && pwd)/sons"
+mkdir -p "$SONS"
+baixar_som() {  # baixar_som <id do Drive> <nome> <início s> <duração s>
+  [ -s "$SONS/$2.wav" ] && return 0
+  curl -fsSL "https://drive.google.com/uc?export=download&id=$1" -o "$SONS/$2-original.mp3"
+  ffmpeg -loglevel error -y -ss "$3" -t "$4" -i "$SONS/$2-original.mp3" \
+    -af "afade=t=out:st=$(awk "BEGIN{print $4-0.05}"):d=0.05" "$SONS/$2.wav"
+}
+baixar_som 1DS2agJOrVxUrOT6hdK41ga7RuypEO7zM clique  1.53 0.20   # um clique de rato
+baixar_som 1K-dY1BRNXJVKc-1xY2vvOwtfI1fW-q65 teclado 0.36 6.40   # teclas a bater; cortar à medida do texto
+
 # Instala no sistema para o ffmpeg (legendas) também as encontrar
 mkdir -p ~/.local/share/fonts && cp "$DIR"/*.otf "$DIR"/*.ttf ~/.local/share/fonts/
 command -v fc-cache >/dev/null && fc-cache -f >/dev/null || true
