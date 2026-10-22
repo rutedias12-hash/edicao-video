@@ -38,3 +38,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   Legendas e horas continuam no ecrã. Pedir à Rute a captura da loja e os dados que faltem (ex.: tamanho).
 2026-10-22 — vlog tapete novo — horas no ecrã: usar as **horas reais de gravação** (metadados do iPhone, hora de Lisboa) do clipe de cada momento.
 2026-10-22 — vlog tapete novo — título do vlog mais condensado: espaço entre letras -0,09 em (letra maior para ocupar a largura).
+2026-10-22 — vlog tapete novo — destaques das legendas: em fundos claros, SEMPRE Burgundy (Semibold e Sloop); Champagne só em fundo escuro.
+2026-10-22 — vlog tapete novo — fecho com pergunta: "tapete aprovado?" nos 3 s finais, no estilo do título (máquina de escrever + teclado, Burgundy). Ver se a Rute quer isto em todos.

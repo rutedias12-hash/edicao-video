@@ -34,9 +34,10 @@ function corDestaque(img,box){
   // Um tom escuro (burgundy, espresso) só serve se tiver 3:1 sobre as partes mais escuras do fundo (20.º percentil).
   const escuras=pct(.2);
   const ok=hex=>contraste(lum(...hex),escuras)>=3;
-  return {burgundy: ok([0x6F,0x17,0x2B]), espresso: ok([0x49,0x3A,0x33])};
+  // Regra da Rute (2026-10-22): destaques das legendas em Burgundy quando o fundo por trás é claro (mediana >= 0,15).
+  return {burgundy: ok([0x6F,0x17,0x2B]), espresso: ok([0x49,0x3A,0x33]), claro: pct(.5) >= 0.15};
 }
-let cor='var(--burgundy)', destSloop='var(--burgundy)', destCor='var(--espresso)';
+let cor='var(--burgundy)', destSloop='var(--burgundy)', destCor='var(--burgundy)';
 function desenha(t){
   const n=Math.max(0,Math.min(TITULO.length,Math.floor((t-INICIO)*LPS))), fim=INICIO+TITULO.length/LPS;
   const cursor=t<fim||(t<fim+PISCA*6&&Math.floor((t-fim)/PISCA)%2===1);
@@ -51,7 +52,7 @@ async function arranca(){
   if(FUNDO){const img=new Image();img.src=FUNDO;await img.decode();document.body.style.backgroundImage=`url(${FUNDO})`;
     const t=corDestaque(img,{x:70,y:220,w:890,h:440}); cor=t.burgundy?'var(--burgundy)':'var(--champagne)';
     const l=corDestaque(img,{x:110,y:960,w:860,h:120});
-    destSloop=l.burgundy?'var(--burgundy)':'var(--champagne)'; destCor=l.espresso?'var(--espresso)':'var(--champagne)';}
+    destSloop=destCor=l.claro?'var(--burgundy)':'var(--champagne)';}
   await Promise.all(['400 40px Montserrat','600 100px Montserrat','40px "Mrs Saint Delafield"'].map(f=>document.fonts.load(f)));
   await document.fonts.ready;
   // Título: o maior tamanho em que a linha mais longa ocupa ~940 px de largura (máx. 300 px)

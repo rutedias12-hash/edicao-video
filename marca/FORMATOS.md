@@ -47,8 +47,8 @@ legenda (a última palavra fica no máximo ~0,6 s). Montserrat Regular ~40 px,
 Cada palavra só aparece.
 **Palavras estratégicas em destaque** (1–2 por frase, nunca mais; as que dão sentido ou emoção:
 "café", "devagar", "casa", "família"…), alternando entre dois estilos:
-- **mesma fonte, tom escuro da paleta (Semibold):** Espresso ou Burgundy; Champagne se o tom escuro não se ler;
-- **em Sloop, bem maior (~2–2,6×):** Cherry Burgundy, ou Champagne se o burgundy não se ler.
+- **mesma fonte, Semibold:** Burgundy em fundo claro; Champagne em fundo escuro (ver `MARCA.md`);
+- **em Sloop, bem maior (2,2×):** Burgundy em fundo claro; Champagne em fundo escuro.
 Não repetir o mesmo estilo de destaque em frases seguidas.
 
 **"Legenda informativa" (só quando a Rute pedir):** modelo para detalhes mais informativos

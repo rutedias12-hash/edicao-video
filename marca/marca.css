@@ -48,6 +48,6 @@
 .cursor { display: inline-block; width: .06em; height: .8em; margin-left: .04em;
           background: currentColor; vertical-align: -.02em; }
 /* Destaques nas legendas do vlog (a base é sempre clara: Winter White) */
-.dest-cor   { color: var(--espresso); font-weight: 600; }   /* mesma fonte, tom escuro da paleta (espresso/burgundy; champagne se não se ler) */
+.dest-cor   { color: var(--burgundy); font-weight: 600; }   /* mesma fonte; Burgundy em fundo claro, Champagne em fundo escuro */
 .dest-sloop { font-family: var(--fonte-sloop); color: var(--burgundy);
               font-size: 2.2em; letter-spacing: 0; line-height: .6; }  /* 2,2× com a Sloop verdadeira (2,6× era para a substituta) */  /* ou --champagne se não se ler */

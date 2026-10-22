@@ -26,8 +26,9 @@ Regras:
 - **Regra do destaque:** a cor de destaque é o Cherry Burgundy. **Quando o burgundy não se lê** sobre a imagem
   (fundo escuro ou avermelhado), usa-se **Champagne**. Teste: contraste de pelo menos 3:1 entre a cor e
   as partes **mais escuras** do fundo por trás do texto (20.º percentil); se o burgundy não chegar, Champagne.
-- Destaques nas legendas: Espresso ou Burgundy; se o tom escuro não chegar a 3:1 sobre as partes mais escuras
-  do fundo, Champagne. Implementado em `marca/exemplo.html`.
+- **Destaques nas legendas (regra da Rute, desde 2026-10-22): em fundo claro, Burgundy** (nos dois estilos: Semibold e Sloop).
+  Fundo claro = luminosidade mediana (relativa, 0–1) do fundo **por trás da palavra** ≥ 0,15. Em fundo escuro, Champagne.
+  Exceções pedidas num vídeo (ex.: uma palavra sempre em Burgundy) sobrepõem-se ao teste.
 
 ## Tipografia (vídeos)
 Guia: Sloop (títulos, destaques, assinaturas) + sans serif (subtítulos, corpo, informação).
