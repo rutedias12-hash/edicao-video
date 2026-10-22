@@ -2,7 +2,7 @@
    Vlog: só Montserrat (+ Sloop em algumas palavras das legendas).
    Yapping: Sloop (títulos/destaques) + Montserrat (legendas/texto).
    Sem sombras. Títulos em máquina de escrever; o resto só aparece. */
-@font-face { font-family: "Sloop"; src: url("fontes/Sloop.otf"); }
+@font-face { font-family: "Sloop"; src: url("fontes/Sloop.ttf"), url("fontes/Sloop.otf"); }   /* Sloop Script Regular (enviada pela Rute) */
 @font-face { font-family: "Montserrat"; font-weight: 400; src: url("fontes/Montserrat-Regular.ttf"); }
 @font-face { font-family: "Montserrat"; font-weight: 500; src: url("fontes/Montserrat-Medium.ttf"); }
 @font-face { font-family: "Montserrat"; font-weight: 600; src: url("fontes/Montserrat-SemiBold.ttf"); }
@@ -50,4 +50,4 @@
 /* Destaques nas legendas do vlog (a base é sempre clara: Winter White) */
 .dest-cor   { color: var(--espresso); font-weight: 600; }   /* mesma fonte, tom escuro da paleta (espresso/burgundy; champagne se não se ler) */
 .dest-sloop { font-family: var(--fonte-sloop); color: var(--burgundy);
-              font-size: 2.6em; letter-spacing: 0; line-height: .6; }  /* 2,6× para a substituta; afinar com a Sloop */  /* ou --champagne se não se ler */
+              font-size: 3.3em; letter-spacing: 0; line-height: .6; }  /* 3,3× do tamanho da legenda = minúsculas ~2× maiores (medido com a Sloop) */  /* ou --champagne se não se ler */

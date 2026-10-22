@@ -159,3 +159,15 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
   com grande plano da embalagem por cima de "sopa de abóbora, camarão e coentros" (IMG_6634, sem som) · 3) "Amamos!".
   Pedaços com `scripts/hq_piece.py` (acerta imagem e som); cut.py: cutaways podem vir de outra fonte (4.º campo). Som só neste bloco
   (−17 LUFS, pico −2,5 dBFS); resto em silêncio. Transcrição confirmada, 2310 frames, sem flashes → `edit/montagem_4k60_hq_com_sopa.mp4` (38,5 s).
+
+## Sessão 7 — 2026-10-22 · lettering "vlog" da marca (marca/FORMATOS.md) → `edit/montagem_4k60_lettering.mp4`
+- A Rute pediu o lettering pelas definições guardadas (marca/, vindas do main), não pelo estilo antigo do CapCut. Textos reaproveitados da versão dela.
+- `scripts/build_lettering_vlog.py` → `animations/slot_3` (HyperFrames, 2160×3840, palco 1080×1920 ×2) → `render.webm`;
+  `scripts/finish_lettering_vlog.sh` junta à montagem, som de teclado 0,3–1,01 s (~20 dB abaixo da voz), -14 LUFS (voz -13,2, pico -1,0).
+- Título "fim / de dia" Montserrat SemiBold 285 px, máquina de escrever + cursor, 0–2,9 s, **Champagne** (burgundy 1,45:1 no 2.º plano → falha o teste 3:1).
+- Horas: 17:50 tentar preparar o jantar · 18:10 plano b · 18:30 jantar do Henrique (omelete + banana esmagada) · 18:50 banho do Henrique ·
+  19:30 deitar o bebé · 19:45 Clarita chega de rastos · 19:50 ainda bem que tinha esta sopa · 20:00 jantar em família. Fecho sem texto.
+- Legendas da sopa palavra a palavra (tempos do bloco transcrito); destaques em Champagne: melhor (cor), chef (Sloop), maravilhosa (cor), amamos (Sloop).
+- Sloop Script Regular enviada pela Rute → marca/fontes/Sloop.ttf; destaque Sloop 3,3× (minúsculas ~2× a legenda).
+- Verificado: texto sempre dentro da zona segura (x 146–1797, y 474–2187 em 4K); 2310 frames.
+- Atenção: na parte da sopa as legendas claras ficam sobre a camisola branca → leitura fraca; proposta à Rute: subir/baixar só nesse bloco.

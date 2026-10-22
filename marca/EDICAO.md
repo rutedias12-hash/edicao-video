@@ -27,3 +27,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   O layout anterior ficou guardado como "legenda informativa" (marca/modelos/), só quando a Rute pedir.
 2026-10-22 — configuração — legendas coladas por baixo da hora/atividade (sem espaço extra).
 2026-10-22 — configuração — todo o texto dentro das margens de segurança dos Reels (220 cima, 420 baixo, 120 direita, 60 esquerda).
+2026-10-22 — continente_sopas — o lettering segue SEMPRE as definições de marca/ (vlog), não o estilo antigo dos projetos no CapCut.
+  Sloop Script Regular enviada pela Rute (marca/fontes/Sloop.ttf, não vai para o git); destaque Sloop a 3,3× a legenda.
