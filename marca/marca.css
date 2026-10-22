@@ -1,33 +1,53 @@
 /* Marca Rute Dias — importar em todas as composições HyperFrames.
-   Caminhos relativos a marca/; copiar ou ajustar o caminho conforme a composição. */
-@font-face { font-family: "La Luxes"; src: url("fontes/LaLuxes.otf") format("opentype"); }
-@font-face { font-family: "New Icon Script"; src: url("fontes/NewIconScript.otf") format("opentype"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 300; src: url("fontes/HindSiliguri-Light.ttf"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 400; src: url("fontes/HindSiliguri-Regular.ttf"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 500; src: url("fontes/HindSiliguri-Medium.ttf"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 600; src: url("fontes/HindSiliguri-SemiBold.ttf"); }
-@font-face { font-family: "Hind Siliguri"; font-weight: 700; src: url("fontes/HindSiliguri-Bold.ttf"); }
+   Vlog: só Montserrat (+ Sloop em algumas palavras das legendas).
+   Yapping: Sloop (títulos/destaques) + Montserrat (legendas/texto).
+   Sem sombras. Títulos em máquina de escrever; o resto só aparece. */
+@font-face { font-family: "Sloop"; src: url("fontes/Sloop.otf"); }
+@font-face { font-family: "Montserrat"; font-weight: 400; src: url("fontes/Montserrat-Regular.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 500; src: url("fontes/Montserrat-Medium.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("fontes/Montserrat-SemiBold.ttf"); }
+/* Substituta da Sloop enquanto não houver o ficheiro */
+@font-face { font-family: "Mrs Saint Delafield"; src: url("fontes/MrsSaintDelafield.ttf"); }
 
 :root {
   /* Cores */
-  --winter-white: #F2EFE6;   /* fundo principal, espaço negativo */
-  --champagne:    #E8D8C5;   /* fundos alternativos, caixas de texto */
-  --espresso:     #493A33;   /* texto principal, linhas, ícones */
-  --burgundy:     #6F172B;   /* assinatura: destaques, palavras-chave */
+  --winter-white: #F2EFE6;   /* texto normal sobre o vídeo */
+  --champagne:    #E8D8C5;   /* destaque quando o burgundy não se lê */
+  --espresso:     #493A33;   /* texto sobre fundos claros */
+  --burgundy:     #6F172B;   /* cor de destaque principal */
 
-  /* Tipos de letra */
-  --fonte-titulo:   "La Luxes", serif;
-  --fonte-destaque: "New Icon Script", cursive;
-  --fonte-corpo:    "Hind Siliguri", sans-serif;
+  /* Fontes */
+  --fonte-texto:   "Montserrat", sans-serif;   /* vlog e yapping */
+  --fonte-sloop:   "Sloop", "Mrs Saint Delafield", cursive;
 
-  /* Tamanhos para vídeo vertical 1080×1920 */
-  --t-titulo:    120px;  /* 96–140 */
-  --t-destaque:   96px;  /* 72–120, só palavras/frases curtas */
-  --t-subtitulo:  56px;  /* 48–64 */
-  --t-corpo:      44px;  /* 40–52, legendas incluídas */
+  /* Espaçamento entre letras: apertado (pedido da Rute) */
+  --esp-titulo: -0.06em;
+  --esp-texto:  -0.035em;
+  --esp-rotulo:  0.04em;
 
-  /* Movimento: suave e editorial */
-  --entrada:   0.7s;
-  --saida:     0.5s;
-  --suave:     cubic-bezier(0.22, 1, 0.36, 1);
+  /* Vídeo vertical 1080×1920 */
+  --t-titulo-vlog: 230px;   /* 200–260: quase o ecrã todo; ajustar para a palavra mais longa caber */
+  --lh-titulo-vlog: 0.78;   /* linhas muito juntas */
+  --lh-texto:   1.2;
+  --t-hora:     54px;       /* SemiBold, sempre Winter White */
+  --t-rotulo:   28px;       /* SemiBold, maiúsculas, sempre Winter White */
+  --t-legenda:  40px;       /* vlog, uma palavra de cada vez */
+  --t-palavra:  64px;       /* yapping, palavra a palavra */
+
+  /* Margens de segurança dos Reels (1080×1920): nada de texto fora desta área */
+  --seg-topo: 220px;   /* barra de cima (nome, áudio) */
+  --seg-base: 420px;   /* legenda do post, nome e botões em baixo */
+  --seg-esq:   60px;
+  --seg-dir:  120px;   /* coluna de ícones (gosto, comentar, partilhar) */
+
+  --letras-por-segundo: 14;
+  --cursor-pisca: 0.5s;
 }
+
+.texto  { color: var(--winter-white); text-shadow: none; letter-spacing: var(--esp-texto); }
+.cursor { display: inline-block; width: .06em; height: .8em; margin-left: .04em;
+          background: currentColor; vertical-align: -.02em; }
+/* Destaques nas legendas do vlog (a base é sempre clara: Winter White) */
+.dest-cor   { color: var(--espresso); font-weight: 600; }   /* mesma fonte, tom escuro da paleta (espresso/burgundy; champagne se não se ler) */
+.dest-sloop { font-family: var(--fonte-sloop); color: var(--burgundy);
+              font-size: 2.6em; letter-spacing: 0; line-height: .6; }  /* 2,6× para a substituta; afinar com a Sloop */  /* ou --champagne se não se ler */
