@@ -171,3 +171,5 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
 - Sloop Script Regular enviada pela Rute → marca/fontes/Sloop.ttf; destaque Sloop 3,3× (minúsculas ~2× a legenda).
 - Verificado: texto sempre dentro da zona segura (x 146–1797, y 474–2187 em 4K); 2310 frames.
 - Atenção: na parte da sopa as legendas claras ficam sobre a camisola branca → leitura fraca; proposta à Rute: subir/baixar só nesse bloco.
+- Iteração: as horas/atividades ficam no ecrã até aparecer a seguinte (a das 20:00 até ao fim, por cima do plano da embalagem).
+  As legendas da voz mantêm a regra palavra a palavra (pedido da Rute: "só o das horas e atividades"). Regra guardada em marca/FORMATOS.md.
