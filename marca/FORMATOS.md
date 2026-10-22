@@ -41,7 +41,7 @@ sem caixa nem sombra. Só aparecem; saem um ou dois clipes depois.
 é dita e **desaparece antes de surgir a seguinte** (nunca duas palavras no ecrã). Em pausas, o ecrã fica sem
 legenda (a última palavra fica no máximo ~0,6 s). Montserrat Regular ~40 px,
 **cor base sempre clara (Winter White), nunca castanho**, sem sombra, centrada na horizontal e
-**imediatamente abaixo da hora/atividade** (ao centro do ecrã; o mesmo sítio mesmo quando não há hora).
+**colada por baixo da hora/atividade** (sem espaço extra entre as duas; ao centro do ecrã; o mesmo sítio mesmo quando não há hora).
 Cada palavra só aparece.
 **Palavras estratégicas em destaque** (1–2 por frase, nunca mais; as que dão sentido ou emoção:
 "café", "devagar", "casa", "família"…), alternando entre dois estilos:

@@ -10,7 +10,7 @@ body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#8a7a6c cent
 #hora{position:absolute;top:880px;width:100%;text-align:center}
 #hora .h{font-weight:600;line-height:1;font-size:var(--t-hora)}
 #hora .r{font-weight:600;line-height:1.2;font-size:var(--t-rotulo);letter-spacing:var(--esp-rotulo);text-transform:uppercase}
-#legenda{position:absolute;top:1000px;left:110px;right:110px;text-align:center;font-size:var(--t-legenda);line-height:var(--lh-texto)}
+#legenda{position:absolute;top:968px;left:110px;right:110px;text-align:center;font-size:var(--t-legenda);line-height:var(--lh-texto)}
 </style></head><body>
 <div id="titulo" class="texto"></div>
 <div id="hora" class="texto" hidden><div class="h">7:15</div><div class="r">pequeno-almoço</div></div>
@@ -50,7 +50,7 @@ function desenha(t){
 async function arranca(){
   if(FUNDO){const img=new Image();img.src=FUNDO;await img.decode();document.body.style.backgroundImage=`url(${FUNDO})`;
     const t=corDestaque(img,{x:70,y:150,w:950,h:440}); cor=t.burgundy?'var(--burgundy)':'var(--champagne)';
-    const l=corDestaque(img,{x:110,y:990,w:860,h:120});
+    const l=corDestaque(img,{x:110,y:960,w:860,h:120});
     destSloop=l.burgundy?'var(--burgundy)':'var(--champagne)'; destCor=l.espresso?'var(--espresso)':'var(--champagne)';}
   await Promise.all(['400 40px Montserrat','600 100px Montserrat','40px "Mrs Saint Delafield"'].map(f=>document.fonts.load(f)));
   await document.fonts.ready;
