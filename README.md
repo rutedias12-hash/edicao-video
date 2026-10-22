@@ -14,5 +14,6 @@ Antes de editar, o Claude mostra sempre o plano e espera pela tua aprovação.
 4. Envia o vídeo e pede: *"edita este vídeo"*.
 
 ## O que vai para o GitHub
-Só as instruções (`CLAUDE.md`) e o script de instalação (`setup.sh`).
+Só as instruções (`CLAUDE.md`), o script de instalação (`setup.sh`) e o manual da marca (`marca/`).
+As fontes e o guia de marca ficam no Google Drive e são descarregados por `marca/download.sh`.
 Vídeos, áudio, ferramentas descarregadas e a chave ficam de fora (ver `.gitignore`).

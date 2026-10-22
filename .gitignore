@@ -14,3 +14,6 @@ tools/
 
 # Segredos
 .env
+
+# Fontes e guia de marca (descarregados do Drive por marca/download.sh)
+marca/fontes/
