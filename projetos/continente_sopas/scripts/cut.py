@@ -2,7 +2,7 @@
 - Duração de cada plano arredondada a frames inteiros (30 fps) e som com exatamente as mesmas amostras → sem desvio acumulado.
 - AV_OFFSET: o som da gravação original chega ~0,10 s atrasado (microfone sem fios; medido na porta a fechar aos 15,1 s),
   por isso o som de cada plano é lido 0,10 s mais à frente.
-- "cutaways": [[inicio_na_fonte, duracao, aos_x_segundos_do_segmento], ...] — imagem de outro momento por cima do som (B-roll).
+- "cutaways": [[inicio_na_fonte, duracao, aos_x_segundos_do_segmento(, fonte)], ...] — imagem de outro momento por cima do som (B-roll).
 - "mute": true — plano sem som.
 - "crop": "w:h:x:y" — aproximar a imagem (sobre o 4K original).
 - "zoom": [z0, z1] — aproximação lenta (ease in-out).
@@ -65,9 +65,10 @@ for i, r in enumerate(edl['ranges']):
     else:
         base = f'{crop}scale=-2:{H}'
     fc = [f'[0:v]{base},setpts=(PTS-STARTPTS)/{sp},fps={FPS}[b0]']; cur = '[b0]'  # acelerar ANTES de fixar os 30 fps
-    for k, (cs, cd, at) in enumerate(r.get('cutaways') or [], start=1):
+    for k, cw in enumerate(r.get('cutaways') or [], start=1):
+        cs, cd, at = cw[:3]; csrc = src[cw[3]] if len(cw) > 3 else s   # 4.º elemento opcional: outra fonte
         if d - (at + cd) < 0.15: cd = d - at + 0.1  # B-roll a acabar mesmo no fim: cobre até ao último frame (evita 'flash')
-        cmd += ['-ss', f'{cs:.3f}', '-t', f'{cd+0.2:.3f}', '-i', s]
+        cmd += ['-ss', f'{cs:.3f}', '-t', f'{cd+0.2:.3f}', '-i', csrc]
         fc.append(f'[{k}:v]scale=-2:{H},fps={FPS},trim=duration={cd},setpts=PTS-STARTPTS+{at}/TB[c{k}]')
         fc.append(f"{cur}[c{k}]overlay=0:0:eof_action=pass:enable='between(t,{at},{at+cd-0.001})'[b{k}]"); cur = f'[b{k}]'
     fc.append(f'{cur}trim=end_frame={n},setpts=PTS-STARTPTS[v]')

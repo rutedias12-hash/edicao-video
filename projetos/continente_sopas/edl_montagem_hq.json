@@ -31,7 +31,11 @@
   "p27_IMG_6638": "/home/user/edicao-video/videos/hq_pedacos/p27_IMG_6638.mov",
   "p28_IMG_6638": "/home/user/edicao-video/videos/hq_pedacos/p28_IMG_6638.mov",
   "p29_IMG_6634": "/home/user/edicao-video/videos/hq_pedacos/p29_IMG_6634.mov",
-  "p_sopa_IMG_6588": "/home/user/edicao-video/videos/hq_pedacos/p_sopa_IMG_6588.mov"
+  "p_sopa_IMG_6588": "/home/user/edicao-video/videos/hq_pedacos/p_sopa_IMG_6588.mov",
+  "p_sopa1": "/home/user/edicao-video/videos/hq_pedacos/p_sopa1.mov",
+  "p_sopa2": "/home/user/edicao-video/videos/hq_pedacos/p_sopa2.mov",
+  "p_sopa3": "/home/user/edicao-video/videos/hq_pedacos/p_sopa3.mov",
+  "p_emb_cut": "/home/user/edicao-video/videos/hq_pedacos/p_emb_cut.mov"
  },
  "ranges": [
   {
@@ -116,13 +120,39 @@
    "mute": true
   },
   {
-   "source": "p_sopa_IMG_6588",
-   "start": 0.85,
-   "end": 3.34,
+   "source": "p_sopa1",
+   "start": 0.8167,
+   "end": 3.3767,
    "beat": "SOPA",
    "quote": "Eu descobri a melhor sopa de sempre no Continente,",
    "label": "",
-   "av_offset": 0.0626
+   "av_offset": 0.074
+  },
+  {
+   "source": "p_sopa2",
+   "start": 0.8333,
+   "end": 4.9333,
+   "beat": "SOPA",
+   "quote": "a receita do chef, sopa de abóbora, camarão e coentros, é maravilhosa.",
+   "label": "",
+   "av_offset": 0.074,
+   "cutaways": [
+    [
+     0.1333,
+     1.1,
+     1.2,
+     "p_emb_cut"
+    ]
+   ]
+  },
+  {
+   "source": "p_sopa3",
+   "start": 0.85,
+   "end": 1.49,
+   "beat": "SOPA",
+   "quote": "Amamos.",
+   "label": "",
+   "av_offset": 0.074
   },
   {
    "source": "p09_IMG_6617",

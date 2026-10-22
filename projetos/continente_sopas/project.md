@@ -154,3 +154,8 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
 - Inserido antes dos ovos (8,9–11,4 s): "Eu descobri a melhor sopa de sempre no Continente" a partir do original IMG_6588 (re-descarregado),
   4K 60 fps, com som só neste plano (resto em silêncio). Som do original: atraso medido 0,063 s (campo `av_offset` novo no cut.py).
   Transcrição confirmada (frase inteira, sem "tip–" nem o "é" seguinte). → `edit/montagem_4k60_hq_com_sopa.mp4` (33,7 s).
+- **Bloco da sopa alargado** (pedido: "igual à versão falada anterior"), 8,9–16,2 s, antes dos ovos, 3 planos do original 4K 60 fps:
+  1) "Eu descobri a melhor sopa de sempre no Continente." (IMG_6588) · 2) "É a receita do chef, sopa de abóbora, camarão e coentros. É maravilhosa."
+  com grande plano da embalagem por cima de "sopa de abóbora, camarão e coentros" (IMG_6634, sem som) · 3) "Amamos!".
+  Pedaços com `scripts/hq_piece.py` (acerta imagem e som); cut.py: cutaways podem vir de outra fonte (4.º campo). Som só neste bloco
+  (−17 LUFS, pico −2,5 dBFS); resto em silêncio. Transcrição confirmada, 2310 frames, sem flashes → `edit/montagem_4k60_hq_com_sopa.mp4` (38,5 s).
