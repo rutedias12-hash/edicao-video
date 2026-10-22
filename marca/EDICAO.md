@@ -29,3 +29,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — todo o texto dentro das margens de segurança dos Reels (220 cima, 420 baixo, 120 direita, 60 esquerda).
 2026-10-22 — continente_sopas — o lettering segue SEMPRE as definições de marca/ (vlog), não o estilo antigo dos projetos no CapCut.
   Sloop Script Regular enviada pela Rute (marca/fontes/Sloop.ttf, não vai para o git); destaque Sloop a 3,3× a legenda.
+2026-10-22 — continente_sopas — horas/atividades e legendas ficam SEMPRE no ecrã e só saem quando aparece a seguinte (sem saírem em pausas).

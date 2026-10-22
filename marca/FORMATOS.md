@@ -35,11 +35,11 @@ Se houver música, os cortes caem no compasso.
 **Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15", Montserrat Semibold ~54 px) e,
 por baixo, a atividade em maiúsculas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO; Semibold ~28 px).
 **Sempre Winter White** (tom claro), **alinhadas ao centro do ecrã** (horizontal e vertical, como nas referências),
-sem caixa nem sombra. Só aparecem; saem um ou dois clipes depois.
+sem caixa nem sombra. Só aparecem e **ficam sempre no ecrã até aparecer a hora seguinte** (a última fica até ao fim).
 
 **Legendas da voz:** **uma só palavra de cada vez**, sincronizada com a fala: cada palavra aparece quando
-é dita e **desaparece antes de surgir a seguinte** (nunca duas palavras no ecrã). Em pausas, o ecrã fica sem
-legenda (a última palavra fica no máximo ~0,6 s). Montserrat Regular ~40 px,
+é dita e **fica até surgir a seguinte**, que a substitui (nunca duas palavras no ecrã; nas pausas a palavra fica).
+A última palavra de um bloco de fala fica até ao fim desse bloco. Montserrat Regular ~40 px,
 **cor base sempre clara (Winter White), nunca castanho**, sem sombra, centrada na horizontal e
 **colada por baixo da hora/atividade** (sem espaço extra entre as duas; ao centro do ecrã; o mesmo sítio mesmo quando não há hora).
 Cada palavra só aparece.

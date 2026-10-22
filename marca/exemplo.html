@@ -43,8 +43,8 @@ function desenha(t){
   const T=document.getElementById('titulo');T.style.color=cor;T.hidden=t>=3;   // título só nos primeiros 3 s
   T.innerHTML=TITULO.slice(0,n)+(cursor?'<span class="cursor"></span>':'');
   document.getElementById('hora').hidden=t<3;
-  // uma palavra de cada vez: fica desde que é dita até à seguinte (máx. 0,6 s se a seguir houver pausa)
-  document.getElementById('legenda').innerHTML=LEG.filter((w,i)=>t>=+w[1]&&t<Math.min(i+1<LEG.length?+LEG[i+1][1]:Infinity,+w[1]+0.6))
+  // uma palavra de cada vez: fica desde que é dita até surgir a seguinte (também nas pausas)
+  document.getElementById('legenda').innerHTML=LEG.filter((w,i)=>t>=+w[1]&&t<(i+1<LEG.length?+LEG[i+1][1]:Infinity))
     .map(w=>w[2]==='sloop'?`<span class="dest-sloop" style="color:${destSloop}">${w[0]}</span>`:w[2]==='cor'?`<span class="dest-cor" style="color:${destCor}">${w[0]}</span>`:w[0]).join(' ');
 }
 async function arranca(){
