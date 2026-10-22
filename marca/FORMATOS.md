@@ -4,9 +4,10 @@ Antes de cada projeto, identificar o formato (perguntar se não for óbvio) e se
 As receitas vêm das referências que a Rute escolheu, **traduzidas para a marca** (`MARCA.md`):
 copia-se a estrutura e o ritmo, nunca as cores ou as fontes das referências.
 
-Comum aos dois: vertical 1080×1920, volume final **-14 LUFS** (o valor de todas as referências),
+Comum aos dois: vertical 1080×1920, todo o texto dentro das **margens de segurança dos Reels** (ver `MARCA.md`), volume final **-14 LUFS** (o valor de todas as referências),
+títulos em máquina de escrever com som de teclado, todo o resto só aparece (ver `MARCA.md`),
 **sem pausas nem respirações** (frases coladas, pausas internas > ~0,2 s cortadas) e **sem fecho final**
-(nada de assinatura no fim; o vídeo acaba na última frase).
+(nada de assinatura nem plano extra no fim; o vídeo acaba na última frase).
 
 ---
 
@@ -26,20 +27,37 @@ alternar plano geral, pormenor (mãos, objetos), visto de cima, perfil, espelho.
 seguidos do mesmo ângulo. Se um plano for longo, partir em vários pedaços curtos de ângulos diferentes.
 Se houver música, os cortes caem no compasso.
 
-**Gancho (0–3 s):** título curto no centro, que aparece **palavra a palavra**, empilhado, uma palavra por linha
-(ex.: "uma / manhã / lenta / comigo"), em La Luxes, Winter White sobre a imagem.
-Por baixo, uma frase curta em New Icon Script (ex.: "a minha rotina"), escrita da esquerda para a direita.
-Fica no ecrã enquanto passam os 2–4 primeiros planos.
+**Título principal (gancho, 0–3 s):** sempre curto, 2–3 palavras ("fim de dia", "manhã comigo").
+- Montserrat Semibold, **muito grande**: a ocupar quase o ecrã todo de largura
+  (escolher o maior tamanho em que a palavra mais longa cabe entre a margem esquerda e a coluna de ícones).
+- **Alinhado à esquerda**, uma ou duas palavras por linha, **linhas e letras muito juntas** (altura de linha ~0,78).
+- Na **cor de destaque**: Cherry Burgundy; se o burgundy não se ler sobre a imagem, **Champagne** (ver `MARCA.md`).
+- Escreve-se à máquina, com cursor e som de teclado. **Só nos primeiros 3 s**; depois desaparece.
 
-**Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15") em Hind Siliguri Medium ~44 px
-e, por baixo, um rótulo minúsculo em maiúsculas espaçadas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO), ~22 px.
-Winter White, centro do ecrã, sem caixa. Entra suave, sai no plano seguinte ou dois.
+**Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15", Montserrat Semibold ~54 px) e,
+por baixo, a atividade em maiúsculas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO; Semibold ~28 px).
+**Sempre Winter White** (tom claro), **alinhadas ao centro do ecrã** (horizontal e vertical, como nas referências),
+sem caixa nem sombra. Só aparecem; saem um ou dois clipes depois.
 
-**Legendas da voz:** discretas. Uma linha, letra pequena (Hind Siliguri Regular ~34–38 px), minúsculas,
-Winter White com sombra muito leve, a meio do ecrã (~45 % da altura). Frase inteira, não palavra a palavra.
-Sem caixa.
+**Legendas da voz:** **uma só palavra de cada vez**, sincronizada com a fala: cada palavra aparece quando
+é dita e **desaparece antes de surgir a seguinte** (nunca duas palavras no ecrã). Em pausas, o ecrã fica sem
+legenda (a última palavra fica no máximo ~0,6 s). Montserrat Regular ~40 px,
+**cor base sempre clara (Winter White), nunca castanho**, sem sombra, centrada na horizontal e
+**colada por baixo da hora/atividade** (sem espaço extra entre as duas; ao centro do ecrã; o mesmo sítio mesmo quando não há hora).
+Cada palavra só aparece.
+**Palavras estratégicas em destaque** (1–2 por frase, nunca mais; as que dão sentido ou emoção:
+"café", "devagar", "casa", "família"…), alternando entre dois estilos:
+- **mesma fonte, tom escuro da paleta (Semibold):** Espresso ou Burgundy; Champagne se o tom escuro não se ler;
+- **em Sloop, bem maior (~2–2,6×):** Cherry Burgundy, ou Champagne se o burgundy não se ler.
+Não repetir o mesmo estilo de destaque em frases seguidas.
 
-**Efeitos sonoros:** não (são só para o yapping).
+**"Legenda informativa" (só quando a Rute pedir):** modelo para detalhes mais informativos
+(ex.: ingredientes, nomes de produtos, um passo de uma rotina). Texto curto enorme à esquerda, no mesmo
+estilo do título (Montserrat Semibold, letras e linhas apertadas, cor de destaque, máquina de escrever com
+som de teclado) que **fica no ecrã** enquanto é relevante, com hora/atividade e legenda por baixo.
+Modelo pronto: `marca/modelos/legenda-informativa.html`. Nunca usar sem a Rute pedir "legenda informativa".
+
+**Efeitos sonoros:** só o teclado, enquanto o título (ou uma legenda informativa) se escreve.
 
 **Cor da imagem:** tons quentes e suaves, iguais em todos os planos (o mesmo "filtro" em todo o vídeo).
 
@@ -50,44 +68,35 @@ Sem caixa.
 ## 2. Yapping (a falar para a câmara: dicas, opiniões, histórias)
 
 Referências:
-- https://www.instagram.com/reel/DaF4c7-hN1t/ (legenda palavra a palavra, palavras grandes, desenhos)
+- https://www.instagram.com/reel/DaF4c7-hN1t/ (legenda palavra a palavra)
 - https://www.instagram.com/reel/Dec66kzs_MU/ (lista que se vai preenchendo no topo)
-- https://www.instagram.com/reel/DeelAf-yI_d/ (títulos de secção "01 / …", imagens de exemplo, cartões de notas)
+- https://www.instagram.com/reel/DeelAf-yI_d/ (títulos de secção "01 / …", imagens de exemplo)
 
 **Duração:** 60–130 s.
 
 **Imagem:** a Rute a falar para a câmara, plano médio. Cortar **todos** os silêncios, hesitações e respirações
 longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 
-**Gancho (0–3 s):** no topo, uma frase pequena em New Icon Script que "se escreve" (ex.: "como eu edito")
-e, por baixo, 2–3 palavras **grandes** em La Luxes que entram uma a uma (ex.: "EDITA OS TEUS VÍDEOS").
-Winter White, com a palavra-chave em Champagne.
+**Gancho (0–3 s):** título curto no terço superior (ex.: "como eu edito os meus vídeos"),
+em **Sloop** (~120 px), na cor de destaque (Burgundy, ou Champagne se não se ler), que **se escreve à máquina**
+com cursor e som de teclado.
 
-**Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã (~62 % da altura).
-Hind Siliguri SemiBold ~68 px, Winter White com sombra suave. Cada palavra entra com um pequeno
-crescimento (95 % → 100 %, 0,12 s), sem saltos. Palavras-chave em Champagne e ligeiramente maiores.
+**Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
+(~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
+(sem crescer nem saltar).
 
 **Durante o vídeo:**
-- **Palavra-tema grande:** quando diz um conceito central ("FEED", "7 PASSOS"), aparece em La Luxes muito grande
-  (160–220 px) atrás ou ao lado dela, 1–2 s.
-- **Títulos de secção:** a cada nova parte, número em New Icon Script ("01") + título em La Luxes
-  ("A lista"), no centro, sobre um plano de pormenor ou sobre ela, 1,5–2 s.
-- **Lista que se vai preenchendo:** quando enumera coisas, no topo aparece o título da lista (New Icon Script)
-  e cada item (Hind Siliguri, "1. …") entra no momento em que é dito; a lista fica até ao fim da secção.
-- **Cartão de notas:** para listas longas ou dicas para guardar, um cartão Champagne com cantos arredondados,
-  título em Hind Siliguri SemiBold Espresso e pontos em Hind Siliguri Regular; a Rute fica visível por baixo.
+- **Títulos de secção:** a cada nova parte, "01 a lista" em Sloop, escrito à máquina
+  com cursor e som de teclado, no terço superior, 1,5–2 s.
+- **Lista que se vai preenchendo:** quando enumera coisas, no topo fica o título da lista (Sloop, escrito à máquina)
+  e cada item ("1. …", Montserrat Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
+- **Destaques:** uma palavra-chave de vez em quando em Sloop, na cor de destaque, em vez da legenda normal.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
-  e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s).
-- **Pequenos desenhos:** brilhos, setas, sublinhados em traço fino Winter White ou Burgundy, à mão,
-  junto do texto. Poucos, só para dar personalidade.
-- **Efeitos sonoros (sim, a Rute quer, o mais parecidos possível com a referência DaF4c7-hN1t):**
-  - **brilho** (chime cintilante, ~0,8 s): no gancho, quando aparece o título;
-  - **clique** (clique de rato, curto e seco): quando aparece uma palavra-tema, um item de lista ou um desenho;
-  - **teclado** (sequência de cliques de teclas): enquanto uma frase "se escreve" no ecrã;
-  - **whoosh** (varrimento curto com batida suave): nos títulos de secção e nas imagens de exemplo.
-  Volume baixo, sempre abaixo da voz. **Não** em cada palavra da legenda, só nos elementos gráficos.
-  Usar sempre os ficheiros de `marca/sons/` (descarregados do Drive por `marca/download.sh`), nunca inventar outros.
-  **Pendente:** a Rute vai arranjar os sons e enviá-los. Enquanto `marca/sons/` não tiver os ficheiros,
-  fazer os vídeos **sem** efeitos sonoros (não criar nem procurar outros).
+  e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.
+- **Efeitos sonoros** (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
+  - **`teclado.wav`**: enquanto um título se escreve; cortar à duração da escrita;
+  - **`clique.wav`** (0,2 s): quando aparece um item de lista ou uma imagem de exemplo.
+  Volume baixo, sempre abaixo da voz (cerca de -20 dB em relação à fala). Nunca nas legendas.
+  Nunca inventar nem procurar outros sons; se a Rute enviar mais, acrescentar aqui.
 
 **Fim:** acaba na frase final. Sem assinatura.

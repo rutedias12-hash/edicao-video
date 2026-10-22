@@ -2,10 +2,11 @@
 
 Fonte de verdade: `marca/fontes/guia-de-marca.png` (branding sheet).
 Fontes e guia são descarregados por `bash marca/download.sh` (corre também no `setup.sh`).
-Variáveis prontas a usar: `marca/marca.css`. Ecrã de exemplo com tudo aplicado: `marca/exemplo.html`.
+Variáveis prontas a usar: `marca/marca.css`. Ecrã de exemplo (com o título a escrever-se): `marca/exemplo.html`.
 
-**Personalidade:** editorial, sofisticada, feminina, luminosa. Calma, nunca agitada.
-**Logótipo:** não há. A assinatura é o nome "Rute Dias" escrito em New Icon Script, na cor Cherry Burgundy.
+**Estilo nos vídeos (decidido pela Rute):** **simples**, ao estilo dos vlogs de referência.
+Sem sombras, sem caixas enfeitadas, animações mínimas.
+**Logótipo:** não há.
 
 ## Cores
 | Nome | Código | Para quê |
@@ -18,38 +19,54 @@ Variáveis prontas a usar: `marca/marca.css`. Ecrã de exemplo com tudo aplicado
 Regras:
 - Usar apenas estas quatro cores. Nada de branco puro, preto puro ou cores fora da paleta.
 - O Burgundy é a cor de assinatura: usar pouco (uma palavra ou um detalhe por ecrã) para manter o impacto.
-- Texto sobre o vídeo: Espresso dentro de uma caixa Winter White ou Champagne (opacidade 85–92 %) ou,
-  sobre imagem escura, Winter White diretamente.
+- Texto sobre o vídeo: diretamente sobre a imagem, **sem sombra e sem caixa**. **Texto base (legendas, horas,
+  rótulos) sempre claro: Winter White** — nunca castanho. Escolher a posição do texto onde o fundo é mais
+  escuro, em vez de mudar a cor ou pôr sombra.
+- **Tons escuros (Espresso, Burgundy) só em destaques.**
+- **Regra do destaque:** a cor de destaque é o Cherry Burgundy. **Quando o burgundy não se lê** sobre a imagem
+  (fundo escuro ou avermelhado), usa-se **Champagne**. Teste: contraste de pelo menos 3:1 entre a cor e
+  as partes **mais escuras** do fundo por trás do texto (20.º percentil); se o burgundy não chegar, Champagne.
+- Destaques nas legendas: Espresso ou Burgundy; se o tom escuro não chegar a 3:1 sobre as partes mais escuras
+  do fundo, Champagne. Implementado em `marca/exemplo.html`.
 
-## Tipografia
-| Função | Fonte | Tamanho em vídeo 1080×1920 |
-|---|---|---|
-| Título principal | La Luxes | 96–140 px |
-| Destaque / assinatura | New Icon Script | 72–120 px, **só palavras ou frases curtas** |
-| Subtítulo | Hind Siliguri SemiBold/Medium | 48–64 px |
-| Corpo e legendas | Hind Siliguri Regular/Medium | 40–52 px |
+## Tipografia (vídeos)
+Guia: Sloop (títulos, destaques, assinaturas) + sans serif (subtítulos, corpo, informação).
+**A sans serif dos vídeos é a Montserrat** (escolha da Rute; substitui a Proxima Nova e a "Sistema").
 
-**Nota sobre La Luxes:** o ficheiro no Drive é a versão *La Luxes Serif* (só maiúsculas, direita).
-O guia mostra *La Luxes Ital* (itálico, com minúsculas). Enquanto a versão Ital não for adicionada ao Drive,
-os títulos saem em maiúsculas elegantes, como em `marca/exemplo.html`.
+| Formato | Títulos | Legendas e texto | Destaques |
+|---|---|---|---|
+| **Vlog** | Montserrat | Montserrat | algumas palavras na mesma fonte num tom escuro da paleta; outras em Sloop |
+| **Yapping** | Sloop | Montserrat | Sloop |
 
-(O guia indica tamanhos em pt para publicações no Instagram; em vídeo vertical usam-se cerca do dobro.)
+- **Sloop só no yapping** (títulos e destaques). No vlog, a única exceção são algumas palavras das legendas.
+- **Sloop:** ainda não está no Drive. Para pré-visualizações usa-se Mrs Saint Delafield; num vídeo final,
+  pedir o ficheiro à Rute antes de renderizar.
+- **Letras e linhas apertadas** (pedido da Rute): espaçamento entre letras -0,06 em nos títulos,
+  -0,035 em no texto, 0,04 em nos rótulos em maiúsculas; altura de linha 0,78 nos títulos, 1,2 no texto.
+
 Para vídeo horizontal 1920×1080, multiplicar os tamanhos por ~0,75.
 
-Rótulos pequenos ao estilo do guia: Hind Siliguri em maiúsculas, com espaçamento entre letras largo (≈0,3em).
+## Margens de segurança (Reels do Instagram)
+Todo o texto tem de ficar **dentro da zona segura** do vídeo 1080×1920, para não ficar tapado pela interface:
+- **cima: 220 px** (nome da conta, áudio);
+- **baixo: 420 px** (legenda do post, nome, botões);
+- **direita: 120 px** (coluna de ícones: gosto, comentar, partilhar);
+- **esquerda: 60 px**.
+Valores em `marca/marca.css` (`--seg-topo`, `--seg-base`, `--seg-dir`, `--seg-esq`). O título ajusta o tamanho para caber
+(com o cursor) entre a margem esquerda e a coluna de ícones. Antes de renderizar, verificar num frame de cada
+elemento que nenhum píxel de texto (acentos e caudas incluídos) sai da zona segura.
 
-## Animações (estilo)
-- **Entradas:** aparecer + subir ligeiramente (20–40 px), 0,6–0,8 s, curva suave (`--suave`). Sem saltos nem ressaltos.
-- **Saídas:** desvanecer em 0,4–0,5 s.
-- **New Icon Script:** a palavra "escreve-se" da esquerda para a direita (revelação com máscara), 0,8–1,2 s.
-- **Linhas finas** (1–2 px, Espresso ou Burgundy) que se desenham por baixo de títulos, como no guia.
-- **Palavra-chave:** muda para Burgundy ou ganha um sublinhado Burgundy no instante em que é dita.
-- **Transições entre secções:** fundido simples ou cortina Winter White/Champagne. Nada de zooms rápidos, giros ou efeitos chamativos.
-- Muito espaço vazio à volta do texto; no máximo dois tipos de letra por ecrã.
+## Animações (só duas)
+1. **Títulos: máquina de escrever.** O texto escreve-se letra a letra (~14 letras por segundo) com uma
+   **barra de cursor** fina (`|`, mesma cor do texto, ~0,08 em de largura) à frente. Quando acaba, o cursor
+   pisca 2–3 vezes (ligado 0,5 s / desligado 0,5 s) e desaparece. Durante a escrita toca o som
+   **`marca/sons/teclado.wav`**, cortado à duração da escrita (desvanecimento de 0,05 s no fim).
+2. **Tudo o resto: só aparecer.** (As legendas mostram uma palavra de cada vez; cada palavra só aparece e só desaparece.) Legendas, horas, rótulos, listas, imagens: entram de uma vez (sem
+   desvanecer, sem deslizar, sem crescer) e saem de uma vez.
+
+Proibido: sombras, contornos, brilhos, ressaltos, zooms, rotações, linhas que se desenham.
 
 ## Atenção às licenças
-- **New Icon Script**: licença "Free for Personal Use" (exfont.com). Para vídeos comerciais ou de clientes
-  é preciso comprar a licença comercial.
-- **La Luxes**: confirmar a licença de origem.
-- **Hind Siliguri**: livre (Google Fonts, licença OFL).
+- **Montserrat** e **Mrs Saint Delafield**: livres (Google Fonts, licença OFL).
+- **Sloop**: confirmar a licença quando a Rute enviar o ficheiro.
 Por isso as fontes **não** vão para o GitHub (o repositório é público); ficam só no Drive.
