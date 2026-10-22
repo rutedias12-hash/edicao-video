@@ -30,17 +30,18 @@ Se houver música, os cortes caem no compasso.
   (200–260 px; escolher o maior tamanho em que a palavra mais longa cabe com ~70 px de margem).
 - **Alinhado à esquerda**, uma ou duas palavras por linha, **linhas e letras muito juntas** (altura de linha ~0,78).
 - Na **cor de destaque**: Cherry Burgundy; se o burgundy não se ler sobre a imagem, **Champagne** (ver `MARCA.md`).
-- Escreve-se à máquina, com cursor e som de teclado. Fica no ecrã enquanto passam os 2–4 primeiros clipes.
+- Escreve-se à máquina, com cursor e som de teclado. **Só nos primeiros 3 s**; depois desaparece.
 
 **Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15", Montserrat Semibold ~54 px) e,
 por baixo, a atividade em maiúsculas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO; Semibold ~28 px).
-**Sempre Winter White** (tom claro, a Rute pediu), centro do ecrã, sem caixa nem sombra; pôr numa zona
-mais escura da imagem. Só aparece; sai um ou dois clipes depois.
+**Sempre Winter White** (tom claro), **alinhadas ao centro do ecrã** (horizontal e vertical, como nas referências),
+sem caixa nem sombra. Só aparecem; saem um ou dois clipes depois.
 
 **Legendas da voz:** **uma só palavra de cada vez**, sincronizada com a fala: cada palavra aparece quando
 é dita e **desaparece antes de surgir a seguinte** (nunca duas palavras no ecrã). Em pausas, o ecrã fica sem
 legenda (a última palavra fica no máximo ~0,6 s). Montserrat Regular ~40 px,
-**cor base sempre clara (Winter White), nunca castanho**, sem sombra, centrada a meio do ecrã (~45 % da altura).
+**cor base sempre clara (Winter White), nunca castanho**, sem sombra, centrada na horizontal e
+**imediatamente abaixo da hora/atividade** (ao centro do ecrã; o mesmo sítio mesmo quando não há hora).
 Cada palavra só aparece.
 **Palavras estratégicas em destaque** (1–2 por frase, nunca mais; as que dão sentido ou emoção:
 "café", "devagar", "casa", "família"…), alternando entre dois estilos:
@@ -48,7 +49,13 @@ Cada palavra só aparece.
 - **em Sloop, bem maior (~2–2,6×):** Cherry Burgundy, ou Champagne se o burgundy não se ler.
 Não repetir o mesmo estilo de destaque em frases seguidas.
 
-**Efeitos sonoros:** só o teclado, enquanto o título se escreve.
+**"Legenda informativa" (só quando a Rute pedir):** modelo para detalhes mais informativos
+(ex.: ingredientes, nomes de produtos, um passo de uma rotina). Texto curto enorme à esquerda, no mesmo
+estilo do título (Montserrat Semibold, letras e linhas apertadas, cor de destaque, máquina de escrever com
+som de teclado) que **fica no ecrã** enquanto é relevante, com hora/atividade e legenda por baixo.
+Modelo pronto: `marca/modelos/legenda-informativa.html`. Nunca usar sem a Rute pedir "legenda informativa".
+
+**Efeitos sonoros:** só o teclado, enquanto o título (ou uma legenda informativa) se escreve.
 
 **Cor da imagem:** tons quentes e suaves, iguais em todos os planos (o mesmo "filtro" em todo o vídeo).
 

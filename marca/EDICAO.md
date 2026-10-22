@@ -23,3 +23,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — Montserrat definitiva (vlog e yapping), letras e linhas mais apertadas.
   Horas/atividade sempre Winter White (tom claro). Legendas: base sempre clara, nunca castanho; tons escuros só nos destaques.
 2026-10-22 — configuração — legendas do vlog: uma só palavra de cada vez, desaparece antes da seguinte.
+2026-10-22 — configuração — vlog: título só nos primeiros 3 s; hora/atividade ao centro do ecrã; legenda logo abaixo.
+  O layout anterior ficou guardado como "legenda informativa" (marca/modelos/), só quando a Rute pedir.

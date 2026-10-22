@@ -1,14 +1,16 @@
 <!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="marca.css">
-<!-- Exemplo de VLOG: título enorme à esquerda em máquina de escrever (cor de destaque com teste de contraste),
-     hora + rótulo, legendas palavra a palavra com destaques. ?t=<s> mostra o instante t; ?fundo=<imagem>. -->
+<!-- Modelo normal de VLOG: título enorme à esquerda em máquina de escrever, só nos primeiros 3 s
+     (cor de destaque com teste de contraste); depois hora + atividade ao centro do ecrã e, logo abaixo,
+     a legenda (uma palavra de cada vez, com destaques). ?t=<s> mostra o instante t; ?fundo=<imagem>.
+     Variante para detalhes informativos: marca/modelos/legenda-informativa.html (só quando a Rute pedir). -->
 <style>
 body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#8a7a6c center/cover no-repeat;font-family:var(--fonte-texto)}
 #titulo{position:absolute;top:150px;left:70px;right:40px;font-weight:600;font-size:var(--t-titulo-vlog);
   line-height:var(--lh-titulo-vlog);letter-spacing:var(--esp-titulo);white-space:pre}
-#hora{position:absolute;top:640px;width:100%;text-align:center}
+#hora{position:absolute;top:880px;width:100%;text-align:center}
 #hora .h{font-weight:600;line-height:1;font-size:var(--t-hora)}
 #hora .r{font-weight:600;line-height:1.2;font-size:var(--t-rotulo);letter-spacing:var(--esp-rotulo);text-transform:uppercase}
-#legenda{position:absolute;top:800px;left:110px;right:110px;text-align:center;font-size:var(--t-legenda);line-height:var(--lh-texto)}
+#legenda{position:absolute;top:1000px;left:110px;right:110px;text-align:center;font-size:var(--t-legenda);line-height:var(--lh-texto)}
 </style></head><body>
 <div id="titulo" class="texto"></div>
 <div id="hora" class="texto" hidden><div class="h">7:15</div><div class="r">pequeno-almoço</div></div>
@@ -38,9 +40,9 @@ let cor='var(--burgundy)', destSloop='var(--burgundy)', destCor='var(--espresso)
 function desenha(t){
   const n=Math.max(0,Math.min(TITULO.length,Math.floor((t-INICIO)*LPS))), fim=INICIO+TITULO.length/LPS;
   const cursor=t<fim||(t<fim+PISCA*6&&Math.floor((t-fim)/PISCA)%2===1);
-  const T=document.getElementById('titulo');T.style.color=cor;
+  const T=document.getElementById('titulo');T.style.color=cor;T.hidden=t>=3;   // título só nos primeiros 3 s
   T.innerHTML=TITULO.slice(0,n)+(cursor?'<span class="cursor"></span>':'');
-  document.getElementById('hora').hidden=t<2.6;
+  document.getElementById('hora').hidden=t<3;
   // uma palavra de cada vez: fica desde que é dita até à seguinte (máx. 0,6 s se a seguir houver pausa)
   document.getElementById('legenda').innerHTML=LEG.filter((w,i)=>t>=+w[1]&&t<Math.min(i+1<LEG.length?+LEG[i+1][1]:Infinity,+w[1]+0.6))
     .map(w=>w[2]==='sloop'?`<span class="dest-sloop" style="color:${destSloop}">${w[0]}</span>`:w[2]==='cor'?`<span class="dest-cor" style="color:${destCor}">${w[0]}</span>`:w[0]).join(' ');
@@ -48,7 +50,7 @@ function desenha(t){
 async function arranca(){
   if(FUNDO){const img=new Image();img.src=FUNDO;await img.decode();document.body.style.backgroundImage=`url(${FUNDO})`;
     const t=corDestaque(img,{x:70,y:150,w:950,h:440}); cor=t.burgundy?'var(--burgundy)':'var(--champagne)';
-    const l=corDestaque(img,{x:110,y:790,w:860,h:120});
+    const l=corDestaque(img,{x:110,y:990,w:860,h:120});
     destSloop=l.burgundy?'var(--burgundy)':'var(--champagne)'; destCor=l.espresso?'var(--espresso)':'var(--champagne)';}
   await Promise.all(['400 40px Montserrat','600 100px Montserrat','40px "Mrs Saint Delafield"'].map(f=>document.fonts.load(f)));
   await document.fonts.ready;

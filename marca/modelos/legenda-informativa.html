@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../marca.css">
+<!-- Modelo "LEGENDA INFORMATIVA" (só quando a Rute pedir): para detalhes mais informativos.
+     Texto enorme à esquerda em máquina de escrever (cor de destaque com teste de contraste), que fica no ecrã,
+     hora + atividade por baixo e legenda (uma palavra de cada vez) logo abaixo.
+     ?t=<s> mostra o instante t; ?fundo=<imagem>. Os caminhos de fontes resolvem-se a partir de marca/. -->
+<style>
+body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#8a7a6c center/cover no-repeat;font-family:var(--fonte-texto)}
+#titulo{position:absolute;top:150px;left:70px;right:40px;font-weight:600;font-size:var(--t-titulo-vlog);
+  line-height:var(--lh-titulo-vlog);letter-spacing:var(--esp-titulo);white-space:pre}
+#hora{position:absolute;top:640px;width:100%;text-align:center}
+#hora .h{font-weight:600;line-height:1;font-size:var(--t-hora)}
+#hora .r{font-weight:600;line-height:1.2;font-size:var(--t-rotulo);letter-spacing:var(--esp-rotulo);text-transform:uppercase}
+#legenda{position:absolute;top:800px;left:110px;right:110px;text-align:center;font-size:var(--t-legenda);line-height:var(--lh-texto)}
+</style></head><body>
+<div id="titulo" class="texto"></div>
+<div id="hora" class="texto" hidden><div class="h">7:15</div><div class="r">pequeno-almoço</div></div>
+<div id="legenda" class="texto"></div>
+<script>
+const P=new URLSearchParams(location.search);
+const TITULO="manhã\ncomigo", LPS=14, INICIO=0.3, PISCA=0.5;
+// legenda: [palavra, segundo em que é dita, destaque: ''|'cor'|'sloop']
+const LEG=[["e",3.2],["começo",3.4],["sempre",3.75],["o",4.0],["dia",4.1],["com",4.35],["um",4.5],["café","4.65","sloop"],
+           ["sem",5.6],["pressa","5.85","cor"]];
+const FUNDO=P.get('fundo');
+// Teste de contraste: burgundy só se tiver >= 3:1 com o fundo médio por trás do título; senão champagne.
+function lum(r,g,b){const f=c=>{c/=255;return c<=.03928?c/12.92:((c+.055)/1.055)**2.4};return .2126*f(r)+.7152*f(g)+.0722*f(b)}
+function contraste(a,b){const [x,y]=[a,b].sort((p,q)=>q-p);return (x+.05)/(y+.05)}
+function corDestaque(img,box){
+  const c=document.createElement('canvas');c.width=1080;c.height=1920;const g=c.getContext('2d');
+  const s=Math.max(1080/img.width,1920/img.height);g.drawImage(img,(1080-img.width*s)/2,(1920-img.height*s)/2,img.width*s,img.height*s);
+  const d=g.getImageData(box.x,box.y,box.w,box.h).data, Ls=[];
+  for(let i=0;i<d.length;i+=16) Ls.push(lum(d[i],d[i+1],d[i+2]));
+  Ls.sort((p,q)=>p-q); const pct=k=>Ls[Math.floor(k*(Ls.length-1))];
+  // Um tom escuro (burgundy, espresso) só serve se tiver 3:1 sobre as partes mais escuras do fundo (20.º percentil).
+  const escuras=pct(.2);
+  const ok=hex=>contraste(lum(...hex),escuras)>=3;
+  return {burgundy: ok([0x6F,0x17,0x2B]), espresso: ok([0x49,0x3A,0x33])};
+}
+let cor='var(--burgundy)', destSloop='var(--burgundy)', destCor='var(--espresso)';
+function desenha(t){
+  const n=Math.max(0,Math.min(TITULO.length,Math.floor((t-INICIO)*LPS))), fim=INICIO+TITULO.length/LPS;
+  const cursor=t<fim||(t<fim+PISCA*6&&Math.floor((t-fim)/PISCA)%2===1);
+  const T=document.getElementById('titulo');T.style.color=cor;
+  T.innerHTML=TITULO.slice(0,n)+(cursor?'<span class="cursor"></span>':'');
+  document.getElementById('hora').hidden=t<2.6;
+  // uma palavra de cada vez: fica desde que é dita até à seguinte (máx. 0,6 s se a seguir houver pausa)
+  document.getElementById('legenda').innerHTML=LEG.filter((w,i)=>t>=+w[1]&&t<Math.min(i+1<LEG.length?+LEG[i+1][1]:Infinity,+w[1]+0.6))
+    .map(w=>w[2]==='sloop'?`<span class="dest-sloop" style="color:${destSloop}">${w[0]}</span>`:w[2]==='cor'?`<span class="dest-cor" style="color:${destCor}">${w[0]}</span>`:w[0]).join(' ');
+}
+async function arranca(){
+  if(FUNDO){const img=new Image();img.src=FUNDO;await img.decode();document.body.style.backgroundImage=`url(${FUNDO})`;
+    const t=corDestaque(img,{x:70,y:150,w:950,h:440}); cor=t.burgundy?'var(--burgundy)':'var(--champagne)';
+    const l=corDestaque(img,{x:110,y:790,w:860,h:120});
+    destSloop=l.burgundy?'var(--burgundy)':'var(--champagne)'; destCor=l.espresso?'var(--espresso)':'var(--champagne)';}
+  await Promise.all(['400 40px Montserrat','600 100px Montserrat','40px "Mrs Saint Delafield"'].map(f=>document.fonts.load(f)));
+  await document.fonts.ready;
+  // Título: o maior tamanho em que a linha mais longa ocupa ~940 px de largura (máx. 300 px)
+  const T=document.getElementById('titulo');T.textContent=TITULO;T.style.fontSize='100px';
+  const linhas=TITULO.split('\n').map(l=>{const s=document.createElement('span');s.textContent=l;T.textContent='';T.appendChild(s);return s.getBoundingClientRect().width});
+  T.style.fontSize=Math.min(300,Math.floor(100*940/Math.max(...linhas)))+'px';
+  document.body.dataset.pronto=1;
+  const q=P.get('t'); if(q!==null) desenha(parseFloat(q)); else {const t0=performance.now();(function f(){desenha((performance.now()-t0)/1000);requestAnimationFrame(f)})()}
+}
+arranca();
+</script></body></html>
