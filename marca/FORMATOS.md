@@ -26,22 +26,24 @@ seguidos do mesmo ângulo. Se um plano for longo, partir em vários pedaços cur
 Se houver música, os cortes caem no compasso.
 
 **Título principal (gancho, 0–3 s):** sempre curto, 2–3 palavras ("fim de dia", "manhã comigo").
-- Fonte "Sistema" (Inter) Semibold, **muito grande**: a ocupar quase o ecrã todo de largura
+- Montserrat Semibold, **muito grande**: a ocupar quase o ecrã todo de largura
   (200–260 px; escolher o maior tamanho em que a palavra mais longa cabe com ~70 px de margem).
-- **Alinhado à esquerda**, uma ou duas palavras por linha, **linhas muito juntas** (altura de linha ~0,88).
+- **Alinhado à esquerda**, uma ou duas palavras por linha, **linhas e letras muito juntas** (altura de linha ~0,78).
 - Na **cor de destaque**: Cherry Burgundy; se o burgundy não se ler sobre a imagem, **Champagne** (ver `MARCA.md`).
 - Escreve-se à máquina, com cursor e som de teclado. Fica no ecrã enquanto passam os 2–4 primeiros clipes.
 
-**Horas no ecrã (manter como está):** a cada mudança de momento, aparece a hora ("7:15", Medium ~44 px) e,
-por baixo, um rótulo pequeno em maiúsculas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO, ~24 px).
-Fonte "Sistema", Winter White, centro do ecrã, sem caixa nem sombra. Só aparece; sai um ou dois clipes depois.
+**Horas no ecrã:** a cada mudança de momento, aparece a hora ("7:15", Montserrat Semibold ~54 px) e,
+por baixo, a atividade em maiúsculas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO; Semibold ~28 px).
+**Sempre Winter White** (tom claro, a Rute pediu), centro do ecrã, sem caixa nem sombra; pôr numa zona
+mais escura da imagem. Só aparece; sai um ou dois clipes depois.
 
 **Legendas da voz:** aparecem **palavra a palavra**, à medida que são ditas, construindo a frase
-(uma ou duas linhas; quando a frase acaba, limpa e começa a seguinte). Fonte "Sistema" Regular ~40 px,
-Winter White, sem sombra, centrada a meio do ecrã (~45 % da altura). Cada palavra só aparece.
+(uma ou duas linhas; quando a frase acaba, limpa e começa a seguinte). Montserrat Regular ~40 px,
+**cor base sempre clara (Winter White), nunca castanho**, sem sombra, centrada a meio do ecrã (~45 % da altura).
+Cada palavra só aparece.
 **Palavras estratégicas em destaque** (1–2 por frase, nunca mais; as que dão sentido ou emoção:
 "café", "devagar", "casa", "família"…), alternando entre dois estilos:
-- **mesma fonte, outro tom da paleta (Semibold):** Champagne sobre fundo escuro; Burgundy quando o texto está em Espresso (fundo claro);
+- **mesma fonte, tom escuro da paleta (Semibold):** Espresso ou Burgundy; Champagne se o tom escuro não se ler;
 - **em Sloop, bem maior (~2–2,6×):** Cherry Burgundy, ou Champagne se o burgundy não se ler.
 Não repetir o mesmo estilo de destaque em frases seguidas.
 
@@ -70,14 +72,14 @@ em **Sloop** (~120 px), na cor de destaque (Burgundy, ou Champagne se não se le
 com cursor e som de teclado.
 
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
-(~62 % da altura). Proxima Nova Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
+(~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
 (sem crescer nem saltar).
 
 **Durante o vídeo:**
 - **Títulos de secção:** a cada nova parte, "01 a lista" em Sloop, escrito à máquina
   com cursor e som de teclado, no terço superior, 1,5–2 s.
 - **Lista que se vai preenchendo:** quando enumera coisas, no topo fica o título da lista (Sloop, escrito à máquina)
-  e cada item ("1. …", Proxima Nova Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
+  e cada item ("1. …", Montserrat Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
 - **Destaques:** uma palavra-chave de vez em quando em Sloop, na cor de destaque, em vez da legenda normal.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.

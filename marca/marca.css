@@ -1,18 +1,12 @@
 /* Marca Rute Dias — importar em todas as composições HyperFrames.
-   Vlog: só "Sistema" (+ Sloop em algumas palavras das legendas).
-   Yapping: Sloop (títulos/destaques) + Proxima Nova (legendas/texto).
+   Vlog: só Montserrat (+ Sloop em algumas palavras das legendas).
+   Yapping: Sloop (títulos/destaques) + Montserrat (legendas/texto).
    Sem sombras. Títulos em máquina de escrever; o resto só aparece. */
-@font-face { font-family: "Proxima Nova"; font-weight: 400; src: url("fontes/ProximaNova-Regular.otf"); }
-@font-face { font-family: "Proxima Nova"; font-weight: 500; src: url("fontes/ProximaNova-Medium.otf"); }
-@font-face { font-family: "Proxima Nova"; font-weight: 600; src: url("fontes/ProximaNova-Semibold.otf"); }
 @font-face { font-family: "Sloop"; src: url("fontes/Sloop.otf"); }
-/* Substitutas (gratuitas) enquanto não houver os ficheiros verdadeiros */
 @font-face { font-family: "Montserrat"; font-weight: 400; src: url("fontes/Montserrat-Regular.ttf"); }
 @font-face { font-family: "Montserrat"; font-weight: 500; src: url("fontes/Montserrat-Medium.ttf"); }
 @font-face { font-family: "Montserrat"; font-weight: 600; src: url("fontes/Montserrat-SemiBold.ttf"); }
-@font-face { font-family: "Inter"; font-weight: 400; src: url("fontes/Inter-Regular.ttf"); }
-@font-face { font-family: "Inter"; font-weight: 500; src: url("fontes/Inter-Medium.ttf"); }
-@font-face { font-family: "Inter"; font-weight: 600; src: url("fontes/Inter-SemiBold.ttf"); }
+/* Substituta da Sloop enquanto não houver o ficheiro */
 @font-face { font-family: "Mrs Saint Delafield"; src: url("fontes/MrsSaintDelafield.ttf"); }
 
 :root {
@@ -23,20 +17,20 @@
   --burgundy:     #6F172B;   /* cor de destaque principal */
 
   /* Fontes */
-  --fonte-sistema: "Inter", -apple-system, "SF Pro Display", sans-serif;   /* vlogs */
-  --fonte-texto:   "Proxima Nova", "Montserrat", sans-serif;               /* yapping */
+  --fonte-texto:   "Montserrat", sans-serif;   /* vlog e yapping */
   --fonte-sloop:   "Sloop", "Mrs Saint Delafield", cursive;
 
   /* Espaçamento entre letras: apertado (pedido da Rute) */
-  --esp-titulo: -0.03em;
-  --esp-texto:  -0.015em;
-  --esp-rotulo:  0.1em;
+  --esp-titulo: -0.06em;
+  --esp-texto:  -0.035em;
+  --esp-rotulo:  0.04em;
 
   /* Vídeo vertical 1080×1920 */
   --t-titulo-vlog: 230px;   /* 200–260: quase o ecrã todo; ajustar para a palavra mais longa caber */
-  --lh-titulo-vlog: 0.88;   /* linhas muito juntas */
-  --t-hora:     44px;
-  --t-rotulo:   24px;
+  --lh-titulo-vlog: 0.78;   /* linhas muito juntas */
+  --lh-texto:   1.2;
+  --t-hora:     54px;       /* SemiBold, sempre Winter White */
+  --t-rotulo:   28px;       /* SemiBold, maiúsculas, sempre Winter White */
   --t-legenda:  40px;       /* vlog, palavra a palavra */
   --t-palavra:  64px;       /* yapping, palavra a palavra */
 
@@ -45,10 +39,9 @@
 }
 
 .texto  { color: var(--winter-white); text-shadow: none; letter-spacing: var(--esp-texto); }
-.claro  { color: var(--espresso); }
 .cursor { display: inline-block; width: .06em; height: .8em; margin-left: .04em;
           background: currentColor; vertical-align: -.02em; }
-/* Destaques nas legendas do vlog */
-.dest-cor   { color: var(--champagne); font-weight: 600; }          /* mesma fonte, outro tom da paleta */
+/* Destaques nas legendas do vlog (a base é sempre clara: Winter White) */
+.dest-cor   { color: var(--espresso); font-weight: 600; }   /* mesma fonte, tom escuro da paleta (espresso/burgundy; champagne se não se ler) */
 .dest-sloop { font-family: var(--fonte-sloop); color: var(--burgundy);
               font-size: 2.6em; letter-spacing: 0; line-height: .6; }  /* 2,6× para a substituta; afinar com a Sloop */  /* ou --champagne se não se ler */

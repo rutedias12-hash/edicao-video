@@ -19,31 +19,30 @@ Sem sombras, sem caixas enfeitadas, animações mínimas.
 Regras:
 - Usar apenas estas quatro cores. Nada de branco puro, preto puro ou cores fora da paleta.
 - O Burgundy é a cor de assinatura: usar pouco (uma palavra ou um detalhe por ecrã) para manter o impacto.
-- Texto sobre o vídeo: diretamente sobre a imagem, **sem sombra e sem caixa**. Winter White por defeito;
-  Espresso quando o fundo é claro. Escolher o plano/posição para o texto se ler bem, em vez de pôr sombra.
+- Texto sobre o vídeo: diretamente sobre a imagem, **sem sombra e sem caixa**. **Texto base (legendas, horas,
+  rótulos) sempre claro: Winter White** — nunca castanho. Escolher a posição do texto onde o fundo é mais
+  escuro, em vez de mudar a cor ou pôr sombra.
+- **Tons escuros (Espresso, Burgundy) só em destaques.**
 - **Regra do destaque:** a cor de destaque é o Cherry Burgundy. **Quando o burgundy não se lê** sobre a imagem
   (fundo escuro ou avermelhado), usa-se **Champagne**. Teste: contraste de pelo menos 3:1 entre a cor e
   as partes **mais escuras** do fundo por trás do texto (20.º percentil); se o burgundy não chegar, Champagne.
-- O mesmo para o texto normal: Winter White precisa de 3:1 sobre as partes **mais claras** (80.º percentil);
-  se não chegar, Espresso (e os destaques em Champagne passam a Burgundy). Implementado em `marca/exemplo.html`.
+- Destaques nas legendas: Espresso ou Burgundy; se o tom escuro não chegar a 3:1 sobre as partes mais escuras
+  do fundo, Champagne. Implementado em `marca/exemplo.html`.
 
 ## Tipografia (vídeos)
-Guia atualizado: Sloop (títulos, destaques, assinaturas) + Proxima Nova (subtítulos, corpo, informação).
-Nos vídeos usa-se assim:
+Guia: Sloop (títulos, destaques, assinaturas) + sans serif (subtítulos, corpo, informação).
+**A sans serif dos vídeos é a Montserrat** (escolha da Rute; substitui a Proxima Nova e a "Sistema").
 
 | Formato | Títulos | Legendas e texto | Destaques |
 |---|---|---|---|
-| **Vlog** | "Sistema" | "Sistema" | algumas palavras na mesma fonte noutro tom da paleta; outras em Sloop |
-| **Yapping** | Sloop | Proxima Nova | Sloop |
+| **Vlog** | Montserrat | Montserrat | algumas palavras na mesma fonte num tom escuro da paleta; outras em Sloop |
+| **Yapping** | Sloop | Montserrat | Sloop |
 
 - **Sloop só no yapping** (títulos e destaques). No vlog, a única exceção são algumas palavras das legendas.
-- **"Sistema"** = a letra do sistema do telemóvel / do CapCut (a do iPhone, SF Pro). Nos vídeos usa-se a
-  **Inter**, gratuita e quase igual (a SF Pro é da Apple e a licença não permite usá-la fora dos aparelhos Apple).
-- **Proxima Nova:** as versões DEMO do Drive não têm acentos (ã, ç, é…) e não podem ser publicadas. Enquanto a
-  Rute não puser a versão completa, usa-se **Montserrat** (a mais parecida).
 - **Sloop:** ainda não está no Drive. Para pré-visualizações usa-se Mrs Saint Delafield; num vídeo final,
   pedir o ficheiro à Rute antes de renderizar.
-- **Espaçamento entre letras apertado** em tudo: títulos -0,03 em, texto -0,015 em, rótulos em maiúsculas 0,1 em.
+- **Letras e linhas apertadas** (pedido da Rute): espaçamento entre letras -0,06 em nos títulos,
+  -0,035 em no texto, 0,04 em nos rótulos em maiúsculas; altura de linha 0,78 nos títulos, 1,2 no texto.
 
 Para vídeo horizontal 1920×1080, multiplicar os tamanhos por ~0,75.
 
@@ -58,7 +57,6 @@ Para vídeo horizontal 1920×1080, multiplicar os tamanhos por ~0,75.
 Proibido: sombras, contornos, brilhos, ressaltos, zooms, rotações, linhas que se desenham.
 
 ## Atenção às licenças
-- **Inter**, **Montserrat** e **Mrs Saint Delafield**: livres (Google Fonts, licença OFL).
-- **Proxima Nova**: paga (Mark Simonson). As versões "Fontspring DEMO" são só para testar, não para publicar.
+- **Montserrat** e **Mrs Saint Delafield**: livres (Google Fonts, licença OFL).
 - **Sloop**: confirmar a licença quando a Rute enviar o ficheiro.
 Por isso as fontes **não** vão para o GitHub (o repositório é público); ficam só no Drive.

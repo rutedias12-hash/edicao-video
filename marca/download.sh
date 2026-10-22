@@ -17,15 +17,7 @@ baixar_gf() {  # baixar_gf <caminho em fonts.gstatic.com> <nome> — fontes grat
 # Guia de marca (Drive da Rute)
 baixar 1FRKX9vR695PuDo9nqCaw0m8ZooVhMOsq guia-de-marca.png
 
-# "Sistema" (vlogs): a letra do sistema do telemóvel/CapCut. Substituta gratuita: Inter.
-baixar_gf inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf Inter-Regular.ttf
-baixar_gf inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf Inter-Medium.ttf
-baixar_gf inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf Inter-SemiBold.ttf
-
-# Proxima Nova (yapping). As versões DEMO do Drive não têm acentos (ã, ç, é…) e não podem ser publicadas,
-# por isso não se usam. Quando a Rute puser a versão completa, acrescentar aqui:
-#   baixar <id> ProximaNova-Regular.otf / ProximaNova-Medium.otf / ProximaNova-Semibold.otf
-# Substituta enquanto não houver: Montserrat.
+# Montserrat: a letra sans serif dos vídeos (vlog e yapping), escolhida pela Rute. Gratuita (Google Fonts, OFL).
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf Montserrat-Regular.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf Montserrat-Medium.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf Montserrat-SemiBold.ttf
