@@ -46,6 +46,16 @@ Guia: Sloop (títulos, destaques, assinaturas) + sans serif (subtítulos, corpo,
 
 Para vídeo horizontal 1920×1080, multiplicar os tamanhos por ~0,75.
 
+## Margens de segurança (Reels do Instagram)
+Todo o texto tem de ficar **dentro da zona segura** do vídeo 1080×1920, para não ficar tapado pela interface:
+- **cima: 220 px** (nome da conta, áudio);
+- **baixo: 420 px** (legenda do post, nome, botões);
+- **direita: 120 px** (coluna de ícones: gosto, comentar, partilhar);
+- **esquerda: 60 px**.
+Valores em `marca/marca.css` (`--seg-topo`, `--seg-base`, `--seg-dir`, `--seg-esq`). O título ajusta o tamanho para caber
+(com o cursor) entre a margem esquerda e a coluna de ícones. Antes de renderizar, verificar num frame de cada
+elemento que nenhum píxel de texto (acentos e caudas incluídos) sai da zona segura.
+
 ## Animações (só duas)
 1. **Títulos: máquina de escrever.** O texto escreve-se letra a letra (~14 letras por segundo) com uma
    **barra de cursor** fina (`|`, mesma cor do texto, ~0,08 em de largura) à frente. Quando acaba, o cursor

@@ -26,3 +26,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — vlog: título só nos primeiros 3 s; hora/atividade ao centro do ecrã; legenda logo abaixo.
   O layout anterior ficou guardado como "legenda informativa" (marca/modelos/), só quando a Rute pedir.
 2026-10-22 — configuração — legendas coladas por baixo da hora/atividade (sem espaço extra).
+2026-10-22 — configuração — todo o texto dentro das margens de segurança dos Reels (220 cima, 420 baixo, 120 direita, 60 esquerda).

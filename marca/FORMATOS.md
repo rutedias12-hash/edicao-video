@@ -4,7 +4,7 @@ Antes de cada projeto, identificar o formato (perguntar se não for óbvio) e se
 As receitas vêm das referências que a Rute escolheu, **traduzidas para a marca** (`MARCA.md`):
 copia-se a estrutura e o ritmo, nunca as cores ou as fontes das referências.
 
-Comum aos dois: vertical 1080×1920, volume final **-14 LUFS** (o valor de todas as referências),
+Comum aos dois: vertical 1080×1920, todo o texto dentro das **margens de segurança dos Reels** (ver `MARCA.md`), volume final **-14 LUFS** (o valor de todas as referências),
 títulos em máquina de escrever com som de teclado, todo o resto só aparece (ver `MARCA.md`).
 
 ---
@@ -27,7 +27,7 @@ Se houver música, os cortes caem no compasso.
 
 **Título principal (gancho, 0–3 s):** sempre curto, 2–3 palavras ("fim de dia", "manhã comigo").
 - Montserrat Semibold, **muito grande**: a ocupar quase o ecrã todo de largura
-  (200–260 px; escolher o maior tamanho em que a palavra mais longa cabe com ~70 px de margem).
+  (escolher o maior tamanho em que a palavra mais longa cabe entre a margem esquerda e a coluna de ícones).
 - **Alinhado à esquerda**, uma ou duas palavras por linha, **linhas e letras muito juntas** (altura de linha ~0,78).
 - Na **cor de destaque**: Cherry Burgundy; se o burgundy não se ler sobre a imagem, **Champagne** (ver `MARCA.md`).
 - Escreve-se à máquina, com cursor e som de teclado. **Só nos primeiros 3 s**; depois desaparece.

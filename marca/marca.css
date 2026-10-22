@@ -34,6 +34,12 @@
   --t-legenda:  40px;       /* vlog, uma palavra de cada vez */
   --t-palavra:  64px;       /* yapping, palavra a palavra */
 
+  /* Margens de segurança dos Reels (1080×1920): nada de texto fora desta área */
+  --seg-topo: 220px;   /* barra de cima (nome, áudio) */
+  --seg-base: 420px;   /* legenda do post, nome e botões em baixo */
+  --seg-esq:   60px;
+  --seg-dir:  120px;   /* coluna de ícones (gosto, comentar, partilhar) */
+
   --letras-por-segundo: 14;
   --cursor-pisca: 0.5s;
 }
