@@ -22,3 +22,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   Legendas do vlog: palavra a palavra, com palavras-chave em Champagne ou em Sloop.
 2026-10-22 — configuração — Montserrat definitiva (vlog e yapping), letras e linhas mais apertadas.
   Horas/atividade sempre Winter White (tom claro). Legendas: base sempre clara, nunca castanho; tons escuros só nos destaques.
+2026-10-22 — configuração — legendas do vlog: uma só palavra de cada vez, desaparece antes da seguinte.

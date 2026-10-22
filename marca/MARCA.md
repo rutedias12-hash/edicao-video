@@ -51,7 +51,7 @@ Para vídeo horizontal 1920×1080, multiplicar os tamanhos por ~0,75.
    **barra de cursor** fina (`|`, mesma cor do texto, ~0,08 em de largura) à frente. Quando acaba, o cursor
    pisca 2–3 vezes (ligado 0,5 s / desligado 0,5 s) e desaparece. Durante a escrita toca o som
    **`marca/sons/teclado.wav`**, cortado à duração da escrita (desvanecimento de 0,05 s no fim).
-2. **Tudo o resto: só aparecer.** (As legendas aparecem palavra a palavra, mas cada palavra também só aparece.) Legendas, horas, rótulos, listas, imagens: entram de uma vez (sem
+2. **Tudo o resto: só aparecer.** (As legendas mostram uma palavra de cada vez; cada palavra só aparece e só desaparece.) Legendas, horas, rótulos, listas, imagens: entram de uma vez (sem
    desvanecer, sem deslizar, sem crescer) e saem de uma vez.
 
 Proibido: sombras, contornos, brilhos, ressaltos, zooms, rotações, linhas que se desenham.

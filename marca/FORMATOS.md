@@ -37,8 +37,9 @@ por baixo, a atividade em maiúsculas (ACORDAR, PEQUENO-ALMOÇO, TRABALHO; Semib
 **Sempre Winter White** (tom claro, a Rute pediu), centro do ecrã, sem caixa nem sombra; pôr numa zona
 mais escura da imagem. Só aparece; sai um ou dois clipes depois.
 
-**Legendas da voz:** aparecem **palavra a palavra**, à medida que são ditas, construindo a frase
-(uma ou duas linhas; quando a frase acaba, limpa e começa a seguinte). Montserrat Regular ~40 px,
+**Legendas da voz:** **uma só palavra de cada vez**, sincronizada com a fala: cada palavra aparece quando
+é dita e **desaparece antes de surgir a seguinte** (nunca duas palavras no ecrã). Em pausas, o ecrã fica sem
+legenda (a última palavra fica no máximo ~0,6 s). Montserrat Regular ~40 px,
 **cor base sempre clara (Winter White), nunca castanho**, sem sombra, centrada a meio do ecrã (~45 % da altura).
 Cada palavra só aparece.
 **Palavras estratégicas em destaque** (1–2 por frase, nunca mais; as que dão sentido ou emoção:
