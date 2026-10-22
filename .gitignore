@@ -14,3 +14,4 @@ tools/
 
 # Segredos
 .env
+poster/aves_*.png
