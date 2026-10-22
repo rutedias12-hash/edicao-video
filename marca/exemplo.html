@@ -52,7 +52,7 @@ async function arranca(){
     const t=corDestaque(img,{x:70,y:220,w:890,h:440}); cor=t.burgundy?'var(--burgundy)':'var(--champagne)';
     const l=corDestaque(img,{x:110,y:960,w:860,h:120});
     destSloop=l.burgundy?'var(--burgundy)':'var(--champagne)'; destCor=l.espresso?'var(--espresso)':'var(--champagne)';}
-  await Promise.all(['400 40px Montserrat','600 100px Montserrat','40px "Mrs Saint Delafield"'].map(f=>document.fonts.load(f)));
+  await Promise.all(['400 40px Montserrat','600 100px Montserrat','40px Sloop'].map(f=>document.fonts.load(f)));
   await document.fonts.ready;
   // Título: o maior tamanho em que a linha mais longa ocupa ~940 px de largura (máx. 300 px)
   const T=document.getElementById('titulo');T.textContent=TITULO;T.style.fontSize='100px';

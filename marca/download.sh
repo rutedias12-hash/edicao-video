@@ -22,10 +22,8 @@ baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf Montserrat
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf Montserrat-Medium.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf Montserrat-SemiBold.ttf
 
-# Sloop (yapping: títulos e destaques; vlog: algumas palavras das legendas). Ainda não está no Drive.
-# Quando estiver, acrescentar aqui: baixar <id> Sloop.otf
-# Substituta só para pré-visualizações: Mrs Saint Delafield.
-baixar_gf mrssaintdelafield/v14/v6-IGZDIOVXH9xtmTZfRagunqBw5WC62cK4.ttf MrsSaintDelafield.ttf
+# Sloop Script (yapping: títulos e destaques; vlog: algumas palavras das legendas). Drive da Rute.
+baixar 1Qmj_vbJOAKKzR9T13qYjRd7p3_hfCj2i Sloop.ttf
 
 # Efeitos sonoros. Ficam já aparados, prontos a usar.
 baixar_som() {  # baixar_som <id do Drive> <nome> <início s> <duração s>
