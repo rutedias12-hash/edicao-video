@@ -13,7 +13,7 @@ Uso: python3 scripts/cut.py   → cuts.mp4"""
 import json, os, subprocess
 from pathlib import Path
 E = Path(__file__).resolve().parent.parent
-FPS, SR, AV_OFFSET, FADE = 30, 48000, 0.10, 0.03
+FPS, SR, AV_OFFSET, FADE = int(os.environ.get('FPS', '30')), 48000, 0.10, 0.03   # FPS=60 → montagem a 60 fps
 EDLF = os.environ.get('EDL', 'edl.json')   # EDL=edl_montagem.json → outra montagem, sem mexer na anterior
 edl = json.load(open(E/EDLF))
 NAME = Path(EDLF).stem.replace('edl', 'cuts', 1)
@@ -82,7 +82,11 @@ for i, r in enumerate(edl['ranges']):
                    f'adelay={int(at*1000)}:all=1,apad,atrim=end_sample={ns}[m{k}]'); mix.append(f'[m{k}]')
     afc.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0,atrim=end_sample={ns},"
                f'afade=t=in:st=0:d={FADE},afade=t=out:st={d-FADE:.4f}:d={FADE}[a]')
-    run(acmd + ['-filter_complex', ';'.join(afc), '-map', '[a]', '-ac', '2', '-c:a', 'pcm_s16le', str(aout)])
+    if r.get('mute') and not r.get('audio_layers'):   # plano sem som (ex.: pedaços sem faixa de áudio) → silêncio exato
+        run(['ffmpeg', '-v', 'error', '-y', '-f', 'lavfi', '-i', f'anullsrc=r={SR}:cl=stereo', '-af', f'atrim=end_sample={ns}',
+             '-c:a', 'pcm_s16le', str(aout)])
+    else:
+        run(acmd + ['-filter_complex', ';'.join(afc), '-map', '[a]', '-ac', '2', '-c:a', 'pcm_s16le', str(aout)])
     if r.get('bowl_clean'): clean_bowl(vout, n)
     vd = float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(vout)]))
     assert abs(vd - d) < 0.02, f'segmento {i}: imagem {vd:.3f}s ≠ som {d:.3f}s'  # garante sincronização

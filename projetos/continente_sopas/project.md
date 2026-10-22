@@ -144,3 +144,10 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
 - Ordem pedida pela Rute: chegada · cozinha caótica · jantar do Henrique (ovos, Henrique à mesa, colher "ahh"; taças limpas) · banho · pijama ·
   deitar (com "shhh") · a Clara chega · jantar com a sopa (sopa a sair da embalagem, taças, mesa) · fecho (embalagem com zoom 1,0→1,22).
 - Fora: tudo com fala, Henrique a comer sopa, embalagem na mão (ela falava).
+
+## Sessão 6 (cont.) — montagem com os CLIPES ORIGINAIS do iPhone (4K, 60 fps) → `edit/montagem_4k60_hq_sem_som.mp4` (31,2 s, 1872 frames)
+- Pasta Drive da Rute: 58 clipes IMG_6555…IMG_6638 (4K HEVC ~60 fps). O vídeo longo = estes clipes por ordem (desvio crescente até ~0,9 s).
+- Disco não chegava (~30 GB): clipes descarregados um a um; `scripts/hq_extract.py` extrai só os pedaços usados (+1 s margem) e acerta cada plano
+  ao frame contra o vídeo longo (erro 0,1–0,6); clipe grande apagado. Pedaços em `videos/hq_pedacos/` (+ hq_map.json, duracoes.json).
+- `scripts/build_hq_edl.py` → `edl_montagem_hq.json`; render `EDL=edl_montagem_hq.json H=3840 FPS=60 cut.py` (cut.py: FPS configurável; silêncio para planos sem som).
+- Verificado: 0 repetidos nos planos com movimento; os repetidos estão só nos planos escuros (quarto vermelho) — o iPhone grava menos imagens com pouca luz. Taças limpas.

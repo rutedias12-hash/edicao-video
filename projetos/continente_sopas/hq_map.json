@@ -1,0 +1,272 @@
+{
+ "00": {
+  "piece": "p00_IMG_6555.mov",
+  "start": 0.9833,
+  "dur": 1.0,
+  "file": "IMG_6555.MOV",
+  "erro": 0.44,
+  "quote": "(imagem) de frente: a abrir a porta e entrar",
+  "desvio_vs_estimativa": -0.017
+ },
+ "01": {
+  "piece": "p01_IMG_6556.mov",
+  "start": 0.9833,
+  "dur": 0.8999999999999986,
+  "file": "IMG_6556.MOV",
+  "erro": 0.54,
+  "quote": "(imagem) de lado, perto: a passar com o bebé",
+  "desvio_vs_estimativa": -0.017
+ },
+ "02": {
+  "piece": "p02_IMG_6555.mov",
+  "start": 1.0,
+  "dur": 1.0,
+  "file": "IMG_6555.MOV",
+  "erro": 0.38,
+  "quote": "(imagem) de frente: a entrar com o bebé ao colo",
+  "desvio_vs_estimativa": 0.0
+ },
+ "03": {
+  "piece": "p03_IMG_6586.mov",
+  "start": 0.8833,
+  "dur": 1.0,
+  "file": "IMG_6586.MOV",
+  "erro": 0.39,
+  "quote": "(imagem) cozinha de costas: Henrique na cadeira com o cão",
+  "desvio_vs_estimativa": -0.117
+ },
+ "04": {
+  "piece": "p04_IMG_6589.mov",
+  "start": 0.8167,
+  "dur": 1.0,
+  "file": "IMG_6589.MOV",
+  "erro": 0.61,
+  "quote": "(imagem) saco das batatas",
+  "desvio_vs_estimativa": -0.183
+ },
+ "05": {
+  "piece": "p05_IMG_6590.mov",
+  "start": 0.7833,
+  "dur": 1.0,
+  "file": "IMG_6590.MOV",
+  "erro": 0.39,
+  "quote": "(imagem) a descascar",
+  "desvio_vs_estimativa": -0.217
+ },
+ "06": {
+  "piece": "p06_IMG_6593.mov",
+  "start": 0.7333,
+  "dur": 1.0,
+  "file": "IMG_6593.MOV",
+  "erro": 0.33,
+  "quote": "(imagem) a entrar na cozinha com o Henrique ao colo",
+  "desvio_vs_estimativa": -0.267
+ },
+ "07": {
+  "piece": "p07_IMG_6592.mov",
+  "start": 0.7833,
+  "dur": 1.0,
+  "file": "IMG_6592.MOV",
+  "erro": 0.4,
+  "quote": "(imagem) a cortar batatas",
+  "desvio_vs_estimativa": -0.217
+ },
+ "08": {
+  "piece": "p08_IMG_6589.mov",
+  "start": 0.8167,
+  "dur": 1.0,
+  "file": "IMG_6589.MOV",
+  "erro": 0.36,
+  "quote": "(imagem) tabuleiros",
+  "desvio_vs_estimativa": -0.183
+ },
+ "13": {
+  "piece": "p13_IMG_6603.mov",
+  "start": 0.6333,
+  "dur": 1.1000000000000227,
+  "file": "IMG_6603.MOV",
+  "erro": 0.35,
+  "quote": "(imagem) corredor: a caminho do banho com o Henrique",
+  "desvio_vs_estimativa": -0.367
+ },
+ "14": {
+  "piece": "p14_IMG_6608.mov",
+  "start": 0.55,
+  "dur": 1.0,
+  "file": "IMG_6608.MOV",
+  "erro": 0.38,
+  "quote": "(imagem) quarto: a porta da casa de banho fecha",
+  "desvio_vs_estimativa": -0.45
+ },
+ "15": {
+  "piece": "p15_IMG_6608.mov",
+  "start": 0.55,
+  "dur": 1.599999999999909,
+  "file": "IMG_6608.MOV",
+  "erro": 0.39,
+  "quote": "(imagem) quarto: a porta abre e sai com ele de toalha",
+  "desvio_vs_estimativa": -0.45
+ },
+ "16": {
+  "piece": "p16_IMG_6608.mov",
+  "start": 0.5667,
+  "dur": 1.0,
+  "file": "IMG_6608.MOV",
+  "erro": 0.43,
+  "quote": "(imagem) o Henrique embrulhado na toalha, na cama",
+  "desvio_vs_estimativa": -0.433
+ },
+ "17": {
+  "piece": "p17_IMG_6608.mov",
+  "start": 0.5667,
+  "dur": 0.900000000000091,
+  "file": "IMG_6608.MOV",
+  "erro": 0.39,
+  "quote": "(imagem) a vestir o pijama",
+  "desvio_vs_estimativa": -0.433
+ },
+ "18": {
+  "piece": "p18_IMG_6608.mov",
+  "start": 0.55,
+  "dur": 0.900000000000091,
+  "file": "IMG_6608.MOV",
+  "erro": 0.39,
+  "quote": "(imagem) abraço de pijama",
+  "desvio_vs_estimativa": -0.45
+ },
+ "09": {
+  "piece": "p09_IMG_6617.mov",
+  "start": 0.4333,
+  "dur": 0.900000000000091,
+  "file": "IMG_6617.MOV",
+  "erro": 0.41,
+  "quote": "(imagem) de costas: a partir os ovos",
+  "desvio_vs_estimativa": -0.567
+ },
+ "10": {
+  "piece": "p10_IMG_6619.mov",
+  "start": 0.4,
+  "dur": 0.900000000000091,
+  "file": "IMG_6619.MOV",
+  "erro": 0.33,
+  "quote": "(imagem) ovos na frigideira",
+  "desvio_vs_estimativa": -0.6
+ },
+ "11": {
+  "piece": "p11_IMG_6623.mov",
+  "start": 0.35,
+  "dur": 1.0,
+  "file": "IMG_6623.MOV",
+  "erro": 0.4,
+  "quote": "(imagem) Henrique sentado à mesa",
+  "desvio_vs_estimativa": -0.65
+ },
+ "12": {
+  "piece": "p12_IMG_6623.mov",
+  "start": 0.3333,
+  "dur": 1.2000000000002728,
+  "file": "IMG_6623.MOV",
+  "erro": 0.42,
+  "quote": "(imagem) a colher ao Henrique, 'ahh' sem som",
+  "desvio_vs_estimativa": -0.667
+ },
+ "19": {
+  "piece": "p19_IMG_6626.mov",
+  "start": 0.3,
+  "dur": 0.900000000000091,
+  "file": "IMG_6626.MOV",
+  "erro": 0.23,
+  "quote": "(imagem) a entrar no quarto com o bebé",
+  "desvio_vs_estimativa": -0.7
+ },
+ "20": {
+  "piece": "p20_IMG_6629.mov",
+  "start": 0.2333,
+  "dur": 0.900000000000091,
+  "file": "IMG_6629.MOV",
+  "erro": 0.13,
+  "quote": "(imagem) a embalar, luz vermelha",
+  "desvio_vs_estimativa": -0.767
+ },
+ "21": {
+  "piece": "p21_IMG_6629.mov",
+  "start": 0.2333,
+  "dur": 0.900000000000091,
+  "file": "IMG_6629.MOV",
+  "erro": 0.19,
+  "quote": "(imagem) no berço",
+  "desvio_vs_estimativa": -0.767
+ },
+ "22": {
+  "piece": "p22_IMG_6630.mov",
+  "start": 0.2333,
+  "dur": 1.0,
+  "file": "IMG_6630.MOV",
+  "erro": 0.53,
+  "quote": "(imagem) shhh, a fechar a porta",
+  "desvio_vs_estimativa": -0.767
+ },
+ "23": {
+  "piece": "p23_IMG_6631.mov",
+  "start": 0.1333,
+  "dur": 0.900000000000091,
+  "file": "IMG_6631.MOV",
+  "erro": 0.35,
+  "quote": "(imagem) a Clara ao colo",
+  "desvio_vs_estimativa": -0.782
+ },
+ "24": {
+  "piece": "p24_IMG_6632.mov",
+  "start": 0.1833,
+  "dur": 0.8000000000001819,
+  "file": "IMG_6632.MOV",
+  "erro": 0.44,
+  "quote": "(imagem) a Clara ao colo, de costas",
+  "desvio_vs_estimativa": -0.817
+ },
+ "25": {
+  "piece": "p25_IMG_6633.mov",
+  "start": 0.15,
+  "dur": 1.300000000000182,
+  "file": "IMG_6633.MOV",
+  "erro": 0.4,
+  "quote": "(imagem) a sopa a sair da embalagem para a taça",
+  "desvio_vs_estimativa": -0.85
+ },
+ "26": {
+  "piece": "p26_IMG_6633.mov",
+  "start": 0.1667,
+  "dur": 0.8000000000001819,
+  "file": "IMG_6633.MOV",
+  "erro": 0.4,
+  "quote": "(imagem) taças servidas",
+  "desvio_vs_estimativa": -0.833
+ },
+ "29": {
+  "piece": "p29_IMG_6634.mov",
+  "start": 0.1333,
+  "dur": 2.300000000000182,
+  "file": "IMG_6634.MOV",
+  "erro": 0.49,
+  "quote": "(imagem) embalagem Receita do Chef, aproximação lenta",
+  "desvio_vs_estimativa": -0.867
+ },
+ "27": {
+  "piece": "p27_IMG_6638.mov",
+  "start": 0.0667,
+  "dur": 1.0,
+  "file": "IMG_6638.MOV",
+  "erro": 0.43,
+  "quote": "(imagem) os três à mesa",
+  "desvio_vs_estimativa": -0.933
+ },
+ "28": {
+  "piece": "p28_IMG_6638.mov",
+  "start": 0.0667,
+  "dur": 1.0,
+  "file": "IMG_6638.MOV",
+  "erro": 0.43,
+  "quote": "(imagem) a jantar tranquilamente",
+  "desvio_vs_estimativa": -0.933
+ }
+}
