@@ -35,6 +35,8 @@ Winter White, centro do ecrã, sem caixa. Entra suave, sai no plano seguinte ou 
 Winter White com sombra muito leve, a meio do ecrã (~45 % da altura). Frase inteira, não palavra a palavra.
 Sem caixa.
 
+**Efeitos sonoros:** não (são só para o yapping).
+
 **Cor da imagem:** tons quentes e suaves, iguais em todos os planos (o mesmo "filtro" em todo o vídeo).
 
 **Fecho:** último plano mais longo (2–3 s) e a assinatura "Rute Dias" em New Icon Script.
@@ -57,7 +59,7 @@ longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 e, por baixo, 2–3 palavras **grandes** em La Luxes que entram uma a uma (ex.: "EDITA OS TEUS VÍDEOS").
 Winter White, com a palavra-chave em Champagne.
 
-**Legendas:** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã (~62 % da altura).
+**Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã (~62 % da altura).
 Hind Siliguri SemiBold ~68 px, Winter White com sombra suave. Cada palavra entra com um pequeno
 crescimento (95 % → 100 %, 0,12 s), sem saltos. Palavras-chave em Champagne e ligeiramente maiores.
 
@@ -74,5 +76,11 @@ crescimento (95 % → 100 %, 0,12 s), sem saltos. Palavras-chave em Champagne e 
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s).
 - **Pequenos desenhos:** brilhos, setas, sublinhados em traço fino Winter White ou Burgundy, à mão,
   junto do texto. Poucos, só para dar personalidade.
+- **Efeitos sonoros (sim, a Rute quer):** som curto e suave quando aparece texto ou imagem:
+  "pop" para palavras-tema e itens de lista, "clique" para cartões de notas, "whoosh" leve nos títulos
+  de secção e nas imagens de exemplo, "brilho" nos desenhos. Volume baixo, sempre abaixo da voz
+  (cerca de -20 dB em relação à fala). **Não** em cada palavra da legenda, só nos elementos gráficos.
+  Sons guardados em `marca/sons/` para serem sempre os mesmos; se ainda não existirem, criá-los no
+  primeiro projeto (ex.: efeitos sonoros da ElevenLabs, com a chave já configurada) e fazer commit.
 
 **Fecho:** frase final + assinatura "Rute Dias" em New Icon Script.
