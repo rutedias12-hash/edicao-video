@@ -5,7 +5,8 @@ As receitas vêm das referências que a Rute escolheu, **traduzidas para a marca
 copia-se a estrutura e o ritmo, nunca as cores ou as fontes das referências.
 
 Comum aos dois: vertical 1080×1920, volume final **-14 LUFS** (o valor de todas as referências),
-assinatura "Rute Dias" no fim.
+**sem pausas nem respirações** (frases coladas, pausas internas > ~0,2 s cortadas) e **sem fecho final**
+(nada de assinatura no fim; o vídeo acaba na última frase).
 
 ---
 
@@ -42,7 +43,7 @@ Sem caixa.
 
 **Cor da imagem:** tons quentes e suaves, iguais em todos os planos (o mesmo "filtro" em todo o vídeo).
 
-**Fecho:** último plano (até 2 s) e a assinatura "Rute Dias" em New Icon Script.
+**Fim:** acaba na última frase. Sem plano extra nem assinatura.
 
 ---
 
@@ -89,4 +90,4 @@ crescimento (95 % → 100 %, 0,12 s), sem saltos. Palavras-chave em Champagne e 
   **Pendente:** a Rute vai arranjar os sons e enviá-los. Enquanto `marca/sons/` não tiver os ficheiros,
   fazer os vídeos **sem** efeitos sonoros (não criar nem procurar outros).
 
-**Fecho:** frase final + assinatura "Rute Dias" em New Icon Script.
+**Fim:** acaba na frase final. Sem assinatura.
