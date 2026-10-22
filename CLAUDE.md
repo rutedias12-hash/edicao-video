@@ -9,7 +9,8 @@ Explicar sempre tudo de forma simples, sem jargão.
 - HyperFrames: skills `hyperframes`, `talking-head-recut`, etc. em `~/.claude/skills/`; usar `npx --yes hyperframes ...`.
 
 ## Marca e estilo (aplicar SEMPRE, sem a Rute ter de pedir)
-- Antes de qualquer plano, ler `marca/MARCA.md` (cores, fontes, animações) e `marca/EDICAO.md` (preferências de edição).
+- Antes de qualquer plano, ler `marca/MARCA.md` (cores, fontes, animações), `marca/EDICAO.md` (preferências de edição)
+  e `marca/FORMATOS.md` (receita de cada formato: vlog ou yapping; perguntar qual, se não for óbvio).
 - Todas as animações HyperFrames usam `marca/marca.css`. Nada de cores ou fontes fora da marca.
 - Se `marca/fontes/` não existir, correr `bash marca/download.sh`.
 - No fim de cada projeto, acrescentar a `marca/EDICAO.md` ("Aprendido nos projetos") o que a Rute corrigiu
