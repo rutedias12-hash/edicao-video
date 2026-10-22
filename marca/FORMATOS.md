@@ -86,5 +86,7 @@ crescimento (95 % → 100 %, 0,12 s), sem saltos. Palavras-chave em Champagne e 
   - **whoosh** (varrimento curto com batida suave): nos títulos de secção e nas imagens de exemplo.
   Volume baixo, sempre abaixo da voz. **Não** em cada palavra da legenda, só nos elementos gráficos.
   Usar sempre os ficheiros de `marca/sons/` (descarregados do Drive por `marca/download.sh`), nunca inventar outros.
+  **Pendente:** a Rute vai arranjar os sons e enviá-los. Enquanto `marca/sons/` não tiver os ficheiros,
+  fazer os vídeos **sem** efeitos sonoros (não criar nem procurar outros).
 
 **Fecho:** frase final + assinatura "Rute Dias" em New Icon Script.
