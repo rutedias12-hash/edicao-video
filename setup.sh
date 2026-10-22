@@ -29,5 +29,8 @@ fi
 (cd "$TOOLS" && npx --yes hyperframes skills update talking-head-recut)
 npx --yes hyperframes browser ensure
 
+# 3. Marca: fontes e guia (do Google Drive, fora do git)
+bash "$ROOT/marca/download.sh" || echo "aviso: não foi possível descarregar as fontes da marca" >&2
+
 command -v ffmpeg >/dev/null || echo "aviso: ffmpeg não encontrado" >&2
 echo "Pronto."
