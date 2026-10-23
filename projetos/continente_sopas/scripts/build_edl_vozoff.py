@@ -11,19 +11,20 @@ P = E.parents[0]/'hq_pedacos'
 base = json.load(open(E/'edl_montagem_hq.json'))
 R = base['ranges']
 src = dict(base['sources'])
-for k in ['p_caos1', 'p_caos2', 'p_caos3', 'p_caos4']:
+for k in ['p_caos1', 'p_caos3', 'p_caos4', 'p_caos5']:
     src[k] = str(P/f'{k}.mov')
 novos = {  # início (no pedaço) do momento escolhido no vídeo longo
     'caos1': {'source': 'p_caos1', 'start': 0.9 + 0.2, 'quote': '(imagem) Henrique na cadeira, ela corre para o forno (2:33)'},
     'caos3': {'source': 'p_caos3', 'start': 0.7333 + 0.2, 'quote': '(imagem) com o Henrique ao colo, mão na testa (11:32)'},
-    'caos2': {'source': 'p_caos2', 'start': 0.8833 + 0.2, 'quote': '(imagem) passa a correr atrás do Henrique (2:46)'},
+    # 'caos2' (2:46, passa a correr atrás do Henrique) saiu a pedido da Rute → 'caos5'
+    'caos5': {'source': 'p_caos5', 'start': 2.35, 'quote': '(imagem) Henrique sozinho na cadeira com o cão, levanta o brinquedo (2:25)'},
     'caos4': {'source': 'p_caos4', 'start': 0.8667 + 0.2, 'quote': '(imagem) a correr para o lava-loiça (2:57)'},
 }
 # (clipe, duração) — índices = edl_montagem_hq.json; secções marcadas para o lettering
 SEQ = [
     ('chegada', [(0, 1.5), (1, 1.5), (2, 1.6)]),
     ('cozinha', [(3, 0.95), (4, 1.0), (5, 1.05), (6, 1.0), (7, 1.0), (8, 1.0),
-                 ('caos1', 1.0), ('caos3', 1.0), ('caos2', 1.0), ('caos4', 1.65)]),
+                 ('caos1', 1.0), ('caos3', 1.0), ('caos5', 1.0), ('caos4', 1.65)]),
     ('sopa', [(9, None), (10, None), (11, None)]),
     ('jantar_henrique', [(12, 1.0), (13, 1.0), (14, 1.1), (15, 1.3)]),
     ('banho', [(16, 1.0), (17, 0.95), (18, 1.6), (19, 0.94)]),

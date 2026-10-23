@@ -37,9 +37,9 @@
   "p_sopa3": "/home/user/edicao-video/videos/hq_pedacos/p_sopa3.mov",
   "p_emb_cut": "/home/user/edicao-video/videos/hq_pedacos/p_emb_cut.mov",
   "p_caos1": "/home/user/edicao-video/videos/hq_pedacos/p_caos1.mov",
-  "p_caos2": "/home/user/edicao-video/videos/hq_pedacos/p_caos2.mov",
   "p_caos3": "/home/user/edicao-video/videos/hq_pedacos/p_caos3.mov",
-  "p_caos4": "/home/user/edicao-video/videos/hq_pedacos/p_caos4.mov"
+  "p_caos4": "/home/user/edicao-video/videos/hq_pedacos/p_caos4.mov",
+  "p_caos5": "/home/user/edicao-video/videos/hq_pedacos/p_caos5.mov"
  },
  "ranges": [
   {
@@ -120,10 +120,10 @@
    "mute": true
   },
   {
-   "source": "p_caos2",
-   "start": 1.0833,
-   "quote": "(imagem) passa a correr atrás do Henrique (2:46)",
-   "end": 2.0833,
+   "source": "p_caos5",
+   "start": 2.35,
+   "quote": "(imagem) Henrique sozinho na cadeira com o cão, levanta o brinquedo (2:25)",
+   "end": 3.35,
    "mute": true
   },
   {
