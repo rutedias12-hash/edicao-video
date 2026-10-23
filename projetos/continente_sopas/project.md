@@ -195,3 +195,4 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
   (1,5–2,5:1, fundo claro por trás). Valores em animations/slot_3/cores_destaques.json.
 - Iteração: palavras em Sloop sem negrito (o negrito das legendas era aplicado à Sloop de forma artificial).
 - Iteração: saiu o clipe dos 12,6–13,6 s (2:46, a Rute a passar atrás do Henrique — gesto que ela não quer); entrou p_caos5 (2:25: Henrique sozinho na cadeira com o cão, levanta o brinquedo). Tempos iguais.
+- **Exportação final 4K** → `edit/vozoff_4k60.mp4` (2160×3840, 60 fps, 48,2 s, 2894 frames, -14 LUFS, pico -1 dBFS, 227 MB). Letras dentro da zona segura (verificado a 5 imagens/s).
