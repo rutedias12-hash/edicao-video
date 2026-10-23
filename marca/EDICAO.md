@@ -40,3 +40,7 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — vlog tapete novo — título do vlog mais condensado: espaço entre letras -0,09 em (letra maior para ocupar a largura).
 2026-10-22 — vlog tapete novo — destaques das legendas: em fundos claros, SEMPRE Burgundy (Semibold e Sloop); Champagne só em fundo escuro.
 2026-10-22 — vlog tapete novo — fecho com pergunta: "tapete aprovado?" nos 3 s finais, no estilo do título (máquina de escrever + teclado, Burgundy). Ver se a Rute quer isto em todos.
+2026-10-23 — vlog tapete novo — fluxo: rever em **rascunho** (720p, rápido; só lettering quando só muda texto) e exportar em **4K só no fim**
+  (`videos/edit/editar.sh rascunho [--so-lettering] | normal | 4k`).
+2026-10-23 — vlog tapete novo — humor: montagem rápida a **preto e branco** (planos ~0,75 s, som ambiente baixo) com frase "POV: …"
+  ao centro, Montserrat SemiBold; a Rute preferiu o texto **à frente** das pessoas (sem efeito de texto por trás delas).
