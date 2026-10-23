@@ -189,3 +189,7 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
   horas novas (17:50 chegar a casa · 17:50 tentar preparar o jantar · …), legendas palavra a palavra da voz off (não aparecem durante o título),
   descem uma linha sob a atividade de 2 linhas; Sloop desce 48 px para não tocar na atividade. HyperFrames check sem erros; zona segura ok.
 - Pré-visualizações: `ESCALA=1` + `cut.py H=1920 FPS=30` + `finish_vozoff.sh preview`. Final: `ESCALA=2`, `H=3840 FPS=60`, `finish_vozoff.sh 4k`.
+- Iteração: título "tenho / de ser / sincera" (260 px, o que ela diz nesse momento; teclado acompanha 1,43 s de escrita); subtítulo logo por baixo.
+  Legendas da voz só neste vídeo: Montserrat Bold 34 px, -0,06 em. Sloop volta ao sítio (pode tocar na atividade).
+  Destaques: burgundy sempre que passam o teste 3:1 no sítio exato da palavra (batalhas, fogão, real, saboroso + chef); restantes Champagne
+  (1,5–2,5:1, fundo claro por trás). Valores em animations/slot_3/cores_destaques.json.

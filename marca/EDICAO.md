@@ -34,3 +34,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   mesmo quando o teste de contraste indicaria Champagne. Destaques Sloop também podem ir em Burgundy. Perguntar se a regra passa a ser sempre assim.
 2026-10-23 — continente_sopas — enviar sempre pré-visualizações em 1080p/30 fps para afinar; o 4K só quando a Rute disser.
   Voz off (vlog): cortar respirações, pausas e silêncios. Título pode levar subtítulo curto por baixo (Winter White, aparece quando o título acaba).
+2026-10-23 — continente_sopas — destaques das legendas: burgundy sempre que o teste de contraste passa no sítio exato da palavra
+  (testar palavra a palavra, não a zona toda); Champagne só quando não passa. A Sloop pode tocar na atividade de cima (não descer).
