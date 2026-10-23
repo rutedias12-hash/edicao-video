@@ -193,3 +193,4 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
   Legendas da voz só neste vídeo: Montserrat Bold 34 px, -0,06 em. Sloop volta ao sítio (pode tocar na atividade).
   Destaques: burgundy sempre que passam o teste 3:1 no sítio exato da palavra (batalhas, fogão, real, saboroso + chef); restantes Champagne
   (1,5–2,5:1, fundo claro por trás). Valores em animations/slot_3/cores_destaques.json.
+- Iteração: palavras em Sloop sem negrito (o negrito das legendas era aplicado à Sloop de forma artificial).

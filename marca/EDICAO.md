@@ -36,3 +36,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   Voz off (vlog): cortar respirações, pausas e silêncios. Título pode levar subtítulo curto por baixo (Winter White, aparece quando o título acaba).
 2026-10-23 — continente_sopas — destaques das legendas: burgundy sempre que o teste de contraste passa no sítio exato da palavra
   (testar palavra a palavra, não a zona toda); Champagne só quando não passa. A Sloop pode tocar na atividade de cima (não descer).
+2026-10-23 — continente_sopas — a Sloop nunca leva negrito (nem herdado das legendas a bold).

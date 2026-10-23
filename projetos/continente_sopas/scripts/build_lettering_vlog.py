@@ -170,6 +170,7 @@ page = f'''<!doctype html>
       .leg {{ top: 968px; left: var(--seg-dir); right: var(--seg-dir); text-align: center; font-weight: 700;
               font-size: 34px; line-height: var(--lh-texto); letter-spacing: -0.06em; }}   /* só neste vídeo: mais pequenas, bold, apertadas */
       .leg .dest-cor {{ font-weight: 700; }}
+      .leg .dest-sloop {{ font-weight: 400; font-synthesis: none; }}   /* Sloop sem negrito (pedido da Rute) */
     </style>
   </head>
   <body>
