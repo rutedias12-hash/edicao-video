@@ -75,25 +75,36 @@ Referências:
 **Imagem:** a Rute a falar para a câmara, plano médio. Cortar **todos** os silêncios, hesitações e respirações
 longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 
-**Gancho (0–3 s):** título curto no terço superior (ex.: "como eu edito os meus vídeos"),
-em **Sloop** (~120 px), na cor de destaque (Burgundy, ou Champagne se não se ler), que **se escreve à máquina**
-com cursor e som de teclado.
+**Começa sempre com zoom in:** durante o gancho, a imagem aproxima-se devagar (até ~1,16×, a abrandar no fim)
+e, quando o gancho acaba (ou na frase seguinte ao título), volta suavemente ao tamanho normal (~0,8 s).
+É o único zoom do vídeo.
+
+**Gancho (0–3 s):** título curto no terço superior (ex.: "COISAS TÓXICAS NA MINHA RELAÇÃO"),
+em **Montserrat Semibold, tudo em maiúsculas**, letras e linhas apertadas, em **Espresso**.
+A **palavra principal** do título fica em **Sloop** (sem engrossar), **muito maior** (~2× a altura das maiúsculas),
+em **Burgundy**, **sobreposta** ao resto do título: a cruzar as linhas de cima e de baixo, ligeiramente
+deslocada para o lado, como uma assinatura por cima do texto. O título **escreve-se à máquina** (maiúsculas e
+palavra em Sloop pela ordem da frase) com cursor e som de teclado.
 
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
 (~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
-(sem crescer nem saltar).
+(sem crescer nem saltar). **As palavras-chave aparecem sempre em Sloop**, sem engrossar (nada de negrito),
+~2,2× maiores, na cor de destaque.
 
 **Durante o vídeo:**
-- **Títulos de secção:** a cada nova parte, "01 a lista" em Sloop, escrito à máquina
-  com cursor e som de teclado, no terço superior, 1,5–2 s.
+- **Títulos de secção:** a cada nova parte, "01 a lista" em **Montserrat Regular** (sans serif, sem negrito, ~76 px),
+  escrito à máquina com cursor e som de teclado, no canto de cima à esquerda (dentro da margem), 1,5–2 s.
+- **Números grandes:** quando enumera coisas (1, 2, 3…), o número de cada ponto fica **no ecrã durante todo o ponto**,
+  em **Montserrat Black** enorme (~680 px), em **Burgundy** (o tom da blusa), **atrás da Rute** (a silhueta dela tapa
+  parte do número), do lado onde há mais espaço livre. Só aparece, com o som de clique.
 - **Lista que se vai preenchendo:** quando enumera coisas, no topo fica o título da lista (Sloop, escrito à máquina)
   e cada item ("1. …", Montserrat Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
-- **Destaques:** uma palavra-chave de vez em quando em Sloop, na cor de destaque, em vez da legenda normal.
+- **Destaques:** uma palavra-chave de vez em quando em Sloop (sem negrito), na cor de destaque, em vez da legenda normal.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.
 - **Efeitos sonoros** (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
   - **`teclado.wav`**: enquanto um título se escreve; cortar à duração da escrita;
-  - **`clique.wav`** (0,2 s): quando aparece um item de lista ou uma imagem de exemplo.
+  - **`clique.wav`** (0,2 s): quando aparece um item de lista, um número grande ou uma imagem de exemplo.
   Volume baixo, sempre abaixo da voz (cerca de -20 dB em relação à fala). Nunca nas legendas.
   Nunca inventar nem procurar outros sons; se a Rute enviar mais, acrescentar aqui.
 

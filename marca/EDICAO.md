@@ -28,3 +28,6 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — legendas coladas por baixo da hora/atividade (sem espaço extra).
 2026-10-22 — configuração — todo o texto dentro das margens de segurança dos Reels (220 cima, 420 baixo, 120 direita, 60 esquerda).
 2026-10-22 — configuração — Sloop Script verdadeira ligada (Drive); destaques em Sloop a ~2,2×.
+2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
+  destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
+  títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.

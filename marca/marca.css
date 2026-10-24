@@ -6,6 +6,7 @@
 @font-face { font-family: "Montserrat"; font-weight: 400; src: url("fontes/Montserrat-Regular.ttf"); }
 @font-face { font-family: "Montserrat"; font-weight: 500; src: url("fontes/Montserrat-Medium.ttf"); }
 @font-face { font-family: "Montserrat"; font-weight: 600; src: url("fontes/Montserrat-SemiBold.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 900; src: url("fontes/Montserrat-Black.ttf"); }   /* números grandes do yapping */
 
 :root {
   /* Cores */
