@@ -75,6 +75,13 @@ Referências:
 **Imagem:** a Rute a falar para a câmara, plano médio. Cortar **todos** os silêncios, hesitações e respirações
 longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 
+**Luz, cor e nitidez (sempre):** antes de pôr textos e imagens, tratar o vídeo da Rute com o mesmo "filtro" em todo o vídeo:
+mais luz e contraste (sombras um pouco mais escuras, meios-tons e altos mais claros, sem queimar a parede),
+tom ligeiramente menos amarelo (a madeira fica menos laranja, a pele continua quente),
+uma redução leve de grão e nitidez moderada (sem contornos brancos). Os textos e pinturas ficam fora do tratamento,
+para as cores da marca não mudarem. Exportar em alta qualidade (H.264 high, CRF 15, preset slow).
+Filtro de referência (ffmpeg): `hqdn3d=1:1:3:3` → escala → `curves=all='0/0 0.16/0.12 0.5/0.55 0.75/0.83 1/0.99',colorbalance=bm=0.025:rm=-0.01:bh=0.015,eq=saturation=1.04,unsharp=5:5:0.8:3:3:0,unsharp=3:3:0.35:3:3:0`.
+
 **Começa sempre com zoom in:** durante o gancho, a imagem aproxima-se devagar (até ~1,16×, a abrandar no fim)
 e, quando o gancho acaba (ou na frase seguinte ao título), volta suavemente ao tamanho normal (~0,8 s).
 É o único zoom do vídeo.
