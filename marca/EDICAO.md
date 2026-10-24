@@ -35,3 +35,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   sem leitura sobre o cabelo: a cor dos títulos passa a adaptar-se ao fundo letra a letra (tom escuro/claro do par).
 2026-10-24 — traços tóxicos — a Rute não gostou das letras a mudar de tom: títulos (gancho e secções) passam a ter
   uma caixa Burgundy por trás, com letras em cor fixa (Winter White; Sloop em Champagne). Secções em maiúsculas.
+2026-10-24 — traços tóxicos — caixa atrás do título inteiro: não. Títulos (gancho e secções) no terço inferior; caixa Burgundy
+  semitransparente só atrás de uma palavra com pouca leitura, nunca a palavra em Sloop.

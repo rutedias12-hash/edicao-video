@@ -79,13 +79,12 @@ longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 e, quando o gancho acaba (ou na frase seguinte ao título), volta suavemente ao tamanho normal (~0,8 s).
 É o único zoom do vídeo.
 
-**Gancho (0–3 s):** título curto no terço superior (ex.: "COISAS TÓXICAS NA MINHA RELAÇÃO"),
-em **Montserrat Semibold, tudo em maiúsculas**, letras e linhas apertadas, em **Winter White** sobre a caixa Burgundy.
+**Gancho (0–3 s):** título curto no **terço inferior** (por baixo das legendas, dentro da margem) (ex.: "COISAS TÓXICAS NA MINHA RELAÇÃO"),
+em **Montserrat Semibold, tudo em maiúsculas**, letras e linhas apertadas, em **Winter White**.
 A **palavra principal** do título fica em **Sloop** (sem engrossar), **muito maior** (~2× a altura das maiúsculas),
 em **Champagne**, **sobreposta** ao resto do título: a cruzar as linhas de cima e de baixo, ligeiramente
 deslocada para o lado, como uma assinatura por cima do texto. O título **escreve-se à máquina** (maiúsculas e
-palavra em Sloop pela ordem da frase) com cursor e som de teclado. Os títulos (gancho e secções) ficam sobre uma caixa Burgundy:
-ver "Títulos do yapping sobre caixa" em `MARCA.md`.
+palavra em Sloop pela ordem da frase) com cursor e som de teclado. Caixa só atrás de uma palavra com pouca leitura: ver "Títulos do yapping" em `MARCA.md`.
 
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
 (~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
@@ -95,7 +94,7 @@ ver "Títulos do yapping sobre caixa" em `MARCA.md`.
 **Durante o vídeo:**
 - **Títulos de secção:** a cada nova parte, o nome da parte em **maiúsculas** ("A LISTA"), **sem número** (o número fica só no número
   grande), em **Montserrat Regular** (sans serif, sem negrito, ~76 px), escrito à máquina com cursor e som de teclado,
-  **centrado no terço superior** (dentro da margem), 1,5–2 s.
+  **centrado no terço inferior**, por baixo das legendas (dentro da margem), 1,5–2 s.
 - **Números grandes:** quando enumera coisas (1, 2, 3…), o número de cada ponto fica **no ecrã durante todo o ponto**,
   em **Montserrat Black** enorme (~680 px), em **Burgundy** (o tom da blusa), **atrás da Rute** (a silhueta dela tapa
   parte do número), do lado onde há mais espaço livre. Só aparece, com o som de clique.

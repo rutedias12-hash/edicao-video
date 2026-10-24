@@ -26,10 +26,10 @@ Regras:
 - **Regra do destaque:** a cor de destaque é o Cherry Burgundy. **Quando o burgundy não se lê** sobre a imagem
   (fundo escuro ou avermelhado), usa-se **Champagne**. Teste: contraste de pelo menos 3:1 entre a cor e
   as partes **mais escuras** do fundo por trás do texto (20.º percentil); se o burgundy não chegar, Champagne.
-- **Títulos do yapping sobre caixa** (exceção à regra "sem caixa", pedida pela Rute): o título do gancho e os títulos
-  de secção ficam sobre uma **caixa retangular Burgundy**, cheia e de cantos retos, que aparece inteira quando o título
-  começa a escrever-se. Letras numa cor fixa: maiúsculas **Winter White**, palavra em Sloop **Champagne**.
-  Nunca mudar a cor das letras conforme o fundo (a Rute não gostou).
+- **Títulos do yapping:** letras numa cor fixa (maiúsculas **Winter White**, palavra em Sloop **Champagne**), sem caixa.
+  **Só uma palavra** com pouca leitura (contraste abaixo de 3:1 com as partes mais escuras do fundo) leva uma
+  **caixa Burgundy semitransparente** (~70 %), de cantos retos, só atrás dessa palavra; **nunca** a palavra em Sloop.
+  Nunca mudar a cor das letras conforme o fundo, nem pôr caixa atrás do título inteiro (a Rute não gostou).
 - Destaques nas legendas: Espresso ou Burgundy; se o tom escuro não chegar a 3:1 sobre as partes mais escuras
   do fundo, Champagne. Implementado em `marca/exemplo.html`.
 
