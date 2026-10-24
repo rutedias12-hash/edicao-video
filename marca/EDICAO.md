@@ -28,3 +28,9 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-22 — configuração — legendas coladas por baixo da hora/atividade (sem espaço extra).
 2026-10-22 — configuração — todo o texto dentro das margens de segurança dos Reels (220 cima, 420 baixo, 120 direita, 60 esquerda).
 2026-10-22 — configuração — Sloop Script verdadeira ligada (Drive); destaques em Sloop a ~2,2×.
+2026-10-24 — haldi ka doodh (vlog) — primeiras versões para ver: **sempre em qualidade inferior** (540×960, rápida);
+  a qualidade final (1080×1920) só depois do "sim" à pré-visualização.
+2026-10-24 — haldi ka doodh (vlog) — a 1.ª versão ficou "perdida", com muitos silêncios e frases a meio. Agora:
+  a voz conta a história por ordem (gancho → para que serve → ingredientes → passos → prova), **só frases completas**
+  (nunca cortar a meio de uma frase nem acabar numa vírgula), pausas dentro da frase encolhidas para ~0,12 s
+  e ~0,25 s entre frases; nada de frases soltas sem contexto.
