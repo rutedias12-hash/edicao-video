@@ -87,20 +87,24 @@ deslocada para o lado, como uma assinatura por cima do texto. O título **escrev
 palavra em Sloop pela ordem da frase) com cursor e som de teclado. Caixa só atrás de uma palavra com pouca leitura: ver "Títulos do yapping" em `MARCA.md`.
 
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
-(~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
-(sem crescer nem saltar). **As palavras-chave aparecem sempre em Sloop**, sem engrossar (nada de negrito),
+(~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**, **letras muito juntas
+(espaçamento -0,07 em)**. Cada palavra só aparece (sem crescer nem saltar). **As palavras-chave aparecem sempre em Sloop**, sem engrossar (nada de negrito),
 ~2,2× maiores, na cor de destaque.
 
 **Durante o vídeo:**
 - **Títulos de secção:** a cada nova parte, o nome da parte em **maiúsculas** ("A LISTA"), **sem número** (o número fica só no número
   grande), em **Montserrat Regular** (sans serif, sem negrito, ~76 px), escrito à máquina com cursor e som de teclado,
-  **centrado no terço inferior**, por baixo das legendas (dentro da margem), 1,5–2 s.
+  **centrado no terço superior** (dentro da margem), 1,5–2 s.
 - **Números grandes:** quando enumera coisas (1, 2, 3…), o número de cada ponto fica **no ecrã durante todo o ponto**,
   em **Montserrat Black** enorme (~680 px), em **Burgundy** (o tom da blusa), **atrás da Rute** (a silhueta dela tapa
   parte do número), do lado onde há mais espaço livre. Só aparece, com o som de clique.
 - **Lista que se vai preenchendo:** quando enumera coisas, no topo fica o título da lista (Sloop, escrito à máquina)
   e cada item ("1. …", Montserrat Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
 - **Destaques:** uma palavra-chave de vez em quando em Sloop (sem negrito), na cor de destaque, em vez da legenda normal.
+- **Imagens (pinturas, exemplos):** podem aparecer **em qualquer parte do ecrã**, em cima ou em baixo.
+  Ficam **à frente** da Rute sempre que **não tapam a cara** (testa e cabelo incluídos) nem as legendas, os títulos
+  ou os números; se não houver sítio assim, ficam **atrás dela**, no sítio onde ela as tapa menos.
+  Verificar sempre num fotograma que se veem bem. Só aparecem e desaparecem, com o clique.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.
 - **Efeitos sonoros** (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
