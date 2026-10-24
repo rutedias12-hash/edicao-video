@@ -9,6 +9,9 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   vlog calmo (a voz respira ~0,2–0,3 s entre frases); yapping vivo (sem tempos mortos).
 - Legendas, título de abertura e animações: dependem do formato (vlog ou yapping), ver `marca/FORMATOS.md`.
 - Volume final: -14 LUFS.
+- **Tratamento de imagem (todos os vídeos, vlog e yapping):** o da v21/v22 dos traços tóxicos, que a Rute aprovou e pediu para guardar.
+  Natural: contraste e luz só um toque, tom ligeiramente menos amarelo, saturação +4%, pouco grão, nitidez suave; só no vídeo,
+  nunca nos textos e imagens. Filtro exato e exportação em `marca/FORMATOS.md` ("Luz, cor e nitidez").
 - Música: **só se a Rute pedir** (confirmado); nesse caso, volume baixo por baixo da voz.
 
 ## Aprendido nos projetos
@@ -40,3 +43,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — imagens em qualquer sítio (em cima ou em baixo), à frente se não taparem a cara, senão atrás;
   títulos de secção ao centro no terço superior; legendas com letras ainda mais juntas (-0,07 em).
 2026-10-24 — traços tóxicos — pinturas a aparecer com "poc" no gancho, para prender; títulos de secção ficam durante todo o ponto.
+2026-10-24 — traços tóxicos — tratamento de imagem: o primeiro (v20) ficou artificial; a versão natural (v21) foi aprovada e passa a ser o padrão.
