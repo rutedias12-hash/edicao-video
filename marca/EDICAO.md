@@ -39,3 +39,4 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   semitransparente só atrás de uma palavra com pouca leitura, nunca a palavra em Sloop.
 2026-10-24 — traços tóxicos — imagens em qualquer sítio (em cima ou em baixo), à frente se não taparem a cara, senão atrás;
   títulos de secção ao centro no terço superior; legendas com letras ainda mais juntas (-0,07 em).
+2026-10-24 — traços tóxicos — pinturas a aparecer com "poc" no gancho, para prender; títulos de secção ficam durante todo o ponto.

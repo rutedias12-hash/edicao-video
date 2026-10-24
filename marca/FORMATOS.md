@@ -86,6 +86,10 @@ em **Champagne**, **sobreposta** ao resto do título: a cruzar as linhas de cima
 deslocada para o lado, como uma assinatura por cima do texto. O título **escreve-se à máquina** (maiúsculas e
 palavra em Sloop pela ordem da frase) com cursor e som de teclado. Caixa só atrás de uma palavra com pouca leitura: ver "Títulos do yapping" em `MARCA.md`.
 
+**Pinturas no gancho (para prender):** logo no início, 3–4 das imagens do vídeo aparecem uma a uma (~0,4 s entre elas),
+pequenas e ligeiramente inclinadas, nos lados do ecrã (à frente da Rute, sem tapar a cara), cada uma com um som de **"poc"**.
+Saem quando o gancho muda de frase.
+
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
 (~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**, **letras muito juntas
 (espaçamento -0,07 em)**. Cada palavra só aparece (sem crescer nem saltar). **As palavras-chave aparecem sempre em Sloop**, sem engrossar (nada de negrito),
@@ -94,7 +98,7 @@ palavra em Sloop pela ordem da frase) com cursor e som de teclado. Caixa só atr
 **Durante o vídeo:**
 - **Títulos de secção:** a cada nova parte, o nome da parte em **maiúsculas** ("A LISTA"), **sem número** (o número fica só no número
   grande), em **Montserrat Regular** (sans serif, sem negrito, ~76 px), escrito à máquina com cursor e som de teclado,
-  **centrado no terço superior** (dentro da margem), 1,5–2 s.
+  **centrado no terço superior** (dentro da margem), e **fica no ecrã enquanto ela fala dessa parte**.
 - **Números grandes:** quando enumera coisas (1, 2, 3…), o número de cada ponto fica **no ecrã durante todo o ponto**,
   em **Montserrat Black** enorme (~680 px), em **Burgundy** (o tom da blusa), **atrás da Rute** (a silhueta dela tapa
   parte do número), do lado onde há mais espaço livre. Só aparece, com o som de clique.
@@ -104,13 +108,14 @@ palavra em Sloop pela ordem da frase) com cursor e som de teclado. Caixa só atr
 - **Imagens (pinturas, exemplos):** podem aparecer **em qualquer parte do ecrã**, em cima ou em baixo.
   Ficam **à frente** da Rute sempre que **não tapam a cara** (testa e cabelo incluídos) nem as legendas, os títulos
   ou os números; se não houver sítio assim, ficam **atrás dela**, no sítio onde ela as tapa menos.
-  Verificar sempre num fotograma que se veem bem. Só aparecem e desaparecem, com o clique.
+  Verificar sempre num fotograma que se veem bem. A Rute pode pedir uma imagem sempre atrás dela, ou centrada. Só aparecem e desaparecem, com o clique.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.
 - **Efeitos sonoros** (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
   - **`teclado.wav`**: enquanto um título se escreve; cortar à duração da escrita;
-  - **`clique.wav`** (0,2 s): quando aparece um item de lista, um número grande ou uma imagem de exemplo.
+  - **`clique.wav`** (0,2 s): quando aparece um item de lista, um número grande ou uma imagem de exemplo;
+  - **"poc"** (`pop.mp3` dos efeitos do media-use): só nas pinturas que aparecem no gancho.
   Volume baixo, sempre abaixo da voz (cerca de -20 dB em relação à fala). Nunca nas legendas.
-  Nunca inventar nem procurar outros sons; se a Rute enviar mais, acrescentar aqui.
+  Nunca inventar nem procurar outros sons; se a Rute pedir ou enviar mais, acrescentar aqui.
 
 **Fecho:** frase final. Sem assinatura, a não ser que a Rute peça.
