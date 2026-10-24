@@ -80,12 +80,12 @@ e, quando o gancho acaba (ou na frase seguinte ao título), volta suavemente ao 
 É o único zoom do vídeo.
 
 **Gancho (0–3 s):** título curto no terço superior (ex.: "COISAS TÓXICAS NA MINHA RELAÇÃO"),
-em **Montserrat Semibold, tudo em maiúsculas**, letras e linhas apertadas, em **Espresso**.
+em **Montserrat Semibold, tudo em maiúsculas**, letras e linhas apertadas, em **Winter White** sobre a caixa Burgundy.
 A **palavra principal** do título fica em **Sloop** (sem engrossar), **muito maior** (~2× a altura das maiúsculas),
-em **Burgundy**, **sobreposta** ao resto do título: a cruzar as linhas de cima e de baixo, ligeiramente
+em **Champagne**, **sobreposta** ao resto do título: a cruzar as linhas de cima e de baixo, ligeiramente
 deslocada para o lado, como uma assinatura por cima do texto. O título **escreve-se à máquina** (maiúsculas e
-palavra em Sloop pela ordem da frase) com cursor e som de teclado. Os títulos têm de se ler em todas as letras:
-ver "Títulos sobre fundos mistos" em `MARCA.md`.
+palavra em Sloop pela ordem da frase) com cursor e som de teclado. Os títulos (gancho e secções) ficam sobre uma caixa Burgundy:
+ver "Títulos do yapping sobre caixa" em `MARCA.md`.
 
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
 (~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
@@ -93,7 +93,7 @@ ver "Títulos sobre fundos mistos" em `MARCA.md`.
 ~2,2× maiores, na cor de destaque.
 
 **Durante o vídeo:**
-- **Títulos de secção:** a cada nova parte, o nome da parte ("a lista"), **sem número** (o número fica só no número
+- **Títulos de secção:** a cada nova parte, o nome da parte em **maiúsculas** ("A LISTA"), **sem número** (o número fica só no número
   grande), em **Montserrat Regular** (sans serif, sem negrito, ~76 px), escrito à máquina com cursor e som de teclado,
   **centrado no terço superior** (dentro da margem), 1,5–2 s.
 - **Números grandes:** quando enumera coisas (1, 2, 3…), o número de cada ponto fica **no ecrã durante todo o ponto**,

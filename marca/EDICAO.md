@@ -33,3 +33,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
 2026-10-24 — traços tóxicos — títulos de secção sem número e centrados no terço superior; a Rute notou letras do título
   sem leitura sobre o cabelo: a cor dos títulos passa a adaptar-se ao fundo letra a letra (tom escuro/claro do par).
+2026-10-24 — traços tóxicos — a Rute não gostou das letras a mudar de tom: títulos (gancho e secções) passam a ter
+  uma caixa Burgundy por trás, com letras em cor fixa (Winter White; Sloop em Champagne). Secções em maiúsculas.
