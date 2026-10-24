@@ -97,7 +97,7 @@ Saem quando o gancho muda de frase.
 
 **Durante o vídeo:**
 - **Títulos de secção:** a cada nova parte, o nome da parte em **maiúsculas** ("A LISTA"), **sem número** (o número fica só no número
-  grande), em **Montserrat Regular** (sans serif, sem negrito, ~76 px), escrito à máquina com cursor e som de teclado,
+  grande), em **Montserrat Regular** (sans serif, sem negrito, ~60 px, letras muito juntas: -0,09 em), escrito à máquina com cursor e som de teclado,
   **centrado no terço superior** (dentro da margem), e **fica no ecrã enquanto ela fala dessa parte**.
 - **Números grandes:** quando enumera coisas (1, 2, 3…), o número de cada ponto fica **no ecrã durante todo o ponto**,
   em **Montserrat Black** enorme (~680 px), em **Burgundy** (o tom da blusa), **atrás da Rute** (a silhueta dela tapa
@@ -108,7 +108,7 @@ Saem quando o gancho muda de frase.
 - **Imagens (pinturas, exemplos):** podem aparecer **em qualquer parte do ecrã**, em cima ou em baixo.
   Ficam **à frente** da Rute sempre que **não tapam a cara** (testa e cabelo incluídos) nem as legendas, os títulos
   ou os números; se não houver sítio assim, ficam **atrás dela**, no sítio onde ela as tapa menos.
-  Verificar sempre num fotograma que se veem bem. A Rute pode pedir uma imagem sempre atrás dela, ou centrada. Só aparecem e desaparecem, com o clique.
+  Nunca atrás de um número grande. Verificar sempre num fotograma que se veem bem. A Rute pode pedir uma imagem sempre atrás dela, ou centrada. Só aparecem e desaparecem, com o clique.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.
 - **Efeitos sonoros** (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
