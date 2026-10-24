@@ -31,3 +31,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-10-24 — traços tóxicos — títulos de secção sem número e centrados no terço superior; a Rute notou letras do título
+  sem leitura sobre o cabelo: a cor dos títulos passa a adaptar-se ao fundo letra a letra (tom escuro/claro do par).

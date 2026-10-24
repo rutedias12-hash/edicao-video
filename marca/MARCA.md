@@ -26,6 +26,10 @@ Regras:
 - **Regra do destaque:** a cor de destaque é o Cherry Burgundy. **Quando o burgundy não se lê** sobre a imagem
   (fundo escuro ou avermelhado), usa-se **Champagne**. Teste: contraste de pelo menos 3:1 entre a cor e
   as partes **mais escuras** do fundo por trás do texto (20.º percentil); se o burgundy não chegar, Champagne.
+- **Títulos sobre fundos mistos** (parte sobre a parede clara, parte sobre o cabelo escuro): a cor de cada letra
+  adapta-se ao fundo que tem por trás, sem sombra nem caixa. Onde o fundo é claro, usa o tom escuro do par; onde é
+  escuro, o tom claro: maiúsculas **Espresso / Winter White**; Sloop e títulos de secção **Burgundy / Champagne**.
+  A passagem de um tom para o outro é suave. O fundo conta já com os números e as imagens que estão por trás.
 - Destaques nas legendas: Espresso ou Burgundy; se o tom escuro não chegar a 3:1 sobre as partes mais escuras
   do fundo, Champagne. Implementado em `marca/exemplo.html`.
 
