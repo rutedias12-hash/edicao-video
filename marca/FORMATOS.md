@@ -86,8 +86,8 @@ em **Champagne**, **sobreposta** ao resto do título: a cruzar as linhas de cima
 deslocada para o lado, como uma assinatura por cima do texto. O título **escreve-se à máquina** (maiúsculas e
 palavra em Sloop pela ordem da frase) com cursor e som de teclado. Caixa só atrás de uma palavra com pouca leitura: ver "Títulos do yapping" em `MARCA.md`.
 
-**Pinturas no gancho (para prender):** logo no início, 3–4 das imagens do vídeo aparecem uma a uma (~0,4 s entre elas),
-pequenas e ligeiramente inclinadas, nos lados do ecrã (à frente da Rute, sem tapar a cara), cada uma com um som de **"poc"**.
+**Pinturas no gancho (para prender):** logo no início (a partir de ~0,15 s), 3–4 das imagens do vídeo aparecem uma a uma, **depressa** (~0,2 s entre elas),
+pequenas e ligeiramente inclinadas, nos lados do ecrã (à frente da Rute, sem tapar a cara), cada uma com um som de **"poc" bem audível** (~6 dB abaixo da voz, não os -20 dB dos outros efeitos).
 Saem quando o gancho muda de frase.
 
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
