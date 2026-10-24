@@ -36,9 +36,9 @@ Guia: Sloop (títulos, destaques, assinaturas) + sans serif (subtítulos, corpo,
 | Formato | Títulos | Legendas e texto | Destaques |
 |---|---|---|---|
 | **Vlog** | Montserrat | Montserrat | algumas palavras na mesma fonte num tom escuro da paleta; outras em Sloop |
-| **Yapping** | Sloop | Montserrat | Sloop |
+| **Yapping** | Montserrat maiúsculas + palavra principal em Sloop por cima; secções em Montserrat Regular | Montserrat | Sloop |
 
-- **Sloop só no yapping** (títulos e destaques). No vlog, a única exceção são algumas palavras das legendas.
+- **Sloop só no yapping** (palavra principal do título e destaques), **nunca engrossada** (sem negrito). No vlog, a única exceção são algumas palavras das legendas.
 - **Sloop:** "Sloop Script Regular.ttf", no Drive da Rute (descarregada por `marca/download.sh`). Tem todos os acentos.
 - **Letras e linhas apertadas** (pedido da Rute): espaçamento entre letras -0,06 em nos títulos,
   -0,035 em no texto, 0,04 em nos rótulos em maiúsculas; altura de linha 0,78 nos títulos, 1,2 no texto.
@@ -64,6 +64,7 @@ elemento que nenhum píxel de texto (acentos e caudas incluídos) sai da zona se
    desvanecer, sem deslizar, sem crescer) e saem de uma vez.
 
 Proibido: sombras, contornos, brilhos, ressaltos, zooms, rotações, linhas que se desenham.
+**Exceção:** os vídeos de yapping começam com um **zoom in** suave no gancho, que volta atrás no fim do gancho (ver `FORMATOS.md`).
 
 ## Atenção às licenças
 - **Montserrat**: livre (Google Fonts, licença OFL).
