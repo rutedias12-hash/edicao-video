@@ -75,37 +75,54 @@ Referências:
 **Imagem:** a Rute a falar para a câmara, plano médio. Cortar **todos** os silêncios, hesitações e respirações
 longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 
+**Luz, cor e nitidez (sempre):** antes de pôr textos e imagens, tratar o vídeo da Rute com o mesmo "filtro" em todo o vídeo:
+**tem de parecer natural**: contraste e luz só um toque (nunca marcados nem muito luminosos; a Rute achou artificial),
+tom ligeiramente menos amarelo (a madeira fica menos laranja, a pele continua quente), saturação +4%,
+uma redução leve de grão e nitidez suave (sem contornos brancos). Os textos e pinturas ficam fora do tratamento,
+para as cores da marca não mudarem. Exportar em alta qualidade (H.264 high, CRF 15, preset slow).
+Filtro de referência (ffmpeg): `hqdn3d=1:1:3:3` → escala → `curves=all='0/0.01 0.25/0.24 0.5/0.51 0.75/0.765 1/0.985',colorbalance=bm=0.025:rm=-0.01:bh=0.015,eq=saturation=1.04,unsharp=5:5:0.45:3:3:0`.
+
 **Começa sempre com zoom in:** durante o gancho, a imagem aproxima-se devagar (até ~1,16×, a abrandar no fim)
 e, quando o gancho acaba (ou na frase seguinte ao título), volta suavemente ao tamanho normal (~0,8 s).
 É o único zoom do vídeo.
 
-**Gancho (0–3 s):** título curto no terço superior (ex.: "COISAS TÓXICAS NA MINHA RELAÇÃO"),
-em **Montserrat Semibold, tudo em maiúsculas**, letras e linhas apertadas, em **Espresso**.
+**Gancho (0–3 s):** título curto no **terço inferior** (por baixo das legendas, dentro da margem) (ex.: "COISAS TÓXICAS NA MINHA RELAÇÃO"),
+em **Montserrat Semibold, tudo em maiúsculas**, letras e linhas apertadas, em **Winter White**.
 A **palavra principal** do título fica em **Sloop** (sem engrossar), **muito maior** (~2× a altura das maiúsculas),
-em **Burgundy**, **sobreposta** ao resto do título: a cruzar as linhas de cima e de baixo, ligeiramente
+em **Champagne**, **sobreposta** ao resto do título: a cruzar as linhas de cima e de baixo, ligeiramente
 deslocada para o lado, como uma assinatura por cima do texto. O título **escreve-se à máquina** (maiúsculas e
-palavra em Sloop pela ordem da frase) com cursor e som de teclado.
+palavra em Sloop pela ordem da frase) com cursor e som de teclado. Caixa só atrás de uma palavra com pouca leitura: ver "Títulos do yapping" em `MARCA.md`.
+
+**Pinturas no gancho (para prender):** logo no início (a partir de ~0,15 s), 3–4 das imagens do vídeo aparecem uma a uma, **depressa** (~0,2 s entre elas),
+pequenas e ligeiramente inclinadas, nos lados do ecrã (à frente da Rute, sem tapar a cara), cada uma com um som de **"poc" bem audível** (~6 dB abaixo da voz, não os -20 dB dos outros efeitos).
+Saem quando o gancho muda de frase.
 
 **Legendas (escolha da Rute):** **uma palavra de cada vez**, sincronizada com a fala, centro-baixo do ecrã
-(~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**. Cada palavra só aparece
-(sem crescer nem saltar). **As palavras-chave aparecem sempre em Sloop**, sem engrossar (nada de negrito),
+(~62 % da altura). Montserrat Semibold ~64 px, Winter White, **sem sombra**, **letras muito juntas
+(espaçamento -0,07 em)**. Cada palavra só aparece (sem crescer nem saltar). **As palavras-chave aparecem sempre em Sloop**, sem engrossar (nada de negrito),
 ~2,2× maiores, na cor de destaque.
 
 **Durante o vídeo:**
-- **Títulos de secção:** a cada nova parte, "01 a lista" em **Montserrat Regular** (sans serif, sem negrito, ~76 px),
-  escrito à máquina com cursor e som de teclado, no canto de cima à esquerda (dentro da margem), 1,5–2 s.
+- **Títulos de secção:** a cada nova parte, o nome da parte em **maiúsculas** ("A LISTA"), **sem número** (o número fica só no número
+  grande), em **Montserrat Regular** (sans serif, sem negrito, ~60 px, letras muito juntas: -0,09 em), escrito à máquina com cursor e som de teclado,
+  **centrado no terço superior** (dentro da margem), e **fica no ecrã enquanto ela fala dessa parte**.
 - **Números grandes:** quando enumera coisas (1, 2, 3…), o número de cada ponto fica **no ecrã durante todo o ponto**,
   em **Montserrat Black** enorme (~680 px), em **Burgundy** (o tom da blusa), **atrás da Rute** (a silhueta dela tapa
   parte do número), do lado onde há mais espaço livre. Só aparece, com o som de clique.
 - **Lista que se vai preenchendo:** quando enumera coisas, no topo fica o título da lista (Sloop, escrito à máquina)
   e cada item ("1. …", Montserrat Regular ~40 px) aparece no momento em que é dito; a lista fica até ao fim da secção.
 - **Destaques:** uma palavra-chave de vez em quando em Sloop (sem negrito), na cor de destaque, em vez da legenda normal.
+- **Imagens (pinturas, exemplos):** podem aparecer **em qualquer parte do ecrã**, em cima ou em baixo.
+  Ficam **à frente** da Rute sempre que **não tapam a cara** (testa e cabelo incluídos) nem as legendas, os títulos
+  ou os números; se não houver sítio assim, ficam **atrás dela**, no sítio onde ela as tapa menos.
+  Nunca atrás de um número grande. Verificar sempre num fotograma que se veem bem. A Rute pode pedir uma imagem sempre atrás dela, ou centrada. Só aparecem e desaparecem, com o clique.
 - **Imagens de exemplo:** quando fala de algo que se pode mostrar, a imagem/vídeo aparece na metade de cima
   e a Rute passa para a metade de baixo (ou a imagem ocupa o ecrã inteiro 1–2 s). Só aparece.
 - **Efeitos sonoros** (`marca/sons/`, descarregados do Drive por `marca/download.sh`):
   - **`teclado.wav`**: enquanto um título se escreve; cortar à duração da escrita;
-  - **`clique.wav`** (0,2 s): quando aparece um item de lista, um número grande ou uma imagem de exemplo.
+  - **`clique.wav`** (0,2 s): quando aparece um item de lista, um número grande ou uma imagem de exemplo;
+  - **"poc"** (`pop.mp3` dos efeitos do media-use): só nas pinturas que aparecem no gancho.
   Volume baixo, sempre abaixo da voz (cerca de -20 dB em relação à fala). Nunca nas legendas.
-  Nunca inventar nem procurar outros sons; se a Rute enviar mais, acrescentar aqui.
+  Nunca inventar nem procurar outros sons; se a Rute pedir ou enviar mais, acrescentar aqui.
 
 **Fecho:** frase final. Sem assinatura, a não ser que a Rute peça.
