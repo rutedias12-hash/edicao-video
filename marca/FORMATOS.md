@@ -80,6 +80,7 @@ longas (cortes seguidos, ritmo vivo, sem tempos mortos).
 tom ligeiramente menos amarelo (a madeira fica menos laranja, a pele continua quente), saturação +4%,
 uma redução leve de grão e nitidez suave (sem contornos brancos). Os textos e pinturas ficam fora do tratamento,
 para as cores da marca não mudarem. Exportar em alta qualidade (H.264 high, CRF 15, preset slow).
+Se a Rute pedir 4K: refazer a base a partir dos originais em 2160×3840 (mesmos cortes) e desenhar textos e imagens ao dobro do tamanho, nunca ampliar o Full HD.
 Filtro de referência (ffmpeg): `hqdn3d=1:1:3:3` → escala → `curves=all='0/0.01 0.25/0.24 0.5/0.51 0.75/0.765 1/0.985',colorbalance=bm=0.025:rm=-0.01:bh=0.015,eq=saturation=1.04,unsharp=5:5:0.45:3:3:0`.
 
 **Começa sempre com zoom in:** durante o gancho, a imagem aproxima-se devagar (até ~1,16×, a abrandar no fim)
