@@ -44,3 +44,10 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   títulos de secção ao centro no terço superior; legendas com letras ainda mais juntas (-0,07 em).
 2026-10-24 — traços tóxicos — pinturas a aparecer com "poc" no gancho, para prender; títulos de secção ficam durante todo o ponto.
 2026-10-24 — traços tóxicos — tratamento de imagem: o primeiro (v20) ficou artificial; a versão natural (v21) foi aprovada e passa a ser o padrão.
+2026-10-26 — chamam-nos egoístas (yapping) — seguir o TEXTO da Rute (ordem e palavras); com várias gravações, escolher a melhor de cada frase.
+  Ritmo muito corrido no início (sem pausas). Sem pinturas nem títulos de secção quando ela não pede.
+  Vídeo de fundo (ex.: gravação de ecrã de notícias) atrás dela na metade de cima, sem as faixas do canal, a desvanecer em baixo;
+  legendas e título do gancho no mesmo sítio, por cima da cabeça. Imagem SEM tratamento (natural) neste vídeo.
+  Frase final pode ficar toda no ecrã (palavras a aparecer e a ficar), linhas juntas, Sloop sobreposta à linha de cima.
+  Acabar logo depois da última palavra (nada de planos em que ela desvia o olhar). O objeto que ela segura é um microfone.
+  Som: limpar a voz (graves, ruído, "s", compressão leve) antes do -14 LUFS.
