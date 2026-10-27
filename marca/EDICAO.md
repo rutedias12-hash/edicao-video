@@ -34,3 +34,29 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   a voz conta a história por ordem (gancho → para que serve → ingredientes → passos → prova), **só frases completas**
   (nunca cortar a meio de uma frase nem acabar numa vírgula), pausas dentro da frase encolhidas para ~0,12 s
   e ~0,25 s entre frases; nada de frases soltas sem contexto.
+2026-10-27 — remédio infalível para a gripe (receita) — o vlog só com voz off e cortes de 0,5 s **não resultou** para
+  receitas. O que a Rute aprovou foi um formato **"orgânico"**: ela a falar para a câmara (planos sincronizados, 2–4 s)
+  e, por cima da voz, imagens curtas do que vai acontecendo (b-roll de 0,7–2 s). Estrutura aprovada:
+  1) abrir com a promessa ("isto é uma bomba para as gripes…") com imagens da bebida pronta (cortes de ~0,8 s);
+  2) a seguir o momento "doente" (a assoar-se) com zoom marcante e o título por cima, com a voz "estou doente hoje";
+  3) ingredientes ditos para a câmara, com cada um na mão (e as alternativas, ex.: cúrcuma em raiz);
+  4) passos da receita com b-roll de cada gesto, por ordem lógica (nunca mostrar um passo antes do anterior);
+  5) prova a dois (brinde, "dez de dez") e acabar com uma reação (zoom na cara do Paulo).
+2026-10-27 — receita — **pausas mínimas entre frases** (~0,02 s, sem "ar" nas pontas); não mexer nos espaços entre
+  palavras dentro da mesma frase. Cortar palavras soltas no fim de frases ("porque…").
+2026-10-27 — receita — **a boca tem de bater com a voz**: se a imagem é ela a falar, a voz é desse mesmo clipe;
+  onde a voz salta, a imagem salta no mesmo instante. Nunca pôr voz de um clipe por cima da boca a mexer noutro.
+2026-10-27 — receita — b-roll: escolher momentos **espontâneos** (ela desprevenida), nunca o início em que está a ligar
+  a câmara e a afastar-se; aproximar o enquadramento quando se vê a boca a falar num plano que é só para mostrar
+  um objeto. Planos vistos de cima (flat lay) **rodados 180°**, para ficarem no ponto de vista de quem vê.
+2026-10-27 — receita — zoom marcante é permitido **quando a Rute pede** (aqui: no assoar e na reação final).
+2026-10-27 — receita — título: "remédio infalível para a gripe", **só Montserrat** (a Sloop no título não agradou);
+  pode aparecer por cima do momento-gancho e não só no segundo 0.
+2026-10-27 — receita — legendas em **frases curtas (2–4 palavras)**, sempre no mesmo sítio, divididas por sentido:
+  nunca acabar em artigo/preposição ("a", "de", "um"…), de preferência começar em "e", "à", "para"
+  (ex.: "uma senhora indiana | ensinou esta receita | à minha avó | e agora vou | ensinar-vos a vocês").
+  Na lista de ingredientes, cada ingrediente na sua legenda e destacado (Semibold, 1,5×).
+  Frases de remate podem ir a Burgundy mesmo sem o teste de contraste ("dez de dez").
+  Sem horas no ecrã nas receitas.
+2026-10-27 — receita — verificar a transcrição nas falas importantes: o Scribe ouviu "eu levo este aqui todo"
+  em vez de "ele é bué esquisito". Na dúvida, perguntar à Rute.
