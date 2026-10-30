@@ -31,3 +31,12 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-10-30 — look para o evento (vlog C&A) — a Rute quer POUCOS silêncios também no vlog: pausas dentro das frases > 0,12 s cortadas, ~0,08 s entre frases.
+  Sem fotografias no meio dos vídeos. Som ambiente das imagens fora (soava a ruído); voz limpa com RNNoise (ffmpeg arnndn) + afftdn leve.
+  Cor NATURAL com um pouco de contraste e nitidez (sem filtro quente). Quando a voz é de um clipe em que ela aparece a falar,
+  a imagem tem de ser desse mesmo instante (nada de outras tentativas por cima: parece dessincronizado).
+  Gosta de: subtítulo curto por baixo do título ("ajudem-me a escolher!"), aviso no ecrã com valores (BUDGET 150 € + 💸),
+  ecrã dividido com as duas opções + pergunta em texto grande ("1 ou 2?"), speed ramp curto em transições com ecrã escuro
+  (sem acelerar planos dela), b-roll rápido (~1,5×, 6–7 s) e texto de campanha do início do b-roll até ao fim.
+  Horas no ecrã: confirmar com a Rute (os metadados dos clipes não deram a hora local certa).
+  Música: só a que ela enviar, como ambiente (~8 dB abaixo da voz, a baixar quando ela fala). Stories: cortes de 8–11 s do vídeo final.
