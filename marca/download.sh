@@ -22,6 +22,8 @@ baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf Montserrat
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf Montserrat-Medium.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf Montserrat-SemiBold.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf Montserrat-Black.ttf   # números grandes do yapping
+baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf Montserrat-Bold.ttf    # destaques das legendas (negrito)
+baixar_gf montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aX8.ttf Montserrat-SemiBoldItalic.ttf   # destaques (itálico)
 
 # Sloop Script (yapping: títulos e destaques; vlog: algumas palavras das legendas). Drive da Rute.
 baixar 1Qmj_vbJOAKKzR9T13qYjRd7p3_hfCj2i Sloop.ttf

@@ -31,3 +31,10 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-10-30 — caixinha de Halloween — yapping com lista: abrir com uma pergunta forte ("vocês não adoram ser pais?") com zoom de impacto + espreitadela do resultado final.
+  B-roll: é a Rute que escolhe os planos (tempos dela, 1.06 = 1 min 06 s), imagem inteira, a fechar cada segmento; o artigo na mão fica cara para a câmara.
+  Ritmo sem pausas nem respirações; cortar explicações supérfluas mas manter a maioria das falas; acabar numa frase de remate.
+  Lista de artigos: papel amarrotado com bordas irregulares, marcadores e tudo em minúsculas, em baixo de um dos lados e SEMPRE à frente;
+  desenrola logo no início (som de papel), cada artigo é rasurado em Burgundy quando é mostrado (sem som de lápis), sai amachucada perto do fim.
+  Título grande no terço superior, atrás da pessoa (recorte), com o destaque em Burgundy. Legendas ao centro, mais acima;
+  destaques na Montserrat a alternar negrito / itálico / Burgundy. Efeitos sonoros bem audíveis. Pequenos morcegos (tema) a pousar na lista.
