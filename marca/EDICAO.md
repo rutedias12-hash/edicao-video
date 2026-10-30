@@ -40,4 +40,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   ecrã dividido com as duas opções + pergunta em texto grande ("1 ou 2?"), speed ramp curto em transições com ecrã escuro
   (sem acelerar planos dela), b-roll rápido (~1,5×, 6–7 s) e texto de campanha do início do b-roll até ao fim.
   Horas no ecrã: confirmar com a Rute (os metadados dos clipes não deram a hora local certa).
+  Nunca deixar silêncio digital entre frases (soa "travado"): encher os espaços com o som real do sítio, do próprio clipe.
   Música: só a que ela enviar, como ambiente MUITO baixa (~-46 dB + sidechain forte). Stories: cortes de 8–11 s do vídeo final.
