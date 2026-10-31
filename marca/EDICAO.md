@@ -31,3 +31,7 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-10-31 — men in black (máscara) — vídeo curto com efeito sonoro dela: tirar o som original e sincronizar a fala do efeito
+  pelo INÍCIO do movimento dos lábios (o "s"), não pela transcrição (estava 0,23 s adiantado). Zoom de abertura bem
+  apertado e centrado no conjunto do motivo (a "mancha verde" dos dois), feito a partir do 4K para não perder nitidez.
+  A Rute quer a imagem mais nítida e com cores mais vivas: saturação ~1,2, contraste ~1,05 e nitidez (unsharp) na exportação.
