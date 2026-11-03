@@ -31,3 +31,12 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-03 — meal prep (vlog) — ritmo: "fast paced montage" de planos de 0,5–1 s a 1,1x (1,5x não), 60 imagens/s (a 30 os cortes travam);
+  cada corte começa depois de o gesto começar e acaba antes de ele acabar; nada de planos de transição entre movimentos.
+  Som SEMPRE sincronizado com a imagem (cada plano com o seu som); com voz off, som dos clipes baixo.
+  Início: vários cortes a entrar e a preparar-se (ex.: avental); logo a seguir um trailer de destaques em ~1 s com a lista de tarefas.
+  Lista de tarefas num cartão (aparece com o trailer, vai para o canto, cada parte fica com visto). Sem horas: cronómetro (Montserrat) desde o 1.º passo até ao fim.
+  Subtítulo por baixo do título, em 2–3 linhas, com a última em destaque. Planos do mesmo gesto/aparelho todos seguidos.
+  Stop motions para coisas a aparecer (frascos, tabuleiro, almôndegas no prato), rápidos e com zoom. Etiquetas: só o essencial (descolar, dedo a colar).
+  Final: um só plano seguido com UM zoom contínuo, até dizer adeus à câmara. Voz off: sem repetições nem falhas, pausas curtas, sem filtros (só volume).
+  Cor: um pouco mais nítida e saturada que o natural.
