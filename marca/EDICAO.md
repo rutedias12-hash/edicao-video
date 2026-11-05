@@ -31,3 +31,10 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-05 — pedido de casamento (yapping storytime) — manter TODOS os acrescentos que a Rute faz nas gravações (nunca cortar ad-libs
+  para caber no tempo; prefere acelerar: o final ficou a ~1,2x da gravação, 1:25). Acabar logo na última frase ("…outra história"), sem "continua…".
+  Sem títulos de secção nem "subtítulos" neste tipo de história. Momentos cómicos: zoom de impacto rápido na palavra (ex.: "nããão", "burra"),
+  com efeitos pedidos por ela: voz tremida (vibrato + tremolo) e filtro de palhaço no rosto (nariz vermelho, bochechas, losangos azuis);
+  gota de suor desenhada na testa num momento de "aperto" ("eu já tinha um marido"). Efeitos seguem a cara (MediaPipe face landmarker).
+  Com armário/fundo claro atrás, todo o texto vai sobre a roupa escura (o Winter White não se lê na madeira clara).
+  Atenção: "para" numa mensagem curta dela pode querer dizer "parar".
