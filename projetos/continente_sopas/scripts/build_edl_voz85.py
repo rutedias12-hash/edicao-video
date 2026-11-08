@@ -11,6 +11,10 @@ from pathlib import Path
 import numpy as np
 E = Path(__file__).resolve().parents[1]; V = E.parent
 VEL = 1.15
+# v2 (Rute: 'há muitos momentos sem voz off'): velocidade por cena na 2.ª metade, mais nos planos lentos
+VEL_CENA = {'jantar_henrique': 1.3, 'banho': 1.5, 'pijama': 1.35, 'deitar': 1.45, 'clara': 1.8, 'sopa_taca': 1.45, 'mesa': 1.2}
+FECHO = 1.9   # o fecho (embalagem com aproximação) fica mais curto, à mesma velocidade
+GAP = 0.35    # silêncio entre frases da voz
 base = json.load(open(E/'edl_vozoff.json')); M = json.load(open(E/'pedacos_map.json'))
 SEC = [('chegada', 0), ('cozinha', 3), ('sopa', 13), ('jantar_henrique', 16), ('banho', 20), ('pijama', 24), ('deitar', 26),
        ('clara', 30), ('sopa_taca', 32), ('mesa', 34), ('fecho', 36)]
@@ -26,7 +30,9 @@ for i, r in enumerate(base['ranges']):
     r['start'] = round(m['clip_start_plano'] - m['piece_a'], 4); r['end'] = round(r['start'] + d, 4)
     for c in r.get('cutaways', []):
         mc = M[c[3]]; c[0] = round(mc['clip_start_plano'] - mc['piece_a'], 4); src[c[3]] = str(V/'hq_pedacos'/f'{c[3]}.mov')
-    if 16 <= i < 36: r['speed'] = VEL
+    cena = [n for n, j in SEC if j <= i][-1]
+    if cena in VEL_CENA: r['speed'] = VEL_CENA[cena]
+    if cena == 'fecho': r['end'] = round(r['start'] + FECHO, 4); d = FECHO
     out.append(r)
     t += max(1, round(d / r.get('speed', 1.0) * 30)) / 30
 secs['fim'] = round(t, 4)
@@ -41,7 +47,11 @@ def escrever(y, nome, pal):
     (V/'voz'/'t.raw').write_bytes(y.tobytes())
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 's16le', '-ar', str(SR), '-ac', '2', '-i', str(V/'voz'/'t.raw'), str(V/'voz'/f'{nome}.wav')], check=True)
     (V/'voz'/'t.raw').unlink(); json.dump(pal, open(V/'voz'/f'{nome}_palavras.json', 'w'), ensure_ascii=False, indent=0)
-B = ler(V/'voz/voz85_B.wav'); PB = json.load(open(V/'voz/voz85_B_palavras.json'))
+# v2: voz da 2.ª parte um pouco mais lenta (pedido da Rute), sem mudar o tom (atempo)
+LENTO = 0.92
+subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(V/'voz/voz85_B.wav'), '-af', f'atempo={LENTO}', str(V/'voz/voz85_B_lento.wav')], check=True)
+B = ler(V/'voz/voz85_B_lento.wav')
+PB = [dict(w, ini=round(w['ini']/LENTO, 3), fim=round(w['fim']/LENTO, 3)) for w in json.load(open(V/'voz/voz85_B_palavras.json'))]
 frases, cur = [], []
 for w in PB:
     cur.append(w)
@@ -61,7 +71,7 @@ pa = json.load(open(V/'voz/voz85_A_palavras.json'))
 vozes = [['voz85_A', round(secs['sopa'] + 0.1 - 0.25 - pa[-1]['fim'], 3)]]
 fim_ant = secs['sopa'] + 7.3
 for (nome, d), cena in zip(nomes, ['jantar_henrique', 'banho', 'deitar', 'clara']):
-    t0 = round(max(secs[cena] + 0.1, fim_ant + 0.3), 3); vozes.append([nome, t0]); fim_ant = t0 + d
+    t0 = round(max(secs[cena] + 0.1, fim_ant + GAP) if cena != 'jantar_henrique' else secs[cena] + 0.15, 3); vozes.append([nome, t0]); fim_ant = t0 + d
 tempos = {'secoes': secs, 'vozes': vozes}
 json.dump(tempos, open(E/'voz85_tempos.json', 'w'), indent=1)
 print(json.dumps(tempos, indent=1)); print('voz acaba aos', round(fim_ant, 2), 's de', secs['fim'])

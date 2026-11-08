@@ -166,7 +166,7 @@
    "end": 2.0,
    "quote": "(imagem) de costas: a partir os ovos",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.3
   },
   {
    "source": "p10_IMG_6619",
@@ -174,7 +174,7 @@
    "end": 2.0,
    "quote": "(imagem) ovos na frigideira",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.3
   },
   {
    "source": "p11_IMG_6623",
@@ -183,7 +183,7 @@
    "quote": "(imagem) Henrique sentado à mesa",
    "mute": true,
    "bowl_clean": true,
-   "speed": 1.15
+   "speed": 1.3
   },
   {
    "source": "p12_IMG_6623",
@@ -192,7 +192,7 @@
    "quote": "(imagem) a colher ao Henrique, 'ahh' sem som",
    "mute": true,
    "bowl_clean": true,
-   "speed": 1.15
+   "speed": 1.3
   },
   {
    "source": "p13_IMG_6603",
@@ -200,7 +200,7 @@
    "end": 2.0,
    "quote": "(imagem) corredor: a caminho do banho com o Henrique",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.5
   },
   {
    "source": "p14_IMG_6608",
@@ -208,7 +208,7 @@
    "end": 1.9333,
    "quote": "(imagem) quarto: a porta da casa de banho fecha",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.5
   },
   {
    "source": "p15_IMG_6608",
@@ -216,7 +216,7 @@
    "end": 2.6,
    "quote": "(imagem) quarto: a porta abre e sai com ele de toalha",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.5
   },
   {
    "source": "p16_IMG_6608",
@@ -224,7 +224,7 @@
    "end": 1.9333,
    "quote": "(imagem) o Henrique embrulhado na toalha, na cama",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.5
   },
   {
    "source": "p17_IMG_6608",
@@ -232,7 +232,7 @@
    "end": 1.8333,
    "quote": "(imagem) a vestir o pijama",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.35
   },
   {
    "source": "p18_IMG_6608",
@@ -240,7 +240,7 @@
    "end": 1.8333,
    "quote": "(imagem) abraço de pijama",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.35
   },
   {
    "source": "p19_IMG_6626",
@@ -248,7 +248,7 @@
    "end": 1.8,
    "quote": "(imagem) a entrar no quarto com o bebé",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.45
   },
   {
    "source": "p20_IMG_6629",
@@ -256,7 +256,7 @@
    "end": 1.8,
    "quote": "(imagem) a embalar, luz vermelha",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.45
   },
   {
    "source": "p21_IMG_6629",
@@ -264,7 +264,7 @@
    "end": 1.8,
    "quote": "(imagem) no berço",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.45
   },
   {
    "source": "p22_IMG_6630",
@@ -272,7 +272,7 @@
    "end": 2.0,
    "quote": "(imagem) shhh, a fechar a porta",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.45
   },
   {
    "source": "p23_IMG_6631",
@@ -280,7 +280,7 @@
    "end": 2.0666,
    "quote": "(imagem) a Clara ao colo",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.8
   },
   {
    "source": "p24_IMG_6632",
@@ -288,7 +288,7 @@
    "end": 2.9333,
    "quote": "(imagem) a Clara ao colo, de costas",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.8
   },
   {
    "source": "p25_IMG_6633",
@@ -296,7 +296,7 @@
    "end": 2.6,
    "quote": "(imagem) a sopa a sair da embalagem para a taça",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.45
   },
   {
    "source": "p26_IMG_6633",
@@ -304,7 +304,7 @@
    "end": 2.2667,
    "quote": "(imagem) taças servidas",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.45
   },
   {
    "source": "p27_IMG_6638",
@@ -312,12 +312,12 @@
    "end": 2.3333,
    "quote": "(imagem) os três à mesa",
    "mute": true,
-   "speed": 1.15
+   "speed": 1.2
   },
   {
    "source": "p29_IMG_6634",
    "start": 1.0,
-   "end": 3.3333,
+   "end": 2.9,
    "quote": "(imagem) embalagem Receita do Chef, aproximação lenta",
    "mute": true,
    "zoom": [
@@ -326,5 +326,5 @@
    ]
   }
  ],
- "total_duration_s": 44.033
+ "total_duration_s": 39.7
 }
