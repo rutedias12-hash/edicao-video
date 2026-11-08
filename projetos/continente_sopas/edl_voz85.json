@@ -1,0 +1,330 @@
+{
+ "version": 1,
+ "sources": {
+  "p00_IMG_6555": "/home/user/edicao-video/videos/hq_pedacos/p00_IMG_6555.mov",
+  "p01_IMG_6556": "/home/user/edicao-video/videos/hq_pedacos/p01_IMG_6556.mov",
+  "p02_IMG_6555": "/home/user/edicao-video/videos/hq_pedacos/p02_IMG_6555.mov",
+  "p03_IMG_6586": "/home/user/edicao-video/videos/hq_pedacos/p03_IMG_6586.mov",
+  "p04_IMG_6589": "/home/user/edicao-video/videos/hq_pedacos/p04_IMG_6589.mov",
+  "p06_IMG_6593": "/home/user/edicao-video/videos/hq_pedacos/p06_IMG_6593.mov",
+  "p08_IMG_6589": "/home/user/edicao-video/videos/hq_pedacos/p08_IMG_6589.mov",
+  "p05_IMG_6590": "/home/user/edicao-video/videos/hq_pedacos/p05_IMG_6590.mov",
+  "p07_IMG_6592": "/home/user/edicao-video/videos/hq_pedacos/p07_IMG_6592.mov",
+  "p_caos1": "/home/user/edicao-video/videos/hq_pedacos/p_caos1.mov",
+  "p_caos3": "/home/user/edicao-video/videos/hq_pedacos/p_caos3.mov",
+  "p_caos5": "/home/user/edicao-video/videos/hq_pedacos/p_caos5.mov",
+  "p_caos4": "/home/user/edicao-video/videos/hq_pedacos/p_caos4.mov",
+  "p_sopa1": "/home/user/edicao-video/videos/hq_pedacos/p_sopa1.mov",
+  "p_sopa2": "/home/user/edicao-video/videos/hq_pedacos/p_sopa2.mov",
+  "p_emb_cut": "/home/user/edicao-video/videos/hq_pedacos/p_emb_cut.mov",
+  "p_sopa3": "/home/user/edicao-video/videos/hq_pedacos/p_sopa3.mov",
+  "p09_IMG_6617": "/home/user/edicao-video/videos/hq_pedacos/p09_IMG_6617.mov",
+  "p10_IMG_6619": "/home/user/edicao-video/videos/hq_pedacos/p10_IMG_6619.mov",
+  "p11_IMG_6623": "/home/user/edicao-video/videos/hq_pedacos/p11_IMG_6623.mov",
+  "p12_IMG_6623": "/home/user/edicao-video/videos/hq_pedacos/p12_IMG_6623.mov",
+  "p13_IMG_6603": "/home/user/edicao-video/videos/hq_pedacos/p13_IMG_6603.mov",
+  "p14_IMG_6608": "/home/user/edicao-video/videos/hq_pedacos/p14_IMG_6608.mov",
+  "p15_IMG_6608": "/home/user/edicao-video/videos/hq_pedacos/p15_IMG_6608.mov",
+  "p16_IMG_6608": "/home/user/edicao-video/videos/hq_pedacos/p16_IMG_6608.mov",
+  "p17_IMG_6608": "/home/user/edicao-video/videos/hq_pedacos/p17_IMG_6608.mov",
+  "p18_IMG_6608": "/home/user/edicao-video/videos/hq_pedacos/p18_IMG_6608.mov",
+  "p19_IMG_6626": "/home/user/edicao-video/videos/hq_pedacos/p19_IMG_6626.mov",
+  "p20_IMG_6629": "/home/user/edicao-video/videos/hq_pedacos/p20_IMG_6629.mov",
+  "p21_IMG_6629": "/home/user/edicao-video/videos/hq_pedacos/p21_IMG_6629.mov",
+  "p22_IMG_6630": "/home/user/edicao-video/videos/hq_pedacos/p22_IMG_6630.mov",
+  "p23_IMG_6631": "/home/user/edicao-video/videos/hq_pedacos/p23_IMG_6631.mov",
+  "p24_IMG_6632": "/home/user/edicao-video/videos/hq_pedacos/p24_IMG_6632.mov",
+  "p25_IMG_6633": "/home/user/edicao-video/videos/hq_pedacos/p25_IMG_6633.mov",
+  "p26_IMG_6633": "/home/user/edicao-video/videos/hq_pedacos/p26_IMG_6633.mov",
+  "p27_IMG_6638": "/home/user/edicao-video/videos/hq_pedacos/p27_IMG_6638.mov",
+  "p29_IMG_6634": "/home/user/edicao-video/videos/hq_pedacos/p29_IMG_6634.mov"
+ },
+ "ranges": [
+  {
+   "source": "p00_IMG_6555",
+   "start": 1.0,
+   "end": 2.5,
+   "quote": "(imagem) de frente: a abrir a porta e entrar",
+   "mute": true
+  },
+  {
+   "source": "p01_IMG_6556",
+   "start": 1.0,
+   "end": 2.5,
+   "quote": "(imagem) de lado, perto: a passar com o bebé",
+   "mute": true
+  },
+  {
+   "source": "p02_IMG_6555",
+   "start": 1.0,
+   "end": 2.6,
+   "quote": "(imagem) de frente: a entrar com o bebé ao colo",
+   "mute": true
+  },
+  {
+   "source": "p03_IMG_6586",
+   "start": 1.0,
+   "end": 1.9333,
+   "quote": "(imagem) cozinha de costas: Henrique na cadeira com o cão",
+   "mute": true
+  },
+  {
+   "source": "p04_IMG_6589",
+   "start": 1.0,
+   "end": 2.0,
+   "quote": "(imagem) saco das batatas",
+   "mute": true
+  },
+  {
+   "source": "p06_IMG_6593",
+   "start": 1.0,
+   "end": 2.0667,
+   "quote": "(imagem) a entrar na cozinha com o Henrique ao colo",
+   "mute": true
+  },
+  {
+   "source": "p08_IMG_6589",
+   "start": 1.0,
+   "end": 2.0,
+   "quote": "(imagem) tabuleiros",
+   "mute": true
+  },
+  {
+   "source": "p05_IMG_6590",
+   "start": 1.0,
+   "end": 2.0,
+   "quote": "(imagem) a descascar",
+   "mute": true
+  },
+  {
+   "source": "p07_IMG_6592",
+   "start": 1.0,
+   "end": 2.0,
+   "quote": "(imagem) a cortar batatas",
+   "mute": true
+  },
+  {
+   "source": "p_caos1",
+   "start": 1.0,
+   "quote": "(imagem) Henrique na cadeira, ela corre para o forno (2:33)",
+   "end": 2.0,
+   "mute": true
+  },
+  {
+   "source": "p_caos3",
+   "start": 1.0,
+   "quote": "(imagem) com o Henrique ao colo, mão na testa (11:32)",
+   "end": 2.0,
+   "mute": true
+  },
+  {
+   "source": "p_caos5",
+   "start": 1.0,
+   "quote": "(imagem) Henrique sozinho na cadeira com o cão, levanta o brinquedo (2:25)",
+   "end": 2.0,
+   "mute": true
+  },
+  {
+   "source": "p_caos4",
+   "start": 1.0,
+   "quote": "(imagem) a correr para o lava-loiça (2:57)",
+   "end": 2.6667,
+   "mute": true
+  },
+  {
+   "source": "p_sopa1",
+   "start": 1.0,
+   "end": 3.56,
+   "quote": "Eu descobri a melhor sopa de sempre no Continente,",
+   "av_offset": 0.074
+  },
+  {
+   "source": "p_sopa2",
+   "start": 1.0,
+   "end": 5.1,
+   "quote": "a receita do chef, sopa de abóbora, camarão e coentros, é maravilhosa.",
+   "av_offset": 0.074,
+   "cutaways": [
+    [
+     1.0,
+     1.1,
+     1.2,
+     "p_emb_cut"
+    ]
+   ]
+  },
+  {
+   "source": "p_sopa3",
+   "start": 1.0,
+   "end": 1.64,
+   "quote": "Amamos.",
+   "av_offset": 0.074
+  },
+  {
+   "source": "p09_IMG_6617",
+   "start": 1.0,
+   "end": 2.0,
+   "quote": "(imagem) de costas: a partir os ovos",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p10_IMG_6619",
+   "start": 1.0,
+   "end": 2.0,
+   "quote": "(imagem) ovos na frigideira",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p11_IMG_6623",
+   "start": 1.0,
+   "end": 2.1,
+   "quote": "(imagem) Henrique sentado à mesa",
+   "mute": true,
+   "bowl_clean": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p12_IMG_6623",
+   "start": 1.0,
+   "end": 2.3,
+   "quote": "(imagem) a colher ao Henrique, 'ahh' sem som",
+   "mute": true,
+   "bowl_clean": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p13_IMG_6603",
+   "start": 1.0,
+   "end": 2.0,
+   "quote": "(imagem) corredor: a caminho do banho com o Henrique",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p14_IMG_6608",
+   "start": 1.0,
+   "end": 1.9333,
+   "quote": "(imagem) quarto: a porta da casa de banho fecha",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p15_IMG_6608",
+   "start": 1.0,
+   "end": 2.6,
+   "quote": "(imagem) quarto: a porta abre e sai com ele de toalha",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p16_IMG_6608",
+   "start": 1.0,
+   "end": 1.9333,
+   "quote": "(imagem) o Henrique embrulhado na toalha, na cama",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p17_IMG_6608",
+   "start": 1.0,
+   "end": 1.8333,
+   "quote": "(imagem) a vestir o pijama",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p18_IMG_6608",
+   "start": 1.0,
+   "end": 1.8333,
+   "quote": "(imagem) abraço de pijama",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p19_IMG_6626",
+   "start": 1.0,
+   "end": 1.8,
+   "quote": "(imagem) a entrar no quarto com o bebé",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p20_IMG_6629",
+   "start": 1.0,
+   "end": 1.8,
+   "quote": "(imagem) a embalar, luz vermelha",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p21_IMG_6629",
+   "start": 1.0,
+   "end": 1.8,
+   "quote": "(imagem) no berço",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p22_IMG_6630",
+   "start": 1.0,
+   "end": 2.0,
+   "quote": "(imagem) shhh, a fechar a porta",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p23_IMG_6631",
+   "start": 0.1333,
+   "end": 2.0666,
+   "quote": "(imagem) a Clara ao colo",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p24_IMG_6632",
+   "start": 1.0,
+   "end": 2.9333,
+   "quote": "(imagem) a Clara ao colo, de costas",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p25_IMG_6633",
+   "start": 1.0,
+   "end": 2.6,
+   "quote": "(imagem) a sopa a sair da embalagem para a taça",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p26_IMG_6633",
+   "start": 1.0,
+   "end": 2.2667,
+   "quote": "(imagem) taças servidas",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p27_IMG_6638",
+   "start": 1.0,
+   "end": 2.3333,
+   "quote": "(imagem) os três à mesa",
+   "mute": true,
+   "speed": 1.15
+  },
+  {
+   "source": "p29_IMG_6634",
+   "start": 1.0,
+   "end": 3.3333,
+   "quote": "(imagem) embalagem Receita do Chef, aproximação lenta",
+   "mute": true,
+   "zoom": [
+    1.0,
+    1.22
+   ]
+  }
+ ],
+ "total_duration_s": 44.033
+}

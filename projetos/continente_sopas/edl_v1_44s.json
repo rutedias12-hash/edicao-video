@@ -1,0 +1,179 @@
+{
+ "version": 1,
+ "sources": {
+  "continente_sopas": "/home/user/edicao-video/videos/continente_sopas.mov"
+ },
+ "ranges": [
+  {
+   "source": "continente_sopas",
+   "start": 4.0,
+   "end": 5.5,
+   "beat": "ABERTURA",
+   "quote": "(imagem) a chegar a casa com o bebé",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 132.0,
+   "end": 133.5,
+   "beat": "ABERTURA",
+   "quote": "(imagem) bebé na cadeira, cão",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 191.12,
+   "end": 192.24,
+   "beat": "JANTAR",
+   "quote": "dez pras seis.",
+   "label": "17:50|preparar o jantar"
+  },
+  {
+   "source": "continente_sopas",
+   "start": 194.22,
+   "end": 197.7,
+   "beat": "JANTAR",
+   "quote": "Este dia nunca mais acaba, malta, juro. Estou de rastos.",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 197.95,
+   "end": 199.54,
+   "beat": "JANTAR",
+   "quote": "Vou preparar o jantar.",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 264.5,
+   "end": 265.5,
+   "beat": "CAOS",
+   "quote": "(imagem) batatas",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 308.0,
+   "end": 309.0,
+   "beat": "CAOS",
+   "quote": "(imagem) descascar",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 523.55,
+   "end": 526.36,
+   "beat": "CAOS",
+   "quote": "Malta, toda a gente sabe que a partir das seis da tarde isso é loucura, né?",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 586.45,
+   "end": 588.7,
+   "beat": "CAOS",
+   "quote": "Espera, filho. Espera.",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 637.22,
+   "end": 641.17,
+   "beat": "DECISAO",
+   "quote": "Vou ser honesta, malta, eu ia fazer jantar, mas já não vou, porque, tipo, não dá.",
+   "label": "plano B"
+  },
+  {
+   "source": "continente_sopas",
+   "start": 645.96,
+   "end": 647.97,
+   "beat": "DECISAO",
+   "quote": "vou fazer uns ovos e vou servir a sopa.",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 653.35,
+   "end": 655.6,
+   "beat": "DECISAO",
+   "quote": "Corta pra trás este plano. (riso)",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 221.62,
+   "end": 224.18,
+   "beat": "PRODUTO",
+   "quote": "eu descobri a melhor sopa de sempre no Continente,",
+   "label": "PRODUTO"
+  },
+  {
+   "source": "continente_sopas",
+   "start": 226.12,
+   "end": 230.22,
+   "beat": "PRODUTO",
+   "quote": "a receita do chef, sopa de abóbora, camarão e coentros, é maravilhosa.",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 249.1,
+   "end": 249.74,
+   "beat": "PRODUTO",
+   "quote": "Amamos.",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 1786.0,
+   "end": 1787.0,
+   "beat": "OVOS",
+   "quote": "(imagem) partir ovos",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 2133.5,
+   "end": 2134.35,
+   "beat": "HENRIQUE",
+   "quote": "É sopa,",
+   "label": "jantar do Henrique"
+  },
+  {
+   "source": "continente_sopas",
+   "start": 2135.24,
+   "end": 2137.8,
+   "beat": "HENRIQUE",
+   "quote": "não é doce, não pode ser sempre doce, filho.",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 2190.42,
+   "end": 2191.14,
+   "beat": "HENRIQUE",
+   "quote": "A sopa é boa.",
+   "label": ""
+  },
+  {
+   "source": "continente_sopas",
+   "start": 2820.72,
+   "end": 2824.4,
+   "beat": "FAMILIA",
+   "quote": "Posso ficar com mais sopa? — Podes, podes.",
+   "label": "jantar"
+  },
+  {
+   "source": "continente_sopas",
+   "start": 2160.0,
+   "end": 2163.0,
+   "beat": "FECHO",
+   "quote": "(imagem) Henrique a comer a sopa",
+   "label": "FECHO"
+  }
+ ],
+ "grade": "",
+ "overlays": [],
+ "total_duration_s": 43.57
+}
