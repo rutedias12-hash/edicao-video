@@ -31,3 +31,5 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-08 — continente sopas (voz off nova) — trocar voz off: manter os mesmos clipes; se a voz não cabe, cortar pausas da voz em vez de alongar planos;
+  se sobra imagem sem voz, acelerar os planos lentos (1,2–1,8×) e pôr as frases quase seguidas; a voz pode abrandar ~8 % sem mudar o tom (atempo).

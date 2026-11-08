@@ -53,9 +53,11 @@ vlist, alist, durs = [], [], []
 for i, r in enumerate(edl['ranges']):
     s = src[r['source']]
     sp = r.get('speed', 1.0)  # >1 = mais rápido (o som mantém o tom)
-    n = max(1, round((r['end'] - r['start']) / sp * FPS)); d = n / FPS; ns = round(d * SR)
+    n = max(1, round((r['end'] - r['start']) / sp * 30)) * (FPS // 30); d = n / FPS; ns = round(d * SR)   # mesma duração a 30 e a 60 fps (textos e voz acertados a 1/30 s)
     durs.append(d)
     vout, aout = d_seg/f'v_{i:02d}.mp4', d_seg/f'a_{i:02d}.wav'
+    if os.environ.get('REUSE') and vout.exists() and aout.exists():   # REUSE=1: só refaz os planos apagados
+        vlist.append(vout); alist.append(aout); continue
     cmd = ['ffmpeg', '-v', 'error', '-y', '-ss', f'{r["start"]:.3f}', '-t', f'{d*sp+0.2:.3f}', '-i', s]
     crop = f"crop={r['crop']}," if r.get('crop') else ''  # aproximar (punch-in), ex. "1080:1920:240:600" na imagem 4K
     if r.get('zoom'):  # [z_inicio, z_fim]: aproximação lenta e suave (ease in-out) sobre o 4K
@@ -64,7 +66,10 @@ for i, r in enumerate(edl['ranges']):
         base = f"zoompan=z='{ez}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s={W}x{H}:fps={FPS}"
     else:
         base = f'{crop}scale=-2:{H}'
-    fc = [f'[0:v]{base},setpts=(PTS-STARTPTS)/{sp},fps={FPS}[b0]']; cur = '[b0]'  # acelerar ANTES de fixar os 30 fps
+    if r.get('zoom'):  # zoompan gera 1 imagem por imagem de entrada: velocidade e fps fixados ANTES (senão, fonte 60 fps num render a 30 fps fica em câmara lenta)
+        fc = [f'[0:v]setpts=(PTS-STARTPTS)/{sp},fps={FPS},{base}[b0]']; cur = '[b0]'
+    else:
+        fc = [f'[0:v]{base},setpts=(PTS-STARTPTS)/{sp},fps={FPS}[b0]']; cur = '[b0]'  # acelerar ANTES de fixar os 30 fps
     for k, cw in enumerate(r.get('cutaways') or [], start=1):
         cs, cd, at = cw[:3]; csrc = src[cw[3]] if len(cw) > 3 else s   # 4.º elemento opcional: outra fonte
         if d - (at + cd) < 0.15: cd = d - at + 0.1  # B-roll a acabar mesmo no fim: cobre até ao último frame (evita 'flash')

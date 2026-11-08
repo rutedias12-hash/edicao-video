@@ -317,13 +317,14 @@
   {
    "source": "p29_IMG_6634",
    "start": 1.0,
-   "end": 2.9,
+   "end": 1.95,
    "quote": "(imagem) embalagem Receita do Chef, aproximação lenta",
    "mute": true,
    "zoom": [
     1.0,
     1.22
-   ]
+   ],
+   "speed": 0.5
   }
  ],
  "total_duration_s": 39.7

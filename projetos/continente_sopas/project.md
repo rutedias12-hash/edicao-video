@@ -206,3 +206,7 @@ Feita a partir da fonte (cut.py H=3840 + export_4k.sh), não da exportação do 
 - Voz parte B dividida em 4 frases, cada uma na sua cena (jantar do Henrique, banho, deitar, Clara). `scripts/build_edl_voz85.py`, `build_lettering_voz85.py` (slot_4, marca.css da versão aprovada = `marca_continente.css`), `finish_voz85.sh`.
 - v1 1080p: 44,0 s, -14 LUFS. Primeira metade igual à v4 (verificado). Transcrição do som final confere.
 - v2 (39,7 s): Rute — "há muitos momentos sem voz off" → velocidade por cena na 2.ª metade (jantar Henrique 1,3× · banho 1,5× · pijama 1,35× · deitar 1,45× · Clara 1,8× · sopa na taça 1,45× · mesa 1,2×), fecho 1,9 s; frases da voz seguidas (0,35 s entre elas). Voz da 2.ª parte 8 % mais lenta sem mudar o tom (atempo 0,92). A 1.ª parte não pode abrandar sem alongar planos (ela pediu para não alongar). Voz acaba aos 37,1 s.
+- **Exportação 4K** (pedido da Rute 2026-11-08): `ALTURA=3840 recuperar_pedacos.py` → `EDL=edl_voz85.json H=3840 FPS=60 cut.py` → `ESCALA=2` lettering (slot_4/render.webm) → `finish_voz85.sh 4k`
+  → `continente-sopas-voz-nova-v2-4k.mp4` (2160×3840, 60 fps, 39,7 s, -14 LUFS). Correções no cut.py: a 60 fps cada plano tem a mesma duração que a 30 fps
+  (antes desfasava até 0,1 s dos textos); o zoompan (fecho) passava a fonte de 60 fps em câmara lenta nas pré-visualizações a 30 fps → agora fixa a velocidade antes;
+  o fecho fica a 0,5× para ser igual ao que a Rute aprovou (embalagem de frente). `REUSE=1` refaz só os planos apagados.

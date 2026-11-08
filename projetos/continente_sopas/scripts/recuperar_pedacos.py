@@ -61,7 +61,7 @@ for src, m in mapa.items():
     p = OUT/f'{src}.mov'
     if not p.exists():
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{a:.3f}', '-i', str(HQ/m['file']), '-t', f'{D:.3f}', '-map', '0:v:0', '-map', '0:a:0',
-                        '-vf', f'scale=-2:{ALT}', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '14', '-pix_fmt', 'yuv420p',
+                        '-vf', f'scale=-2:{ALT}', '-c:v', 'libx264', '-preset', 'fast', '-crf', '12', '-pix_fmt', 'yuv420p',
                         '-c:a', 'pcm_s16le', str(p)], check=True)
 json.dump(mapa, open(MAPF, 'w'), indent=1)
 print('pedaços prontos:', len(mapa))

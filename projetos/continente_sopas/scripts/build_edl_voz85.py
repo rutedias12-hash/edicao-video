@@ -32,7 +32,8 @@ for i, r in enumerate(base['ranges']):
         mc = M[c[3]]; c[0] = round(mc['clip_start_plano'] - mc['piece_a'], 4); src[c[3]] = str(V/'hq_pedacos'/f'{c[3]}.mov')
     cena = [n for n, j in SEC if j <= i][-1]
     if cena in VEL_CENA: r['speed'] = VEL_CENA[cena]
-    if cena == 'fecho': r['end'] = round(r['start'] + FECHO, 4); d = FECHO
+    if cena == 'fecho':   # a versão aprovada mostrava este plano a meia velocidade (a embalagem de frente, antes de a mão a rodar)
+        r['end'] = round(r['start'] + FECHO/2, 4); r['speed'] = 0.5; d = FECHO/2
     out.append(r)
     t += max(1, round(d / r.get('speed', 1.0) * 30)) / 30
 secs['fim'] = round(t, 4)
