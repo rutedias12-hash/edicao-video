@@ -40,3 +40,11 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
   Stop motions para coisas a aparecer (frascos, tabuleiro, almôndegas no prato), rápidos e com zoom. Etiquetas: só o essencial (descolar, dedo a colar).
   Final: um só plano seguido com UM zoom contínuo, até dizer adeus à câmara. Voz off: sem repetições nem falhas, pausas curtas, sem filtros (só volume).
   Cor: um pouco mais nítida e saturada que o natural.
+2026-11-09 — reset da casa (vlog) — planos curtos (0,35–0,4 s) e muitos, para se notarem as fases de cada atividade, por ordem real.
+  Cada atividade focada nas mãos/coisas a acontecer (pegar, puxar, pousar, apanhar do chão), nunca a Rute a passar perto da câmara;
+  escolher o início de cada gesto (ex.: sapatos, loiça) e tirar os planos mais parados. Momentos com som próprio (ex.: spray) incluem-se pelo som.
+  Zoom/recortes só no início e no fim. Som de cada plano sem filtros e sem aumentar o volume; cortes com cross-fade curto (±30 ms) para não haver buracos.
+  Título com linhas bem juntas (altura de linha ~0,66); sub-subtítulo pequeno em Burgundy semibold (castanho não se lê em cozinha clara).
+  Sem trailer/resumo depois do título quando não faz sentido. Neste vídeo, a lista começa vazia e cada tarefa entra com um som de "certo" no fim da sua parte.
+  Voz off: entra logo no início com o título, tem de durar o vídeo todo (sem silêncios), pausas curtas (≤0,25 s); o vídeo acelera para caber (~55 s).
+  Legendas e cronómetro ao meio do ecrã. Verificar sempre a sincronização voz/legendas medindo o som (o adelay do ffmpeg falhou uma vez).
