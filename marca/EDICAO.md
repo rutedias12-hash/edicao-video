@@ -31,3 +31,8 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-17 — espremedor (vlog orgânico, com as conversas reais em vez de voz off) — o som é o de cada plano, sem filtros nem ganho;
+  cortar falas sem interesse (redes sociais, "ainda dava para fazer mais"), silêncios e palavrões; nunca cortar a meio de uma palavra.
+  Legendas e horas SEMPRE ao meio do ecrã, no mesmo sítio (não mudar de posição por plano); o título fica em cima à esquerda.
+  Zoom in lento (gancho, falas-chave, fecho) e imagem mais aproximada em piadas/reações: a Rute pediu (exceção à regra "sem zooms").
+  Planos de pormenor sem fala (ex.: pôr a laranja, lavar as peças) entram POR CIMA de uma fala dela, com a voz a continuar.
