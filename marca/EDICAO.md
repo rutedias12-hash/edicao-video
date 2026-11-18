@@ -31,3 +31,8 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-12 — Emma (campanha) — vlog com voz off: a voz começa logo na abertura; pausas curtas (~0,25 s entre frases) e
+  respirações silenciadas (fica só a fala). Cortes de 0,4–0,5 s quando é preciso caber na voz; nada de imagens sem voz no fim.
+  Stop motion só onde a Rute pede (não transformar outros planos em stop motion). Fecho: último plano a desvanecer para preto
+  por baixo da última frase. Stories: b-roll sem texto (15 s); story a falar = cortar pausas/hesitações sem cortar palavras,
+  com legendas palavra a palavra (num quarto claro o texto base vai em Espresso porque o Winter White não se lê).
