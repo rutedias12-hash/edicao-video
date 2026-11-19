@@ -31,3 +31,8 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-19 — looks no elevador (C&A) — reel de transição de looks (porta abre, 2 poses em cortes secos, porta fecha):
+  começa com um teaser em grelha 2x2 com os looks bem perto, a trocar a cada 0,4 s; título ao centro e, numa parceria,
+  o logo da marca (ficheiro dela) em vez do nome escrito; número do look ("LOOK 01"…) sempre no ecrã, troca com clique;
+  ritmo ligeiramente acelerado (1,1x); sem música (ela põe no Instagram). Stories a falar: 25–30 s, silêncios cortados,
+  volume mais alto (~-14 LUFS), legendas uma palavra de cada vez; pré-visualização do reel = só a grelha de looks, sem título.
