@@ -31,3 +31,10 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-23 — lookbook mãe e filha (Kiabi) — lookbook: planos de 0,5–0,7 s, só trechos com olhos abertos e sem falar
+  (deslizar o trecho em vez de tirar o clipe); clipes horizontais em tríptico vertical (3 linhas) sem misturar looks,
+  e as linhas entram uma a uma POR CIMA do clipe anterior (nunca sobre fundo branco); só zoom lento, sem ajuste de cor,
+  sem zoom de impacto nem flash; no look mais "parado" planos mais próximos das peças. Intro/título: 2 linhas, alinhado
+  à esquerda, palavra-chave em itálico, linhas juntas (0,70), escrita rápida (~28 letras/s) e subtítulo logo a seguir;
+  texto final (pergunta) em máquina de escrever sobre o último plano alongado. Story: título ao centro + logo da marca
+  pequeno sem fundo; peças da colagem a rodar num anel deitado (elipse horizontal) à volta do título.
