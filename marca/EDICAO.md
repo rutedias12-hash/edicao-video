@@ -31,3 +31,11 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-24 — campanha AEG (máquina de lavar) — vídeo de campanha com fala para a câmara + b-roll + voz off:
+  voz off SEMPRE seguida, sem silêncios (cortar pausas; o b-roll é que se ajusta à voz, por troços, para cada imagem bater com a frase);
+  voz off ao mesmo volume das falas para a câmara; quando há imagens novas, a Rute indica a ordem e os segundos — seguir à letra;
+  cortes rápidos (b-roll ~1,4x), cortar logo que a ação acaba (ex.: o cesto pára de deslizar);
+  planos filmados na horizontal: não ampliar demasiado (ecrã dividido em três ou recorte largo sobre o mesmo plano desfocado);
+  silhueta recortada (sem fundo) pousada no limite inferior, de lado — nunca a desvanecer;
+  legendas da voz em baixo ao centro, brancas, SEM caixa nem fundo (não gostou do fundo castanho); logo do cliente na cor original;
+  final de campanha: logo sem fundo por cima do último plano, depois fade para preto ficando só o logo.
