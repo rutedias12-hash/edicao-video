@@ -20,6 +20,7 @@ baixar 1FRKX9vR695PuDo9nqCaw0m8ZooVhMOsq guia-de-marca.png
 # Montserrat: a letra sans serif dos vídeos (vlog e yapping), escolhida pela Rute. Gratuita (Google Fonts, OFL).
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf Montserrat-Regular.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf Montserrat-Medium.ttf
+baixar_gf montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9WXh0oA.woff Montserrat-MediumItalic.woff  # legendas de cinema (itálico)
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf Montserrat-SemiBold.ttf
 baixar_gf montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf Montserrat-Black.ttf   # números grandes do yapping
 
