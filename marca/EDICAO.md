@@ -31,3 +31,12 @@ corrigiu ou elogiou, para não ter de ser pedido outra vez. Em caso de conflito,
 2026-10-24 — traços tóxicos — yapping: título em Montserrat maiúsculas com a palavra principal em Sloop (sem negrito) sobreposta;
   destaques sempre em Sloop sem negrito; números grandes (Montserrat Black, Burgundy) atrás da Rute durante cada ponto;
   títulos de secção em Montserrat Regular; o vídeo começa com zoom in no gancho.
+2026-11-27 — campanha Creative Toys (Bad Day) — sketch cinematográfico + B-roll:
+  Sem grão de filme; filtro de cor leve; voz sem filtros (só volume); nunca música sintetizada/gerada (a Rute envia as músicas).
+  Sketch/diálogo: legendas de cinema (frase inteira, 1–2 linhas, terço de baixo, Montserrat Medium Italic, letras e linhas apertadas);
+  palavra-chave do sketch grande (Montserrat Black, Champagne) exatamente na fala e a sair antes do plano seguinte.
+  Corte de música dramático: efeito de fita a encravar/disco riscado antes da fala-chave.
+  B-roll: cortes nas batidas da música; trípticos com painéis a entrar um a um de cima para baixo; escolher frames em movimento
+  e com olhos abertos; música do B-roll constante e baixa sob a voz-off (sem "bombar").
+  Voz-off: legendar com o TEXTO que a Rute envia (não o da transcrição); logos das marcas sem fundo dentro da legenda.
+  Fim: desvanecer a negro + "@arutedias × logo da marca". Rótulos de texto não podem tapar o nome impresso no produto.
